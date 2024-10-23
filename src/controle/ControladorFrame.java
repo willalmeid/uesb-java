@@ -9,17 +9,19 @@ public class ControladorFrame implements ActionListener{
 
 	Frame frame;
 	
-	public ControladorFrame() {
-		this.frame = new Frame();
+	public ControladorFrame(Frame frame) {
+		this.frame = frame;
+		frame.revalidate();
+		frame.repaint();
 	}
 	
 	public void actionPerformed(ActionEvent e) {
 		
-		
 	}
 	
 	public static void main(String[] args) {
-		new ControladorFrame();
+		Frame frame = new Frame();
+		new ControladorFrame(frame);
 	}
 
 }
