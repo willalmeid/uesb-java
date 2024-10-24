@@ -52,7 +52,7 @@ public class Frame extends JFrame {
 	public JMenu getMenuCadastro() {
 		if(menuCadastro == null) {
 			menuCadastro = new JMenu();
-			menuCadastro.setText("Cadastro");
+			menuCadastro.setText("Cadastrar");
 			menuCadastro.add(getMenuItemCadastrarPaciente());
 			menuCadastro.add(getMenuItemCadastrarMedico());
 			menuCadastro.add(getMenuItemCadastrarExame());
@@ -90,7 +90,7 @@ public class Frame extends JFrame {
 	public JMenuItem getMenuItemCadastrarPaciente() {
 		if(menuItemCadastrarPaciente == null) {
 			menuItemCadastrarPaciente = new JMenuItem();
-			menuItemCadastrarPaciente.setText("Cadastrar Paciente");
+			menuItemCadastrarPaciente.setText("Paciente");
 		}
 		return menuItemCadastrarPaciente;
 	}
@@ -98,7 +98,7 @@ public class Frame extends JFrame {
 	public JMenuItem getMenuItemCadastrarMedico() {
 		if(menuItemCadastrarMedico == null) {
 			menuItemCadastrarMedico = new JMenuItem();
-			menuItemCadastrarMedico.setText("Cadastrar Médico");
+			menuItemCadastrarMedico.setText("Médico");
 		}
 		return menuItemCadastrarMedico;
 	}
@@ -106,7 +106,7 @@ public class Frame extends JFrame {
 	public JMenuItem getMenuItemCadastrarExame() {
 		if(menuItemCadastrarExame == null) {
 			menuItemCadastrarExame = new JMenuItem();
-			menuItemCadastrarExame.setText("Cadastrat Exame");
+			menuItemCadastrarExame.setText("Exame");
 		}
 		return menuItemCadastrarExame;
 	}
@@ -114,7 +114,7 @@ public class Frame extends JFrame {
 	public JMenuItem getMenuItemCadastrarConsulta() {
 		if(menuItemCadastrarConsulta == null) {
 			menuItemCadastrarConsulta = new JMenuItem();
-			menuItemCadastrarConsulta.setText("Cadastar Consulta");
+			menuItemCadastrarConsulta.setText("Consulta");
 		}
 		return menuItemCadastrarConsulta;
 	}
@@ -122,7 +122,7 @@ public class Frame extends JFrame {
 	public JMenuItem getMenuItemCadastrarMaterial() {
 		if(menuItemCadastrarMaterial == null) {
 			menuItemCadastrarMaterial = new JMenuItem();
-			menuItemCadastrarMaterial.setText("Cadastar Material");
+			menuItemCadastrarMaterial.setText("Material");
 		}
 		return menuItemCadastrarMaterial;
 	}
@@ -130,7 +130,7 @@ public class Frame extends JFrame {
 	public JMenuItem getMenuItemAgendamentoDeConsulta() {
 	    if (menuItemAgendamentoDeConsulta == null) {
 	        menuItemAgendamentoDeConsulta = new JMenuItem();
-	        menuItemAgendamentoDeConsulta.setText("Agendamento de Consulta");
+	        menuItemAgendamentoDeConsulta.setText("Consulta");
 	    }
 	    return menuItemAgendamentoDeConsulta;
 	}
@@ -138,7 +138,7 @@ public class Frame extends JFrame {
 	public JMenuItem getMenuItemAgendamentoDeExame() {
 	    if (menuItemAgendamentoDeExame == null) {
 	        menuItemAgendamentoDeExame = new JMenuItem();
-	        menuItemAgendamentoDeExame.setText("Agendamento de Exame");
+	        menuItemAgendamentoDeExame.setText("Exame");
 	    }
 	    return menuItemAgendamentoDeExame;
 	}
@@ -170,7 +170,7 @@ public class Frame extends JFrame {
 	public JMenuItem getMenuItemRelatoriosDeConsulta() {
 	    if (menuItemRelatoriosDeConsulta == null) {
 	        menuItemRelatoriosDeConsulta = new JMenuItem();
-	        menuItemRelatoriosDeConsulta.setText("Relatórios de Consulta");
+	        menuItemRelatoriosDeConsulta.setText("Consulta");
 	    }
 	    return menuItemRelatoriosDeConsulta;
 	}
@@ -178,7 +178,7 @@ public class Frame extends JFrame {
 	public JMenuItem getMenuItemRelatoriosDeExames() {
 	    if (menuItemRelatoriosDeExames == null) {
 	        menuItemRelatoriosDeExames = new JMenuItem();
-	        menuItemRelatoriosDeExames.setText("Relatórios de Exames");
+	        menuItemRelatoriosDeExames.setText("Exames");
 	    }
 	    return menuItemRelatoriosDeExames;
 	}
@@ -186,7 +186,7 @@ public class Frame extends JFrame {
 	public JMenuItem getMenuItemRelatoriosFinanceiros() {
 	    if (menuItemRelatoriosFinanceiros == null) {
 	        menuItemRelatoriosFinanceiros = new JMenuItem();
-	        menuItemRelatoriosFinanceiros.setText("Relatórios Financeiros");
+	        menuItemRelatoriosFinanceiros.setText("Financeiros");
 	    }
 	    return menuItemRelatoriosFinanceiros;
 	}
@@ -194,7 +194,7 @@ public class Frame extends JFrame {
 	public JMenuItem getMenuItemRelatoriosDeMateriais() {
 	    if (menuItemRelatoriosDeMateriais == null) {
 	        menuItemRelatoriosDeMateriais = new JMenuItem();
-	        menuItemRelatoriosDeMateriais.setText("Relatórios de Materiais");
+	        menuItemRelatoriosDeMateriais.setText("Materiais");
 	    }
 	    return menuItemRelatoriosDeMateriais;
 	}
