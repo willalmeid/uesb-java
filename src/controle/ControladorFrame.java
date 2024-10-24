@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import visual.Frame;
 import visual.PanelCadastrarConsulta;
 import visual.PanelCadastrarExame;
+import visual.PanelCadastrarMedico;
 
 public class ControladorFrame implements ActionListener{
 
@@ -13,9 +14,11 @@ public class ControladorFrame implements ActionListener{
 	
 	PanelCadastrarConsulta panelCadastarConsulta;
 	PanelCadastrarExame panelCadastrarExame;
+	PanelCadastrarMedico panelCadastrarMedico;
 	
 	ControladorPanelCadastrarConsulta controladorPanelCadastrarConsulta;
 	ControladorPanelCadastrarExame controladorPanelCadastrarExame;
+	ControladorPanelCadastrarMedico controladorPanelCadastrarMedico;
 	
 	public ControladorFrame(Frame frame) {
 		this.frame = frame;
@@ -26,6 +29,7 @@ public class ControladorFrame implements ActionListener{
 	public void addEventos() {
 		frame.getMenuItemCadastrarConsulta().addActionListener(this);
 		frame.getMenuItemCadastrarExame().addActionListener(this);
+		frame.getMenuItemCadastrarMedico().addActionListener(this);
 	}
 	
 	public void actionPerformed(ActionEvent e) {
@@ -37,6 +41,10 @@ public class ControladorFrame implements ActionListener{
 			panelCadastrarExame = new PanelCadastrarExame();
 			controladorPanelCadastrarExame = new ControladorPanelCadastrarExame(panelCadastrarExame);
 			frame.setContentPane(panelCadastrarExame);
+		} else if(e.getSource() == frame.getMenuItemCadastrarMedico()) {
+			panelCadastrarMedico = new PanelCadastrarMedico();
+			controladorPanelCadastrarMedico = new ControladorPanelCadastrarMedico(panelCadastrarMedico);
+			frame.setContentPane(panelCadastrarMedico);
 		}
 		
 		renderizarFrame();
