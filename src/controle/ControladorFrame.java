@@ -7,7 +7,7 @@ import visual.Frame;
 import visual.PanelCadastrarConsulta;
 import visual.PanelCadastrarExame;
 import visual.PanelCadastrarMedico;
-import visual.PanelCadastrarPaciente;
+import visual.PanelCadastrarMaterial;
 
 public class ControladorFrame implements ActionListener{
 
@@ -16,12 +16,12 @@ public class ControladorFrame implements ActionListener{
 	PanelCadastrarConsulta panelCadastarConsulta;
 	PanelCadastrarExame panelCadastrarExame;
 	PanelCadastrarMedico panelCadastrarMedico;
-	PanelCadastrarPaciente panelCadastrarPaciente;
+	PanelCadastrarMaterial panelCadastrarMaterial;
 	
 	ControladorPanelCadastrarConsulta controladorPanelCadastrarConsulta;
 	ControladorPanelCadastrarExame controladorPanelCadastrarExame;
 	ControladorPanelCadastrarMedico controladorPanelCadastrarMedico;
-	ControladorPanelCadastrarPaciente controladorPanelCadastrarPaciente;
+	ControladorPanelCadastrarMaterial controladorPanelCadastrarMaterial;
 	
 	public ControladorFrame(Frame frame) {
 		this.frame = frame;
@@ -33,7 +33,7 @@ public class ControladorFrame implements ActionListener{
 		frame.getMenuItemCadastrarConsulta().addActionListener(this);
 		frame.getMenuItemCadastrarExame().addActionListener(this);
 		frame.getMenuItemCadastrarMedico().addActionListener(this);
-		frame.getMenuItemCadastrarPaciente().addActionListener(this);
+		frame.getMenuItemCadastrarMaterial().addActionListener(this);
 	}
 	
 	public void actionPerformed(ActionEvent e) {
@@ -49,10 +49,10 @@ public class ControladorFrame implements ActionListener{
 			panelCadastrarMedico = new PanelCadastrarMedico();
 			controladorPanelCadastrarMedico = new ControladorPanelCadastrarMedico(panelCadastrarMedico);
 			frame.setContentPane(panelCadastrarMedico);
-		} else if(e.getSource() == frame.getMenuItemCadastrarPaciente()) {
-			panelCadastrarPaciente = new PanelCadastrarPaciente();
-			controladorPanelCadastrarPaciente = new ControladorPanelCadastrarPaciente(panelCadastrarPaciente);
-			frame.setContentPane(panelCadastrarPaciente);
+		} else if(e.getSource() == frame.getMenuItemCadastrarMaterial()) {
+			panelCadastrarMaterial = new PanelCadastrarMaterial();
+			controladorPanelCadastrarMaterial = new ControladorPanelCadastrarMaterial(panelCadastrarMaterial);
+			frame.setContentPane(panelCadastrarMaterial);
 		}
 		
 		renderizarFrame();
