@@ -43,6 +43,7 @@ public class PanelCadastrarConsulta extends JPanel {
 	
 	public PanelCadastrarConsulta() {
 		setBackground(new Color(255, 0, 128)); // Apenas um teste
+		setSize(1280, 750);
 		setLayout(null);
 		add(getLabelTitlePanel());
 		add(getPanelMain());
