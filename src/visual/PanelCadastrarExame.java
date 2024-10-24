@@ -32,9 +32,6 @@ public class PanelCadastrarExame extends JPanel {
 	
 	private JButton buttonCadastrar;
 	private JButton buttonLimpar;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
 
 	public PanelCadastrarExame() {
 		setBackground(new Color(0, 128, 255)); // Apenas um teste
