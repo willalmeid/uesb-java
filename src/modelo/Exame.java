@@ -13,21 +13,21 @@ public class Exame {
 	private Medico medico;
 	
 	/* Poderia der do tipo enum, pois os tipos já são definidos */
-	private String tipo;
+	private String tipoExame;
 
 	public Exame() {
 		
 	}
 
 	public Exame(String nomeExame, String descricao, float valorParticular, Material materiasUtilizado, Medico medico,
-			String tipo) {
+			String tipoExame) {
 		super();
 		this.nomeExame = nomeExame;
 		this.descricao = descricao;
 		this.valorParticular = valorParticular;
 		this.materiasUtilizado = materiasUtilizado;
 		this.medico = medico;
-		this.tipo = tipo;
+		this.tipoExame = tipoExame;
 	}
 
 	public String getNomeExame() {
@@ -71,11 +71,11 @@ public class Exame {
 	}
 
 	public String getTipo() {
-		return tipo;
+		return tipoExame;
 	}
 
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
+	public void setTipo(String tipoExame) {
+		this.tipoExame = tipoExame;
 	}
 
 }
