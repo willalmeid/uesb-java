@@ -12,7 +12,7 @@ public class Paciente {
 	 * poderia ser uma lista para histórico médico e um enum para o convênio.
 	 * Sendo assim, teremos que discutir depois.
 	 * */
-	private String historicoMédico;
+	private String historicoMedico;
 	private String covenio;
 	
 	private float peso;
@@ -31,7 +31,7 @@ public class Paciente {
 		this.dataNascimento = dataNascimento;
 		this.telefone = telefone;
 		this.tipoSanguineo = tipoSanguineo;
-		this.historicoMédico = historicoMédico;
+		this.historicoMedico = historicoMédico;
 		this.covenio = covenio;
 		this.peso = peso;
 		this.altura = altura;
@@ -72,11 +72,11 @@ public class Paciente {
 	}
 
 	public String getHistoricoMédico() {
-		return historicoMédico;
+		return historicoMedico;
 	}
 
 	public void setHistoricoMédico(String historicoMédico) {
-		this.historicoMédico = historicoMédico;
+		this.historicoMedico = historicoMédico;
 	}
 
 	public String getCovenio() {
