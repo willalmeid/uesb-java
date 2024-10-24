@@ -10,10 +10,10 @@ public class Medico {
 	private float valorConsultaParticular;
 	
 	// Pensei em criar uma class para isso
-	private String históricoDeAtendimento;
+	private String historicoDeAtendimento;
 
 	public Medico() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public Medico(String nome, String especialidade, String crm, String contato, float valorConsultaParticular,
@@ -24,7 +24,7 @@ public class Medico {
 		this.crm = crm;
 		this.contato = contato;
 		this.valorConsultaParticular = valorConsultaParticular;
-		this.históricoDeAtendimento = históricoDeAtendimento;
+		this.historicoDeAtendimento = históricoDeAtendimento;
 	}
 
 	public String getNome() {
@@ -68,11 +68,11 @@ public class Medico {
 	}
 
 	public String getHistóricoDeAtendimento() {
-		return históricoDeAtendimento;
+		return historicoDeAtendimento;
 	}
 
 	public void setHistóricoDeAtendimento(String históricoDeAtendimento) {
-		this.históricoDeAtendimento = históricoDeAtendimento;
+		this.historicoDeAtendimento = históricoDeAtendimento;
 	}
 
 }
