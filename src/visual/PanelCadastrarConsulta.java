@@ -1,18 +1,18 @@
 package visual;
 
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import java.awt.Choice;
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.Button;
-import java.awt.Panel;
 
 public class PanelCadastrarConsulta extends JPanel {
 
 	private JLabel labelTitlePanel;
 	
+	private JPanel panelMain;
 	
 	private JLabel labelData;
 	private JLabel labelHora;
@@ -38,9 +38,8 @@ public class PanelCadastrarConsulta extends JPanel {
 	private Choice choiceConvenio;
 	
 	
-	private Button buttonCadastrar;
-	private Button buttonLimpar;
-	private Panel panelMain;
+	private JButton buttonCadastrar;
+	private JButton buttonLimpar;
 	
 	public PanelCadastrarConsulta() {
 		setBackground(new Color(255, 0, 128)); // Apenas um teste
@@ -53,9 +52,9 @@ public class PanelCadastrarConsulta extends JPanel {
 	
 	
 	/* ------------------------------------------------------------- Acesso ao PanelMain ------------------------------------------------------------ */
-	public Panel getPanelMain() {
+	public JPanel getPanelMain() {
 		if (panelMain == null) {
-			panelMain = new Panel();
+			panelMain = new JPanel();
 			panelMain.setBackground(new Color(255, 128, 255));
 			panelMain.setBounds(30, 135, 1220, 490);
 			panelMain.setLayout(null);
@@ -231,7 +230,7 @@ public class PanelCadastrarConsulta extends JPanel {
 	public Choice getChoicePaciente() {
 		if (choicePaciente == null) {
 			choicePaciente = new Choice();
-			choicePaciente.setBounds(416, 444, 28, 20);
+			choicePaciente.setBounds(268, 444, 176, 20);
 			choicePaciente.add("TESTE");
 		}
 		return choicePaciente;
@@ -256,17 +255,17 @@ public class PanelCadastrarConsulta extends JPanel {
 	}
 	
 	/* ------------------------------------------------------------- Acesso aos Buttons ------------------------------------------------------------ */
-	public Button getButtonCadastrar() {
+	public JButton getButtonCadastrar() {
 		if (buttonCadastrar == null) {
-			buttonCadastrar = new Button("Cadastrar");
+			buttonCadastrar = new JButton("Cadastrar");
 			buttonCadastrar.setBounds(1170, 631, 80, 35);
 		}
 		return buttonCadastrar;
 	}
 	
-	public Button getButtonLimpar() {
+	public JButton getButtonLimpar() {
 		if (buttonLimpar == null) {
-			buttonLimpar = new Button("Limpar");
+			buttonLimpar = new JButton("Limpar");
 			buttonLimpar.setBounds(30, 631, 80, 35);
 		}
 		return buttonLimpar;

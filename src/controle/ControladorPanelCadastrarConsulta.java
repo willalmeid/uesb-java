@@ -22,9 +22,10 @@ public class ControladorPanelCadastrarConsulta implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == panelCadastrarConsulta.getButtonCadastrar()) {
 			cadastrarConsulta();
-			System.out.println("TESTE");
+			System.out.println("Cadastrado!");
 		} else if(e.getSource() == panelCadastrarConsulta.getButtonLimpar()) {
 			limparPanel();
+			System.out.println("Limpo!");
 		}
 	}
 	
@@ -33,7 +34,11 @@ public class ControladorPanelCadastrarConsulta implements ActionListener {
 	}
 	
 	public void limparPanel() {
-		
+		panelCadastrarConsulta.getTextFieldData().setText("");
+		panelCadastrarConsulta.getTextFieldHora().setText("");
+		panelCadastrarConsulta.getTextFieldQueixaPaciente().setText("");
+		panelCadastrarConsulta.getTextFieldObservacoes().setText("");
+		panelCadastrarConsulta.getTextFieldMaterial().setText("");
 	}
 
 }
