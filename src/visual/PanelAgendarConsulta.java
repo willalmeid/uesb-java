@@ -28,7 +28,7 @@ public class PanelAgendarConsulta extends JPanel{
 	private JButton buttonLimpar;
 	
 	public PanelAgendarConsulta() {
-		setSize(1280, 768);
+		setSize(1280, 750);
 		setBackground(new Color(128, 255, 128));
 		setLayout(null);
 		add(getLabelTitlePanel());
@@ -42,7 +42,7 @@ public class PanelAgendarConsulta extends JPanel{
 			panelPrincipal = new JPanel();
 			panelPrincipal.setBackground(new Color(0, 255, 0));
 			panelPrincipal.setLocation(80, 125);
-			panelPrincipal.setSize(1120, 517);
+			panelPrincipal.setSize(1120, 432);
 			panelPrincipal.setLayout(null);
 			panelPrincipal.add(getLabelData());
 			panelPrincipal.add(getLabelHora());
@@ -70,7 +70,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JLabel getLabelData() {
 		if(labelData == null) {
 			labelData = new JLabel();
-			labelData.setBounds(477, 459, 27, 14);
+			labelData.setBounds(460, 285, 27, 14);
 			labelData.setText("Data:");
 		}
 		return labelData;
@@ -79,7 +79,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JLabel getLabelHora() {
 		if(labelHora == null) {
 			labelHora = new JLabel();
-			labelHora.setBounds(568, 458, 48, 17);
+			labelHora.setBounds(551, 284, 48, 17);
 			labelHora.setText("Hora:");
 		}
 		return labelHora;
@@ -88,7 +88,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JLabel getLabelPaciente() {
 		if(labelPaciente == null) {
 			labelPaciente = new JLabel();
-			labelPaciente.setBounds(659, 459, 45, 14);
+			labelPaciente.setBounds(642, 285, 45, 14);
 			labelPaciente.setText("Paciente:");
 		}
 		return labelPaciente;
@@ -97,7 +97,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JLabel getLabelMedico() {
 		if(labelMedico == null) {
 			labelMedico = new JLabel();
-			labelMedico.setBounds(750, 459, 37, 14);
+			labelMedico.setBounds(733, 285, 37, 14);
 			labelMedico.setText("Medico:");
 		}
 		return labelMedico;
@@ -106,7 +106,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JTextField getTextFieldData() {
 		if(textFieldData == null) {
 			textFieldData = new JTextField();
-			textFieldData.setBounds(477, 486, 86, 20);
+			textFieldData.setBounds(460, 312, 86, 20);
 			textFieldData.setColumns(10);
 		}
 		return textFieldData;
@@ -115,7 +115,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JTextField getTextFieldHora() {
 		if(textFieldHora == null) {
 			textFieldHora = new JTextField();
-			textFieldHora.setBounds(568, 486, 86, 20);
+			textFieldHora.setBounds(551, 312, 86, 20);
 			textFieldHora.setColumns(10);
 		}
 		return textFieldHora;
@@ -124,7 +124,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JTextField getTextFieldPaciente() {
 		if(textFieldPaciente == null) {
 			textFieldPaciente = new JTextField();
-			textFieldPaciente.setBounds(659, 486, 86, 20);
+			textFieldPaciente.setBounds(642, 312, 86, 20);
 			textFieldPaciente.setColumns(10);
 		}
 		return textFieldPaciente;
@@ -133,7 +133,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JTextField getTextFieldMedico() {
 		if(textFieldMedico == null) {
 			textFieldMedico = new JTextField();
-			textFieldMedico.setBounds(750, 486, 86, 20);
+			textFieldMedico.setBounds(733, 312, 86, 20);
 			textFieldMedico.setColumns(10);
 		}
 		return textFieldMedico;
@@ -143,7 +143,7 @@ public class PanelAgendarConsulta extends JPanel{
 		if(buttonAgendar == null) {
 			buttonAgendar = new JButton();
 			buttonAgendar.setText("Agendar");
-			buttonAgendar.setBounds(1092, 705, 108, 32);
+			buttonAgendar.setBounds(1070, 608, 108, 32);
 		}
 		return buttonAgendar;
 	}
@@ -152,7 +152,7 @@ public class PanelAgendarConsulta extends JPanel{
 		if(buttonLimpar == null) {
 			buttonLimpar = new JButton();
 			buttonLimpar.setText("Limpar");
-			buttonLimpar.setBounds(80, 705, 108, 32);
+			buttonLimpar.setBounds(80, 608, 108, 32);
 		}
 		return buttonLimpar;
 	}
