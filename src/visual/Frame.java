@@ -18,12 +18,12 @@ public class Frame extends JFrame {
 	private JMenuItem menuItemCadastrarConsulta;
 	private JMenuItem menuItemCadastrarMaterial;
 
-	private JMenuItem menuItemAgendamentoDeConsulta;
-	private JMenuItem menuItemAgendamentoDeExame;
-	private JMenuItem menuItemVisualizacaoDeAgenda;
-	private JMenuItem menuItemPesquisaDeHorarios;
+	private JMenuItem menuItemAgendarConsulta;
+	private JMenuItem menuItemAgendarExame;
+	private JMenuItem menuItemVisualizarAgenda;
+	private JMenuItem menuItemPesquisarHorarios;
 	/* Verificar se os dois são junto ou não */
-	private JMenuItem menuItemCancelamentoEReagendamento;
+	private JMenuItem menuItemCancelarEReagendar;
 
 	private JMenuItem menuItemRelatoriosDeConsulta;
 	private JMenuItem menuItemRelatoriosDeExames;
@@ -66,11 +66,11 @@ public class Frame extends JFrame {
 		if(menuAgendamento == null) {
 			menuAgendamento = new JMenu();
 			menuAgendamento.setText("Agendamento");
-			menuAgendamento.add(getMenuItemAgendamentoDeConsulta());
-			menuAgendamento.add(getMenuItemAgendamentoDeExame());
-			menuAgendamento.add(getMenuItemVisualizacaoDeAgenda());
-			menuAgendamento.add(getMenuItemPesquisaDeHorarios());
-			menuAgendamento.add(getMenuItemCancelamentoEReagendamento());
+			menuAgendamento.add(getMenuItemAgendarConsulta());
+			menuAgendamento.add(getMenuItemAgendarExame());
+			menuAgendamento.add(getMenuItemVisualizarAgenda());
+			menuAgendamento.add(getMenuItemPesquisarHorarios());
+			menuAgendamento.add(getMenuItemCancelarEReagendar());
 		}
 		return menuAgendamento;
 	}
@@ -127,44 +127,44 @@ public class Frame extends JFrame {
 		return menuItemCadastrarMaterial;
 	}
 
-	public JMenuItem getMenuItemAgendamentoDeConsulta() {
-	    if (menuItemAgendamentoDeConsulta == null) {
-	        menuItemAgendamentoDeConsulta = new JMenuItem();
-	        menuItemAgendamentoDeConsulta.setText("Consulta");
+	public JMenuItem getMenuItemAgendarConsulta() {
+	    if (menuItemAgendarConsulta == null) {
+	        menuItemAgendarConsulta = new JMenuItem();
+	        menuItemAgendarConsulta.setText("Consulta");
 	    }
-	    return menuItemAgendamentoDeConsulta;
+	    return menuItemAgendarConsulta;
 	}
 
-	public JMenuItem getMenuItemAgendamentoDeExame() {
-	    if (menuItemAgendamentoDeExame == null) {
-	        menuItemAgendamentoDeExame = new JMenuItem();
-	        menuItemAgendamentoDeExame.setText("Exame");
+	public JMenuItem getMenuItemAgendarExame() {
+	    if (menuItemAgendarExame == null) {
+	        menuItemAgendarExame = new JMenuItem();
+	        menuItemAgendarExame.setText("Exame");
 	    }
-	    return menuItemAgendamentoDeExame;
+	    return menuItemAgendarExame;
 	}
 
-	public JMenuItem getMenuItemVisualizacaoDeAgenda() {
-	    if (menuItemVisualizacaoDeAgenda == null) {
-	        menuItemVisualizacaoDeAgenda = new JMenuItem();
-	        menuItemVisualizacaoDeAgenda.setText("Visualização de Agenda");
+	public JMenuItem getMenuItemVisualizarAgenda() {
+	    if (menuItemVisualizarAgenda == null) {
+	        menuItemVisualizarAgenda = new JMenuItem();
+	        menuItemVisualizarAgenda.setText("Visualização de Agenda");
 	    }
-	    return menuItemVisualizacaoDeAgenda;
+	    return menuItemVisualizarAgenda;
 	}
 
-	public JMenuItem getMenuItemPesquisaDeHorarios() {
-	    if (menuItemPesquisaDeHorarios == null) {
-	        menuItemPesquisaDeHorarios = new JMenuItem();
-	        menuItemPesquisaDeHorarios.setText("Pesquisa de Horários");
+	public JMenuItem getMenuItemPesquisarHorarios() {
+	    if (menuItemPesquisarHorarios == null) {
+	        menuItemPesquisarHorarios = new JMenuItem();
+	        menuItemPesquisarHorarios.setText("Pesquisa de Horários");
 	    }
-	    return menuItemPesquisaDeHorarios;
+	    return menuItemPesquisarHorarios;
 	}
 
-	public JMenuItem getMenuItemCancelamentoEReagendamento() {
-	    if (menuItemCancelamentoEReagendamento == null) {
-	        menuItemCancelamentoEReagendamento = new JMenuItem();
-	        menuItemCancelamentoEReagendamento.setText("Cancelamento e Reagendamento");
+	public JMenuItem getMenuItemCancelarEReagendar() {
+	    if (menuItemCancelarEReagendar == null) {
+	        menuItemCancelarEReagendar = new JMenuItem();
+	        menuItemCancelarEReagendar.setText("Cancelamento e Reagendamento");
 	    }
-	    return menuItemCancelamentoEReagendamento;
+	    return menuItemCancelarEReagendar;
 	}
 
 	public JMenuItem getMenuItemRelatoriosDeConsulta() {
