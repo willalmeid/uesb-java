@@ -40,7 +40,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JPanel getPanelPrincipal() {
 		if(panelPrincipal == null) {
 			panelPrincipal = new JPanel();
-			panelPrincipal.setBackground(new Color(128, 255, 128));
+			panelPrincipal.setBackground(new Color(0, 255, 0));
 			panelPrincipal.setLocation(80, 125);
 			panelPrincipal.setSize(1120, 517);
 			panelPrincipal.setLayout(null);
