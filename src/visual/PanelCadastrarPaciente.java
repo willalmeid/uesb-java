@@ -132,7 +132,7 @@ public class PanelCadastrarPaciente extends JPanel{
 			labelTitlePanel = new JLabel();
 			labelTitlePanel.setFont(new Font("Tahoma", Font.PLAIN, 36));
 			labelTitlePanel.setText("Cadastro de Paciente");
-			labelTitlePanel.setBounds(470, 15, 340, 60);
+			labelTitlePanel.setBounds(470, 15, 336, 44);
 		}
 		return labelTitlePanel;
 	}
