@@ -9,6 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.border.LineBorder;
 
 public class PanelCadastrarPaciente extends JPanel{
 
@@ -75,6 +76,7 @@ public class PanelCadastrarPaciente extends JPanel{
 	public JPanel getPanelPaciente() {
 		if (panelPaciente == null) {
 			panelPaciente = new JPanel();
+			panelPaciente.setBorder(new LineBorder(null));
 			panelPaciente.setBackground(new Color(128, 255, 128));
 			panelPaciente.setBounds(140, 115, 1000, 250);
 			panelPaciente.setLayout(null);
@@ -103,6 +105,7 @@ public class PanelCadastrarPaciente extends JPanel{
 	public JPanel getPanelEndereco() {
 		if (panelEndereco == null) {
 			panelEndereco = new JPanel();
+			panelEndereco.setBorder(new LineBorder(null));
 			panelEndereco.setBackground(new Color(128, 255, 128));
 			panelEndereco.setBounds(140, 435, 1000, 140);
 			panelEndereco.setLayout(null);
