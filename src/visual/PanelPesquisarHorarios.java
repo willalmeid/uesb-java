@@ -12,7 +12,7 @@ public class PanelPesquisarHorarios extends JPanel {
 	private JPanel panelPrincipal;
 	
 	public PanelPesquisarHorarios() {
-		setBackground(new Color(128, 64, 64)); // Apenas um teste
+		setBackground(new Color(128, 64, 64));
 		setSize(1280, 750);
 		setLayout(null);
 		add(getLabelTitlePanel());

@@ -31,7 +31,6 @@ public class ControladorPanelCadastrarMaterial implements ActionListener{
 
 	private void cadastrarMaterial() {
 		
-		
 	}
 
 	private void limparPanel() {

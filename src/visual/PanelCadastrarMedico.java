@@ -11,8 +11,7 @@ import javax.swing.JTextField;
 public class PanelCadastrarMedico extends JPanel{
 	
 	private JLabel labelTitlePanel;
-	
-	private JPanel panelMain;
+	private JPanel panelPrincipal;
 	
 	private JLabel labelNome;
 	private JLabel labelEspecialidade;
@@ -32,7 +31,7 @@ public class PanelCadastrarMedico extends JPanel{
 	private JButton buttonLimpar;
 
 	public PanelCadastrarMedico() {
-		setBackground(new Color(255, 0, 0)); // Apenas um teste
+		setBackground(new Color(255, 0, 0));
 		setSize(1280, 750);
 		setLayout(null);
 		
@@ -42,31 +41,31 @@ public class PanelCadastrarMedico extends JPanel{
 		add(getButtonLimpar());
 	}
 	
-	/* ------------------------------------------------------------- Acesso ao PanelMain ------------------------------------------------------------ */
+	/* ------------------------------------------------------------- Panel Principal ------------------------------------------------------------- */
 	public JPanel getPanelMain() {
-		if(panelMain == null) {
-			panelMain = new JPanel();
-			panelMain.setBackground(new Color(255, 128, 128));
-			panelMain.setBounds(30, 135, 1220, 490);
-			panelMain.setLayout(null);
-			panelMain.add(getLabelNome());
-			panelMain.add(getLabelEspecialidade());
-			panelMain.add(getLabelCrm());
-			panelMain.add(getLabelContato());
-			panelMain.add(getLabelValorConsultaParticular());
-			panelMain.add(getLabelHistoricoDeAtendimento());
+		if(panelPrincipal == null) {
+			panelPrincipal = new JPanel();
+			panelPrincipal.setBackground(new Color(255, 128, 128));
+			panelPrincipal.setBounds(30, 135, 1220, 490);
+			panelPrincipal.setLayout(null);
+			panelPrincipal.add(getLabelNome());
+			panelPrincipal.add(getLabelEspecialidade());
+			panelPrincipal.add(getLabelCrm());
+			panelPrincipal.add(getLabelContato());
+			panelPrincipal.add(getLabelValorConsultaParticular());
+			panelPrincipal.add(getLabelHistoricoDeAtendimento());
 
-			panelMain.add(getTextFieldNome());
-			panelMain.add(getTextFieldEspecialidade());
-			panelMain.add(getTextFieldCrm());
-			panelMain.add(getTextFieldContato());
-			panelMain.add(getTextFieldValorConsultaParticular());
-			panelMain.add(getTextFieldHistoricoDeAtendimento());
+			panelPrincipal.add(getTextFieldNome());
+			panelPrincipal.add(getTextFieldEspecialidade());
+			panelPrincipal.add(getTextFieldCrm());
+			panelPrincipal.add(getTextFieldContato());
+			panelPrincipal.add(getTextFieldValorConsultaParticular());
+			panelPrincipal.add(getTextFieldHistoricoDeAtendimento());
 		}
-		return panelMain;
+		return panelPrincipal;
 	}
 	
-	/* ------------------------------------------------------------- Acesso aos Labels ------------------------------------------------------------ */
+	/* ------------------------------------------------------------------- Labels --------------------------------------------------------------- */
 	public JLabel getLabelTitlePanel() {
 		if(labelTitlePanel == null) {
 			labelTitlePanel = new JLabel();
@@ -131,7 +130,7 @@ public class PanelCadastrarMedico extends JPanel{
 		return labelHistoricoDeAtendimento;
 	}
 	
-	/* ------------------------------------------------------------- Acesso aos imputs ------------------------------------------------------------ */
+	/* ------------------------------------------------------------------ Imputs --------------------------------------------------------------- */
 	public JTextField getTextFieldNome() {
 		if (textFieldNome == null) {
 			textFieldNome = new JTextField();
@@ -186,7 +185,7 @@ public class PanelCadastrarMedico extends JPanel{
 		return textFieldHistoricoDeAtendimento;
 	}
 	
-	/* ------------------------------------------------------------- Acesso aos Buttons ------------------------------------------------------------ */
+	/* ---------------------------------------------------------------- Buttons ----------------------------------------------------------------- */
 	public JButton getButtonCadastrar() {
 		if (buttonCadastrar == null) {
 			buttonCadastrar = new JButton("Cadastrar");

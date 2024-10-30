@@ -19,14 +19,13 @@ public class ControladorPanelAgendarConsulta implements ActionListener {
 		panelAgendarConsulta.getButtonLimpar();
 	}
 
-	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == panelAgendarConsulta.getButtonAgendar()) {
 			cadastrarConsulta();
-			System.out.println("Cadastrado!");
+			
 		} else if(e.getSource() == panelAgendarConsulta.getButtonLimpar()) {
 			limparPanel();
-			System.out.println("Limpo!");
+			
 		}	
 	}
 	

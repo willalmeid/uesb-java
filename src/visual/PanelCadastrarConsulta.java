@@ -10,21 +10,18 @@ import java.awt.Font;
 
 public class PanelCadastrarConsulta extends JPanel {
 
+	private JPanel panelPrincipal;
 	private JLabel labelTitlePanel;
-	
-	private JPanel panelMain;
 	
 	private JLabel labelData;
 	private JLabel labelHora;
 	private JLabel labelQueixaPaciente;
 	private JLabel labelObservacoes;
 	private JLabel labelMaterial;
-	
 	private JLabel labelMedico;
 	private JLabel labelPaciente;
 	private JLabel labelTipoDeConsulta;
 	private JLabel labelConvenio;
-	
 	
 	private JTextField textFieldData;
 	private JTextField textFieldHora;
@@ -37,12 +34,11 @@ public class PanelCadastrarConsulta extends JPanel {
 	private Choice choiceTipoDeConsulta;
 	private Choice choiceConvenio;
 	
-	
 	private JButton buttonCadastrar;
 	private JButton buttonLimpar;
 	
 	public PanelCadastrarConsulta() {
-		setBackground(new Color(255, 0, 128)); // Apenas um teste
+		setBackground(new Color(255, 0, 128));
 		setSize(1280, 750);
 		setLayout(null);
 		add(getLabelTitlePanel());
@@ -51,37 +47,35 @@ public class PanelCadastrarConsulta extends JPanel {
 		add(getButtonLimpar());
 	}
 	
-	
-	/* ------------------------------------------------------------- Acesso ao PanelMain ------------------------------------------------------------ */
 	public JPanel getPanelMain() {
-		if (panelMain == null) {
-			panelMain = new JPanel();
-			panelMain.setBackground(new Color(255, 128, 255));
-			panelMain.setBounds(30, 135, 1220, 490);
-			panelMain.setLayout(null);
-			panelMain.add(getLabelData());
-			panelMain.add(getLabelHora());
-			panelMain.add(getLabelQueixaPaciente());
-			panelMain.add(getLabelObservacoes());
-			panelMain.add(getLabelMaterial());
-			panelMain.add(getLabelMedico());
-			panelMain.add(getLabelPaciente());
-			panelMain.add(getLabelTipoDeConsulta());
-			panelMain.add(getLabelConvenio());
-			panelMain.add(getChoiceMedico());
-			panelMain.add(getChoicePaciente());
-			panelMain.add(getChoiceTipoDeConsulta());
-			panelMain.add(getChoiceConvenio());
-			panelMain.add(getTextFieldData());
-			panelMain.add(getTextFieldHora());
-			panelMain.add(getTextFieldQueixaPaciente());
-			panelMain.add(getTextFieldObservacoes());
-			panelMain.add(getTextFieldMaterial());
+		if (panelPrincipal == null) {
+			panelPrincipal = new JPanel();
+			panelPrincipal.setBackground(new Color(255, 128, 255));
+			panelPrincipal.setBounds(30, 135, 1220, 490);
+			panelPrincipal.setLayout(null);
+			panelPrincipal.add(getLabelData());
+			panelPrincipal.add(getLabelHora());
+			panelPrincipal.add(getLabelQueixaPaciente());
+			panelPrincipal.add(getLabelObservacoes());
+			panelPrincipal.add(getLabelMaterial());
+			panelPrincipal.add(getLabelMedico());
+			panelPrincipal.add(getLabelPaciente());
+			panelPrincipal.add(getLabelTipoDeConsulta());
+			panelPrincipal.add(getLabelConvenio());
+			panelPrincipal.add(getChoiceMedico());
+			panelPrincipal.add(getChoicePaciente());
+			panelPrincipal.add(getChoiceTipoDeConsulta());
+			panelPrincipal.add(getChoiceConvenio());
+			panelPrincipal.add(getTextFieldData());
+			panelPrincipal.add(getTextFieldHora());
+			panelPrincipal.add(getTextFieldQueixaPaciente());
+			panelPrincipal.add(getTextFieldObservacoes());
+			panelPrincipal.add(getTextFieldMaterial());
 		}
-		return panelMain;
+		return panelPrincipal;
 	}
 	
-	/* ------------------------------------------------------------- Acesso aos Labels ------------------------------------------------------------ */
+	/* ----------------------------------------------------------------- Labels -------------------------------------------------------------- */
 	public JLabel getLabelTitlePanel() {
 		if(labelTitlePanel == null) {
 			labelTitlePanel = new JLabel();
@@ -173,7 +167,7 @@ public class PanelCadastrarConsulta extends JPanel {
 		return labelConvenio;
 	}
 	
-	/* ------------------------------------------------------------- Acesso aos imputs ------------------------------------------------------------ */
+	/* ----------------------------------------------------------------- Imputs -------------------------------------------------------------- */
 	public JTextField getTextFieldData() {
 		if (textFieldData == null) {
 			textFieldData = new JTextField();
@@ -255,7 +249,7 @@ public class PanelCadastrarConsulta extends JPanel {
 		return choiceConvenio;
 	}
 	
-	/* ------------------------------------------------------------- Acesso aos Buttons ------------------------------------------------------------ */
+	/* ---------------------------------------------------------------- Buttons -------------------------------------------------------------- */
 	public JButton getButtonCadastrar() {
 		if (buttonCadastrar == null) {
 			buttonCadastrar = new JButton("Cadastrar");

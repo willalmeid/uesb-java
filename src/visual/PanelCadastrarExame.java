@@ -12,7 +12,6 @@ import java.awt.Font;
 public class PanelCadastrarExame extends JPanel {
 	
 	private JLabel labelTitlePanel;
-	
 	private JPanel panelMain;
 	
 	private JLabel labelNomeExame;
@@ -34,7 +33,7 @@ public class PanelCadastrarExame extends JPanel {
 	private JButton buttonLimpar;
 
 	public PanelCadastrarExame() {
-		setBackground(new Color(0, 128, 255)); // Apenas um teste
+		setBackground(new Color(0, 128, 255));
 		setSize(1280, 750);
 		add(getLabelTitlePanel());
 		add(getPanelMain());
@@ -68,7 +67,7 @@ public class PanelCadastrarExame extends JPanel {
 		return panelMain;
 	}
 	
-	/* ------------------------------------------------------------- Acesso aos Labels ------------------------------------------------------------ */
+	/* -------------------------------------------------------------- Labels ----------------------------------------------------------- */
 	public JLabel getLabelTitlePanel() {
 		if(labelTitlePanel == null) {
 			labelTitlePanel = new JLabel();
@@ -133,7 +132,7 @@ public class PanelCadastrarExame extends JPanel {
 		return labelTipoExame;
 	}
 
-	/* ------------------------------------------------------------- Acesso aos imputs ------------------------------------------------------------ */
+	/* --------------------------------------------------------------- Imputs ----------------------------------------------------------- */
 	public JTextField getTextFieldNomeExame() {
 		if(textFieldNomeExame == null) {
 			textFieldNomeExame = new JTextField();
@@ -184,7 +183,7 @@ public class PanelCadastrarExame extends JPanel {
 		return comboBoxTipoExame;
 	}
 	
-	/* ------------------------------------------------------------- Acesso aos Buttons ------------------------------------------------------------ */
+	/* ------------------------------------------------------------- Buttons ------------------------------------------------------------ */
 	public JButton getButtonCadastrar() {
 		if (buttonCadastrar == null) {
 			buttonCadastrar = new JButton("Cadastrar");

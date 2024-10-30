@@ -58,6 +58,7 @@ public class PanelAgendarExame extends JPanel{
 		return panelPrincipal;
 	}
 
+	/* ------------------------------------------------------------ Label --------------------------------------------------------------- */
 	public JLabel getLabelTitlePanel() {
 		if(labelTitlePanel == null) {
 			labelTitlePanel = new JLabel();
@@ -104,6 +105,7 @@ public class PanelAgendarExame extends JPanel{
 		return labelTipoExame;
 	}
 	
+	/* ------------------------------------------------------------- Inputs --------------------------------------------------------------- */
 	public JTextField getTextFieldData() {
 		if(textFieldData == null) {
 			textFieldData = new JTextField();
@@ -140,6 +142,7 @@ public class PanelAgendarExame extends JPanel{
 		return comboBoxTipoExame;
 	}
 	
+	/* ------------------------------------------------------------- Button ---------------------------------------------------------------- */
 	public JButton getButtonAgendar() {
 		if(buttonAgendar == null) {
 			buttonAgendar = new JButton();

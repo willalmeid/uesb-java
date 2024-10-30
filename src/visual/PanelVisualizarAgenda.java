@@ -12,7 +12,7 @@ public class PanelVisualizarAgenda extends JPanel {
 	private JPanel panelPrincipal;
 	
 	public PanelVisualizarAgenda() {
-		setBackground(new Color(255, 128, 64)); // Apenas um teste
+		setBackground(new Color(255, 128, 64));
 		setSize(1280, 750);
 		setLayout(null);
 		add(getLabelTitlePanel());

@@ -22,10 +22,10 @@ public class ControladorPanelCadastrarConsulta implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == panelCadastrarConsulta.getButtonCadastrar()) {
 			cadastrarConsulta();
-			System.out.println("Cadastrado!");
+
 		} else if(e.getSource() == panelCadastrarConsulta.getButtonLimpar()) {
 			limparPanel();
-			System.out.println("Limpo!");
+
 		}
 	}
 	

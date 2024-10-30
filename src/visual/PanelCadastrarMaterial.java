@@ -9,54 +9,55 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class PanelCadastrarMaterial extends JPanel {
-	private JPanel panelMain;
-	
+	private JPanel panelPrincipal;
 	private JLabel labelTitlePanel;
+	
 	private JLabel labelNome;
 	private JLabel labelQtdEmEstoque;
 	private JLabel labelQtdMinimaEmEstoque;
 	private JLabel labelFornecedor;
 	private JLabel labelPreco;
 	
-	private JButton buttonLimpar;
-	private JButton  buttonCadastrar;
 	private JTextField textFieldNome;
 	private JTextField textFieldQtdEmEstoque;
 	private JTextField textFieldQtdMinimaEmEstoque;
 	private JTextField textFieldFornecedor;
 	private JTextField textFieldPreco;
 	
+	private JButton buttonLimpar;
+	private JButton  buttonCadastrar;
+
 	public PanelCadastrarMaterial() {
-		setBackground(new Color(0, 128, 0)); // Apenas um teste
+		setBackground(new Color(0, 128, 0));
 		setLayout(null);
 		add(getLabelTitlePanel());
 		add(getPanelMain());
 		add(getButtonLimpar());
 		add(getButtonCadastrar());
 	}
-	/* ------------------------------------------------------------- Acesso ao PanelMain ------------------------------------------------------------ */
+	
+	/* ---------------------------------------------------------------- Panel ------------------------------------------------------------ */
 	public JPanel getPanelMain() {
-		if(panelMain == null) {
-			panelMain = new JPanel();
-			panelMain.setBackground(new Color(128, 255, 128));
-			panelMain.setBounds(30, 135, 1220, 490);
-			panelMain.setLayout(null);
-			panelMain.add(getLabelNome());
-			panelMain.add(getLabelQtdEmEstoque());
-			panelMain.add(getLabelQtdMinimaEmEstoque());
-			panelMain.add(getLabelFornecedor());
-			panelMain.add(getLabelPreco());
-			panelMain.add(getTextFieldNome());
-			panelMain.add(getTextFieldQtdEmEstoque());
-			panelMain.add(getTextFieldQtdMinimaEmEstoque());
-			panelMain.add(getTextFieldFornecedor());
-			panelMain.add(getTextFieldPreco());
+		if(panelPrincipal == null) {
+			panelPrincipal = new JPanel();
+			panelPrincipal.setBackground(new Color(128, 255, 128));
+			panelPrincipal.setBounds(30, 135, 1220, 490);
+			panelPrincipal.setLayout(null);
+			panelPrincipal.add(getLabelNome());
+			panelPrincipal.add(getLabelQtdEmEstoque());
+			panelPrincipal.add(getLabelQtdMinimaEmEstoque());
+			panelPrincipal.add(getLabelFornecedor());
+			panelPrincipal.add(getLabelPreco());
+			panelPrincipal.add(getTextFieldNome());
+			panelPrincipal.add(getTextFieldQtdEmEstoque());
+			panelPrincipal.add(getTextFieldQtdMinimaEmEstoque());
+			panelPrincipal.add(getTextFieldFornecedor());
+			panelPrincipal.add(getTextFieldPreco());
 		}
-		return panelMain;
+		return panelPrincipal;
 	}
 	
-	/* ------------------------------------------------------------- Acesso aos Labels ------------------------------------------------------------ */
-	
+	/* ------------------------------------------------------------- Labels -------------------------------------------------------------- */
 	public JLabel getLabelTitlePanel() {
 		if(labelTitlePanel == null) {
 			labelTitlePanel = new JLabel();
@@ -112,8 +113,7 @@ public class PanelCadastrarMaterial extends JPanel {
 		return labelPreco;
 	}
 	
-	/* ------------------------------------------------------------- Acesso aos Inputs ------------------------------------------------------------ */
-	
+	/* ------------------------------------------------------------- Inputs ------------------------------------------------------------ */
 	public JTextField getTextFieldNome() {
 		if (textFieldNome == null) {
 			textFieldNome = new JTextField();
@@ -155,7 +155,7 @@ public class PanelCadastrarMaterial extends JPanel {
 		return textFieldPreco;
 	}
 	
-	/* ------------------------------------------------------------- Acesso aos Buttons ------------------------------------------------------------ */
+	/* ------------------------------------------------------------- Buttons ------------------------------------------------------------ */
 	
 	public JButton getButtonCadastrar() {
 		if (buttonCadastrar == null) {

@@ -32,8 +32,10 @@ public class ControladorFrame implements ActionListener{
 	PanelAgendarExame panelAgendarExame;
 	PanelVisualizarAgenda panelVisualizarAgenda;
 	PanelPesquisarHorarios panelPesquisarHorarios;
+	
 	// Verificar Depois
 //	PanelAgendarConsulta panelCacelarEReagendar;
+	
 	PanelRelatoriosDeConsulta panelRelatoriosDeConsulta;
 	PanelRelatoriosDeExames panelRelatoriosDeExames;
 	PanelRelatoriosFinanceiros panelRelatoriosFinanceiros;
@@ -50,7 +52,9 @@ public class ControladorFrame implements ActionListener{
 	ControladorPanelAgendarExame controladorPanelAgendarExame;
 	ControladorPanelVisualizarAgenda controladorPanelVisualizarAgenda;
 	ControladorPanelPesquisarHorarios controladorPanelPesquisarHorarios;
+	
 //	ControladorPanelCancelarEReagendar controladorPanelCancelarEReagendar;
+	
 	ControladorPanelRelatoriosDeConsulta controladorPanelRelatoriosDeConsulta;
 	ControladorPanelRelatoriosDeExames controladorPanelRelatoriosDeExames;
 	ControladorPanelRelatoriosFinanceiros controladorPanelRelatoriosFinanceiros;

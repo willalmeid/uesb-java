@@ -37,7 +37,7 @@ public class PanelCadastrarPaciente extends JPanel{
 	private JComboBox<String> comboBoxCovenio;
 	private JComboBox<String> comboBoxTipoSanguineo;
 	
-	
+	// Endereço
 	private JLabel labelCEP;
 	private JLabel labelEstado;
 	private JLabel labelCidade;
@@ -58,7 +58,7 @@ public class PanelCadastrarPaciente extends JPanel{
 	private JButton buttonLimpar;
 	
 	public PanelCadastrarPaciente() {
-		setBackground(new Color(0, 255, 128)); // Apenas um teste
+		setBackground(new Color(0, 255, 128));
 		setSize(1280, 750);
 		setLayout(null);
 		add(getLabelTitlePanel());
@@ -104,7 +104,6 @@ public class PanelCadastrarPaciente extends JPanel{
 			panelEndereco.setBounds(30, 434, 1220, 186);
 			panelEndereco.setLayout(null);
 			
-			//------------------------- Adicionando os Labels ----------------------
 			panelEndereco.add(getLabelCEP());
 			panelEndereco.add(getLabelEstado());
 			panelEndereco.add(getLabelCidade());
@@ -113,7 +112,6 @@ public class PanelCadastrarPaciente extends JPanel{
 			panelEndereco.add(getLabelLogradouro());
 			panelEndereco.add(getLabelComplemento());
 
-			//------------------------- Adicionando os TextField -------------------
 			panelEndereco.add(getTextFieldCEP());
 			panelEndereco.add(getTextFieldEstado());
 			panelEndereco.add(getTextFieldCidade());

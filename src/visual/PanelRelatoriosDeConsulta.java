@@ -12,7 +12,7 @@ public class PanelRelatoriosDeConsulta extends JPanel {
 	private JPanel panelPrincipal;
 	
 	public PanelRelatoriosDeConsulta() {
-		setBackground(new Color(0, 0, 255)); // Apenas um teste
+		setBackground(new Color(0, 0, 255));
 		setSize(1280, 750);
 		setLayout(null);
 		add(getLabelTitlePanel());

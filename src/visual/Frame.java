@@ -22,7 +22,7 @@ public class Frame extends JFrame {
 	private JMenuItem menuItemAgendarExame;
 	private JMenuItem menuItemVisualizarAgenda;
 	private JMenuItem menuItemPesquisarHorarios;
-	/* Verificar se os dois são junto ou não */
+	
 	private JMenuItem menuItemCancelarEReagendar;
 
 	private JMenuItem menuItemRelatoriosDeConsulta;
@@ -32,10 +32,10 @@ public class Frame extends JFrame {
 
 	public Frame() {
 		super();
-		this.setVisible(true); // Tornar ele visível.
-		this.setSize(1280, 768); // Tamanho da Janela
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE); // Fechar quando apertar no x
-		this.setLocationRelativeTo(null); // Abrir ele no centro da tela
+		this.setVisible(true);
+		this.setSize(1280, 768);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setLocationRelativeTo(null);
 		this.setJMenuBar(getBarraMenu());
 	}
 
@@ -48,7 +48,8 @@ public class Frame extends JFrame {
 		}
 		return barraMenu;
 	}
-
+	
+	/* ------------------------------------------------------------ Menus --------------------------------------------------------------- */
 	public JMenu getMenuCadastro() {
 		if(menuCadastro == null) {
 			menuCadastro = new JMenu();
@@ -87,6 +88,7 @@ public class Frame extends JFrame {
 		return menuRelatorio;
 	}
 
+	/* -------------------------------------------------------- Menu itens -------------------------------------------------------------- */
 	public JMenuItem getMenuItemCadastrarPaciente() {
 		if(menuItemCadastrarPaciente == null) {
 			menuItemCadastrarPaciente = new JMenuItem();

@@ -11,7 +11,6 @@ import javax.swing.JTextField;
 public class PanelAgendarConsulta extends JPanel{
 
 	private JLabel labelTitlePanel;
-	
 	private JPanel panelPrincipal;
 	
 	private JLabel labelData;
@@ -57,6 +56,7 @@ public class PanelAgendarConsulta extends JPanel{
 		return panelPrincipal;
 	}
 	
+	/* ------------------------------------------------------------- Label ----------------------------------------------------------------- */
 	public JLabel getLabelTitlePanel() {
 		if(labelTitlePanel == null) {
 			labelTitlePanel = new JLabel();
@@ -103,6 +103,7 @@ public class PanelAgendarConsulta extends JPanel{
 		return labelMedico;
 	}
 
+	/* --------------------------------------------------------------- Inputs ------------------------------------------------------------ */
 	public JTextField getTextFieldData() {
 		if(textFieldData == null) {
 			textFieldData = new JTextField();
@@ -139,6 +140,7 @@ public class PanelAgendarConsulta extends JPanel{
 		return textFieldMedico;
 	}
 	
+	/* --------------------------------------------------------- Button ----------------------------------------------------------------- */
 	public JButton getButtonAgendar() {
 		if(buttonAgendar == null) {
 			buttonAgendar = new JButton();
