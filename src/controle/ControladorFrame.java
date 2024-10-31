@@ -88,54 +88,67 @@ public class ControladorFrame implements ActionListener{
 			panelCadastarConsulta = new PanelCadastrarConsulta();
 			controladorPanelCadastrarConsulta = new ControladorPanelCadastrarConsulta(panelCadastarConsulta);
 			frame.setContentPane(panelCadastarConsulta);
+			
 		} else if(e.getSource() == frame.getMenuItemCadastrarExame()) {
 			panelCadastrarExame = new PanelCadastrarExame();
 			controladorPanelCadastrarExame = new ControladorPanelCadastrarExame(panelCadastrarExame);
 			frame.setContentPane(panelCadastrarExame);
+			
 		} else if(e.getSource() == frame.getMenuItemCadastrarMedico()) {
 			panelCadastrarMedico = new PanelCadastrarMedico();
 			controladorPanelCadastrarMedico = new ControladorPanelCadastrarMedico(panelCadastrarMedico);
 			frame.setContentPane(panelCadastrarMedico);
+			
 		} else if(e.getSource() == frame.getMenuItemCadastrarMaterial()) {
 			panelCadastrarMaterial = new PanelCadastrarMaterial();
 			controladorPanelCadastrarMaterial = new ControladorPanelCadastrarMaterial(panelCadastrarMaterial);
 			frame.setContentPane(panelCadastrarMaterial);
+			
 		} else if(e.getSource() == frame.getMenuItemCadastrarPaciente()) {
 			panelCadastrarPaciente = new PanelCadastrarPaciente();
 			controladorPanelCadastrarPaciente = new ControladorPanelCadastrarPaciente(panelCadastrarPaciente);
 			frame.setContentPane(panelCadastrarPaciente);
+			
 		} else if(e.getSource() == frame.getMenuItemAgendarConsulta()) {
 			panelAgendarConsulta = new PanelAgendarConsulta();
 			controladorPanelAgendarConsulta = new ControladorPanelAgendarConsulta(panelAgendarConsulta);
 			frame.setContentPane(panelAgendarConsulta);
+			
 		} else if (e.getSource() == frame.getMenuItemAgendarExame()) {
 		    panelAgendarExame = new PanelAgendarExame();
 		    controladorPanelAgendarExame = new ControladorPanelAgendarExame(panelAgendarExame);
 		    frame.setContentPane(panelAgendarExame);
+		    
 		} else if (e.getSource() == frame.getMenuItemVisualizarAgenda()) {
 		    panelVisualizarAgenda = new PanelVisualizarAgenda();
 		    controladorPanelVisualizarAgenda = new ControladorPanelVisualizarAgenda(panelVisualizarAgenda);
 		    frame.setContentPane(panelVisualizarAgenda);
+		    
 		} else if (e.getSource() == frame.getMenuItemPesquisarHorarios()) {
 		    panelPesquisarHorarios = new PanelPesquisarHorarios();
 		    controladorPanelPesquisarHorarios = new ControladorPanelPesquisarHorarios(panelPesquisarHorarios);
 		    frame.setContentPane(panelPesquisarHorarios);
+		    
 		} else if (e.getSource() == frame.getMenuItemRelatoriosDeConsulta()) {
 		    panelRelatoriosDeConsulta = new PanelRelatoriosDeConsulta();
 		    controladorPanelRelatoriosDeConsulta = new ControladorPanelRelatoriosDeConsulta(panelRelatoriosDeConsulta);
 		    frame.setContentPane(panelRelatoriosDeConsulta);
+		    
 		} else if (e.getSource() == frame.getMenuItemRelatoriosDeExames()) {
 		    panelRelatoriosDeExames = new PanelRelatoriosDeExames();
 		    controladorPanelRelatoriosDeExames = new ControladorPanelRelatoriosDeExames(panelRelatoriosDeExames);
 		    frame.setContentPane(panelRelatoriosDeExames);
+		    
 		} else if (e.getSource() == frame.getMenuItemRelatoriosFinanceiros()) {
 		    panelRelatoriosFinanceiros = new PanelRelatoriosFinanceiros();
 		    controladorPanelRelatoriosFinanceiros = new ControladorPanelRelatoriosFinanceiros(panelRelatoriosFinanceiros);
 		    frame.setContentPane(panelRelatoriosFinanceiros);
+		    
 		} else if (e.getSource() == frame.getMenuItemRelatoriosDeMateriais()) {
 		    panelRelatoriosDeMateriais = new PanelRelatoriosDeMateriais();
 		    controladorPanelRelatoriosDeMateriais = new ControladorPanelRelatoriosDeMateriais(panelRelatoriosDeMateriais);
 		    frame.setContentPane(panelRelatoriosDeMateriais);
+		    
 		}
 		
 		renderizarFrame();
