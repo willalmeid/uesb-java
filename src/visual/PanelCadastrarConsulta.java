@@ -3,6 +3,7 @@ package visual;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import java.awt.Choice;
 import java.awt.Color;
@@ -25,12 +26,13 @@ public class PanelCadastrarConsulta extends JPanel {
 	
 	private JTextField textFieldData;
 	private JTextField textFieldHora;
-	private JTextField textFieldQueixaPaciente;
-	private JTextField textFieldObservacoes;
-	private JTextField textFieldMaterial;
+	private JTextField textFieldPaciente;
 	
+	private JTextArea textAreaObservacoes;
+	private JTextArea textAreaMaterial;
+	private JTextArea textAreaQueixaPaciente;
+
 	private Choice choiceMedico;
-	private Choice choicePaciente;
 	private Choice choiceTipoDeConsulta;
 	private Choice choiceConvenio;
 	
@@ -51,7 +53,7 @@ public class PanelCadastrarConsulta extends JPanel {
 		if (panelPrincipal == null) {
 			panelPrincipal = new JPanel();
 			panelPrincipal.setBackground(new Color(255, 128, 255));
-			panelPrincipal.setBounds(30, 135, 1220, 490);
+			panelPrincipal.setBounds(140, 130, 1000, 475);
 			panelPrincipal.setLayout(null);
 			panelPrincipal.add(getLabelData());
 			panelPrincipal.add(getLabelHora());
@@ -62,15 +64,18 @@ public class PanelCadastrarConsulta extends JPanel {
 			panelPrincipal.add(getLabelPaciente());
 			panelPrincipal.add(getLabelTipoDeConsulta());
 			panelPrincipal.add(getLabelConvenio());
+			
+			panelPrincipal.add(getTextFieldPaciente());
+			panelPrincipal.add(getTextFieldHora());
+			panelPrincipal.add(getTextFieldData());
+			
+			panelPrincipal.add(getTextAreaQueixaPaciente());
+			panelPrincipal.add(getTextAreaObservacoes());
+			panelPrincipal.add(getTextAreaMaterial());
+			
 			panelPrincipal.add(getChoiceMedico());
-			panelPrincipal.add(getChoicePaciente());
 			panelPrincipal.add(getChoiceTipoDeConsulta());
 			panelPrincipal.add(getChoiceConvenio());
-			panelPrincipal.add(getTextFieldData());
-			panelPrincipal.add(getTextFieldHora());
-			panelPrincipal.add(getTextFieldQueixaPaciente());
-			panelPrincipal.add(getTextFieldObservacoes());
-			panelPrincipal.add(getTextFieldMaterial());
 		}
 		return panelPrincipal;
 	}
@@ -80,8 +85,8 @@ public class PanelCadastrarConsulta extends JPanel {
 		if(labelTitlePanel == null) {
 			labelTitlePanel = new JLabel();
 			labelTitlePanel.setFont(new Font("Tahoma", Font.PLAIN, 36));
-			labelTitlePanel.setText("Tela de Cadastro de Consultas");
-			labelTitlePanel.setBounds(397, 30, 485, 76);
+			labelTitlePanel.setText("Cadastro de Consultas");
+			labelTitlePanel.setBounds(462, 30, 355, 44);
 		}
 		return labelTitlePanel;
 	}
@@ -89,7 +94,8 @@ public class PanelCadastrarConsulta extends JPanel {
 	public JLabel getLabelData() {
 		if(labelData == null) {
 			labelData = new JLabel();
-			labelData.setBounds(406, 368, 39, 20);
+			labelData.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			labelData.setBounds(625, 15, 150, 20);
 			labelData.setText("Data");
 		}
 		return labelData;
@@ -98,7 +104,8 @@ public class PanelCadastrarConsulta extends JPanel {
 	public JLabel getLabelHora() {
 		if(labelHora == null) {
 			labelHora = new JLabel();
-			labelHora.setBounds(494, 368, 39, 20);
+			labelHora.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			labelHora.setBounds(800, 15, 100, 20);
 			labelHora.setText("Hora");
 		}
 		return labelHora;
@@ -107,7 +114,8 @@ public class PanelCadastrarConsulta extends JPanel {
 	public JLabel getLabelQueixaPaciente() {
 		if(labelQueixaPaciente == null) {
 			labelQueixaPaciente = new JLabel();
-			labelQueixaPaciente.setBounds(579, 368, 39, 20);
+			labelQueixaPaciente.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			labelQueixaPaciente.setBounds(100, 130, 800, 20);
 			labelQueixaPaciente.setText("QueixaPaciente");
 		}
 		return labelQueixaPaciente;
@@ -116,7 +124,8 @@ public class PanelCadastrarConsulta extends JPanel {
 	public JLabel getLabelObservacoes() {
 		if(labelObservacoes == null) {
 			labelObservacoes = new JLabel();
-			labelObservacoes.setBounds(674, 368, 39, 20);
+			labelObservacoes.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			labelObservacoes.setBounds(100, 240, 800, 20);
 			labelObservacoes.setText("Observações");
 		}
 		return labelObservacoes;
@@ -125,7 +134,8 @@ public class PanelCadastrarConsulta extends JPanel {
 	public JLabel getLabelMaterial() {
 		if(labelMaterial == null) {
 			labelMaterial = new JLabel();
-			labelMaterial.setBounds(776, 368, 39, 20);
+			labelMaterial.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			labelMaterial.setBounds(100, 350, 800, 20);
 			labelMaterial.setText("Material");
 		}
 		return labelMaterial;
@@ -134,7 +144,8 @@ public class PanelCadastrarConsulta extends JPanel {
 	public JLabel getLabelMedico() {
 		if(labelMedico == null) {
 			labelMedico = new JLabel();
-			labelMedico.setBounds(503, 419, 39, 20);
+			labelMedico.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			labelMedico.setBounds(100, 75, 220, 20);
 			labelMedico.setText("Médico");
 		}
 		return labelMedico;
@@ -143,7 +154,8 @@ public class PanelCadastrarConsulta extends JPanel {
 	public JLabel getLabelPaciente() {
 		if(labelPaciente == null) {
 			labelPaciente = new JLabel();
-			labelPaciente.setBounds(413, 421, 48, 17);
+			labelPaciente.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			labelPaciente.setBounds(100, 15, 220, 20);
 			labelPaciente.setText("Paciente");
 		}
 		return labelPaciente;
@@ -152,7 +164,8 @@ public class PanelCadastrarConsulta extends JPanel {
 	public JLabel getLabelTipoDeConsulta() {
 		if(labelTipoDeConsulta == null) {
 			labelTipoDeConsulta = new JLabel();
-			labelTipoDeConsulta.setBounds(598, 421, 88, 17);
+			labelTipoDeConsulta.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			labelTipoDeConsulta.setBounds(625, 75, 150, 17);
 			labelTipoDeConsulta.setText("Tipo De Consulta");
 		}
 		return labelTipoDeConsulta;
@@ -161,7 +174,8 @@ public class PanelCadastrarConsulta extends JPanel {
 	public JLabel getLabelConvenio() {
 		if(labelConvenio == null) {
 			labelConvenio = new JLabel();
-			labelConvenio.setBounds(708, 419, 48, 20);
+			labelConvenio.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			labelConvenio.setBounds(800, 75, 100, 20);
 			labelConvenio.setText("Convenio");
 		}
 		return labelConvenio;
@@ -171,7 +185,8 @@ public class PanelCadastrarConsulta extends JPanel {
 	public JTextField getTextFieldData() {
 		if (textFieldData == null) {
 			textFieldData = new JTextField();
-			textFieldData.setBounds(406, 388, 28, 20);
+			textFieldData.setFont(new Font("Tahoma", Font.PLAIN, 15));
+			textFieldData.setBounds(100, 40, 500, 25);
 			textFieldData.setColumns(10);
 		}
 		return textFieldData;
@@ -180,61 +195,65 @@ public class PanelCadastrarConsulta extends JPanel {
 	public JTextField getTextFieldHora() {
 		if (textFieldHora == null) {
 			textFieldHora = new JTextField();
-			textFieldHora.setBounds(492, 388, 28, 20);
+			textFieldHora.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			textFieldHora.setBounds(800, 40, 100, 25);
 			textFieldHora.setColumns(10);
 		}
 		return textFieldHora;
 	}
 	
-	public JTextField getTextFieldQueixaPaciente() {
-		if (textFieldQueixaPaciente == null) {
-			textFieldQueixaPaciente = new JTextField();
-			textFieldQueixaPaciente.setBounds(579, 388, 28, 20);
-			textFieldQueixaPaciente.setColumns(10);
+	public JTextArea getTextAreaQueixaPaciente() {
+		if (textAreaQueixaPaciente == null) {
+			textAreaQueixaPaciente = new JTextArea();
+			textAreaQueixaPaciente.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			textAreaQueixaPaciente.setBounds(100, 155, 800, 75);
+			textAreaQueixaPaciente.setColumns(10);
 		}
-		return textFieldQueixaPaciente;
+		return textAreaQueixaPaciente;
 	}
 	
-	public JTextField getTextFieldObservacoes() {
-		if (textFieldObservacoes == null) {
-			textFieldObservacoes = new JTextField();
-			textFieldObservacoes.setBounds(674, 388, 28, 20);
-			textFieldObservacoes.setColumns(10);
+	public JTextArea getTextAreaObservacoes() {
+		if (textAreaObservacoes == null) {
+			textAreaObservacoes = new JTextArea();
+			textAreaObservacoes.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			textAreaObservacoes.setBounds(100, 265, 800, 75);
+			textAreaObservacoes.setColumns(10);
 		}
-		return textFieldObservacoes;
+		return textAreaObservacoes;
 	}
 	
-	public JTextField getTextFieldMaterial() {
-		if (textFieldMaterial == null) {
-			textFieldMaterial = new JTextField();
-			textFieldMaterial.setBounds(776, 388, 28, 20);
-			textFieldMaterial.setColumns(10);
+	public JTextArea getTextAreaMaterial() {
+		if (textAreaMaterial == null) {
+			textAreaMaterial = new JTextArea();
+			textAreaMaterial.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			textAreaMaterial.setBounds(100, 375, 800, 75);
+			textAreaMaterial.setColumns(10);
 		}
-		return textFieldMaterial;
+		return textAreaMaterial;
 	}
 	
 	public Choice getChoiceMedico() {
 		if (choiceMedico == null) {
 			choiceMedico = new Choice();
-			choiceMedico.setBounds(514, 444, 28, 20);
+			choiceMedico.setBounds(100, 102, 500, 20);
 			choiceMedico.add("TESTE");
 		}
 		return choiceMedico;
 	}
 	
-	public Choice getChoicePaciente() {
-		if (choicePaciente == null) {
-			choicePaciente = new Choice();
-			choicePaciente.setBounds(268, 444, 176, 20);
-			choicePaciente.add("TESTE");
+	public JTextField getTextFieldPaciente() {
+		if (textFieldPaciente == null) {
+			textFieldPaciente = new JTextField();
+			textFieldPaciente.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			textFieldPaciente.setBounds(625, 40, 150, 25);
 		}
-		return choicePaciente;
+		return textFieldPaciente;
 	}
 	
 	public Choice getChoiceTipoDeConsulta() {
 		if (choiceTipoDeConsulta == null) {
 			choiceTipoDeConsulta = new Choice();
-			choiceTipoDeConsulta.setBounds(624, 444, 28, 20);
+			choiceTipoDeConsulta.setBounds(625, 102, 150, 20);
 			choiceTipoDeConsulta.add("TESTE");
 		}
 		return choiceTipoDeConsulta;
@@ -243,7 +262,7 @@ public class PanelCadastrarConsulta extends JPanel {
 	public Choice getChoiceConvenio() {
 		if (choiceConvenio == null) {
 			choiceConvenio = new Choice();
-			choiceConvenio.setBounds(708, 444, 28, 20);
+			choiceConvenio.setBounds(800, 102, 100, 20);
 			choiceConvenio.add("TESTE");
 		}
 		return choiceConvenio;
@@ -253,7 +272,7 @@ public class PanelCadastrarConsulta extends JPanel {
 	public JButton getButtonCadastrar() {
 		if (buttonCadastrar == null) {
 			buttonCadastrar = new JButton("Cadastrar");
-			buttonCadastrar.setBounds(1170, 631, 80, 35);
+			buttonCadastrar.setBounds(1040, 630, 100, 35);
 		}
 		return buttonCadastrar;
 	}
@@ -261,7 +280,7 @@ public class PanelCadastrarConsulta extends JPanel {
 	public JButton getButtonLimpar() {
 		if (buttonLimpar == null) {
 			buttonLimpar = new JButton("Limpar");
-			buttonLimpar.setBounds(30, 631, 80, 35);
+			buttonLimpar.setBounds(140, 630, 100, 35);
 		}
 		return buttonLimpar;
 	}

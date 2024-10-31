@@ -36,9 +36,9 @@ public class ControladorPanelCadastrarConsulta implements ActionListener {
 	public void limparPanel() {
 		panelCadastrarConsulta.getTextFieldData().setText("");
 		panelCadastrarConsulta.getTextFieldHora().setText("");
-		panelCadastrarConsulta.getTextFieldQueixaPaciente().setText("");
-		panelCadastrarConsulta.getTextFieldObservacoes().setText("");
-		panelCadastrarConsulta.getTextFieldMaterial().setText("");
+		panelCadastrarConsulta.getTextAreaQueixaPaciente().setText("");
+		panelCadastrarConsulta.getTextAreaObservacoes().setText("");
+		panelCadastrarConsulta.getTextAreaMaterial().setText("");
 	}
 
 }
