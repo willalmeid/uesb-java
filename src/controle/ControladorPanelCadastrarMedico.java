@@ -39,6 +39,6 @@ public class ControladorPanelCadastrarMedico implements ActionListener{
 		panelCadastrarMedico.getTextFieldCrm().setText("");
 		panelCadastrarMedico.getTextFieldContato().setText("");
 		panelCadastrarMedico.getTextFieldValorConsultaParticular().setText("");
-		panelCadastrarMedico.getTextFieldHistoricoDeAtendimento().setText("");
+		panelCadastrarMedico.getTextAreaHistoricoDeAtendimento().setText("");
 	}
 }

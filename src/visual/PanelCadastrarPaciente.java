@@ -368,7 +368,7 @@ public class PanelCadastrarPaciente extends JPanel{
 	        comboBoxCovenio = new JComboBox();
 	        comboBoxCovenio.setFont(new Font("Tahoma", Font.PLAIN, 14));
 	        comboBoxCovenio.setBounds(740, 102, 160, 20);
-	        comboBoxCovenio.addItem("TESTE");
+	        comboBoxCovenio.addItem("");
 	    }
 	    return comboBoxCovenio;
 	}
@@ -376,8 +376,10 @@ public class PanelCadastrarPaciente extends JPanel{
 	public JComboBox getComboBoxTipoSanguineo() {
 	    if (comboBoxTipoSanguineo == null) {
 	    	comboBoxTipoSanguineo = new JComboBox();
+	    	comboBoxTipoSanguineo.setBackground(new Color(255, 255, 255));
 	    	comboBoxTipoSanguineo.setFont(new Font("Tahoma", Font.PLAIN, 14));
 	    	comboBoxTipoSanguineo.setBounds(595, 102, 110, 20);
+	    	comboBoxTipoSanguineo.addItem("");
 	    	comboBoxTipoSanguineo.addItem("A+");
 	    	comboBoxTipoSanguineo.addItem("A-");
 	    	comboBoxTipoSanguineo.addItem("B+");
