@@ -185,7 +185,7 @@ public class PanelCadastrarConsulta extends JPanel {
 	public JTextField getTextFieldData() {
 		if (textFieldData == null) {
 			textFieldData = new JTextField();
-			textFieldData.setFont(new Font("Tahoma", Font.PLAIN, 15));
+			textFieldData.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			textFieldData.setBounds(100, 40, 500, 25);
 			textFieldData.setColumns(10);
 		}
