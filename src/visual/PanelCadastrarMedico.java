@@ -8,6 +8,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.border.LineBorder;
 
 public class PanelCadastrarMedico extends JPanel{
 	
@@ -32,7 +33,7 @@ public class PanelCadastrarMedico extends JPanel{
 	private JButton buttonLimpar;
 
 	public PanelCadastrarMedico() {
-		setBackground(new Color(255, 0, 0));
+		setBackground(new Color(2, 83, 112));
 		setSize(1280, 750);
 		setLayout(null);
 		
@@ -46,8 +47,9 @@ public class PanelCadastrarMedico extends JPanel{
 	public JPanel getPanelMain() {
 		if(panelPrincipal == null) {
 			panelPrincipal = new JPanel();
-			panelPrincipal.setBackground(new Color(255, 128, 128));
-			panelPrincipal.setBounds(140, 202, 1000, 345);
+			panelPrincipal.setBorder(new LineBorder(null));
+			panelPrincipal.setBackground(new Color(204, 229, 233));
+			panelPrincipal.setBounds(140, 150, 1000, 385);
 			panelPrincipal.setLayout(null);
 			panelPrincipal.add(getLabelNome());
 			panelPrincipal.add(getLabelEspecialidade());
@@ -70,6 +72,7 @@ public class PanelCadastrarMedico extends JPanel{
 	public JLabel getLabelTitlePanel() {
 		if(labelTitlePanel == null) {
 			labelTitlePanel = new JLabel();
+			labelTitlePanel.setForeground(new Color(255, 255, 255));
 			labelTitlePanel.setFont(new Font("Tahoma", Font.PLAIN, 36));
 			labelTitlePanel.setText("Cadastro de Médico");
 			labelTitlePanel.setBounds(483, 50, 314, 44);
@@ -192,7 +195,7 @@ public class PanelCadastrarMedico extends JPanel{
 		if (textAreaHistoricoDeAtendimento == null) {
 			textAreaHistoricoDeAtendimento = new JTextArea();
 			textAreaHistoricoDeAtendimento.setFont(new Font("Tahoma", Font.PLAIN, 14));
-			textAreaHistoricoDeAtendimento.setBounds(100, 220, 800, 100);
+			textAreaHistoricoDeAtendimento.setBounds(100, 220, 800, 150);
 			textAreaHistoricoDeAtendimento.setColumns(10);
 		}
 		return textAreaHistoricoDeAtendimento;
