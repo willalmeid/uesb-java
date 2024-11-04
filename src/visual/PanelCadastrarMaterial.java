@@ -7,6 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.border.LineBorder;
 
 public class PanelCadastrarMaterial extends JPanel {
 	private JPanel panelPrincipal;
@@ -28,7 +29,8 @@ public class PanelCadastrarMaterial extends JPanel {
 	private JButton  buttonCadastrar;
 
 	public PanelCadastrarMaterial() {
-		setBackground(new Color(0, 128, 0));
+		setSize(1280, 750);
+		setBackground(new Color(2, 83, 112));
 		setLayout(null);
 		add(getLabelTitlePanel());
 		add(getPanelMain());
@@ -40,8 +42,9 @@ public class PanelCadastrarMaterial extends JPanel {
 	public JPanel getPanelMain() {
 		if(panelPrincipal == null) {
 			panelPrincipal = new JPanel();
-			panelPrincipal.setBackground(new Color(128, 255, 128));
-			panelPrincipal.setBounds(30, 135, 1220, 490);
+			panelPrincipal.setBorder(new LineBorder(null));
+			panelPrincipal.setBackground(new Color(204, 229, 233));
+			panelPrincipal.setBounds(140, 150, 1000, 170);
 			panelPrincipal.setLayout(null);
 			panelPrincipal.add(getLabelNome());
 			panelPrincipal.add(getLabelQtdEmEstoque());
@@ -61,9 +64,10 @@ public class PanelCadastrarMaterial extends JPanel {
 	public JLabel getLabelTitlePanel() {
 		if(labelTitlePanel == null) {
 			labelTitlePanel = new JLabel();
+			labelTitlePanel.setForeground(new Color(255, 255, 255));
 			labelTitlePanel.setFont(new Font("Tahoma", Font.PLAIN, 36));
-			labelTitlePanel.setText("Tela de Cadastro de Materiais");
-			labelTitlePanel.setBounds(397, 30, 485, 76);
+			labelTitlePanel.setText("Cadastro de Materiais");
+			labelTitlePanel.setBounds(468, 50, 344, 44);
 		}
 		return labelTitlePanel;
 	}
@@ -71,7 +75,8 @@ public class PanelCadastrarMaterial extends JPanel {
 	public JLabel getLabelNome() {
 		if(labelNome == null) {
 			labelNome = new JLabel();
-			labelNome.setBounds(150, 380, 39, 20);
+			labelNome.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			labelNome.setBounds(100, 30, 39, 20);
 			labelNome.setText("Nome");
 		}
 		return labelNome;
@@ -80,7 +85,8 @@ public class PanelCadastrarMaterial extends JPanel {
 	public JLabel getLabelQtdEmEstoque() {
 		if(labelQtdEmEstoque == null) {
 			labelQtdEmEstoque = new JLabel();
-			labelQtdEmEstoque.setBounds(250, 380, 140, 20);
+			labelQtdEmEstoque.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			labelQtdEmEstoque.setBounds(100, 90, 250, 20);
 			labelQtdEmEstoque.setText("Quantidade em estoque");
 		}
 		return labelQtdEmEstoque;
@@ -89,7 +95,8 @@ public class PanelCadastrarMaterial extends JPanel {
 	public JLabel getLabelQtdMinimaEmEstoque() {
 		if(labelQtdMinimaEmEstoque == null) {
 			labelQtdMinimaEmEstoque = new JLabel();
-			labelQtdMinimaEmEstoque.setBounds(400, 380, 180, 20);
+			labelQtdMinimaEmEstoque.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			labelQtdMinimaEmEstoque.setBounds(375, 90, 250, 20);
 			labelQtdMinimaEmEstoque.setText("Quantidade minima em estoque");
 		}
 		return labelQtdMinimaEmEstoque;
@@ -98,7 +105,8 @@ public class PanelCadastrarMaterial extends JPanel {
 	public JLabel getLabelFornecedor() {
 		if(labelFornecedor == null) {
 			labelFornecedor = new JLabel();
-			labelFornecedor.setBounds(590, 380, 70, 20);
+			labelFornecedor.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			labelFornecedor.setBounds(650, 90, 250, 20);
 			labelFornecedor.setText("Fornecedor");
 		}
 		return labelFornecedor;
@@ -107,7 +115,8 @@ public class PanelCadastrarMaterial extends JPanel {
 	public JLabel getLabelPreco() {
 		if(labelPreco == null) {
 			labelPreco = new JLabel();
-			labelPreco.setBounds(690, 380, 39, 20);
+			labelPreco.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			labelPreco.setBounds(775, 30, 125, 20);
 			labelPreco.setText("Preço");
 		}
 		return labelPreco;
@@ -117,7 +126,8 @@ public class PanelCadastrarMaterial extends JPanel {
 	public JTextField getTextFieldNome() {
 		if (textFieldNome == null) {
 			textFieldNome = new JTextField();
-			textFieldNome.setBounds(150, 400, 86, 20);
+			textFieldNome.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			textFieldNome.setBounds(100, 55, 650, 25);
 			textFieldNome.setColumns(10);
 		}
 		return textFieldNome;
@@ -125,7 +135,8 @@ public class PanelCadastrarMaterial extends JPanel {
 	public JTextField getTextFieldQtdEmEstoque() {
 		if (textFieldQtdEmEstoque == null) {
 			textFieldQtdEmEstoque = new JTextField();
-			textFieldQtdEmEstoque.setBounds(250, 400, 140, 20);
+			textFieldQtdEmEstoque.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			textFieldQtdEmEstoque.setBounds(100, 115, 250, 25);
 			textFieldQtdEmEstoque.setColumns(10);
 		}
 		return textFieldQtdEmEstoque;
@@ -133,7 +144,7 @@ public class PanelCadastrarMaterial extends JPanel {
 	public JTextField getTextFieldQtdMinimaEmEstoque() {
 		if (textFieldQtdMinimaEmEstoque == null) {
 			textFieldQtdMinimaEmEstoque = new JTextField();
-			textFieldQtdMinimaEmEstoque.setBounds(400, 400, 180, 20);
+			textFieldQtdMinimaEmEstoque.setBounds(375, 115, 250, 25);
 			textFieldQtdMinimaEmEstoque.setColumns(10);
 		}
 		return textFieldQtdMinimaEmEstoque;
@@ -141,7 +152,8 @@ public class PanelCadastrarMaterial extends JPanel {
 	public JTextField getTextFieldFornecedor() {
 		if (textFieldFornecedor == null) {
 			textFieldFornecedor = new JTextField();
-			textFieldFornecedor.setBounds(590, 400, 86, 20);
+			textFieldFornecedor.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			textFieldFornecedor.setBounds(650, 115, 250, 25);
 			textFieldFornecedor.setColumns(10);
 		}
 		return textFieldFornecedor;
@@ -149,7 +161,8 @@ public class PanelCadastrarMaterial extends JPanel {
 	public JTextField getTextFieldPreco() {
 		if (textFieldPreco == null) {
 			textFieldPreco = new JTextField();
-			textFieldPreco.setBounds(690, 400, 86, 20);
+			textFieldPreco.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			textFieldPreco.setBounds(775, 55, 125, 25);
 			textFieldPreco.setColumns(10);
 		}
 		return textFieldPreco;
@@ -160,7 +173,7 @@ public class PanelCadastrarMaterial extends JPanel {
 	public JButton getButtonCadastrar() {
 		if (buttonCadastrar == null) {
 			buttonCadastrar = new JButton("Cadastrar");
-			buttonCadastrar.setBounds(1170, 631, 80, 35);
+			buttonCadastrar.setBounds(1040, 600, 100, 35);
 		}
 		return buttonCadastrar;
 	}
@@ -168,7 +181,7 @@ public class PanelCadastrarMaterial extends JPanel {
 	public JButton getButtonLimpar() {
 		if (buttonLimpar == null) {
 			buttonLimpar = new JButton("Limpar");
-			buttonLimpar.setBounds(30, 631, 80, 35);
+			buttonLimpar.setBounds(140, 600, 100, 35);
 		}
 		return buttonLimpar;
 	}
