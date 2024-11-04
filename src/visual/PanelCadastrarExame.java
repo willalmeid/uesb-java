@@ -8,6 +8,7 @@ import javax.swing.JTextField;
 
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.border.LineBorder;
 
 public class PanelCadastrarExame extends JPanel {
 	
@@ -33,7 +34,7 @@ public class PanelCadastrarExame extends JPanel {
 	private JButton buttonLimpar;
 
 	public PanelCadastrarExame() {
-		setBackground(new Color(0, 128, 255));
+		setBackground(new Color(2, 83, 112));
 		setSize(1280, 750);
 		add(getLabelTitlePanel());
 		add(getPanelMain());
@@ -45,8 +46,9 @@ public class PanelCadastrarExame extends JPanel {
 	public JPanel getPanelMain() {
 		if(panelMain == null) {
 			panelMain = new JPanel();
-			panelMain.setBackground(new Color(0, 128, 192));
-			panelMain.setBounds(30, 135, 1220, 490);
+			panelMain.setBorder(new LineBorder(null));
+			panelMain.setBackground(new Color(204, 229, 233));
+			panelMain.setBounds(140, 150, 1000, 230);
 			panelMain.setLayout(null);
 			
 			panelMain.add(getLabelNomeExame());
@@ -71,9 +73,10 @@ public class PanelCadastrarExame extends JPanel {
 	public JLabel getLabelTitlePanel() {
 		if(labelTitlePanel == null) {
 			labelTitlePanel = new JLabel();
-			labelTitlePanel.setText("Tela de Cadastro de Exame");
+			labelTitlePanel.setForeground(new Color(255, 255, 255));
+			labelTitlePanel.setText("Cadastro de Exame");
 			labelTitlePanel.setFont(new Font("Tahoma", Font.PLAIN, 36));
-			labelTitlePanel.setBounds(397, 30, 485, 76);
+			labelTitlePanel.setBounds(486, 50, 308, 44);
 		}
 		return labelTitlePanel;
 	}
@@ -81,7 +84,8 @@ public class PanelCadastrarExame extends JPanel {
 	public JLabel getLabelNomeExame() {
 		if(labelNomeExame == null) {
 			labelNomeExame = new JLabel();
-			labelNomeExame.setBounds(382, 439, 39, 20);
+			labelNomeExame.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			labelNomeExame.setBounds(100, 30, 650, 20);
 			labelNomeExame.setText("Nome do Exame");
 		}
 		return labelNomeExame;
@@ -90,7 +94,8 @@ public class PanelCadastrarExame extends JPanel {
 	public JLabel getLabelDescricao() {
 		if(labelDescricao == null) {
 			labelDescricao = new JLabel();
-			labelDescricao.setBounds(431, 439, 39, 20);
+			labelDescricao.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			labelDescricao.setBounds(525, 150, 375, 20);
 			labelDescricao.setText("Decrição");
 		}
 		return labelDescricao;
@@ -99,8 +104,9 @@ public class PanelCadastrarExame extends JPanel {
 	public JLabel getLabelMateriaisUtilizados() {
 		if(labelMateriaisUtilizados == null) {
 			labelMateriaisUtilizados = new JLabel();
+			labelMateriaisUtilizados.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			labelMateriaisUtilizados.setText("Materiais Utilizados");
-			labelMateriaisUtilizados.setBounds(333, 439, 39, 20);
+			labelMateriaisUtilizados.setBounds(100, 150, 400, 20);
 		}
 		return labelMateriaisUtilizados;
 	}
@@ -108,8 +114,9 @@ public class PanelCadastrarExame extends JPanel {
 	public JLabel getLabelValorParticular() {
 		if(labelValorParticular == null) {
 			labelValorParticular = new JLabel();
+			labelValorParticular.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			labelValorParticular.setText("Valor Particular");
-			labelValorParticular.setBounds(480, 439, 39, 20);
+			labelValorParticular.setBounds(775, 30, 125, 20);
 		}
 		return labelValorParticular;
 	}
@@ -117,8 +124,9 @@ public class PanelCadastrarExame extends JPanel {
 	public JLabel getLabelMedico() {
 		if(labelMedico == null) {
 			labelMedico = new JLabel();
+			labelMedico.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			labelMedico.setText("Medico");
-			labelMedico.setBounds(676, 428, 39, 20);
+			labelMedico.setBounds(100, 90, 400, 20);
 		}
 		return labelMedico;
 	}
@@ -126,8 +134,9 @@ public class PanelCadastrarExame extends JPanel {
 	public JLabel getLabelTipoExame() {
 		if(labelTipoExame == null) {
 			labelTipoExame = new JLabel();
+			labelTipoExame.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			labelTipoExame.setText("TipoExame");
-			labelTipoExame.setBounds(834, 428, 39, 20);
+			labelTipoExame.setBounds(525, 90, 375, 20);
 		}
 		return labelTipoExame;
 	}
@@ -136,7 +145,8 @@ public class PanelCadastrarExame extends JPanel {
 	public JTextField getTextFieldNomeExame() {
 		if(textFieldNomeExame == null) {
 			textFieldNomeExame = new JTextField();
-			textFieldNomeExame.setBounds(382, 459, 39, 20);
+			textFieldNomeExame.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			textFieldNomeExame.setBounds(100, 55, 650, 25);
 		}
 		return textFieldNomeExame;
 	}
@@ -144,7 +154,8 @@ public class PanelCadastrarExame extends JPanel {
 	public JTextField getTextFieldDescricao() {
 		if (textFieldDescricao == null) {
 			textFieldDescricao = new JTextField();
-			textFieldDescricao.setBounds(431, 459, 39, 20);
+			textFieldDescricao.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			textFieldDescricao.setBounds(525, 175, 375, 25);
 		}
 		return textFieldDescricao;
 	}
@@ -152,7 +163,8 @@ public class PanelCadastrarExame extends JPanel {
 	public JTextField getTextFieldMateriaisUtilizados() {
 		if (textFieldMateriaisUtilizados == null) {
 			textFieldMateriaisUtilizados = new JTextField();
-			textFieldMateriaisUtilizados.setBounds(333, 459, 39, 20);
+			textFieldMateriaisUtilizados.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			textFieldMateriaisUtilizados.setBounds(100, 175, 400, 25);
 		}
 		return textFieldMateriaisUtilizados;
 	}
@@ -160,7 +172,8 @@ public class PanelCadastrarExame extends JPanel {
 	public JTextField getTextFieldValorParticular() {
 		if (textFieldValorParticular == null) {
 			textFieldValorParticular = new JTextField();
-			textFieldValorParticular.setBounds(480, 459, 39, 20);
+			textFieldValorParticular.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			textFieldValorParticular.setBounds(775, 55, 125, 25);
 		}
 		return textFieldValorParticular;
 	}
@@ -168,8 +181,9 @@ public class PanelCadastrarExame extends JPanel {
 	public JComboBox getComboBoxMedico() {
 		if(comboBoxMedico == null) {
 			comboBoxMedico = new JComboBox();
-			comboBoxMedico.setBounds(629, 449, 150, 30);
-			comboBoxMedico.addItem("TESTE");
+			comboBoxMedico.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			comboBoxMedico.setBounds(100, 115, 400, 25);
+			comboBoxMedico.addItem("");
 		}
 		return comboBoxMedico;
 	}
@@ -177,8 +191,9 @@ public class PanelCadastrarExame extends JPanel {
 	public JComboBox getComboBoxTipoExame() {
 		if(comboBoxTipoExame == null) {
 			comboBoxTipoExame = new JComboBox();
-			comboBoxTipoExame.setBounds(789, 449, 150, 30);
-			comboBoxTipoExame.addItem("TESTE");
+			comboBoxTipoExame.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			comboBoxTipoExame.setBounds(525, 115, 375, 25);
+			comboBoxTipoExame.addItem("");
 		}
 		return comboBoxTipoExame;
 	}
@@ -187,7 +202,7 @@ public class PanelCadastrarExame extends JPanel {
 	public JButton getButtonCadastrar() {
 		if (buttonCadastrar == null) {
 			buttonCadastrar = new JButton("Cadastrar");
-			buttonCadastrar.setBounds(1170, 631, 80, 35);
+			buttonCadastrar.setBounds(1040, 600, 100, 35);
 		}
 		return buttonCadastrar;
 	}
@@ -195,7 +210,7 @@ public class PanelCadastrarExame extends JPanel {
 	public JButton getButtonLimpar() {
 		if (buttonLimpar == null) {
 			buttonLimpar = new JButton("Limpar");
-			buttonLimpar.setBounds(30, 631, 80, 35);
+			buttonLimpar.setBounds(140, 600, 100, 35);
 		}
 		return buttonLimpar;
 	}
