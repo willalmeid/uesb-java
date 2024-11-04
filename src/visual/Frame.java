@@ -1,9 +1,13 @@
 package visual;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.UIManager;
 
 public class Frame extends JFrame {
 	
@@ -11,6 +15,8 @@ public class Frame extends JFrame {
 	private JMenu menuCadastro;
 	private JMenu menuAgendamento;
 	private JMenu menuRelatorio;
+
+	private JButton buttonHome;
 
 	private JMenuItem menuItemCadastrarPaciente;
 	private JMenuItem menuItemCadastrarMedico;
@@ -42,6 +48,7 @@ public class Frame extends JFrame {
 	public JMenuBar getBarraMenu() {
 		if(barraMenu == null) {
 			barraMenu = new JMenuBar();
+			barraMenu.add(getButtonHome());
 			barraMenu.add(getMenuCadastro());
 			barraMenu.add(getMenuAgendamento());
 			barraMenu.add(getMenuRelatorio());
@@ -53,6 +60,8 @@ public class Frame extends JFrame {
 	public JMenu getMenuCadastro() {
 		if(menuCadastro == null) {
 			menuCadastro = new JMenu();
+			menuCadastro.setBackground(new Color(255, 255, 255));
+			menuCadastro.setBorder(UIManager.getBorder("Menu.border"));
 			menuCadastro.setText("Cadastrar");
 			menuCadastro.add(getMenuItemCadastrarPaciente());
 			menuCadastro.add(getMenuItemCadastrarMedico());
@@ -89,6 +98,21 @@ public class Frame extends JFrame {
 	}
 
 	/* -------------------------------------------------------- Menu itens -------------------------------------------------------------- */
+	public JButton getButtonHome() {
+		if(buttonHome == null) {
+			buttonHome = new JButton();
+			// Ajuste de aparência para se parecer com um JMenu
+	        buttonHome.setFocusPainted(false); // Remove o foco visual ao clicar
+	        buttonHome.setContentAreaFilled(false); // Remove o preenchimento do botão
+	        buttonHome.setBorderPainted(false); // Remove a borda do botão
+	        buttonHome.setOpaque(false); // Deixe o fundo transparente
+	        
+			buttonHome.setFont(new Font("Segoe UI", Font.PLAIN, 12));
+			buttonHome.setText("Home");
+		}
+		return buttonHome;
+	}
+	
 	public JMenuItem getMenuItemCadastrarPaciente() {
 		if(menuItemCadastrarPaciente == null) {
 			menuItemCadastrarPaciente = new JMenuItem();

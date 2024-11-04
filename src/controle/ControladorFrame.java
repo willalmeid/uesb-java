@@ -10,6 +10,7 @@ import visual.PanelCadastrarConsulta;
 import visual.PanelCadastrarExame;
 import visual.PanelCadastrarMedico;
 import visual.PanelCadastrarPaciente;
+import visual.PanelHome;
 import visual.PanelPesquisarHorarios;
 import visual.PanelRelatoriosDeConsulta;
 import visual.PanelRelatoriosDeExames;
@@ -21,6 +22,9 @@ import visual.PanelCadastrarMaterial;
 public class ControladorFrame implements ActionListener{
 
 	Frame frame;
+	
+	// Está static, pois o método main só aceitava assim.
+	static PanelHome panelHome;
 	
 	PanelCadastrarConsulta panelCadastarConsulta;
 	PanelCadastrarExame panelCadastrarExame;
@@ -67,6 +71,8 @@ public class ControladorFrame implements ActionListener{
 	}
 	
 	public void addEventos() {
+		frame.getButtonHome().addActionListener(this);
+	
 		frame.getMenuItemCadastrarConsulta().addActionListener(this);
 		frame.getMenuItemCadastrarExame().addActionListener(this);
 		frame.getMenuItemCadastrarMedico().addActionListener(this);
@@ -84,7 +90,10 @@ public class ControladorFrame implements ActionListener{
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		if(e.getSource() == frame.getMenuItemCadastrarConsulta()) {
+		if(e.getSource() == frame.getButtonHome()) {
+			panelHome = new PanelHome();
+			frame.setContentPane(panelHome);
+		}else if(e.getSource() == frame.getMenuItemCadastrarConsulta()) {
 			panelCadastarConsulta = new PanelCadastrarConsulta();
 			controladorPanelCadastrarConsulta = new ControladorPanelCadastrarConsulta(panelCadastarConsulta);
 			frame.setContentPane(panelCadastarConsulta);
@@ -156,6 +165,8 @@ public class ControladorFrame implements ActionListener{
 	
 	public static void main(String[] args) {
 		Frame frame = new Frame();
+		panelHome = new PanelHome();
+		frame.setContentPane(panelHome);
 		new ControladorFrame(frame);
 	}
 	
