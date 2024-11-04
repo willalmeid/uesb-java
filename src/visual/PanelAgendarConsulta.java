@@ -73,6 +73,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JLabel getLabelData() {
 		if(labelData == null) {
 			labelData = new JLabel();
+			labelData.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			labelData.setBounds(90, 162, 220, 14);
 			labelData.setText("Data:");
 		}
@@ -82,6 +83,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JLabel getLabelHora() {
 		if(labelHora == null) {
 			labelHora = new JLabel();
+			labelHora.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			labelHora.setBounds(388, 161, 220, 17);
 			labelHora.setText("Hora:");
 		}
@@ -91,6 +93,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JLabel getLabelPaciente() {
 		if(labelPaciente == null) {
 			labelPaciente = new JLabel();
+			labelPaciente.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			labelPaciente.setBounds(90, 71, 152, 14);
 			labelPaciente.setText("Paciente:");
 		}
@@ -100,7 +103,8 @@ public class PanelAgendarConsulta extends JPanel{
 	public JLabel getLabelMedico() {
 		if(labelMedico == null) {
 			labelMedico = new JLabel();
-			labelMedico.setBounds(661, 171, 380, 14);
+			labelMedico.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			labelMedico.setBounds(661, 162, 380, 14);
 			labelMedico.setText("Medico:");
 		}
 		return labelMedico;
@@ -135,7 +139,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JComboBox getComboBoxMedico() {
 		if (comboBoxMedico == null) {
 			comboBoxMedico = new JComboBox();
-			comboBoxMedico.setBounds(661, 196, 380, 22);
+			comboBoxMedico.setBounds(661, 181, 380, 37);
 			comboBoxMedico.addItem("TESTE");
 		}
 		return comboBoxMedico;

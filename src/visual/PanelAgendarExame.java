@@ -73,6 +73,7 @@ public class PanelAgendarExame extends JPanel{
 	public JLabel getLabelData() {
 		if(labelData == null) {
 			labelData = new JLabel();
+			labelData.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			labelData.setBounds(90, 162, 220, 14);
 			labelData.setText("Data:");
 		}
@@ -82,6 +83,7 @@ public class PanelAgendarExame extends JPanel{
 	public JLabel getLabelHora() {
 		if(labelHora == null) {
 			labelHora = new JLabel();
+			labelHora.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			labelHora.setBounds(388, 161, 220, 17);
 			labelHora.setText("Hora:");
 		}
@@ -91,6 +93,7 @@ public class PanelAgendarExame extends JPanel{
 	public JLabel getLabelPaciente() {
 		if(labelPaciente == null) {
 			labelPaciente = new JLabel();
+			labelPaciente.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			labelPaciente.setBounds(90, 72, 518, 17);
 			labelPaciente.setText("Paciente:");
 		}
@@ -100,7 +103,8 @@ public class PanelAgendarExame extends JPanel{
 	public JLabel getLabelTipoExame() {
 		if(labelTipoExame == null) {
 			labelTipoExame = new JLabel();
-			labelTipoExame.setBounds(676, 161, 59, 17);
+			labelTipoExame.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			labelTipoExame.setBounds(676, 161, 271, 17);
 			labelTipoExame.setText("Tipo Exame:");
 		}
 		return labelTipoExame;

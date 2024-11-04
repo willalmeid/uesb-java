@@ -12,7 +12,7 @@ public class PanelVisualizarAgenda extends JPanel {
 	private JPanel panelPrincipal;
 	
 	public PanelVisualizarAgenda() {
-		setBackground(new Color(255, 128, 64));
+		setBackground(new Color(2, 82, 112));
 		setSize(1280, 750);
 		setLayout(null);
 		add(getLabelTitlePanel());
@@ -22,6 +22,7 @@ public class PanelVisualizarAgenda extends JPanel {
 	public JLabel getLabelTitlePanel() {
 		if(labelTitlePanel == null) {
 			labelTitlePanel = new JLabel();
+			labelTitlePanel.setForeground(new Color(255, 255, 255));
 			labelTitlePanel.setFont(new Font("Tahoma", Font.PLAIN, 36));
 			labelTitlePanel.setText("Visualizar Agenda");
 			labelTitlePanel.setBounds(497, 30, 285, 76);
@@ -32,7 +33,7 @@ public class PanelVisualizarAgenda extends JPanel {
 	public JPanel getPanelPrincipal() {
 		if(panelPrincipal == null) {
 			panelPrincipal = new JPanel();
-			panelPrincipal.setBackground(new Color(255, 128, 0));
+			panelPrincipal.setBackground(new Color(204, 229, 233));
 			panelPrincipal.setLocation(207, 136);
 			panelPrincipal.setSize(500, 400);
 			panelPrincipal.setBounds(30, 135, 1220, 490);
