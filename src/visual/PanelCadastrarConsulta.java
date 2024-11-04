@@ -40,7 +40,7 @@ public class PanelCadastrarConsulta extends JPanel {
 	private JButton buttonLimpar;
 	
 	public PanelCadastrarConsulta() {
-		setBackground(new Color(255, 0, 128));
+		setBackground(new Color(2, 83, 112));
 		setSize(1280, 750);
 		setLayout(null);
 		add(getLabelTitlePanel());
@@ -52,7 +52,7 @@ public class PanelCadastrarConsulta extends JPanel {
 	public JPanel getPanelMain() {
 		if (panelPrincipal == null) {
 			panelPrincipal = new JPanel();
-			panelPrincipal.setBackground(new Color(255, 128, 255));
+			panelPrincipal.setBackground(new Color(204, 229, 233));
 			panelPrincipal.setBounds(140, 130, 1000, 475);
 			panelPrincipal.setLayout(null);
 			panelPrincipal.add(getLabelData());
@@ -84,6 +84,7 @@ public class PanelCadastrarConsulta extends JPanel {
 	public JLabel getLabelTitlePanel() {
 		if(labelTitlePanel == null) {
 			labelTitlePanel = new JLabel();
+			labelTitlePanel.setForeground(new Color(255, 255, 255));
 			labelTitlePanel.setFont(new Font("Tahoma", Font.PLAIN, 36));
 			labelTitlePanel.setText("Cadastro de Consultas");
 			labelTitlePanel.setBounds(462, 30, 355, 44);

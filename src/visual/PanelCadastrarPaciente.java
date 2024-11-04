@@ -60,7 +60,7 @@ public class PanelCadastrarPaciente extends JPanel{
 	private JButton buttonLimpar;
 	
 	public PanelCadastrarPaciente() {
-		setBackground(new Color(0, 255, 128));
+		setBackground(new Color(2, 83, 112));
 		setSize(1280, 750);
 		setLayout(null);
 		add(getLabelTitlePanel());
@@ -77,7 +77,7 @@ public class PanelCadastrarPaciente extends JPanel{
 		if (panelPaciente == null) {
 			panelPaciente = new JPanel();
 			panelPaciente.setBorder(new LineBorder(null));
-			panelPaciente.setBackground(new Color(128, 255, 128));
+			panelPaciente.setBackground(new Color(204, 229, 233));
 			panelPaciente.setBounds(140, 115, 1000, 250);
 			panelPaciente.setLayout(null);
 			
@@ -106,7 +106,7 @@ public class PanelCadastrarPaciente extends JPanel{
 		if (panelEndereco == null) {
 			panelEndereco = new JPanel();
 			panelEndereco.setBorder(new LineBorder(null));
-			panelEndereco.setBackground(new Color(128, 255, 128));
+			panelEndereco.setBackground(new Color(204, 229, 233));
 			panelEndereco.setBounds(140, 435, 1000, 140);
 			panelEndereco.setLayout(null);
 			
@@ -133,6 +133,7 @@ public class PanelCadastrarPaciente extends JPanel{
 	public JLabel getLabelTitlePanel() {
 		if(labelTitlePanel == null) {
 			labelTitlePanel = new JLabel();
+			labelTitlePanel.setForeground(new Color(255, 255, 255));
 			labelTitlePanel.setFont(new Font("Tahoma", Font.PLAIN, 36));
 			labelTitlePanel.setText("Cadastro de Paciente");
 			labelTitlePanel.setBounds(470, 15, 336, 44);
@@ -143,6 +144,7 @@ public class PanelCadastrarPaciente extends JPanel{
 	public JLabel getLabelTitlePaciente() {
 		if(labelTitlePessoais == null) {
 			labelTitlePessoais = new JLabel();
+			labelTitlePessoais.setForeground(new Color(255, 255, 255));
 			labelTitlePessoais.setFont(new Font("Tahoma", Font.PLAIN, 20));
 			labelTitlePessoais.setText("Dados Pessoais");
 			labelTitlePessoais.setBounds(140, 75, 1000, 35);
@@ -153,6 +155,7 @@ public class PanelCadastrarPaciente extends JPanel{
 	public JLabel getLabelTitleEndereco() {
 		if(labelTitleEndereco == null) {
 			labelTitleEndereco = new JLabel();
+			labelTitleEndereco.setForeground(new Color(255, 255, 255));
 			labelTitleEndereco.setFont(new Font("Tahoma", Font.PLAIN, 20));
 			labelTitleEndereco.setText("Dados de Endereço");
 			labelTitleEndereco.setBounds(140, 395, 1000, 35);
