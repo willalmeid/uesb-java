@@ -7,6 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.JComboBox;
 
 public class PanelAgendarConsulta extends JPanel{
 
@@ -20,15 +21,15 @@ public class PanelAgendarConsulta extends JPanel{
 	
 	private JTextField textFieldData;
 	private JTextField textFieldHora;
-	private JTextField textFieldPaciente;
-	private JTextField textFieldMedico;
 	
 	private JButton buttonAgendar;
 	private JButton buttonLimpar;
+	private JComboBox comboBoxPaciente;
+	private JComboBox comboBoxMedico;
 	
 	public PanelAgendarConsulta() {
 		setSize(1280, 750);
-		setBackground(new Color(128, 255, 128));
+		setBackground(new Color(2, 83, 112));
 		setLayout(null);
 		add(getLabelTitlePanel());
 		add(getPanelPrincipal());
@@ -39,7 +40,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JPanel getPanelPrincipal() {
 		if(panelPrincipal == null) {
 			panelPrincipal = new JPanel();
-			panelPrincipal.setBackground(new Color(0, 255, 0));
+			panelPrincipal.setBackground(new Color(204, 229, 233));
 			panelPrincipal.setLocation(80, 125);
 			panelPrincipal.setSize(1120, 432);
 			panelPrincipal.setLayout(null);
@@ -50,8 +51,8 @@ public class PanelAgendarConsulta extends JPanel{
 			
 			panelPrincipal.add(getTextFieldData());
 			panelPrincipal.add(getTextFieldHora());
-			panelPrincipal.add(getTextFieldPaciente());
-			panelPrincipal.add(getTextFieldMedico());
+			panelPrincipal.add(getComboBoxPaciente());
+			panelPrincipal.add(getComboBoxMedico());
 		}
 		return panelPrincipal;
 	}
@@ -60,6 +61,8 @@ public class PanelAgendarConsulta extends JPanel{
 	public JLabel getLabelTitlePanel() {
 		if(labelTitlePanel == null) {
 			labelTitlePanel = new JLabel();
+			labelTitlePanel.setForeground(new Color(255, 255, 255));
+			labelTitlePanel.setBackground(new Color(240, 240, 240));
 			labelTitlePanel.setText("Tela Agendamento de Consulta");
 			labelTitlePanel.setFont(new Font("Tahoma", Font.PLAIN, 36));
 			labelTitlePanel.setBounds(388, 30, 503, 76);
@@ -70,7 +73,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JLabel getLabelData() {
 		if(labelData == null) {
 			labelData = new JLabel();
-			labelData.setBounds(460, 285, 27, 14);
+			labelData.setBounds(90, 162, 220, 14);
 			labelData.setText("Data:");
 		}
 		return labelData;
@@ -79,7 +82,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JLabel getLabelHora() {
 		if(labelHora == null) {
 			labelHora = new JLabel();
-			labelHora.setBounds(551, 284, 48, 17);
+			labelHora.setBounds(388, 161, 220, 17);
 			labelHora.setText("Hora:");
 		}
 		return labelHora;
@@ -88,7 +91,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JLabel getLabelPaciente() {
 		if(labelPaciente == null) {
 			labelPaciente = new JLabel();
-			labelPaciente.setBounds(642, 285, 45, 14);
+			labelPaciente.setBounds(90, 71, 152, 14);
 			labelPaciente.setText("Paciente:");
 		}
 		return labelPaciente;
@@ -97,7 +100,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JLabel getLabelMedico() {
 		if(labelMedico == null) {
 			labelMedico = new JLabel();
-			labelMedico.setBounds(733, 285, 37, 14);
+			labelMedico.setBounds(661, 171, 380, 14);
 			labelMedico.setText("Medico:");
 		}
 		return labelMedico;
@@ -107,7 +110,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JTextField getTextFieldData() {
 		if(textFieldData == null) {
 			textFieldData = new JTextField();
-			textFieldData.setBounds(460, 312, 86, 20);
+			textFieldData.setBounds(90, 181, 220, 37);
 			textFieldData.setColumns(10);
 		}
 		return textFieldData;
@@ -116,28 +119,26 @@ public class PanelAgendarConsulta extends JPanel{
 	public JTextField getTextFieldHora() {
 		if(textFieldHora == null) {
 			textFieldHora = new JTextField();
-			textFieldHora.setBounds(551, 312, 86, 20);
+			textFieldHora.setBounds(388, 181, 220, 37);
 			textFieldHora.setColumns(10);
 		}
 		return textFieldHora;
 	}
-
-	public JTextField getTextFieldPaciente() {
-		if(textFieldPaciente == null) {
-			textFieldPaciente = new JTextField();
-			textFieldPaciente.setBounds(642, 312, 86, 20);
-			textFieldPaciente.setColumns(10);
+	public JComboBox getComboBoxPaciente() {
+		if (comboBoxPaciente == null) {
+			comboBoxPaciente = new JComboBox();
+			comboBoxPaciente.setBounds(90, 96, 518, 22);
+			comboBoxPaciente.addItem("TESTE");
 		}
-		return textFieldPaciente;
+		return comboBoxPaciente;
 	}
-
-	public JTextField getTextFieldMedico() {
-		if(textFieldMedico == null) {
-			textFieldMedico = new JTextField();
-			textFieldMedico.setBounds(733, 312, 86, 20);
-			textFieldMedico.setColumns(10);
+	public JComboBox getComboBoxMedico() {
+		if (comboBoxMedico == null) {
+			comboBoxMedico = new JComboBox();
+			comboBoxMedico.setBounds(661, 196, 380, 22);
+			comboBoxMedico.addItem("TESTE");
 		}
-		return textFieldMedico;
+		return comboBoxMedico;
 	}
 	
 	/* --------------------------------------------------------- Button ----------------------------------------------------------------- */
