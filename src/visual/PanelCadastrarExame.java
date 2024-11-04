@@ -4,6 +4,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import java.awt.Color;
@@ -23,9 +24,9 @@ public class PanelCadastrarExame extends JPanel {
 	private JLabel labelTipoExame;
 	
 	private JTextField textFieldNomeExame;
-	private JTextField textFieldDescricao;
-	private JTextField textFieldMateriaisUtilizados;
 	private JTextField textFieldValorParticular;
+	private JTextArea textAreaMateriaisUtilizados;
+	private JTextArea textAreaDescricao;
 	
 	private JComboBox<String> comboBoxMedico;
 	private JComboBox<String> comboBoxTipoExame;
@@ -48,7 +49,7 @@ public class PanelCadastrarExame extends JPanel {
 			panelMain = new JPanel();
 			panelMain.setBorder(new LineBorder(null));
 			panelMain.setBackground(new Color(204, 229, 233));
-			panelMain.setBounds(140, 150, 1000, 230);
+			panelMain.setBounds(140, 150, 1000, 405);
 			panelMain.setLayout(null);
 			
 			panelMain.add(getLabelNomeExame());
@@ -59,9 +60,9 @@ public class PanelCadastrarExame extends JPanel {
 			panelMain.add(getLabelTipoExame());
 			
 			panelMain.add(getTextFieldNomeExame());
-			panelMain.add(getTextFieldDescricao());
-			panelMain.add(getTextFieldMateriaisUtilizados());
 			panelMain.add(getTextFieldValorParticular());
+			panelMain.add(getTextAreaMateriaisUtilizados());
+			panelMain.add(getTextAreaDescricao());
 			
 			panelMain.add(getComboBoxMedico());
 			panelMain.add(getComboBoxTipoExame());
@@ -151,22 +152,22 @@ public class PanelCadastrarExame extends JPanel {
 		return textFieldNomeExame;
 	}
 	
-	public JTextField getTextFieldDescricao() {
-		if (textFieldDescricao == null) {
-			textFieldDescricao = new JTextField();
-			textFieldDescricao.setFont(new Font("Tahoma", Font.PLAIN, 14));
-			textFieldDescricao.setBounds(525, 175, 375, 25);
+	public JTextArea getTextAreaDescricao() {
+		if (textAreaDescricao == null) {
+			textAreaDescricao = new JTextArea();
+			textAreaDescricao.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			textAreaDescricao.setBounds(525, 175, 375, 200);
 		}
-		return textFieldDescricao;
+		return textAreaDescricao;
 	}
 	
-	public JTextField getTextFieldMateriaisUtilizados() {
-		if (textFieldMateriaisUtilizados == null) {
-			textFieldMateriaisUtilizados = new JTextField();
-			textFieldMateriaisUtilizados.setFont(new Font("Tahoma", Font.PLAIN, 14));
-			textFieldMateriaisUtilizados.setBounds(100, 175, 400, 25);
+	public JTextArea getTextAreaMateriaisUtilizados() {
+		if (textAreaMateriaisUtilizados == null) {
+			textAreaMateriaisUtilizados = new JTextArea();
+			textAreaMateriaisUtilizados.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			textAreaMateriaisUtilizados.setBounds(100, 175, 400, 200);
 		}
-		return textFieldMateriaisUtilizados;
+		return textAreaMateriaisUtilizados;
 	}
 	
 	public JTextField getTextFieldValorParticular() {
