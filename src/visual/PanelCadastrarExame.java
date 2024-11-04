@@ -195,6 +195,11 @@ public class PanelCadastrarExame extends JPanel {
 			comboBoxTipoExame.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			comboBoxTipoExame.setBounds(525, 115, 375, 25);
 			comboBoxTipoExame.addItem("");
+			comboBoxTipoExame.addItem("Exames Físicos");
+			comboBoxTipoExame.addItem("Exames Laboratoriais");
+			comboBoxTipoExame.addItem("Imagens");
+			comboBoxTipoExame.addItem("Biópsia");
+			comboBoxTipoExame.addItem("Patologia e análise clínica");
 		}
 		return comboBoxTipoExame;
 	}
