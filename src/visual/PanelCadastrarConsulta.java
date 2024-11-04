@@ -1,11 +1,11 @@
 package visual;
 
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import java.awt.Choice;
 import java.awt.Color;
 import java.awt.Font;
 
@@ -32,9 +32,9 @@ public class PanelCadastrarConsulta extends JPanel {
 	private JTextArea textAreaMaterial;
 	private JTextArea textAreaQueixaPaciente;
 
-	private Choice choiceMedico;
-	private Choice choiceTipoDeConsulta;
-	private Choice choiceConvenio;
+	private JComboBox<String> comboBoxMedico;
+	private JComboBox<String> comboBoxTipoDeConsulta;
+	private JComboBox<String> comboBoxConvenio;
 	
 	private JButton buttonCadastrar;
 	private JButton buttonLimpar;
@@ -73,9 +73,9 @@ public class PanelCadastrarConsulta extends JPanel {
 			panelPrincipal.add(getTextAreaObservacoes());
 			panelPrincipal.add(getTextAreaMaterial());
 			
-			panelPrincipal.add(getChoiceMedico());
-			panelPrincipal.add(getChoiceTipoDeConsulta());
-			panelPrincipal.add(getChoiceConvenio());
+			panelPrincipal.add(getComboBoxMedico());
+			panelPrincipal.add(getComboBoxTipoDeConsulta());
+			panelPrincipal.add(getComboBoxConvenio());
 		}
 		return panelPrincipal;
 	}
@@ -233,13 +233,14 @@ public class PanelCadastrarConsulta extends JPanel {
 		return textAreaMaterial;
 	}
 	
-	public Choice getChoiceMedico() {
-		if (choiceMedico == null) {
-			choiceMedico = new Choice();
-			choiceMedico.setBounds(100, 102, 500, 20);
-			choiceMedico.add("TESTE");
+	public JComboBox getComboBoxMedico() {
+		if (comboBoxMedico == null) {
+			comboBoxMedico = new JComboBox();
+			comboBoxMedico.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			comboBoxMedico.setBounds(100, 100, 500, 25);
+			comboBoxMedico.addItem("");
 		}
-		return choiceMedico;
+		return comboBoxMedico;
 	}
 	
 	public JTextField getTextFieldPaciente() {
@@ -251,22 +252,24 @@ public class PanelCadastrarConsulta extends JPanel {
 		return textFieldPaciente;
 	}
 	
-	public Choice getChoiceTipoDeConsulta() {
-		if (choiceTipoDeConsulta == null) {
-			choiceTipoDeConsulta = new Choice();
-			choiceTipoDeConsulta.setBounds(625, 102, 150, 20);
-			choiceTipoDeConsulta.add("TESTE");
+	public JComboBox getComboBoxTipoDeConsulta() {
+		if (comboBoxTipoDeConsulta == null) {
+			comboBoxTipoDeConsulta = new JComboBox();
+			comboBoxTipoDeConsulta.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			comboBoxTipoDeConsulta.setBounds(625, 100, 150, 25);
+			comboBoxTipoDeConsulta.addItem("");
 		}
-		return choiceTipoDeConsulta;
+		return comboBoxTipoDeConsulta;
 	}
 	
-	public Choice getChoiceConvenio() {
-		if (choiceConvenio == null) {
-			choiceConvenio = new Choice();
-			choiceConvenio.setBounds(800, 102, 100, 20);
-			choiceConvenio.add("TESTE");
+	public JComboBox getComboBoxConvenio() {
+		if (comboBoxConvenio == null) {
+			comboBoxConvenio = new JComboBox();
+			comboBoxConvenio.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			comboBoxConvenio.setBounds(800, 100, 100, 25);
+			comboBoxConvenio.addItem("");
 		}
-		return choiceConvenio;
+		return comboBoxConvenio;
 	}
 	
 	/* ---------------------------------------------------------------- Buttons -------------------------------------------------------------- */
