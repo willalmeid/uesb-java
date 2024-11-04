@@ -36,8 +36,8 @@ public class ControladorPanelCadastrarExame implements ActionListener{
 	
 	public void limparPanel() {
 		panelCadastrarExame.getTextFieldNomeExame().setText("");
-		panelCadastrarExame.getTextFieldDescricao().setText("");
-		panelCadastrarExame.getTextFieldMateriaisUtilizados().setText("");
+		panelCadastrarExame.getTextAreaDescricao().setText("");
+		panelCadastrarExame.getTextAreaMateriaisUtilizados().setText("");
 		panelCadastrarExame.getTextFieldValorParticular().setText("");
 	}
 }
