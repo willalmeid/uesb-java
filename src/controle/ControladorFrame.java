@@ -10,6 +10,7 @@ import visual.PanelCadastrarConsulta;
 import visual.PanelCadastrarExame;
 import visual.PanelCadastrarMedico;
 import visual.PanelCadastrarPaciente;
+import visual.PanelCancelarEReagendar;
 import visual.PanelHome;
 import visual.PanelPesquisarHorarios;
 import visual.PanelRelatoriosDeConsulta;
@@ -37,7 +38,7 @@ public class ControladorFrame implements ActionListener{
 	PanelPesquisarHorarios panelPesquisarHorarios;
 	
 	// Verificar Depois
-//	PanelAgendarConsulta panelCacelarEReagendar;
+	PanelCancelarEReagendar panelCancelarEReagendar;
 	
 	PanelRelatoriosDeConsulta panelRelatoriosDeConsulta;
 	PanelRelatoriosDeExames panelRelatoriosDeExames;
@@ -82,6 +83,8 @@ public class ControladorFrame implements ActionListener{
 		frame.getMenuItemAgendarExame().addActionListener(this);
 		frame.getMenuItemVisualizarAgenda().addActionListener(this);
 		frame.getMenuItemPesquisarHorarios().addActionListener(this);
+		frame.getMenuItemCancelarEReagendar().addActionListener(this);
+		
 		frame.getMenuItemRelatoriosDeConsulta().addActionListener(this);
 		frame.getMenuItemRelatoriosDeExames().addActionListener(this);
 		frame.getMenuItemRelatoriosFinanceiros().addActionListener(this);
@@ -137,6 +140,10 @@ public class ControladorFrame implements ActionListener{
 		    controladorPanelPesquisarHorarios = new ControladorPanelPesquisarHorarios(panelPesquisarHorarios);
 		    frame.setContentPane(panelPesquisarHorarios);
 		    
+		} else if(e.getSource() == frame.getMenuItemCancelarEReagendar()) {
+			panelCancelarEReagendar = new PanelCancelarEReagendar();
+			frame.setContentPane(panelCancelarEReagendar);
+			
 		} else if (e.getSource() == frame.getMenuItemRelatoriosDeConsulta()) {
 		    panelRelatoriosDeConsulta = new PanelRelatoriosDeConsulta();
 		    controladorPanelRelatoriosDeConsulta = new ControladorPanelRelatoriosDeConsulta(panelRelatoriosDeConsulta);
