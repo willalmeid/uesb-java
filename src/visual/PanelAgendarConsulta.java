@@ -145,8 +145,10 @@ public class PanelAgendarConsulta extends JPanel{
 			comboBoxMedico = new JComboBox();
 			comboBoxMedico.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			comboBoxMedico.setBounds(100, 115, 550, 25);
-			comboBoxMedico.addItem("");
 			comboBoxMedico.addItem("NOME MÉDICO");
+			
+			// Definir seu padrão como nenhum dos itens acima
+	    	comboBoxMedico.setSelectedIndex(-1);
 		}
 		return comboBoxMedico;
 	}

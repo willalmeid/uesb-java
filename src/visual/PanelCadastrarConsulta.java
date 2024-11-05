@@ -8,6 +8,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.border.LineBorder;
 
 public class PanelCadastrarConsulta extends JPanel {
 
@@ -52,6 +53,7 @@ public class PanelCadastrarConsulta extends JPanel {
 	public JPanel getPanelMain() {
 		if (panelPrincipal == null) {
 			panelPrincipal = new JPanel();
+			panelPrincipal.setBorder(new LineBorder(null));
 			panelPrincipal.setBackground(new Color(204, 229, 233));
 			panelPrincipal.setBounds(140, 130, 1000, 475);
 			panelPrincipal.setLayout(null);
@@ -86,8 +88,8 @@ public class PanelCadastrarConsulta extends JPanel {
 			labelTitlePanel = new JLabel();
 			labelTitlePanel.setForeground(new Color(255, 255, 255));
 			labelTitlePanel.setFont(new Font("Tahoma", Font.PLAIN, 36));
-			labelTitlePanel.setText("Cadastro de Consultas");
-			labelTitlePanel.setBounds(462, 30, 355, 44);
+			labelTitlePanel.setText("Cadastrar Consultas");
+			labelTitlePanel.setBounds(481, 50, 317, 44);
 		}
 		return labelTitlePanel;
 	}
@@ -117,7 +119,7 @@ public class PanelCadastrarConsulta extends JPanel {
 			labelQueixaPaciente = new JLabel();
 			labelQueixaPaciente.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			labelQueixaPaciente.setBounds(100, 130, 800, 20);
-			labelQueixaPaciente.setText("QueixaPaciente");
+			labelQueixaPaciente.setText("Queixa do Paciente");
 		}
 		return labelQueixaPaciente;
 	}
@@ -137,7 +139,7 @@ public class PanelCadastrarConsulta extends JPanel {
 			labelMaterial = new JLabel();
 			labelMaterial.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			labelMaterial.setBounds(100, 350, 800, 20);
-			labelMaterial.setText("Material");
+			labelMaterial.setText("Materiais");
 		}
 		return labelMaterial;
 	}
@@ -146,7 +148,7 @@ public class PanelCadastrarConsulta extends JPanel {
 		if(labelMedico == null) {
 			labelMedico = new JLabel();
 			labelMedico.setFont(new Font("Tahoma", Font.PLAIN, 14));
-			labelMedico.setBounds(100, 75, 220, 20);
+			labelMedico.setBounds(100, 75, 350, 20);
 			labelMedico.setText("Médico");
 		}
 		return labelMedico;
@@ -166,7 +168,7 @@ public class PanelCadastrarConsulta extends JPanel {
 		if(labelTipoDeConsulta == null) {
 			labelTipoDeConsulta = new JLabel();
 			labelTipoDeConsulta.setFont(new Font("Tahoma", Font.PLAIN, 14));
-			labelTipoDeConsulta.setBounds(625, 75, 150, 17);
+			labelTipoDeConsulta.setBounds(475, 75, 200, 20);
 			labelTipoDeConsulta.setText("Tipo De Consulta");
 		}
 		return labelTipoDeConsulta;
@@ -176,8 +178,8 @@ public class PanelCadastrarConsulta extends JPanel {
 		if(labelConvenio == null) {
 			labelConvenio = new JLabel();
 			labelConvenio.setFont(new Font("Tahoma", Font.PLAIN, 14));
-			labelConvenio.setBounds(800, 75, 100, 20);
-			labelConvenio.setText("Convenio");
+			labelConvenio.setBounds(700, 75, 200, 20);
+			labelConvenio.setText("Convênio");
 		}
 		return labelConvenio;
 	}
@@ -237,8 +239,11 @@ public class PanelCadastrarConsulta extends JPanel {
 		if (comboBoxMedico == null) {
 			comboBoxMedico = new JComboBox();
 			comboBoxMedico.setFont(new Font("Tahoma", Font.PLAIN, 14));
-			comboBoxMedico.setBounds(100, 100, 500, 25);
-			comboBoxMedico.addItem("");
+			comboBoxMedico.setBounds(100, 100, 350, 25);
+			comboBoxMedico.addItem("NOME MÉDICO");
+			
+			// Definir seu padrão como nenhum dos itens acima
+	    	comboBoxMedico.setSelectedIndex(-1);
 		}
 		return comboBoxMedico;
 	}
@@ -256,8 +261,11 @@ public class PanelCadastrarConsulta extends JPanel {
 		if (comboBoxTipoDeConsulta == null) {
 			comboBoxTipoDeConsulta = new JComboBox();
 			comboBoxTipoDeConsulta.setFont(new Font("Tahoma", Font.PLAIN, 14));
-			comboBoxTipoDeConsulta.setBounds(625, 100, 150, 25);
-			comboBoxTipoDeConsulta.addItem("");
+			comboBoxTipoDeConsulta.setBounds(475, 100, 200, 25);
+			comboBoxTipoDeConsulta.addItem("TIPO DE CONSULTA");
+			
+			// Definir seu padrão como nenhum dos itens acima
+	    	comboBoxTipoDeConsulta.setSelectedIndex(-1);
 		}
 		return comboBoxTipoDeConsulta;
 	}
@@ -266,8 +274,11 @@ public class PanelCadastrarConsulta extends JPanel {
 		if (comboBoxConvenio == null) {
 			comboBoxConvenio = new JComboBox();
 			comboBoxConvenio.setFont(new Font("Tahoma", Font.PLAIN, 14));
-			comboBoxConvenio.setBounds(800, 100, 100, 25);
-			comboBoxConvenio.addItem("");
+			comboBoxConvenio.setBounds(700, 100, 200, 25);
+			comboBoxConvenio.addItem("TIPO DE CONVÊNIO");
+			
+			// Definir seu padrão como nenhum dos itens acima
+	    	comboBoxConvenio.setSelectedIndex(-1);
 		}
 		return comboBoxConvenio;
 	}

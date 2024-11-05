@@ -75,9 +75,9 @@ public class PanelCadastrarExame extends JPanel {
 		if(labelTitlePanel == null) {
 			labelTitlePanel = new JLabel();
 			labelTitlePanel.setForeground(new Color(255, 255, 255));
-			labelTitlePanel.setText("Cadastro de Exame");
+			labelTitlePanel.setText("Cadastrar Exame");
 			labelTitlePanel.setFont(new Font("Tahoma", Font.PLAIN, 36));
-			labelTitlePanel.setBounds(486, 50, 308, 44);
+			labelTitlePanel.setBounds(505, 50, 270, 44);
 		}
 		return labelTitlePanel;
 	}
@@ -126,7 +126,7 @@ public class PanelCadastrarExame extends JPanel {
 		if(labelMedico == null) {
 			labelMedico = new JLabel();
 			labelMedico.setFont(new Font("Tahoma", Font.PLAIN, 14));
-			labelMedico.setText("Medico");
+			labelMedico.setText("Médico");
 			labelMedico.setBounds(100, 90, 400, 20);
 		}
 		return labelMedico;
@@ -136,7 +136,7 @@ public class PanelCadastrarExame extends JPanel {
 		if(labelTipoExame == null) {
 			labelTipoExame = new JLabel();
 			labelTipoExame.setFont(new Font("Tahoma", Font.PLAIN, 14));
-			labelTipoExame.setText("TipoExame");
+			labelTipoExame.setText("Tipo do Exame");
 			labelTipoExame.setBounds(525, 90, 375, 20);
 		}
 		return labelTipoExame;
@@ -184,7 +184,10 @@ public class PanelCadastrarExame extends JPanel {
 			comboBoxMedico = new JComboBox();
 			comboBoxMedico.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			comboBoxMedico.setBounds(100, 115, 400, 25);
-			comboBoxMedico.addItem("");
+			comboBoxMedico.addItem("NOME MÉDICO");
+			
+			// Definir seu padrão como nenhum dos itens acima
+	    	comboBoxMedico.setSelectedIndex(-1);
 		}
 		return comboBoxMedico;
 	}
@@ -194,12 +197,14 @@ public class PanelCadastrarExame extends JPanel {
 			comboBoxTipoExame = new JComboBox();
 			comboBoxTipoExame.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			comboBoxTipoExame.setBounds(525, 115, 375, 25);
-			comboBoxTipoExame.addItem("");
 			comboBoxTipoExame.addItem("Exames Físicos");
 			comboBoxTipoExame.addItem("Exames Laboratoriais");
 			comboBoxTipoExame.addItem("Imagens");
 			comboBoxTipoExame.addItem("Biópsia");
 			comboBoxTipoExame.addItem("Patologia e análise clínica");
+			
+			// Definir seu padrão como nenhum dos itens acima
+	    	comboBoxTipoExame.setSelectedIndex(-1);
 		}
 		return comboBoxTipoExame;
 	}

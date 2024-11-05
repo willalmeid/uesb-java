@@ -66,8 +66,8 @@ public class PanelCadastrarMaterial extends JPanel {
 			labelTitlePanel = new JLabel();
 			labelTitlePanel.setForeground(new Color(255, 255, 255));
 			labelTitlePanel.setFont(new Font("Tahoma", Font.PLAIN, 36));
-			labelTitlePanel.setText("Cadastro de Materiais");
-			labelTitlePanel.setBounds(468, 50, 344, 44);
+			labelTitlePanel.setText("Cadastrar Materiais");
+			labelTitlePanel.setBounds(487, 50, 306, 44);
 		}
 		return labelTitlePanel;
 	}

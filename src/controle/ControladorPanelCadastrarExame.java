@@ -39,5 +39,8 @@ public class ControladorPanelCadastrarExame implements ActionListener{
 		panelCadastrarExame.getTextAreaDescricao().setText("");
 		panelCadastrarExame.getTextAreaMateriaisUtilizados().setText("");
 		panelCadastrarExame.getTextFieldValorParticular().setText("");
+		
+    	panelCadastrarExame.getComboBoxMedico().setSelectedIndex(-1);
+    	panelCadastrarExame.getComboBoxTipoExame().setSelectedIndex(-1);
 	}
 }

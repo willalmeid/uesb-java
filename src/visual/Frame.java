@@ -172,7 +172,7 @@ public class Frame extends JFrame {
 	public JMenuItem getMenuItemVisualizarAgenda() {
 	    if (menuItemVisualizarAgenda == null) {
 	        menuItemVisualizarAgenda = new JMenuItem();
-	        menuItemVisualizarAgenda.setText("Visualização de Agenda");
+	        menuItemVisualizarAgenda.setText("Visualizar Agenda");
 	    }
 	    return menuItemVisualizarAgenda;
 	}
@@ -180,7 +180,7 @@ public class Frame extends JFrame {
 	public JMenuItem getMenuItemPesquisarHorarios() {
 	    if (menuItemPesquisarHorarios == null) {
 	        menuItemPesquisarHorarios = new JMenuItem();
-	        menuItemPesquisarHorarios.setText("Pesquisa de Horários");
+	        menuItemPesquisarHorarios.setText("Pesquisar Horários");
 	    }
 	    return menuItemPesquisarHorarios;
 	}
@@ -188,7 +188,7 @@ public class Frame extends JFrame {
 	public JMenuItem getMenuItemCancelarEReagendar() {
 	    if (menuItemCancelarEReagendar == null) {
 	        menuItemCancelarEReagendar = new JMenuItem();
-	        menuItemCancelarEReagendar.setText("Cancelamento e Reagendamento");
+	        menuItemCancelarEReagendar.setText("Reagendar ou Cancelar");
 	    }
 	    return menuItemCancelarEReagendar;
 	}

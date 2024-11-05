@@ -74,8 +74,8 @@ public class PanelCadastrarMedico extends JPanel{
 			labelTitlePanel = new JLabel();
 			labelTitlePanel.setForeground(new Color(255, 255, 255));
 			labelTitlePanel.setFont(new Font("Tahoma", Font.PLAIN, 36));
-			labelTitlePanel.setText("Cadastro de Médico");
-			labelTitlePanel.setBounds(483, 50, 314, 44);
+			labelTitlePanel.setText("Cadastrar Médico");
+			labelTitlePanel.setBounds(502, 50, 276, 44);
 		}
 		return labelTitlePanel;
 	}

@@ -146,12 +146,13 @@ public class PanelAgendarExame extends JPanel{
 			comboBoxTipoExame = new JComboBox();
 			comboBoxTipoExame.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			comboBoxTipoExame.setBounds(650, 115, 250, 25);
-			comboBoxTipoExame.addItem("");
 			comboBoxTipoExame.addItem("Exames Físicos");
 			comboBoxTipoExame.addItem("Exames Laboratoriais");
 			comboBoxTipoExame.addItem("Imagens");
 			comboBoxTipoExame.addItem("Biópsia");
 			comboBoxTipoExame.addItem("Patologia e análise clínica");
+			
+			comboBoxTipoExame.setSelectedIndex(-1);
 		}
 		return comboBoxTipoExame;
 	}

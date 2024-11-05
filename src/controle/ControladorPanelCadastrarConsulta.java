@@ -56,6 +56,11 @@ public class ControladorPanelCadastrarConsulta implements ActionListener {
 		panelCadastrarConsulta.getTextAreaQueixaPaciente().setText("");
 		panelCadastrarConsulta.getTextAreaObservacoes().setText("");
 		panelCadastrarConsulta.getTextAreaMaterial().setText("");
+		
+		// Definir seu padrão como nenhum dos itens acima
+		panelCadastrarConsulta.getComboBoxMedico().setSelectedIndex(-1);
+    	panelCadastrarConsulta.getComboBoxTipoDeConsulta().setSelectedIndex(-1);
+    	panelCadastrarConsulta.getComboBoxConvenio().setSelectedIndex(-1);
 	}
 
 }

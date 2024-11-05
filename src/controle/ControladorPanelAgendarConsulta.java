@@ -17,8 +17,8 @@ public class ControladorPanelAgendarConsulta implements ActionListener {
 	}
 	
 	public void addEventos() {
-		panelAgendarConsulta.getButtonAgendar();
-		panelAgendarConsulta.getButtonLimpar();
+		panelAgendarConsulta.getButtonAgendar().addActionListener(this);
+		panelAgendarConsulta.getButtonLimpar().addActionListener(this);
 	}
 
 	public void actionPerformed(ActionEvent e) {
@@ -39,7 +39,7 @@ public class ControladorPanelAgendarConsulta implements ActionListener {
 		panelAgendarConsulta.getTextFieldData().setText("");
 		panelAgendarConsulta.getTextFieldHora().setText("");
 		panelAgendarConsulta.getTextFieldPaciente().setText("");
-		panelAgendarConsulta.getComboBoxMedico().setSelectedIndex(0);
+		panelAgendarConsulta.getComboBoxMedico().setSelectedIndex(-1);
 	}
 
 }

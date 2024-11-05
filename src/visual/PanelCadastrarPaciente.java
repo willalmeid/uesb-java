@@ -135,8 +135,8 @@ public class PanelCadastrarPaciente extends JPanel{
 			labelTitlePanel = new JLabel();
 			labelTitlePanel.setForeground(new Color(255, 255, 255));
 			labelTitlePanel.setFont(new Font("Tahoma", Font.PLAIN, 36));
-			labelTitlePanel.setText("Cadastro de Paciente");
-			labelTitlePanel.setBounds(470, 15, 336, 44);
+			labelTitlePanel.setText("Cadastrar Paciente");
+			labelTitlePanel.setBounds(491, 15, 298, 44);
 		}
 		return labelTitlePanel;
 	}
@@ -371,7 +371,10 @@ public class PanelCadastrarPaciente extends JPanel{
 	        comboBoxCovenio = new JComboBox();
 	        comboBoxCovenio.setFont(new Font("Tahoma", Font.PLAIN, 14));
 	        comboBoxCovenio.setBounds(740, 102, 160, 20);
-	        comboBoxCovenio.addItem("");
+	        comboBoxCovenio.addItem("TIPO DO CONVÊNIO");
+	        
+	        // Definir seu padrão como nenhum dos itens acima
+	    	comboBoxCovenio.setSelectedIndex(-1);
 	    }
 	    return comboBoxCovenio;
 	}
@@ -382,7 +385,7 @@ public class PanelCadastrarPaciente extends JPanel{
 	    	comboBoxTipoSanguineo.setBackground(new Color(255, 255, 255));
 	    	comboBoxTipoSanguineo.setFont(new Font("Tahoma", Font.PLAIN, 14));
 	    	comboBoxTipoSanguineo.setBounds(595, 102, 110, 20);
-	    	comboBoxTipoSanguineo.addItem("");
+//	    	comboBoxTipoSanguineo.addItem("");
 	    	comboBoxTipoSanguineo.addItem("A+");
 	    	comboBoxTipoSanguineo.addItem("A-");
 	    	comboBoxTipoSanguineo.addItem("B+");
@@ -391,6 +394,9 @@ public class PanelCadastrarPaciente extends JPanel{
 	    	comboBoxTipoSanguineo.addItem("AB-");
 	    	comboBoxTipoSanguineo.addItem("O+");
 	    	comboBoxTipoSanguineo.addItem("O-");
+	    	
+	    	// Definir seu padrão como nenhum dos itens acima
+	    	comboBoxTipoSanguineo.setSelectedIndex(-1);
 	    }
 	    return comboBoxTipoSanguineo;
 	}

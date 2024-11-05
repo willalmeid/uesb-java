@@ -80,5 +80,8 @@ public class ControladorPanelCadastrarPaciente implements ActionListener {
 		panelCadastrarPaciente.getTextFieldNumero().setText("");
 		panelCadastrarPaciente.getTextFieldLogradouro().setText("");
 		panelCadastrarPaciente.getTextFieldComplemento().setText("");
+		
+    	panelCadastrarPaciente.getComboBoxTipoSanguineo().setSelectedIndex(-1);
+    	panelCadastrarPaciente.getComboBoxCovenio().setSelectedIndex(-1);
 	}
 }
