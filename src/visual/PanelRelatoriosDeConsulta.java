@@ -5,6 +5,7 @@ import java.awt.Font;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.border.LineBorder;
 
 public class PanelRelatoriosDeConsulta extends JPanel {
 
@@ -33,12 +34,12 @@ public class PanelRelatoriosDeConsulta extends JPanel {
 	public JPanel getPanelPrincipal() {
 		if(panelPrincipal == null) {
 			panelPrincipal = new JPanel();
+			panelPrincipal.setBorder(new LineBorder(null));
 			panelPrincipal.setBackground(new Color(204, 229, 233));
 			panelPrincipal.setLocation(207, 136);
 			panelPrincipal.setSize(500, 400);
-			panelPrincipal.setBounds(30, 135, 1220, 490);
+			panelPrincipal.setBounds(290, 120, 700, 550);
 		}
 		return panelPrincipal;
 	}
-
 }
