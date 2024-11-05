@@ -36,7 +36,7 @@ public class ControladorPanelAgendarExame implements ActionListener {
 	public void limparPanel() {
 		panelAgendarExames.getTextFieldData().setText("");
 		panelAgendarExames.getTextFieldHora().setText("");
-		panelAgendarExames.getComboBoxPaciente().setSelectedIndex(0);
+		panelAgendarExames.getTextFieldPaciente().setText("");
 		panelAgendarExames.getComboBoxTipoExame().setSelectedIndex(0);
 	}
 }

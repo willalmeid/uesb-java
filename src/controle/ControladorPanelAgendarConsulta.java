@@ -38,7 +38,7 @@ public class ControladorPanelAgendarConsulta implements ActionListener {
 	public void limparPanel() {
 		panelAgendarConsulta.getTextFieldData().setText("");
 		panelAgendarConsulta.getTextFieldHora().setText("");
-		panelAgendarConsulta.getComboBoxPaciente().setSelectedIndex(0);
+		panelAgendarConsulta.getTextFieldPaciente().setText("");
 		panelAgendarConsulta.getComboBoxMedico().setSelectedIndex(0);
 	}
 

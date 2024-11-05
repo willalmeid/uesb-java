@@ -8,6 +8,7 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.border.LineBorder;
 
 public class PanelAgendarExame extends JPanel{
 
@@ -21,12 +22,12 @@ public class PanelAgendarExame extends JPanel{
 	
 	private JTextField textFieldData;
 	private JTextField textFieldHora;
+	private JTextField textFieldPaciente;
 	
 	private JComboBox<String> comboBoxTipoExame;
 	
 	private JButton buttonAgendar;
 	private JButton buttonLimpar;
-	private JComboBox comboBoxPaciente;
 	
 	public PanelAgendarExame() {
 		setSize(1280, 750);
@@ -41,9 +42,10 @@ public class PanelAgendarExame extends JPanel{
 	public JPanel getPanelPrincipal() {
 		if(panelPrincipal == null) {
 			panelPrincipal = new JPanel();
+			panelPrincipal.setBorder(new LineBorder(new Color(0, 0, 0)));
 			panelPrincipal.setBackground(new Color(204, 229, 233));
-			panelPrincipal.setLocation(65, 137);
-			panelPrincipal.setSize(1120, 401);
+			panelPrincipal.setLocation(140, 150);
+			panelPrincipal.setSize(1000, 170);
 			panelPrincipal.setLayout(null);
 			panelPrincipal.add(getLabelData());
 			panelPrincipal.add(getLabelHora());
@@ -52,8 +54,8 @@ public class PanelAgendarExame extends JPanel{
 			
 			panelPrincipal.add(getTextFieldData());
 			panelPrincipal.add(getTextFieldHora());
+			panelPrincipal.add(getTextFieldPaciente());
 			panelPrincipal.add(getComboBoxTipoExame());
-			panelPrincipal.add(getComboBoxPaciente());
 		}
 		return panelPrincipal;
 	}
@@ -63,9 +65,9 @@ public class PanelAgendarExame extends JPanel{
 		if(labelTitlePanel == null) {
 			labelTitlePanel = new JLabel();
 			labelTitlePanel.setForeground(new Color(255, 255, 255));
-			labelTitlePanel.setText("Tela Agendamento de Exame");
+			labelTitlePanel.setText("Agendamento de Exame");
 			labelTitlePanel.setFont(new Font("Tahoma", Font.PLAIN, 36));
-			labelTitlePanel.setBounds(388, 30, 503, 76);
+			labelTitlePanel.setBounds(446, 50, 388, 44);
 		}
 		return labelTitlePanel;
 	}
@@ -74,7 +76,7 @@ public class PanelAgendarExame extends JPanel{
 		if(labelData == null) {
 			labelData = new JLabel();
 			labelData.setFont(new Font("Tahoma", Font.PLAIN, 14));
-			labelData.setBounds(90, 162, 220, 14);
+			labelData.setBounds(100, 90, 220, 20);
 			labelData.setText("Data:");
 		}
 		return labelData;
@@ -84,7 +86,7 @@ public class PanelAgendarExame extends JPanel{
 		if(labelHora == null) {
 			labelHora = new JLabel();
 			labelHora.setFont(new Font("Tahoma", Font.PLAIN, 14));
-			labelHora.setBounds(388, 161, 220, 17);
+			labelHora.setBounds(375, 90, 250, 20);
 			labelHora.setText("Hora:");
 		}
 		return labelHora;
@@ -94,7 +96,7 @@ public class PanelAgendarExame extends JPanel{
 		if(labelPaciente == null) {
 			labelPaciente = new JLabel();
 			labelPaciente.setFont(new Font("Tahoma", Font.PLAIN, 14));
-			labelPaciente.setBounds(90, 72, 518, 17);
+			labelPaciente.setBounds(100, 30, 800, 20);
 			labelPaciente.setText("Paciente:");
 		}
 		return labelPaciente;
@@ -104,7 +106,7 @@ public class PanelAgendarExame extends JPanel{
 		if(labelTipoExame == null) {
 			labelTipoExame = new JLabel();
 			labelTipoExame.setFont(new Font("Tahoma", Font.PLAIN, 14));
-			labelTipoExame.setBounds(676, 161, 271, 17);
+			labelTipoExame.setBounds(650, 90, 250, 17);
 			labelTipoExame.setText("Tipo Exame:");
 		}
 		return labelTipoExame;
@@ -114,7 +116,8 @@ public class PanelAgendarExame extends JPanel{
 	public JTextField getTextFieldData() {
 		if(textFieldData == null) {
 			textFieldData = new JTextField();
-			textFieldData.setBounds(90, 181, 220, 37);
+			textFieldData.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			textFieldData.setBounds(100, 115, 250, 25);
 			textFieldData.setColumns(10);
 		}
 		return textFieldData;
@@ -123,26 +126,32 @@ public class PanelAgendarExame extends JPanel{
 	public JTextField getTextFieldHora() {
 		if(textFieldHora == null) {
 			textFieldHora = new JTextField();
-			textFieldHora.setBounds(388, 181, 220, 37);
+			textFieldHora.setBounds(375, 115, 250, 25);
 			textFieldHora.setColumns(10);
 		}
 		return textFieldHora;
 	}
 	
-	public JComboBox getComboBoxPaciente() {
-		if (comboBoxPaciente == null) {
-			comboBoxPaciente = new JComboBox();
-			comboBoxPaciente.setBounds(90, 100, 518, 22);
-			comboBoxPaciente.addItem("TESTE");
+	public JTextField getTextFieldPaciente() {
+		if (textFieldPaciente == null) {
+			textFieldPaciente = new JTextField();
+			textFieldPaciente.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			textFieldPaciente.setBounds(100, 55, 800, 25);
 		}
-		return comboBoxPaciente;
+		return textFieldPaciente;
 	}
 	
 	public JComboBox getComboBoxTipoExame() {
 		if(comboBoxTipoExame == null) {
 			comboBoxTipoExame = new JComboBox();
-			comboBoxTipoExame.setBounds(676, 181, 271, 37);
-			comboBoxTipoExame.addItem("TESTE");
+			comboBoxTipoExame.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			comboBoxTipoExame.setBounds(650, 115, 250, 25);
+			comboBoxTipoExame.addItem("");
+			comboBoxTipoExame.addItem("Exames Físicos");
+			comboBoxTipoExame.addItem("Exames Laboratoriais");
+			comboBoxTipoExame.addItem("Imagens");
+			comboBoxTipoExame.addItem("Biópsia");
+			comboBoxTipoExame.addItem("Patologia e análise clínica");
 		}
 		return comboBoxTipoExame;
 	}
@@ -152,7 +161,7 @@ public class PanelAgendarExame extends JPanel{
 		if(buttonAgendar == null) {
 			buttonAgendar = new JButton();
 			buttonAgendar.setText("Agendar");
-			buttonAgendar.setBounds(1077, 603, 108, 32);
+			buttonAgendar.setBounds(1040, 600, 100, 35);
 		}
 		return buttonAgendar;
 	}
@@ -161,7 +170,7 @@ public class PanelAgendarExame extends JPanel{
 		if(buttonLimpar == null) {
 			buttonLimpar = new JButton();
 			buttonLimpar.setText("Limpar");
-			buttonLimpar.setBounds(65, 603, 108, 32);
+			buttonLimpar.setBounds(140, 600, 100, 35);
 		}
 		return buttonLimpar;
 	}

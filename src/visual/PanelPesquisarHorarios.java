@@ -5,6 +5,7 @@ import java.awt.Font;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.border.LineBorder;
 
 public class PanelPesquisarHorarios extends JPanel {
 
@@ -25,7 +26,7 @@ public class PanelPesquisarHorarios extends JPanel {
 			labelTitlePanel.setForeground(new Color(255, 255, 255));
 			labelTitlePanel.setFont(new Font("Tahoma", Font.PLAIN, 36));
 			labelTitlePanel.setText("Pesquisar Horários");
-			labelTitlePanel.setBounds(488, 30, 303, 76);
+			labelTitlePanel.setBounds(492, 50, 295, 44);
 		}
 		return labelTitlePanel;
 	}
@@ -33,10 +34,11 @@ public class PanelPesquisarHorarios extends JPanel {
 	public JPanel getPanelPrincipal() {
 		if(panelPrincipal == null) {
 			panelPrincipal = new JPanel();
+			panelPrincipal.setBorder(new LineBorder(new Color(0, 0, 0)));
 			panelPrincipal.setBackground(new Color(204, 229, 233));
 			panelPrincipal.setLocation(207, 136);
 			panelPrincipal.setSize(500, 400);
-			panelPrincipal.setBounds(30, 135, 1220, 490);
+			panelPrincipal.setBounds(140, 150, 1000, 490);
 		}
 		return panelPrincipal;
 	}
