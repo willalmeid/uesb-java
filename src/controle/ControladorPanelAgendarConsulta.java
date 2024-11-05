@@ -2,7 +2,9 @@ package controle;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
+import modelo.Consulta;
 import visual.PanelAgendarConsulta;
 
 public class ControladorPanelAgendarConsulta implements ActionListener {
@@ -36,8 +38,8 @@ public class ControladorPanelAgendarConsulta implements ActionListener {
 	public void limparPanel() {
 		panelAgendarConsulta.getTextFieldData().setText("");
 		panelAgendarConsulta.getTextFieldHora().setText("");
-		panelAgendarConsulta.getTextFieldPaciente().setText("");
-		panelAgendarConsulta.getTextFieldMedico().setText("");
+		panelAgendarConsulta.getComboBoxPaciente().setSelectedIndex(0);
+		panelAgendarConsulta.getComboBoxMedico().setSelectedIndex(0);
 	}
 
 }
