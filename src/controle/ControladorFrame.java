@@ -23,8 +23,7 @@ public class ControladorFrame implements ActionListener{
 
 	Frame frame;
 	
-	// Está static, pois o método main só aceitava assim.
-	static PanelHome panelHome;
+	PanelHome panelHome;
 	
 	PanelCadastrarConsulta panelCadastarConsulta;
 	PanelCadastrarExame panelCadastrarExame;
@@ -165,7 +164,7 @@ public class ControladorFrame implements ActionListener{
 	
 	public static void main(String[] args) {
 		Frame frame = new Frame();
-		panelHome = new PanelHome();
+		PanelHome panelHome = new PanelHome();
 		frame.setContentPane(panelHome);
 		new ControladorFrame(frame);
 	}
