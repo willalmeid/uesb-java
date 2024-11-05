@@ -4,6 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
+
 import modelo.Consulta;
 import modelo.Material;
 import modelo.Medico;
@@ -46,8 +48,16 @@ public class ControladorPanelCadastrarConsulta implements ActionListener {
 		
 		Medico medico = (Medico) panelCadastrarConsulta.getComboBoxMedico().getSelectedItem();
 		
-		String nomePaciente = panelCadastrarConsulta.getTextFieldPaciente().getText();	
-		String nomeMaterial = panelCadastrarConsulta.getTextAreaMaterial().getText();
+		Paciente paciente = new Paciente();
+		paciente.setNome(panelCadastrarConsulta.getTextFieldPaciente().getText());	
+		
+		Material material = new Material(); 
+		material.setNomeDoMaterial(panelCadastrarConsulta.getTextAreaMaterial().getText());
+		
+		Consulta c = new Consulta(data, hora, queixaPaciente, tipoDeConsulta, convenio, observacoes, medico, paciente, material);
+	
+		consultasAgendadas.add(c);
+		JOptionPane.showMessageDialog(panelCadastrarConsulta, "Consulta cadastrada com sucesso", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
 	}
 	
 	public void limparPanel() {
