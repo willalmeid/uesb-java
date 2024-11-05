@@ -116,6 +116,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JTextField getTextFieldData() {
 		if(textFieldData == null) {
 			textFieldData = new JTextField();
+			textFieldData.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			textFieldData.setBounds(675, 115, 100, 25);
 			textFieldData.setColumns(10);
 		}
@@ -125,6 +126,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JTextField getTextFieldHora() {
 		if(textFieldHora == null) {
 			textFieldHora = new JTextField();
+			textFieldHora.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			textFieldHora.setBounds(800, 115, 100, 25);
 			textFieldHora.setColumns(10);
 		}
@@ -133,6 +135,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JTextField getTextFieldPaciente() {
 		if (textFieldPaciente == null) {
 			textFieldPaciente = new JTextField();
+			textFieldPaciente.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			textFieldPaciente.setBounds(100, 55, 800, 25);
 		}
 		return textFieldPaciente;
@@ -140,6 +143,7 @@ public class PanelAgendarConsulta extends JPanel{
 	public JComboBox getComboBoxMedico() {
 		if (comboBoxMedico == null) {
 			comboBoxMedico = new JComboBox();
+			comboBoxMedico.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			comboBoxMedico.setBounds(100, 115, 550, 25);
 			comboBoxMedico.addItem("");
 			comboBoxMedico.addItem("NOME MÉDICO");
