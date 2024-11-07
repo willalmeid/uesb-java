@@ -2,9 +2,7 @@ package controle;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
-import modelo.Consulta;
 import visual.PanelAgendarConsulta;
 
 public class ControladorPanelAgendarConsulta implements ActionListener {
