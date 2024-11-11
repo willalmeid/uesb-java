@@ -26,7 +26,6 @@ public class ControladorPanelUniverso implements ActionListener {
         } else if (e.getSource() == timer) {
             panelUniverso.atualizarAngulo(0.01);
         }
-		
 	}
 	
 	public void iniciarGalaxia() {
