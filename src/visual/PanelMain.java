@@ -1,0 +1,72 @@
+package visual;
+
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+
+import styles.ButtonNavegacao;
+import styles.Icons;
+import styles.Thema;
+
+public class PanelMain extends JPanel{
+
+	private ButtonNavegacao buttonCadastar;
+	private ButtonNavegacao buttonAgendar;
+	private ButtonNavegacao buttonRelatorios;
+	
+	public PanelMain() {
+		this.setBackground(Thema.corFundoPrincipal);
+		GroupLayout gl_panelHome = new GroupLayout(this);
+		gl_panelHome.setHorizontalGroup(
+			gl_panelHome.createParallelGroup(Alignment.LEADING)
+			.addGroup(gl_panelHome.createSequentialGroup()
+				.addGap(90)
+				.addComponent(getButtonCadastar(), GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
+				.addGap(100)
+				.addComponent(getButtonAgendar(), GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
+				.addGap(100)
+				.addComponent(getButtonRelatorios(), GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
+				.addContainerGap(150, Short.MAX_VALUE)
+			)
+		);
+		
+		gl_panelHome.setVerticalGroup(
+			gl_panelHome.createParallelGroup(Alignment.LEADING)
+			.addGroup(gl_panelHome.createSequentialGroup()
+				.addGap(100)
+				.addGroup(gl_panelHome.createParallelGroup(Alignment.TRAILING, false)
+					.addComponent(getButtonRelatorios(), Alignment.LEADING, 0, 0, Short.MAX_VALUE)
+					.addComponent(getButtonCadastar(), Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
+					.addComponent(getButtonAgendar(), Alignment.LEADING, 0, 0, Short.MAX_VALUE)
+				)
+				.addGap(488)
+			)
+		);
+		setLayout(gl_panelHome);
+	}
+	
+	public ButtonNavegacao getButtonCadastar() {
+		if (buttonCadastar == null) {
+			buttonCadastar = new ButtonNavegacao();
+			buttonCadastar.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.gerenciarConsultas)));
+		}
+		return buttonCadastar;
+	}
+	
+	public ButtonNavegacao getButtonAgendar() {
+		if (buttonAgendar == null) {
+			buttonAgendar = new ButtonNavegacao();
+			buttonAgendar.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.gerenciarConsultas)));
+		}
+		return buttonAgendar;
+	}
+	
+	public ButtonNavegacao getButtonRelatorios() {
+		if (buttonRelatorios == null) {
+			buttonRelatorios = new ButtonNavegacao();
+			buttonRelatorios.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.gerenciarConsultas)));
+		}
+		return buttonRelatorios;
+	}
+}
