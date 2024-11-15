@@ -11,7 +11,7 @@ import styles.Thema;
 
 public class PanelMain extends JPanel{
 
-	private ButtonNavegacao buttonCadastar;
+	private ButtonNavegacao buttonCadastrar;
 	private ButtonNavegacao buttonAgendar;
 	private ButtonNavegacao buttonRelatorios;
 	
@@ -47,11 +47,11 @@ public class PanelMain extends JPanel{
 	}
 	
 	public ButtonNavegacao getButtonCadastar() {
-		if (buttonCadastar == null) {
-			buttonCadastar = new ButtonNavegacao();
-			buttonCadastar.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.gerenciarConsultas)));
+		if (buttonCadastrar == null) {
+			buttonCadastrar = new ButtonNavegacao();
+			buttonCadastrar.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.gerenciarConsultas)));
 		}
-		return buttonCadastar;
+		return buttonCadastrar;
 	}
 	
 	public ButtonNavegacao getButtonAgendar() {
