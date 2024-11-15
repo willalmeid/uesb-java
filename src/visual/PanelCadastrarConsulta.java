@@ -47,8 +47,8 @@ public class PanelCadastrarConsulta extends JPanel {
 	private Buttons buttonLimpar;
 	
 	public PanelCadastrarConsulta() {
-		setSize(830, 785);
 		setBackground(Thema.corPrincipal);
+		
 		GroupLayout groupLayout = new GroupLayout(this);
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
@@ -59,9 +59,9 @@ public class PanelCadastrarConsulta extends JPanel {
 					.addGap(10)
 					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING, false)
 						.addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
-							.addComponent(getButtonLimpar(), GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
+							.addComponent(getButtonLimpar(), GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE)
 							.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-							.addComponent(getButtonCadastrar(), GroupLayout.PREFERRED_SIZE, 106, GroupLayout.PREFERRED_SIZE))
+							.addComponent(getButtonCadastrar(), GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE))
 						.addComponent(getPanelMain(), Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 760, GroupLayout.PREFERRED_SIZE)))
 		);
 		groupLayout.setVerticalGroup(

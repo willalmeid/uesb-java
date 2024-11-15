@@ -89,9 +89,9 @@ public class PanelCadastrarPaciente extends JPanel{
 							.addComponent(getPanelEndereco(), GroupLayout.PREFERRED_SIZE, 760, GroupLayout.PREFERRED_SIZE))
 						.addGroup(groupLayout.createSequentialGroup()
 							.addGap(20)
-							.addComponent(getButtonLimpar(), GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
+							.addComponent(getButtonLimpar(), GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE)
 							.addGap(549)
-							.addComponent(getButtonCadastrar(), GroupLayout.PREFERRED_SIZE, 111, GroupLayout.PREFERRED_SIZE)))
+							.addComponent(getButtonCadastrar(), GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE)))
 					.addGap(358))
 		);
 		groupLayout.setVerticalGroup(
