@@ -1,13 +1,15 @@
 package visual;
 
+import java.awt.Component;
+
 import javax.swing.JDialog;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 
-public class DialogCadastrarPaciente extends JDialog {
+public class Dialog extends JDialog {
     
-    public DialogCadastrarPaciente(PanelCadastrarPaciente panelCadastrarPaciente, Frame frame) {
-        JScrollPane scrollPane = new JScrollPane(panelCadastrarPaciente);
+    public Dialog(Component panel, Frame frame) {
+        JScrollPane scrollPane = new JScrollPane(panel);
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         
         JScrollBar verticalScrollBar = scrollPane.getVerticalScrollBar();
