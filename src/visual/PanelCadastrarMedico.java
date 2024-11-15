@@ -38,7 +38,7 @@ public class PanelCadastrarMedico extends JPanel{
 
 	public PanelCadastrarMedico() {
 		setBackground(Thema.corPrincipal);
-		setSize(830, 559);
+		
 		GroupLayout groupLayout = new GroupLayout(this);
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
