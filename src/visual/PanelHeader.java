@@ -55,7 +55,7 @@ public class PanelHeader extends JPanel{
 	public JLabel getLabelLogo() {
 		if (labelLogo == null) {
 			labelLogo = new JLabel("");
-			labelLogo.setIcon(new ImageIcon(PanelHeader.class.getResource("/assets/logo-brnaca-fundo-transparente-129x150.png")));
+			labelLogo.setIcon(new ImageIcon(PanelHeader.class.getResource("/assets/logo-fundo-transparente-129x150.png")));
 			labelLogo.setFont(new Font("Tahoma", Font.PLAIN, 99));
 		}
 		return labelLogo;
