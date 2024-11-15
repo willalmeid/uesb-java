@@ -8,6 +8,6 @@ public class Input extends JTextField {
 		super();
 		setFont(Thema.FONT_INPUTS);
 		setColumns(30);
-		setBorder(BorderFactory.createLineBorder(Thema.corPrincipal, 2));
+		setBorder(BorderFactory.createLineBorder(Thema.corAuxiliar2, 2));
 	}
 }
