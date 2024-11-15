@@ -7,6 +7,7 @@ import visual.Dialog;
 import visual.PanelCadastrar;
 import visual.PanelCadastrarConsulta;
 import visual.PanelCadastrarExame;
+import visual.PanelCadastrarMaterial;
 import visual.PanelCadastrarMedico;
 import visual.PanelCadastrarPaciente;
 
@@ -24,6 +25,7 @@ public class ControladorPanelCadastrar implements ActionListener {
 		panelCadastrar.getButtonCadastrarMedico().addActionListener(this);
 		panelCadastrar.getButtonCadastrarExame().addActionListener(this);
 		panelCadastrar.getButtonCadastrarConsulta().addActionListener(this);
+		panelCadastrar.getButtonCadastrarMaterial().addActionListener(this);
 	}
 	
 	public void actionPerformed(ActionEvent e) {
@@ -42,6 +44,10 @@ public class ControladorPanelCadastrar implements ActionListener {
 		} else if(e.getSource() == panelCadastrar.getButtonCadastrarConsulta()) {
 			PanelCadastrarConsulta panelCadastrarConsulta = new PanelCadastrarConsulta();
 			Dialog dialog = new Dialog(panelCadastrarConsulta);
+			
+		} else if(e.getSource() == panelCadastrar.getButtonCadastrarMaterial()) {
+			PanelCadastrarMaterial panelCadastrarMaterial = new PanelCadastrarMaterial();
+			Dialog dialog = new Dialog(panelCadastrarMaterial);
 			
 		}
 	}
