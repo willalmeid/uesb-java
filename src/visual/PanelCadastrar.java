@@ -36,9 +36,9 @@ public class PanelCadastrar extends JPanel {
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 						.addGroup(groupLayout.createSequentialGroup()
 							.addGap(150)
-							.addComponent(getButtonCadastrarMaterial(), GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
+							.addComponent(getButtonCadastrarConsulta(), GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
 							.addGap(30)
-							.addComponent(getButtonCadastrarConsulta(), GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE))
+							.addComponent(getButtonCadastrarMaterial(), GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE))
 						.addGroup(groupLayout.createSequentialGroup()
 							.addComponent(getButtonCadastrarPaciente(), GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
 							.addGap(30)
@@ -75,8 +75,8 @@ public class PanelCadastrar extends JPanel {
 						.addComponent(getButtonCadastrarMedico(), GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE))
 					.addPreferredGap(ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(getButtonCadastrarConsulta(), GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE)
-						.addComponent(getButtonCadastrarMaterial(), GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE))
+						.addComponent(getButtonCadastrarMaterial(), GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE)
+						.addComponent(getButtonCadastrarConsulta(), GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE))
 					.addGap(89))
 		);
 		setLayout(groupLayout);
