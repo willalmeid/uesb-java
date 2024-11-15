@@ -1,31 +1,48 @@
 package visual;
 
-import java.awt.Color;
-
-import javax.swing.JLabel;
+import javax.swing.GroupLayout;
 import javax.swing.JPanel;
-import java.awt.Font;
+import javax.swing.JSplitPane;
+
+import controle.ControladorPanelMain;
+
+import javax.swing.GroupLayout.Alignment;
 
 public class PanelHome extends JPanel {
 
-	private JLabel labelTitlePanel;
+	private JSplitPane splitPane;
+	private PanelHeader panelHeader;
 	
 	public PanelHome() {
-		setBackground(new Color(2, 83, 112));
-		setSize(1280, 750);
-		add(getLabelTitle());
-		setLayout(null);
+		setVisible(true);
+		setSize(1280, 768);
+		
+		GroupLayout groupLayout = new GroupLayout(this);
+		groupLayout.setHorizontalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addComponent(getSplitPane(), GroupLayout.PREFERRED_SIZE, 400, Short.MAX_VALUE)
+		);
+		groupLayout.setVerticalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addComponent(getSplitPane(), GroupLayout.PREFERRED_SIZE, 729, GroupLayout.PREFERRED_SIZE)
+		);
+		setLayout(groupLayout);
 	}
-
-	public JLabel getLabelTitle() {
-		if(labelTitlePanel == null) {
-			labelTitlePanel = new JLabel();
-			labelTitlePanel.setForeground(new Color(255, 255, 255));
-			labelTitlePanel.setFont(new Font("Tahoma", Font.PLAIN, 30));
-			labelTitlePanel.setSize(454, 37);
-			labelTitlePanel.setLocation(413, 100);
-			labelTitlePanel.setText("Bem vindo(a) ao sitema hospitalar");
+	
+	public JSplitPane getSplitPane() {
+		if (splitPane == null) {
+			splitPane = new JSplitPane();
+			splitPane.setContinuousLayout(true);
+			splitPane.setOrientation(JSplitPane.VERTICAL_SPLIT);
+			splitPane.setLeftComponent(new PanelHeader());
+			
+			PanelMain panelMain = new PanelMain();
+			new ControladorPanelMain(panelMain);
+			splitPane.setRightComponent(panelMain);
+			
+			splitPane.setDividerSize(0); // Define a largura da barra para 0, tornando-a invisível
+			splitPane.setEnabled(false); // Desativa o redimensionamento do JSplitPane
 		}
-		return labelTitlePanel;
+		return splitPane;
 	}
 }
