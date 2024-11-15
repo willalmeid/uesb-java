@@ -11,7 +11,7 @@ import javax.swing.GroupLayout.Alignment;
 public class PanelHome extends JPanel {
 
 	private JSplitPane splitPane;
-	private PanelHeader panelHeader;
+	private PanelHomeHeader panelHeader;
 	
 	public PanelHome() {
 		setVisible(true);
@@ -34,9 +34,9 @@ public class PanelHome extends JPanel {
 			splitPane = new JSplitPane();
 			splitPane.setContinuousLayout(true);
 			splitPane.setOrientation(JSplitPane.VERTICAL_SPLIT);
-			splitPane.setLeftComponent(new PanelHeader());
+			splitPane.setLeftComponent(new PanelHomeHeader());
 			
-			PanelMain panelMain = new PanelMain();
+			PanelHomeMain panelMain = new PanelHomeMain();
 			new ControladorPanelMain(panelMain);
 			splitPane.setRightComponent(panelMain);
 			

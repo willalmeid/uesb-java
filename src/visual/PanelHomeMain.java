@@ -9,13 +9,13 @@ import styles.ButtonNavegacao;
 import styles.Icons;
 import styles.Thema;
 
-public class PanelMain extends JPanel{
+public class PanelHomeMain extends JPanel{
 
 	private ButtonNavegacao buttonCadastrar;
 	private ButtonNavegacao buttonAgendar;
 	private ButtonNavegacao buttonRelatorios;
 	
-	public PanelMain() {
+	public PanelHomeMain() {
 		this.setBackground(Thema.corFundoPrincipal);
 		GroupLayout gl_panelHome = new GroupLayout(this);
 		gl_panelHome.setHorizontalGroup(

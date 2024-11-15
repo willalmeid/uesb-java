@@ -12,7 +12,7 @@ import styles.ButtonNavegacao;
 import visual.Dialog;
 import visual.Frame;
 import visual.PanelHome;
-import visual.PanelMain;
+import visual.PanelHomeMain;
 import visual.PanelCadastrar;
 import visual.PanelCadastrarMedico;
 import visual.PanelCadastrarPaciente;
@@ -21,7 +21,7 @@ public class ControladorFrame implements ActionListener{
 
 	Frame frame;
 	PanelHome panelHome;
-	PanelMain panelMain;
+	PanelHomeMain panelMain;
 	
 	public ControladorFrame(Frame frame) {
 		this.frame = frame;
@@ -30,8 +30,8 @@ public class ControladorFrame implements ActionListener{
             this.panelHome = (PanelHome) frame.getContentPane();
 
             // Obtém o PanelMain através do JSplitPane
-            if (panelHome.getSplitPane().getRightComponent() instanceof PanelMain) {
-                this.panelMain = (PanelMain) panelHome.getSplitPane().getRightComponent();
+            if (panelHome.getSplitPane().getRightComponent() instanceof PanelHomeMain) {
+                this.panelMain = (PanelHomeMain) panelHome.getSplitPane().getRightComponent();
 
                 // Adiciona ActionListener aos botões
                 ButtonNavegacao buttonCadastrar = panelMain.getButtonCadastar();

@@ -12,13 +12,13 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 
 import styles.Thema;
 
-public class PanelHeader extends JPanel{
+public class PanelHomeHeader extends JPanel{
 	
 	private JLabel labelLogo;
 	private JLabel labelNome;
 	private JLabel labelFrase;
 	
-	public PanelHeader() {
+	public PanelHomeHeader() {
 		setBackground(Thema.corPrincipal);
 		GroupLayout gl_panelHeader = new GroupLayout(this);
 		gl_panelHeader.setHorizontalGroup(
@@ -55,7 +55,7 @@ public class PanelHeader extends JPanel{
 	public JLabel getLabelLogo() {
 		if (labelLogo == null) {
 			labelLogo = new JLabel("");
-			labelLogo.setIcon(new ImageIcon(PanelHeader.class.getResource("/assets/logo-fundo-transparente-129x150.png")));
+			labelLogo.setIcon(new ImageIcon(PanelHomeHeader.class.getResource("/assets/logo-fundo-transparente-129x150.png")));
 			labelLogo.setFont(new Font("Tahoma", Font.PLAIN, 99));
 		}
 		return labelLogo;

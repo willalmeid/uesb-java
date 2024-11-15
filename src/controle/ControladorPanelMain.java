@@ -3,14 +3,14 @@ package controle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import visual.PanelMain;
+import visual.PanelHomeMain;
 
 public class ControladorPanelMain implements ActionListener {
 	
-	PanelMain panelMain;
+	PanelHomeMain panelMain;
 
 	// Construtor para passar o painel e o JFrame
-	public ControladorPanelMain(PanelMain panelMain) {
+	public ControladorPanelMain(PanelHomeMain panelMain) {
 		 this.panelMain = panelMain;
 		 addEventos();
 	}
