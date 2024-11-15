@@ -12,7 +12,7 @@ public class Buttons extends JButton {
 	public Buttons(String text) {
 		setText(text);
 		setFont(Thema.FONT_LABELS_INPUTS);
-		setPreferredSize(new Dimension(150, 80));
+		setPreferredSize(new Dimension(160, 80));
 		setAlignmentX(Component.CENTER_ALIGNMENT);
 		setBackground(Thema.corBranco);
 		setForeground(Thema.corAuxiliar2);
