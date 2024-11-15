@@ -25,6 +25,9 @@ public class PanelCadastrar extends JPanel {
 	
 	public PanelCadastrar() {
 		setVisible(true);
+		setSize(1280, 768);
+		setBackground(Thema.corPrincipal);
+		
 		GroupLayout groupLayout = new GroupLayout(this);
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
