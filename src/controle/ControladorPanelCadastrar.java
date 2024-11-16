@@ -4,23 +4,32 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import visual.Dialog;
+import visual.Frame;
 import visual.PanelCadastrar;
 import visual.PanelCadastrarConsulta;
 import visual.PanelCadastrarExame;
 import visual.PanelCadastrarMaterial;
 import visual.PanelCadastrarMedico;
 import visual.PanelCadastrarPaciente;
+import visual.PanelHome;
 
 public class ControladorPanelCadastrar implements ActionListener {
 
+	Frame frame;
 	PanelCadastrar panelCadastrar;
+	PanelHome panelHome;
 	
-	public ControladorPanelCadastrar(PanelCadastrar panelCadastrar) {
+	public ControladorPanelCadastrar(PanelCadastrar panelCadastrar, Frame frame, PanelHome panelHome) {
 		this.panelCadastrar = panelCadastrar;
+		this.frame = frame;
+		this.panelHome = panelHome;
 		addEventos();
 	}
 	
 	public void addEventos() {
+		panelCadastrar.getButtonHome().addActionListener(this);
+		panelCadastrar.getButtonVoltar().addActionListener(this);
+
 		panelCadastrar.getButtonCadastrarPaciente().addActionListener(this);
 		panelCadastrar.getButtonCadastrarMedico().addActionListener(this);
 		panelCadastrar.getButtonCadastrarExame().addActionListener(this);
@@ -29,7 +38,12 @@ public class ControladorPanelCadastrar implements ActionListener {
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		if(e.getSource() == panelCadastrar.getButtonCadastrarPaciente()) {
+		if(e.getSource() == panelCadastrar.getButtonHome() || e.getSource() == panelCadastrar.getButtonVoltar()) {
+//			new ControladorPanelMain(panelHome, frame);
+			frame.setContentPane(panelHome);
+			
+		} else 
+			if(e.getSource() == panelCadastrar.getButtonCadastrarPaciente()) {
 			PanelCadastrarPaciente panelCadastrarPaciente = new PanelCadastrarPaciente();
 			new ControladorPanelCadastrarPaciente(panelCadastrarPaciente);
 			Dialog dialog = new Dialog(panelCadastrarPaciente);

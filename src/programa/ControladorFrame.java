@@ -1,21 +1,15 @@
 package programa;
 
-import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 import controle.ControladorPanelCadastrar;
 import styles.ButtonNavegacao;
 
-import visual.Dialog;
 import visual.Frame;
 import visual.PanelHome;
 import visual.PanelHomeMain;
 import visual.PanelCadastrar;
-import visual.PanelCadastrarMedico;
-import visual.PanelCadastrarPaciente;
 
 public class ControladorFrame implements ActionListener{
 
@@ -48,7 +42,7 @@ public class ControladorFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == panelMain.getButtonCadastar()) {
 			PanelCadastrar panelCadastrar = new PanelCadastrar();
-			ControladorPanelCadastrar controladorCadastrar = new ControladorPanelCadastrar(panelCadastrar);
+			ControladorPanelCadastrar controladorCadastrar = new ControladorPanelCadastrar(panelCadastrar, frame, panelHome);
 			frame.setContentPane(panelCadastrar);
 			
         } else if (e.getSource() == panelMain.getButtonAgendar()) {
