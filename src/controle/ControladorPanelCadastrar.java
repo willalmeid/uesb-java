@@ -41,6 +41,7 @@ public class ControladorPanelCadastrar implements ActionListener {
 			
 		} else if(e.getSource() == panelCadastrar.getButtonCadastrarExame()) {
 			PanelCadastrarExame panelCadastrarExame = new PanelCadastrarExame();
+			new ControladorPanelCadastrarExame(panelCadastrarExame);
 			Dialog dialog = new Dialog(panelCadastrarExame);
 			
 		} else if(e.getSource() == panelCadastrar.getButtonCadastrarConsulta()) {
