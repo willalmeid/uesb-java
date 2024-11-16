@@ -1,16 +1,15 @@
 package visual;
 
-import javax.swing.BorderFactory;
-import javax.swing.JComboBox;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
 
 import java.awt.Color;
 import javax.swing.border.LineBorder;
 
 import styles.Buttons;
-import styles.Input;
+import styles.InputComboBox;
+import styles.InputTextField;
 import styles.InputLabel;
+import styles.InputTextArea;
 import styles.Thema;
 import styles.TitlePanel;
 import javax.swing.GroupLayout;
@@ -29,19 +28,19 @@ public class PanelCadastrarExame extends JPanel {
 	private InputLabel labelMedico;
 	private InputLabel labelTipoExame;
 	
-	private Input textFieldNomeExame;
-	private Input textFieldValorParticular;
-	private JTextArea textAreaMateriaisUtilizados;
-	private JTextArea textAreaDescricao;
+	private InputTextField textFieldNomeExame;
+	private InputTextField textFieldValorParticular;
+	private InputTextArea textAreaMateriaisUtilizados;
+	private InputTextArea textAreaDescricao;
 	
-	private JComboBox<String> comboBoxMedico;
-	private JComboBox<String> comboBoxTipoExame;
+	private InputComboBox comboBoxMedico;
+	private InputComboBox comboBoxTipoExame;
 	
 	private Buttons buttonCadastrar;
 	private Buttons buttonLimpar;
 
 	public PanelCadastrarExame() {
-		setBackground(Thema.corPrincipal);
+		setBackground(Thema.PRINCIPAL);
 		
 		GroupLayout groupLayout = new GroupLayout(this);
 		groupLayout.setHorizontalGroup(
@@ -159,70 +158,62 @@ public class PanelCadastrarExame extends JPanel {
 	}
 
 	/* --------------------------------------------------------------- Imputs ----------------------------------------------------------- */
-	public Input getTextFieldNomeExame() {
+	public InputTextField getTextFieldNomeExame() {
 		if(textFieldNomeExame == null) {
-			textFieldNomeExame = new Input();
+			textFieldNomeExame = new InputTextField();
 			textFieldNomeExame.setBounds(10, 36, 585, 25);
 		}
 		return textFieldNomeExame;
 	}
 	
-	public JTextArea getTextAreaDescricao() {
+	public InputTextArea getTextAreaDescricao() {
 		if (textAreaDescricao == null) {
-			textAreaDescricao = new JTextArea();
-			textAreaDescricao.setBorder(BorderFactory.createLineBorder(Thema.corAuxiliar2, 2));
-			textAreaDescricao.setFont(Thema.FONT_INPUTS);
+			textAreaDescricao = new InputTextArea();
 			textAreaDescricao.setBounds(385, 156, 365, 200);
 		}
 		return textAreaDescricao;
 	}
 	
-	public JTextArea getTextAreaMateriaisUtilizados() {
+	public InputTextArea getTextAreaMateriaisUtilizados() {
 		if (textAreaMateriaisUtilizados == null) {
-			textAreaMateriaisUtilizados = new JTextArea();
-			textAreaMateriaisUtilizados.setBorder(BorderFactory.createLineBorder(Thema.corAuxiliar2, 2));
-			textAreaMateriaisUtilizados.setFont(Thema.FONT_INPUTS);
+			textAreaMateriaisUtilizados = new InputTextArea();
 			textAreaMateriaisUtilizados.setBounds(10, 156, 360, 200);
 		}
 		return textAreaMateriaisUtilizados;
 	}
 	
-	public Input getTextFieldValorParticular() {
+	public InputTextField getTextFieldValorParticular() {
 		if (textFieldValorParticular == null) {
-			textFieldValorParticular = new Input();
+			textFieldValorParticular = new InputTextField();
 			textFieldValorParticular.setBounds(610, 35, 140, 25);
 		}
 		return textFieldValorParticular;
 	}
 	
-	public JComboBox<String> getComboBoxMedico() {
+	public InputComboBox getComboBoxMedico() {
 		if(comboBoxMedico == null) {
-			comboBoxMedico = new JComboBox<String>();
-			comboBoxMedico.setFont(Thema.FONT_INPUTS);
-			comboBoxMedico.setBorder(BorderFactory.createLineBorder(Thema.corAuxiliar2, 2));
+			comboBoxMedico = new InputComboBox();
 			comboBoxMedico.setBounds(10, 96, 410, 25);
+			
 			comboBoxMedico.addItem("NOME MÉDICO");
 			
-			// Definir seu padrão como nenhum dos itens acima
-	    	comboBoxMedico.setSelectedIndex(-1);
+			comboBoxMedico.setSelectedIndex(-1);
 		}
 		return comboBoxMedico;
 	}
 
-	public JComboBox<String> getComboBoxTipoExame() {
+	public InputComboBox getComboBoxTipoExame() {
 		if(comboBoxTipoExame == null) {
-			comboBoxTipoExame = new JComboBox<String>();
+			comboBoxTipoExame = new InputComboBox();
 			comboBoxTipoExame.setBounds(435, 96, 315, 25);
-			comboBoxTipoExame.setFont(Thema.FONT_INPUTS);
-			comboBoxTipoExame.setBorder(BorderFactory.createLineBorder(Thema.corAuxiliar2, 2));
+			
 			comboBoxTipoExame.addItem("Exames Físicos");
 			comboBoxTipoExame.addItem("Exames Laboratoriais");
 			comboBoxTipoExame.addItem("Imagens");
 			comboBoxTipoExame.addItem("Biópsia");
 			comboBoxTipoExame.addItem("Patologia e análise clínica");
 			
-			// Definir seu padrão como nenhum dos itens acima
-	    	comboBoxTipoExame.setSelectedIndex(-1);
+			comboBoxTipoExame.setSelectedIndex(-1);
 		}
 		return comboBoxTipoExame;
 	}

@@ -14,8 +14,8 @@ public class Buttons extends JButton {
 		setFont(Thema.FONT_LABELS_INPUTS);
 		setPreferredSize(new Dimension(160, 80));
 		setAlignmentX(Component.CENTER_ALIGNMENT);
-		setBackground(Thema.corBranco);
-		setForeground(Thema.corAuxiliar2);
+		setBackground(Thema.WHITE);
+		setForeground(Thema.AUXILIAR);
 		setBorderPainted(false);
 		setFocusPainted(false);
 		setOpaque(false);
@@ -31,11 +31,11 @@ public class Buttons extends JButton {
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
         // Preenchendo o fundo com cor arredondada
-        g2.setColor(Thema.corBranco);
+        g2.setColor(Thema.WHITE);
         g2.fillRoundRect(0, 0, getWidth(), getHeight(), 10, 10); // 20, 20 define os cantos arredondados
 
         // Desenhando a borda arredondada
-        g2.setColor(Thema.corAuxiliar2);
+        g2.setColor(Thema.AUXILIAR);
         g2.drawRoundRect(0, 0, getWidth() - 1, getHeight() - 1, 10, 10); // Borda arredondada
 
         g2.dispose();

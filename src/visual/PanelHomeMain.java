@@ -16,7 +16,7 @@ public class PanelHomeMain extends JPanel{
 	private ButtonNavegacao buttonRelatorios;
 	
 	public PanelHomeMain() {
-		this.setBackground(Thema.corFundoPrincipal);
+		this.setBackground(Thema.BACKGROUND);
 		GroupLayout gl_panelHome = new GroupLayout(this);
 		gl_panelHome.setHorizontalGroup(
 			gl_panelHome.createParallelGroup(Alignment.LEADING)
@@ -48,24 +48,24 @@ public class PanelHomeMain extends JPanel{
 	
 	public ButtonNavegacao getButtonCadastar() {
 		if (buttonCadastrar == null) {
-			buttonCadastrar = new ButtonNavegacao();
-			buttonCadastrar.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.gerenciarConsultas)));
+			buttonCadastrar = new ButtonNavegacao("Cadastrar");
+			buttonCadastrar.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.CADASTRAR)));
 		}
 		return buttonCadastrar;
 	}
 	
 	public ButtonNavegacao getButtonAgendar() {
 		if (buttonAgendar == null) {
-			buttonAgendar = new ButtonNavegacao();
-			buttonAgendar.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.gerenciarConsultas)));
+			buttonAgendar = new ButtonNavegacao("Agendar");
+			buttonAgendar.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.AGENDAR)));
 		}
 		return buttonAgendar;
 	}
 	
 	public ButtonNavegacao getButtonRelatorios() {
 		if (buttonRelatorios == null) {
-			buttonRelatorios = new ButtonNavegacao();
-			buttonRelatorios.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.gerenciarConsultas)));
+			buttonRelatorios = new ButtonNavegacao("Relatórios");
+			buttonRelatorios.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.RELATORIO)));
 		}
 		return buttonRelatorios;
 	}

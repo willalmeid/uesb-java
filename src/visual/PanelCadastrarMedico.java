@@ -1,13 +1,13 @@
 package visual;
 
-import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.border.LineBorder;
 
 import styles.Buttons;
-import styles.Input;
+import styles.InputTextField;
 import styles.InputLabel;
+import styles.InputTextArea;
 import styles.Thema;
 import styles.TitlePanel;
 import javax.swing.GroupLayout;
@@ -26,18 +26,18 @@ public class PanelCadastrarMedico extends JPanel{
 	private InputLabel labelValorConsultaParticular;
 	private InputLabel labelHistoricoDeAtendimento;
 	
-	private Input textFieldNome;
-	private Input textFieldEspecialidade;
-	private Input textFieldCrm;
-	private Input textFieldContato;
-	private Input textFieldValorConsultaParticular;
-	private JTextArea textAreaHistoricoDeAtendimento;
+	private InputTextField textFieldNome;
+	private InputTextField textFieldEspecialidade;
+	private InputTextField textFieldCrm;
+	private InputTextField textFieldContato;
+	private InputTextField textFieldValorConsultaParticular;
+	private InputTextArea textAreaHistoricoDeAtendimento;
 	
 	private Buttons buttonCadastrar;
 	private Buttons buttonLimpar;
 
 	public PanelCadastrarMedico() {
-		setBackground(Thema.corPrincipal);
+		setBackground(Thema.PRINCIPAL);
 		
 		GroupLayout groupLayout = new GroupLayout(this);
 		groupLayout.setHorizontalGroup(
@@ -77,7 +77,7 @@ public class PanelCadastrarMedico extends JPanel{
 		if(panelPrincipal == null) {
 			panelPrincipal = new JPanel();
 			panelPrincipal.setBorder(new LineBorder(null));
-			panelPrincipal.setBackground(Thema.corFundoPrincipal);
+			panelPrincipal.setBackground(Thema.BACKGROUND);
 			panelPrincipal.setLayout(null);
 			panelPrincipal.add(getLabelNome());
 			panelPrincipal.add(getLabelEspecialidade());
@@ -153,41 +153,41 @@ public class PanelCadastrarMedico extends JPanel{
 	}
 	
 	/* ------------------------------------------------------------------ Imputs --------------------------------------------------------------- */
-	public Input getTextFieldNome() {
+	public InputTextField getTextFieldNome() {
 		if (textFieldNome == null) {
-			textFieldNome = new Input();
+			textFieldNome = new InputTextField();
 			textFieldNome.setBounds(10, 36, 740, 25);
 		}
 		return textFieldNome;
 	}
 	
-	public Input getTextFieldEspecialidade() {
+	public InputTextField getTextFieldEspecialidade() {
 		if (textFieldEspecialidade == null) {
-			textFieldEspecialidade = new Input();
+			textFieldEspecialidade = new InputTextField();
 			textFieldEspecialidade.setBounds(10, 96, 740, 25);
 		}
 		return textFieldEspecialidade;
 	}
 	
-	public Input getTextFieldCrm() {
+	public InputTextField getTextFieldCrm() {
 		if (textFieldCrm == null) {
-			textFieldCrm = new Input();
+			textFieldCrm = new InputTextField();
 			textFieldCrm.setBounds(10, 156, 240, 25);
 		}
 		return textFieldCrm;
 	}
 	
-	public Input getTextFieldContato() {
+	public InputTextField getTextFieldContato() {
 		if (textFieldContato == null) {
-			textFieldContato = new Input();
+			textFieldContato = new InputTextField();
 			textFieldContato.setBounds(265, 156, 280, 25);
 		}
 		return textFieldContato;
 	}
 	
-	public Input getTextFieldValorConsultaParticular() {
+	public InputTextField getTextFieldValorConsultaParticular() {
 		if (textFieldValorConsultaParticular == null) {
-			textFieldValorConsultaParticular = new Input();
+			textFieldValorConsultaParticular = new InputTextField();
 			textFieldValorConsultaParticular.setBounds(560, 156, 190, 25);
 		}
 		return textFieldValorConsultaParticular;
@@ -195,10 +195,8 @@ public class PanelCadastrarMedico extends JPanel{
 	
 	public JTextArea getTextAreaHistoricoDeAtendimento() {
 		if (textAreaHistoricoDeAtendimento == null) {
-			textAreaHistoricoDeAtendimento = new JTextArea();
+			textAreaHistoricoDeAtendimento = new InputTextArea();
 			textAreaHistoricoDeAtendimento.setBounds(10, 216, 740, 150);
-			textAreaHistoricoDeAtendimento.setFont(Thema.FONT_INPUTS);
-			textAreaHistoricoDeAtendimento.setBorder(BorderFactory.createLineBorder(Thema.corAuxiliar2, 2));
 		}
 		return textAreaHistoricoDeAtendimento;
 	}

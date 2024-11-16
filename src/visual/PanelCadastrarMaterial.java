@@ -1,12 +1,10 @@
 package visual;
 
-import java.awt.Color;
-
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
 import styles.Buttons;
-import styles.Input;
+import styles.InputTextField;
 import styles.InputLabel;
 import styles.Thema;
 import styles.TitlePanel;
@@ -24,17 +22,17 @@ public class PanelCadastrarMaterial extends JPanel {
 	private InputLabel labelFornecedor;
 	private InputLabel labelPreco;
 	
-	private Input textFieldNome;
-	private Input textFieldQtdEmEstoque;
-	private Input textFieldQtdMinimaEmEstoque;
-	private Input textFieldFornecedor;
-	private Input textFieldPreco;
+	private InputTextField textFieldNome;
+	private InputTextField textFieldQtdEmEstoque;
+	private InputTextField textFieldQtdMinimaEmEstoque;
+	private InputTextField textFieldFornecedor;
+	private InputTextField textFieldPreco;
 	
 	private Buttons buttonLimpar;
 	private Buttons  buttonCadastrar;
 
 	public PanelCadastrarMaterial() {
-		setBackground(Thema.corPrincipal);
+		setBackground(Thema.PRINCIPAL);
 		
 		GroupLayout groupLayout = new GroupLayout(this);
 		groupLayout.setHorizontalGroup(
@@ -75,7 +73,7 @@ public class PanelCadastrarMaterial extends JPanel {
 		if(panelPrincipal == null) {
 			panelPrincipal = new JPanel();
 			panelPrincipal.setBorder(new LineBorder(null));
-			panelPrincipal.setBackground(new Color(204, 229, 233));
+			panelPrincipal.setBackground(Thema.BACKGROUND);
 			panelPrincipal.setLayout(null);
 			panelPrincipal.add(getLabelNome());
 			panelPrincipal.add(getLabelQtdEmEstoque());
@@ -140,37 +138,37 @@ public class PanelCadastrarMaterial extends JPanel {
 	}
 	
 	/* ------------------------------------------------------------- Inputs ------------------------------------------------------------ */
-	public Input getTextFieldNome() {
+	public InputTextField getTextFieldNome() {
 		if (textFieldNome == null) {
-			textFieldNome = new Input();
+			textFieldNome = new InputTextField();
 			textFieldNome.setBounds(10, 36, 600, 25);
 		}
 		return textFieldNome;
 	}
-	public Input getTextFieldQtdEmEstoque() {
+	public InputTextField getTextFieldQtdEmEstoque() {
 		if (textFieldQtdEmEstoque == null) {
-			textFieldQtdEmEstoque = new Input();
+			textFieldQtdEmEstoque = new InputTextField();
 			textFieldQtdEmEstoque.setBounds(10, 96, 200, 25);
 		}
 		return textFieldQtdEmEstoque;
 	}
-	public Input getTextFieldQtdMinimaEmEstoque() {
+	public InputTextField getTextFieldQtdMinimaEmEstoque() {
 		if (textFieldQtdMinimaEmEstoque == null) {
-			textFieldQtdMinimaEmEstoque = new Input();
+			textFieldQtdMinimaEmEstoque = new InputTextField();
 			textFieldQtdMinimaEmEstoque.setBounds(225, 96, 250, 25);
 		}
 		return textFieldQtdMinimaEmEstoque;
 	}
-	public Input getTextFieldFornecedor() {
+	public InputTextField getTextFieldFornecedor() {
 		if (textFieldFornecedor == null) {
-			textFieldFornecedor = new Input();
+			textFieldFornecedor = new InputTextField();
 			textFieldFornecedor.setBounds(490, 96, 260, 25);
 		}
 		return textFieldFornecedor;
 	}
-	public Input getTextFieldPreco() {
+	public InputTextField getTextFieldPreco() {
 		if (textFieldPreco == null) {
-			textFieldPreco = new Input();
+			textFieldPreco = new InputTextField();
 			textFieldPreco.setBounds(625, 35, 125, 25);
 		}
 		return textFieldPreco;

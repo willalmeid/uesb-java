@@ -1,15 +1,13 @@
 package visual;
 
-import javax.swing.BorderFactory;
-import javax.swing.JComboBox;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
-import java.awt.Color;
 import javax.swing.border.LineBorder;
 
 import styles.Buttons;
-import styles.Input;
+import styles.InputComboBox;
+import styles.InputTextField;
 import styles.InputLabel;
+import styles.InputTextArea;
 import styles.Thema;
 import styles.TitlePanel;
 import javax.swing.GroupLayout;
@@ -31,23 +29,23 @@ public class PanelCadastrarConsulta extends JPanel {
 	private InputLabel labelTipoDeConsulta;
 	private InputLabel labelConvenio;
 	
-	private Input textFieldData;
-	private Input textFieldHora;
-	private Input textFieldPaciente;
+	private InputTextField textFieldData;
+	private InputTextField textFieldHora;
+	private InputTextField textFieldPaciente;
 	
-	private JTextArea textAreaObservacoes;
-	private JTextArea textAreaMaterial;
-	private JTextArea textAreaQueixaPaciente;
+	private InputTextArea textAreaObservacoes;
+	private InputTextArea textAreaMaterial;
+	private InputTextArea textAreaQueixaPaciente;
 
-	private JComboBox<String> comboBoxMedico;
-	private JComboBox<String> comboBoxTipoDeConsulta;
-	private JComboBox<String> comboBoxConvenio;
+	private InputComboBox comboBoxMedico;
+	private InputComboBox comboBoxTipoDeConsulta;
+	private InputComboBox comboBoxConvenio;
 	
 	private Buttons buttonCadastrar;
 	private Buttons buttonLimpar;
 	
 	public PanelCadastrarConsulta() {
-		setBackground(Thema.corPrincipal);
+		setBackground(Thema.PRINCIPAL);
 		
 		GroupLayout groupLayout = new GroupLayout(this);
 		groupLayout.setHorizontalGroup(
@@ -87,7 +85,7 @@ public class PanelCadastrarConsulta extends JPanel {
 		if (panelPrincipal == null) {
 			panelPrincipal = new JPanel();
 			panelPrincipal.setBorder(new LineBorder(null));
-			panelPrincipal.setBackground(new Color(204, 229, 233));
+			panelPrincipal.setBackground(Thema.BACKGROUND);
 			panelPrincipal.setLayout(null);
 			panelPrincipal.add(getLabelData());
 			panelPrincipal.add(getLabelHora());
@@ -195,98 +193,86 @@ public class PanelCadastrarConsulta extends JPanel {
 	}
 	
 	/* ----------------------------------------------------------------- Imputs -------------------------------------------------------------- */
-	public Input getTextFieldData() {
+	public InputTextField getTextFieldData() {
 		if (textFieldData == null) {
-			textFieldData = new Input();
+			textFieldData = new InputTextField();
 			textFieldData.setBounds(10, 36, 500, 25);
 		}
 		return textFieldData;
 	}
 	
-	public Input getTextFieldHora() {
+	public InputTextField getTextFieldHora() {
 		if (textFieldHora == null) {
-			textFieldHora = new Input();
+			textFieldHora = new InputTextField();
 			textFieldHora.setBounds(660, 36, 90, 25);
 		}
 		return textFieldHora;
 	}
 	
-	public Input getTextFieldPaciente() {
+	public InputTextField getTextFieldPaciente() {
 		if (textFieldPaciente == null) {
-			textFieldPaciente = new Input();
+			textFieldPaciente = new InputTextField();
 			textFieldPaciente.setBounds(525, 36, 120, 25);
 		}
 		return textFieldPaciente;
 	}
 	
-	public JTextArea getTextAreaQueixaPaciente() {
+	public InputTextArea getTextAreaQueixaPaciente() {
 		if (textAreaQueixaPaciente == null) {
-			textAreaQueixaPaciente = new JTextArea();
-			textAreaQueixaPaciente.setFont(Thema.FONT_INPUTS);
-			textAreaQueixaPaciente.setBorder(BorderFactory.createLineBorder(Thema.corAuxiliar2, 2));
+			textAreaQueixaPaciente = new InputTextArea();
 			textAreaQueixaPaciente.setBounds(10, 151, 740, 75);
 		}
 		return textAreaQueixaPaciente;
 	}
 	
-	public JTextArea getTextAreaObservacoes() {
+	public InputTextArea getTextAreaObservacoes() {
 		if (textAreaObservacoes == null) {
-			textAreaObservacoes = new JTextArea();
-			textAreaObservacoes.setFont(Thema.FONT_INPUTS);
-			textAreaObservacoes.setBorder(BorderFactory.createLineBorder(Thema.corAuxiliar2, 2));
+			textAreaObservacoes = new InputTextArea();
 			textAreaObservacoes.setBounds(10, 261, 740, 75);
 		}
 		return textAreaObservacoes;
 	}
 	
-	public JTextArea getTextAreaMaterial() {
+	public InputTextArea getTextAreaMaterial() {
 		if (textAreaMaterial == null) {
-			textAreaMaterial = new JTextArea();
-			textAreaMaterial.setFont(Thema.FONT_INPUTS);
-			textAreaMaterial.setBorder(BorderFactory.createLineBorder(Thema.corAuxiliar2, 2));
+			textAreaMaterial = new InputTextArea();
 			textAreaMaterial.setBounds(10, 371, 740, 75);
 		}
 		return textAreaMaterial;
 	}
 	
-	public JComboBox<String> getComboBoxMedico() {
+	public InputComboBox getComboBoxMedico() {
 		if (comboBoxMedico == null) {
-			comboBoxMedico = new JComboBox<String>();
-			comboBoxMedico.setFont(Thema.FONT_INPUTS);
-			comboBoxMedico.setBorder(BorderFactory.createLineBorder(Thema.corAuxiliar2, 2));
+			comboBoxMedico = new InputComboBox();
 			comboBoxMedico.setBounds(10, 96, 350, 25);
+			
 			comboBoxMedico.addItem("NOME MÉDICO");
 			
-			// Definir seu padrão como nenhum dos itens acima
-	    	comboBoxMedico.setSelectedIndex(-1);
+			comboBoxMedico.setSelectedIndex(-1);
 		}
 		return comboBoxMedico;
 	}
 	
-	public JComboBox<String> getComboBoxTipoDeConsulta() {
+	public InputComboBox getComboBoxTipoDeConsulta() {
 		if (comboBoxTipoDeConsulta == null) {
-			comboBoxTipoDeConsulta = new JComboBox<String>();
-			comboBoxTipoDeConsulta.setFont(Thema.FONT_INPUTS);
-			comboBoxTipoDeConsulta.setBorder(BorderFactory.createLineBorder(Thema.corAuxiliar2, 2));
+			comboBoxTipoDeConsulta = new InputComboBox();
 			comboBoxTipoDeConsulta.setBounds(375, 96, 145, 25);
+			
 			comboBoxTipoDeConsulta.addItem("TIPO DE CONSULTA");
 			
-			// Definir seu padrão como nenhum dos itens acima
-	    	comboBoxTipoDeConsulta.setSelectedIndex(-1);
+			comboBoxTipoDeConsulta.setSelectedIndex(-1);
 		}
 		return comboBoxTipoDeConsulta;
 	}
 	
-	public JComboBox<String> getComboBoxConvenio() {
+	public InputComboBox getComboBoxConvenio() {
 		if (comboBoxConvenio == null) {
-			comboBoxConvenio = new JComboBox<String>();
-			comboBoxConvenio.setFont(Thema.FONT_INPUTS);
-			comboBoxConvenio.setBorder(BorderFactory.createLineBorder(Thema.corAuxiliar2, 2));
+			comboBoxConvenio = new InputComboBox();
 			comboBoxConvenio.setBounds(535, 96, 215, 25);
+			
 			comboBoxConvenio.addItem("TIPO DE CONVÊNIO");
 			
-			// Definir seu padrão como nenhum dos itens acima
-	    	comboBoxConvenio.setSelectedIndex(-1);
+			comboBoxConvenio.setSelectedIndex(-1);
 		}
 		return comboBoxConvenio;
 	}

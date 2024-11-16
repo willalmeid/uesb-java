@@ -1,19 +1,16 @@
 package visual;
 
-import java.awt.Color;
-
-import javax.swing.JComboBox;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
 import javax.swing.border.LineBorder;
 
 import styles.Buttons;
-import styles.Input;
+import styles.InputComboBox;
+import styles.InputTextField;
 import styles.InputLabel;
+import styles.InputTextArea;
 import styles.Thema;
 import styles.TitlePanel;
 
-import javax.swing.BorderFactory;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 
@@ -34,15 +31,16 @@ public class PanelCadastrarPaciente extends JPanel{
 	private InputLabel labelPeso;
 	private InputLabel labelAltura;
 	
-	private Input textFieldNome;
-	private Input textFieldDataNascimento;
-	private Input textFieldTelefone;
-	private JTextArea textAreaHistoricoMedico;
-	private Input textFieldPeso;
-	private Input textFieldAltura;
+	private InputTextField textFieldNome;
+	private InputTextField textFieldDataNascimento;
+	private InputTextField textFieldTelefone;
+	private InputTextField textFieldPeso;
+	private InputTextField textFieldAltura;
 	
-	private JComboBox<String> comboBoxCovenio;
-	private JComboBox<String> comboBoxTipoSanguineo;
+	private InputTextArea textAreaHistoricoMedico;
+
+	private InputComboBox comboBoxCovenio;
+	private InputComboBox comboBoxTipoSanguineo;
 	
 	// Endereço
 	private InputLabel labelCEP;
@@ -53,19 +51,19 @@ public class PanelCadastrarPaciente extends JPanel{
 	private InputLabel labelLogradouro;
 	private InputLabel labelComplemento;
 	
-	private Input textFieldCEP;
-	private Input textFieldEstado;
-	private Input textFieldCidade;
-	private Input textFieldBairro;
-	private Input textFieldNumero;
-	private Input textFieldLogradouro;
-	private Input textFieldComplemento;
+	private InputTextField textFieldCEP;
+	private InputTextField textFieldEstado;
+	private InputTextField textFieldCidade;
+	private InputTextField textFieldBairro;
+	private InputTextField textFieldNumero;
+	private InputTextField textFieldLogradouro;
+	private InputTextField textFieldComplemento;
 	
 	private Buttons buttonCadastrar;
 	private Buttons buttonLimpar;
 	
 	public PanelCadastrarPaciente() {
-		setBackground(Thema.corPrincipal);
+		setBackground(Thema.PRINCIPAL);
 		
 		GroupLayout groupLayout = new GroupLayout(this);
 		groupLayout.setHorizontalGroup(
@@ -121,7 +119,7 @@ public class PanelCadastrarPaciente extends JPanel{
 		if (panelPaciente == null) {
 			panelPaciente = new JPanel();
 			panelPaciente.setBorder(new LineBorder(null));
-			panelPaciente.setBackground(Thema.corFundoPrincipal);
+			panelPaciente.setBackground(Thema.BACKGROUND);
 			panelPaciente.setLayout(null);
 			
 			panelPaciente.add(getLabelNome());
@@ -149,7 +147,7 @@ public class PanelCadastrarPaciente extends JPanel{
 		if (panelEndereco == null) {
 			panelEndereco = new JPanel();
 			panelEndereco.setBorder(new LineBorder(null));
-			panelEndereco.setBackground(Thema.corFundoPrincipal);
+			panelEndereco.setBackground(Thema.BACKGROUND);
 			panelEndereco.setLayout(null);
 			panelEndereco.add(getLabelCEP());
 			panelEndereco.add(getTextFieldCEP());
@@ -314,77 +312,71 @@ public class PanelCadastrarPaciente extends JPanel{
 	}
 	
 	/* ------------------------------------------------------------- Acesso aos imputs ------------------------------------------------------------ */
-	public Input getTextFieldNome() {
+	public InputTextField getTextFieldNome() {
 		if (textFieldNome == null) {
-			textFieldNome = new Input();
+			textFieldNome = new InputTextField();
 			textFieldNome.setBounds(10, 36, 565, 25);
 		}
 		return textFieldNome;
 	}
 	
-	public Input getTextFieldDataNascimento() {
+	public InputTextField getTextFieldDataNascimento() {
 	    if (textFieldDataNascimento == null) {
-	        textFieldDataNascimento = new Input();
+	        textFieldDataNascimento = new InputTextField();
 	        textFieldDataNascimento.setBounds(590, 36, 160, 25);
 	    }
 	    return textFieldDataNascimento;
 	}
 
-	public Input getTextFieldTelefone() {
+	public InputTextField getTextFieldTelefone() {
 	    if (textFieldTelefone == null) {
-	        textFieldTelefone = new Input();
+	        textFieldTelefone = new InputTextField();
 	        textFieldTelefone.setBounds(345, 95, 140, 25);
 	    }
 	    return textFieldTelefone;
 	}
 
-	public JTextArea getTextAreaHistoricoMedico() {
+	public InputTextArea getTextAreaHistoricoMedico() {
 	    if (textAreaHistoricoMedico == null) {
-	        textAreaHistoricoMedico = new JTextArea();
-	        textAreaHistoricoMedico.setFont(Thema.FONT_INPUTS);
+	        textAreaHistoricoMedico = new InputTextArea();
 	        textAreaHistoricoMedico.setBounds(10, 156, 740, 75);
-	        textAreaHistoricoMedico.setBorder(BorderFactory.createLineBorder(Thema.corAuxiliar2, 2));
 	    }
 	    return textAreaHistoricoMedico;
 	}
 
-	public Input getTextFieldPeso() {
+	public InputTextField getTextFieldPeso() {
 	    if (textFieldPeso == null) {
-	        textFieldPeso = new Input();
+	        textFieldPeso = new InputTextField();
 	        textFieldPeso.setBounds(10, 95, 90, 25);
 	    }
 	    return textFieldPeso;
 	}
 
-	public Input getTextFieldAltura() {
+	public InputTextField getTextFieldAltura() {
 	    if (textFieldAltura == null) {
-	        textFieldAltura = new Input();
+	        textFieldAltura = new InputTextField();
 	        textFieldAltura.setBounds(115, 95, 90, 25);
 	    }
 	    return textFieldAltura;
 	}
 
-	public JComboBox<String> getComboBoxCovenio() {
+	public InputComboBox getComboBoxCovenio() {
 	    if (comboBoxCovenio == null) {
-	        comboBoxCovenio = new JComboBox<String>();
-	        comboBoxCovenio.setBackground(new Color(255, 255, 255));
-	        comboBoxCovenio.setFont(Thema.FONT_INPUTS);
+	        comboBoxCovenio = new InputComboBox();
 	        comboBoxCovenio.setBounds(500, 95, 250, 25);
-	        comboBoxCovenio.setBorder(BorderFactory.createLineBorder(Thema.corAuxiliar2, 2));
+	        
 	        comboBoxCovenio.addItem("TIPO DO CONVÊNIO");
 	        
-	    	comboBoxCovenio.setSelectedIndex(-1);
+	        comboBoxCovenio.setSelectedIndex(-1);
 	    }
 	    return comboBoxCovenio;
 	}
 
-	public JComboBox<String> getComboBoxTipoSanguineo() {
+	public InputComboBox getComboBoxTipoSanguineo() {
 	    if (comboBoxTipoSanguineo == null) {
-	    	comboBoxTipoSanguineo = new JComboBox<String>();
-	    	comboBoxTipoSanguineo.setBackground(new Color(255, 255, 255));
-	    	comboBoxTipoSanguineo.setFont(Thema.FONT_INPUTS);
+	    	comboBoxTipoSanguineo = new InputComboBox();
 	    	comboBoxTipoSanguineo.setBounds(220, 96, 110, 25);
-	    	comboBoxTipoSanguineo.setBorder(BorderFactory.createLineBorder(Thema.corAuxiliar2, 2));
+	    	
 	    	comboBoxTipoSanguineo.addItem("A+");
 	    	comboBoxTipoSanguineo.addItem("A-");
 	    	comboBoxTipoSanguineo.addItem("B+");
@@ -399,57 +391,57 @@ public class PanelCadastrarPaciente extends JPanel{
 	    return comboBoxTipoSanguineo;
 	}
 	
-	public Input getTextFieldCEP() {
+	public InputTextField getTextFieldCEP() {
 		if (textFieldCEP == null) {
-			textFieldCEP = new Input();
+			textFieldCEP = new InputTextField();
 			textFieldCEP.setBounds(10, 37, 150, 25);
 		}
 		return textFieldCEP;
 	}
 	
-	public Input getTextFieldLogradouro() {
+	public InputTextField getTextFieldLogradouro() {
 		if (textFieldLogradouro == null) {
-			textFieldLogradouro = new Input();
+			textFieldLogradouro = new InputTextField();
 			textFieldLogradouro.setBounds(11, 98, 365, 25);
 		}
 		return textFieldLogradouro;
 	}
 	
-	public Input getTextFieldNumero() {
+	public InputTextField getTextFieldNumero() {
 		if (textFieldNumero == null) {
-			textFieldNumero = new Input();
+			textFieldNumero = new InputTextField();
 			textFieldNumero.setBounds(670, 37, 80, 25);
 		}
 		return textFieldNumero;
 	}
 	
-	public Input getTextFieldEstado() {
+	public InputTextField getTextFieldEstado() {
 		if (textFieldEstado == null) {
-			textFieldEstado = new Input();
+			textFieldEstado = new InputTextField();
 			textFieldEstado.setBounds(175, 37, 150, 25);
 		}
 		return textFieldEstado;
 	}
 	
-	public Input getTextFieldCidade() {
+	public InputTextField getTextFieldCidade() {
 		if (textFieldCidade == null) {
-			textFieldCidade = new Input();
+			textFieldCidade = new InputTextField();
 			textFieldCidade.setBounds(340, 37, 150, 25);
 		}
 		return textFieldCidade;
 	}
 	
-	public Input getTextFieldBairro() {
+	public InputTextField getTextFieldBairro() {
 		if (textFieldBairro == null) {
-			textFieldBairro = new Input();
+			textFieldBairro = new InputTextField();
 			textFieldBairro.setBounds(505, 37, 150, 25);
 		}
 		return textFieldBairro;
 	}
 	
-	public Input getTextFieldComplemento() {
+	public InputTextField getTextFieldComplemento() {
 		if (textFieldComplemento == null) {
-			textFieldComplemento = new Input();
+			textFieldComplemento = new InputTextField();
 			textFieldComplemento.setBounds(390, 98, 360, 25);
 		}
 		return textFieldComplemento;

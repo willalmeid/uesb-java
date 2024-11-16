@@ -19,7 +19,7 @@ public class PanelHomeHeader extends JPanel{
 	private JLabel labelFrase;
 	
 	public PanelHomeHeader() {
-		setBackground(Thema.corPrincipal);
+		setBackground(Thema.PRINCIPAL);
 		GroupLayout gl_panelHeader = new GroupLayout(this);
 		gl_panelHeader.setHorizontalGroup(
 			gl_panelHeader.createParallelGroup(Alignment.LEADING)

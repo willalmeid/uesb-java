@@ -26,7 +26,7 @@ public class PanelCadastrar extends JPanel {
 	public PanelCadastrar() {
 		setVisible(true);
 		setSize(1280, 768);
-		setBackground(Thema.corPrincipal);
+		setBackground(Thema.PRINCIPAL);
 		
 		GroupLayout groupLayout = new GroupLayout(this);
 		groupLayout.setHorizontalGroup(
@@ -91,48 +91,49 @@ public class PanelCadastrar extends JPanel {
 	
 	public ButtonNavegacao getButtonCadastrarPaciente() {
 		if(buttonCadastrarPaciente == null) {
-			buttonCadastrarPaciente = new ButtonNavegacao();
-			buttonCadastrarPaciente.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.gerenciarConsultas)));
+			buttonCadastrarPaciente = new ButtonNavegacao("Paciente");
+			buttonCadastrarPaciente.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.CADASTRAR_PACIENTE)));
 		}
 		return buttonCadastrarPaciente;
 	}
 	
 	public ButtonNavegacao getButtonCadastrarMedico() {
 		if(buttonCadastrarMedico == null) {
-			buttonCadastrarMedico = new ButtonNavegacao();
-			buttonCadastrarMedico.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.gerenciarConsultas)));
+			buttonCadastrarMedico = new ButtonNavegacao("Medico");
+			buttonCadastrarMedico.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.CADASTRAR_MEDICO)));
 		}
 		return buttonCadastrarMedico;
 	}
 	
 	public ButtonNavegacao getButtonCadastrarExame() {
 		if(buttonCadastrarExame == null) {
-			buttonCadastrarExame = new ButtonNavegacao();
-			buttonCadastrarExame.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.gerenciarConsultas)));
+			buttonCadastrarExame = new ButtonNavegacao("Exame");
+			buttonCadastrarExame.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.CADASTRAR_EXAME)));
 		}
 		return buttonCadastrarExame;
 	}
 	
 	public ButtonNavegacao getButtonCadastrarConsulta() {
 		if(buttonCadastrarConsulta == null) {
-			buttonCadastrarConsulta = new ButtonNavegacao();
-			buttonCadastrarConsulta.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.gerenciarConsultas)));
+			buttonCadastrarConsulta = new ButtonNavegacao("Consulta");
+			buttonCadastrarConsulta.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.CADASTRAR_CONSULTA)));
 		}
 		return buttonCadastrarConsulta;
 	}
 	
 	public ButtonNavegacao getButtonCadastrarMaterial() {
 		if(buttonCadastrarMaterial == null) {
-			buttonCadastrarMaterial = new ButtonNavegacao();
-			buttonCadastrarMaterial.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.gerenciarConsultas)));
+			buttonCadastrarMaterial = new ButtonNavegacao("Material");
+			buttonCadastrarMaterial.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.CADASTRAR_MATERIAL)));
 		}
 		return buttonCadastrarMaterial;
 	}
 	public JButton getButtonVoltar() {
 		if (buttonVoltar == null) {
-			buttonVoltar = new JButton("<\r\n");
+			buttonVoltar = new JButton("");
+			buttonVoltar.setIcon(new ImageIcon(PanelCadastrar.class.getResource(Icons.BUTTON_BACK)));
 			buttonVoltar.setFont(Thema.FONT_LABELS_INPUTS);
-			buttonVoltar.setBackground(Thema.cortransparent);
+			buttonVoltar.setBackground(Thema.TRANSPARENT);
 			buttonVoltar.setOpaque(true);
 			buttonVoltar.setBorderPainted(false);          // Não desenhar borda padrão
 	        buttonVoltar.setFocusPainted(false); 
@@ -142,9 +143,9 @@ public class PanelCadastrar extends JPanel {
 	public JButton getButtonHome() {
 		if (buttonHome == null) {
 			buttonHome = new JButton("");
-			buttonHome.setIcon(new ImageIcon(PanelCadastrar.class.getResource("/assets/icons/home.png")));
+			buttonHome.setIcon(new ImageIcon(PanelCadastrar.class.getResource(Icons.BUTTON_HOME)));
 			buttonHome.setFont(Thema.FONT_LABELS_INPUTS);
-			buttonHome.setBackground(Thema.cortransparent);
+			buttonHome.setBackground(Thema.TRANSPARENT);
 			buttonHome.setOpaque(true);
 			buttonHome.setBorderPainted(false); 
 			buttonHome.setFocusPainted(false);
