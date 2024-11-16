@@ -3,12 +3,12 @@ package controle;
 import visual.Frame;
 import visual.PanelUniverso;
 
-public class controladorFrame {
+public class ControladorFrame {
 
 	private Frame frame;
 	private PanelUniverso panelUniverso;
 	
-	public controladorFrame(Frame frame) {
+	public ControladorFrame(Frame frame) {
 		this.frame = frame;
 	}
 
@@ -17,6 +17,6 @@ public class controladorFrame {
 		PanelUniverso panelUniverso = new PanelUniverso();
 		ControladorPanelUniverso controladorPanelUniverso = new ControladorPanelUniverso(panelUniverso);
 		frame.setContentPane(panelUniverso);
-		new controladorFrame(frame);
+		new ControladorFrame(frame);
 	}
 }

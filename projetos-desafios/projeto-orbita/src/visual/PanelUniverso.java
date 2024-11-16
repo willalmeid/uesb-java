@@ -3,11 +3,16 @@ package visual;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import java.awt.Font;
+
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
 public class PanelUniverso extends JPanel{
@@ -21,7 +26,6 @@ public class PanelUniverso extends JPanel{
 	private final int WIDTH = 1280;
     private final int HEIGHT = 768;
     private final int STAR_RADIUS = 50;
-    private final int BODY_RADIUS = 10;
     private final int ORBIT_RADIUS_X = 300;
     private final int ORBIT_RADIUS_Y = 200;
     
@@ -44,8 +48,6 @@ public class PanelUniverso extends JPanel{
         int centerY = HEIGHT / 2;
         
         // Desenha a estrela
-//        g2d.setColor(Color.YELLOW);
-//        g2d.fillOval(centerX - STAR_RADIUS, centerY - STAR_RADIUS, STAR_RADIUS * 2, STAR_RADIUS * 2);
         imageSol.setBounds(centerX - 32, centerY - 32, 64, 64);
 
         // Desenha a órbita
@@ -55,17 +57,10 @@ public class PanelUniverso extends JPanel{
         // Calcula e desenha a posição do corpo celeste
         int bodyX = (int) (centerX + ORBIT_RADIUS_X * Math.cos(angle));
         int bodyY = (int) (centerY + ORBIT_RADIUS_Y * Math.sin(angle));
-        
-//        g2d.setColor(Color.RED);
-//        g2d.fillOval(bodyX - BODY_RADIUS, bodyY - BODY_RADIUS, BODY_RADIUS * 2, BODY_RADIUS * 2);
+       
         imageTerra.setBounds(bodyX - 16, bodyY - 16, 32, 32);
     }
 	
-	public void atualizarAngulo(double incremento) {
-        angle += incremento;
-        repaint();
-    }
-
 	public JButton getButtonComecar() {
 		if(buttonComecar == null) {
 			buttonComecar = new JButton();
@@ -91,12 +86,25 @@ public class PanelUniverso extends JPanel{
 		}
 		return imageSol;
 	}
-	private JLabel getImageTerra() {
+	public JLabel getImageTerra() {
 		if (imageTerra == null) {
 			imageTerra = new JLabel("");
-			imageTerra.setIcon(new ImageIcon(PanelUniverso.class.getResource("/imagem/planeta-terra.png")));
+			try {
+				imageTerra.setIcon(new ImageIcon(ImageIO.read(PanelUniverso.class.getResourceAsStream("/imagem/sprite.png")).getSubimage(0, 0, 32, 32)));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			imageTerra.setBounds(241, 436, 32, 32);
 		}
 		return imageTerra;
+	}
+	
+	public double getAngle() {
+		return angle;
+	}
+	
+	public void setAngle(double angle) {
+		this.angle = angle;
 	}
 }
