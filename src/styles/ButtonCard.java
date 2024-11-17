@@ -15,7 +15,7 @@ public class ButtonCard extends JButton {
         setFont(Thema.FONT_BUTTON_NAVEGACAO);
         setBackground(Thema.TRANSPARENT);
         setForeground(Thema.PRINCIPAL);
-        setPreferredSize(new Dimension(300, 500));
+        setPreferredSize(new Dimension(300, 300));
         
         setAlignmentX(Component.CENTER_ALIGNMENT);
         setVerticalTextPosition(SwingConstants.BOTTOM); // Texto embaixo
