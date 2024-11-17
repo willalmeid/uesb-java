@@ -8,8 +8,8 @@ import java.awt.RenderingHints;
 
 import javax.swing.JButton;
 
-public class Buttons extends JButton {
-	public Buttons(String text) {
+public class Button extends JButton {
+	public Button(String text) {
 		setText(text);
 		setFont(Thema.FONT_LABELS_INPUTS);
 		setPreferredSize(new Dimension(160, 80));
