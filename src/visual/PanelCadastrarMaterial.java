@@ -3,7 +3,7 @@ package visual;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
-import styles.Buttons;
+import styles.Button;
 import styles.InputTextField;
 import styles.InputLabel;
 import styles.Thema;
@@ -28,8 +28,8 @@ public class PanelCadastrarMaterial extends JPanel {
 	private InputTextField textFieldFornecedor;
 	private InputTextField textFieldPreco;
 	
-	private Buttons buttonLimpar;
-	private Buttons  buttonCadastrar;
+	private Button buttonLimpar;
+	private Button  buttonCadastrar;
 
 	public PanelCadastrarMaterial() {
 		setBackground(Thema.PRINCIPAL);
@@ -176,16 +176,16 @@ public class PanelCadastrarMaterial extends JPanel {
 	
 	/* ------------------------------------------------------------- Buttons ------------------------------------------------------------ */
 	
-	public Buttons getButtonCadastrar() {
+	public Button getButtonCadastrar() {
 		if (buttonCadastrar == null) {
-			buttonCadastrar = new Buttons("Cadastrar");
+			buttonCadastrar = new Button("Cadastrar");
 		}
 		return buttonCadastrar;
 	}
 	
-	public Buttons getButtonLimpar() {
+	public Button getButtonLimpar() {
 		if (buttonLimpar == null) {
-			buttonLimpar = new Buttons("Limpar");
+			buttonLimpar = new Button("Limpar");
 		}
 		return buttonLimpar;
 	}

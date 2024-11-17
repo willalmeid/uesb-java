@@ -5,23 +5,23 @@ import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
 import javax.swing.GroupLayout.Alignment;
 
+import styles.ButtonCard;
 import styles.ButtonNavegacao;
 import styles.Icons;
 import styles.Thema;
 import styles.TitlePanel;
 import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.JButton;
 
 public class PanelCadastrar extends JPanel {
 
 	private TitlePanel titlePanel;
-	private ButtonNavegacao buttonCadastrarPaciente;
-	private ButtonNavegacao buttonCadastrarMedico;
-	private ButtonNavegacao buttonCadastrarExame;
-	private ButtonNavegacao buttonCadastrarConsulta;
-	private ButtonNavegacao buttonCadastrarMaterial;
-	private JButton buttonVoltar;
-	private JButton buttonHome;
+	private ButtonCard buttonCadastrarPaciente;
+	private ButtonCard buttonCadastrarMedico;
+	private ButtonCard buttonCadastrarExame;
+	private ButtonCard buttonCadastrarConsulta;
+	private ButtonCard buttonCadastrarMaterial;
+	private ButtonNavegacao buttonVoltar;
+	private ButtonNavegacao buttonHome;
 	
 	public PanelCadastrar() {
 		setVisible(true);
@@ -45,13 +45,13 @@ public class PanelCadastrar extends JPanel {
 							.addComponent(getButtonCadastrarMedico(), GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
 							.addGap(30)
 							.addComponent(getButtonCadastrarExame(), GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)))
-					.addContainerGap(109, Short.MAX_VALUE))
+					.addContainerGap(211, Short.MAX_VALUE))
 				.addGroup(groupLayout.createSequentialGroup()
 					.addGap(50)
 					.addComponent(getButtonVoltar(), GroupLayout.PREFERRED_SIZE, 62, GroupLayout.PREFERRED_SIZE)
-					.addGap(327)
-					.addComponent(getTitlePanel(), GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED, 314, Short.MAX_VALUE)
+					.addGap(378)
+					.addComponent(getTitlePanel(), GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+					.addGap(365)
 					.addComponent(getButtonHome(), GroupLayout.PREFERRED_SIZE, 62, GroupLayout.PREFERRED_SIZE)
 					.addGap(63))
 		);
@@ -60,20 +60,22 @@ public class PanelCadastrar extends JPanel {
 				.addGroup(groupLayout.createSequentialGroup()
 					.addGap(30)
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+							.addGroup(groupLayout.createSequentialGroup()
+								.addComponent(getButtonVoltar(), GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
+								.addPreferredGap(ComponentPlacement.RELATED, 51, Short.MAX_VALUE))
+							.addGroup(groupLayout.createSequentialGroup()
+								.addComponent(getButtonHome(), GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
+								.addPreferredGap(ComponentPlacement.RELATED)))
 						.addGroup(groupLayout.createSequentialGroup()
-							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-								.addComponent(getButtonVoltar(), GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
-								.addComponent(getTitlePanel(), GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE))
-							.addPreferredGap(ComponentPlacement.RELATED, 50, Short.MAX_VALUE))
-						.addGroup(groupLayout.createSequentialGroup()
-							.addComponent(getButtonHome(), GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
+							.addComponent(getTitlePanel(), GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
 							.addPreferredGap(ComponentPlacement.RELATED)))
 					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING, false)
 						.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 							.addComponent(getButtonCadastrarExame(), GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE)
 							.addComponent(getButtonCadastrarPaciente(), GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE))
 						.addComponent(getButtonCadastrarMedico(), GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE))
-					.addPreferredGap(ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+					.addPreferredGap(ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 						.addComponent(getButtonCadastrarMaterial(), GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE)
 						.addComponent(getButtonCadastrarConsulta(), GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE))
@@ -89,66 +91,58 @@ public class PanelCadastrar extends JPanel {
 		return titlePanel;
 	}
 	
-	public ButtonNavegacao getButtonCadastrarPaciente() {
+	public ButtonCard getButtonCadastrarPaciente() {
 		if(buttonCadastrarPaciente == null) {
-			buttonCadastrarPaciente = new ButtonNavegacao("Paciente");
+			buttonCadastrarPaciente = new ButtonCard("Paciente");
 			buttonCadastrarPaciente.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.CADASTRAR_PACIENTE)));
 		}
 		return buttonCadastrarPaciente;
 	}
 	
-	public ButtonNavegacao getButtonCadastrarMedico() {
+	public ButtonCard getButtonCadastrarMedico() {
 		if(buttonCadastrarMedico == null) {
-			buttonCadastrarMedico = new ButtonNavegacao("Medico");
+			buttonCadastrarMedico = new ButtonCard("Medico");
 			buttonCadastrarMedico.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.CADASTRAR_MEDICO)));
 		}
 		return buttonCadastrarMedico;
 	}
 	
-	public ButtonNavegacao getButtonCadastrarExame() {
+	public ButtonCard getButtonCadastrarExame() {
 		if(buttonCadastrarExame == null) {
-			buttonCadastrarExame = new ButtonNavegacao("Exame");
+			buttonCadastrarExame = new ButtonCard("Exame");
 			buttonCadastrarExame.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.CADASTRAR_EXAME)));
 		}
 		return buttonCadastrarExame;
 	}
 	
-	public ButtonNavegacao getButtonCadastrarConsulta() {
+	public ButtonCard getButtonCadastrarConsulta() {
 		if(buttonCadastrarConsulta == null) {
-			buttonCadastrarConsulta = new ButtonNavegacao("Consulta");
+			buttonCadastrarConsulta = new ButtonCard("Consulta");
 			buttonCadastrarConsulta.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.CADASTRAR_CONSULTA)));
 		}
 		return buttonCadastrarConsulta;
 	}
 	
-	public ButtonNavegacao getButtonCadastrarMaterial() {
+	public ButtonCard getButtonCadastrarMaterial() {
 		if(buttonCadastrarMaterial == null) {
-			buttonCadastrarMaterial = new ButtonNavegacao("Material");
+			buttonCadastrarMaterial = new ButtonCard("Material");
 			buttonCadastrarMaterial.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.CADASTRAR_MATERIAL)));
 		}
 		return buttonCadastrarMaterial;
 	}
-	public JButton getButtonVoltar() {
+	
+	public ButtonNavegacao getButtonVoltar() {
 		if (buttonVoltar == null) {
-			buttonVoltar = new JButton("");
+			buttonVoltar = new ButtonNavegacao();
 			buttonVoltar.setIcon(new ImageIcon(PanelCadastrar.class.getResource(Icons.BUTTON_BACK)));
-			buttonVoltar.setFont(Thema.FONT_LABELS_INPUTS);
-			buttonVoltar.setBackground(Thema.TRANSPARENT);
-			buttonVoltar.setOpaque(true);
-			buttonVoltar.setBorderPainted(false);          // Não desenhar borda padrão
-	        buttonVoltar.setFocusPainted(false); 
 		}
 		return buttonVoltar;
 	}
-	public JButton getButtonHome() {
+	
+	public ButtonNavegacao getButtonHome() {
 		if (buttonHome == null) {
-			buttonHome = new JButton("");
+			buttonHome = new ButtonNavegacao();
 			buttonHome.setIcon(new ImageIcon(PanelCadastrar.class.getResource(Icons.BUTTON_HOME)));
-			buttonHome.setFont(Thema.FONT_LABELS_INPUTS);
-			buttonHome.setBackground(Thema.TRANSPARENT);
-			buttonHome.setOpaque(true);
-			buttonHome.setBorderPainted(false); 
-			buttonHome.setFocusPainted(false);
 		}
 		return buttonHome;
 	}

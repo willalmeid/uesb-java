@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import controle.ControladorPanelCadastrar;
-import styles.ButtonNavegacao;
+import styles.ButtonCard;
 
 import visual.Frame;
 import visual.PanelHome;
@@ -28,9 +28,9 @@ public class ControladorFrame implements ActionListener{
                 this.panelMain = (PanelHomeMain) panelHome.getSplitPane().getRightComponent();
 
                 // Adiciona ActionListener aos botões
-                ButtonNavegacao buttonCadastrar = panelMain.getButtonCadastar();
-                ButtonNavegacao buttonAgendar = panelMain.getButtonAgendar();
-                ButtonNavegacao buttonRelatorios = panelMain.getButtonRelatorios();
+                ButtonCard buttonCadastrar = panelMain.getButtonCadastar();
+                ButtonCard buttonAgendar = panelMain.getButtonAgendar();
+                ButtonCard buttonRelatorios = panelMain.getButtonRelatorios();
 
                 buttonCadastrar.addActionListener(this);
                 buttonAgendar.addActionListener(this);

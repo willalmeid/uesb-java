@@ -5,7 +5,7 @@ import javax.swing.JPanel;
 import java.awt.Color;
 import javax.swing.border.LineBorder;
 
-import styles.Buttons;
+import styles.Button;
 import styles.InputComboBox;
 import styles.InputTextField;
 import styles.InputLabel;
@@ -36,8 +36,8 @@ public class PanelCadastrarExame extends JPanel {
 	private InputComboBox comboBoxMedico;
 	private InputComboBox comboBoxTipoExame;
 	
-	private Buttons buttonCadastrar;
-	private Buttons buttonLimpar;
+	private Button buttonCadastrar;
+	private Button buttonLimpar;
 
 	public PanelCadastrarExame() {
 		setBackground(Thema.PRINCIPAL);
@@ -219,16 +219,16 @@ public class PanelCadastrarExame extends JPanel {
 	}
 	
 	/* ------------------------------------------------------------- Buttons ------------------------------------------------------------ */
-	public Buttons getButtonCadastrar() {
+	public Button getButtonCadastrar() {
 		if (buttonCadastrar == null) {
-			buttonCadastrar = new Buttons("Cadastrar");
+			buttonCadastrar = new Button("Cadastrar");
 		}
 		return buttonCadastrar;
 	}
 	
-	public Buttons getButtonLimpar() {
+	public Button getButtonLimpar() {
 		if (buttonLimpar == null) {
-			buttonLimpar = new Buttons("Limpar");
+			buttonLimpar = new Button("Limpar");
 		}
 		return buttonLimpar;
 	}

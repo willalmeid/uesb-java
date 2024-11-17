@@ -5,15 +5,15 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
-import styles.ButtonNavegacao;
+import styles.ButtonCard;
 import styles.Icons;
 import styles.Thema;
 
 public class PanelHomeMain extends JPanel{
 
-	private ButtonNavegacao buttonCadastrar;
-	private ButtonNavegacao buttonAgendar;
-	private ButtonNavegacao buttonRelatorios;
+	private ButtonCard buttonCadastrar;
+	private ButtonCard buttonAgendar;
+	private ButtonCard buttonRelatorios;
 	
 	public PanelHomeMain() {
 		this.setBackground(Thema.BACKGROUND);
@@ -46,25 +46,25 @@ public class PanelHomeMain extends JPanel{
 		setLayout(gl_panelHome);
 	}
 	
-	public ButtonNavegacao getButtonCadastar() {
+	public ButtonCard getButtonCadastar() {
 		if (buttonCadastrar == null) {
-			buttonCadastrar = new ButtonNavegacao("Cadastrar");
+			buttonCadastrar = new ButtonCard("Cadastrar");
 			buttonCadastrar.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.CADASTRAR)));
 		}
 		return buttonCadastrar;
 	}
 	
-	public ButtonNavegacao getButtonAgendar() {
+	public ButtonCard getButtonAgendar() {
 		if (buttonAgendar == null) {
-			buttonAgendar = new ButtonNavegacao("Agendar");
+			buttonAgendar = new ButtonCard("Agendar");
 			buttonAgendar.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.AGENDAR)));
 		}
 		return buttonAgendar;
 	}
 	
-	public ButtonNavegacao getButtonRelatorios() {
+	public ButtonCard getButtonRelatorios() {
 		if (buttonRelatorios == null) {
-			buttonRelatorios = new ButtonNavegacao("Relatórios");
+			buttonRelatorios = new ButtonCard("Relatórios");
 			buttonRelatorios.setIcon(new ImageIcon(PanelHome.class.getResource(Icons.RELATORIO)));
 		}
 		return buttonRelatorios;

@@ -4,7 +4,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.border.LineBorder;
 
-import styles.Buttons;
+import styles.Button;
 import styles.InputTextField;
 import styles.InputLabel;
 import styles.InputTextArea;
@@ -33,8 +33,8 @@ public class PanelCadastrarMedico extends JPanel{
 	private InputTextField textFieldValorConsultaParticular;
 	private InputTextArea textAreaHistoricoDeAtendimento;
 	
-	private Buttons buttonCadastrar;
-	private Buttons buttonLimpar;
+	private Button buttonCadastrar;
+	private Button buttonLimpar;
 
 	public PanelCadastrarMedico() {
 		setBackground(Thema.PRINCIPAL);
@@ -202,16 +202,16 @@ public class PanelCadastrarMedico extends JPanel{
 	}
 	
 	/* ---------------------------------------------------------------- Buttons ----------------------------------------------------------------- */
-	public Buttons getButtonCadastrar() {
+	public Button getButtonCadastrar() {
 		if (buttonCadastrar == null) {
-			buttonCadastrar = new Buttons("Cadastrar");
+			buttonCadastrar = new Button("Cadastrar");
 		}
 		return buttonCadastrar;
 	}
 	
-	public Buttons getButtonLimpar() {
+	public Button getButtonLimpar() {
 		if (buttonLimpar == null) {
-			buttonLimpar = new Buttons("Limpar");
+			buttonLimpar = new Button("Limpar");
 		}
 		return buttonLimpar;
 	}

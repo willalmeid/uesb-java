@@ -3,7 +3,7 @@ package visual;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
-import styles.Buttons;
+import styles.Button;
 import styles.InputComboBox;
 import styles.InputTextField;
 import styles.InputLabel;
@@ -41,8 +41,8 @@ public class PanelCadastrarConsulta extends JPanel {
 	private InputComboBox comboBoxTipoDeConsulta;
 	private InputComboBox comboBoxConvenio;
 	
-	private Buttons buttonCadastrar;
-	private Buttons buttonLimpar;
+	private Button buttonCadastrar;
+	private Button buttonLimpar;
 	
 	public PanelCadastrarConsulta() {
 		setBackground(Thema.PRINCIPAL);
@@ -278,16 +278,16 @@ public class PanelCadastrarConsulta extends JPanel {
 	}
 	
 	/* ---------------------------------------------------------------- Buttons -------------------------------------------------------------- */
-	public Buttons getButtonCadastrar() {
+	public Button getButtonCadastrar() {
 		if (buttonCadastrar == null) {
-			buttonCadastrar = new Buttons("Cadastrar");
+			buttonCadastrar = new Button("Cadastrar");
 		}
 		return buttonCadastrar;
 	}
 	
-	public Buttons getButtonLimpar() {
+	public Button getButtonLimpar() {
 		if (buttonLimpar == null) {
-			buttonLimpar = new Buttons("Limpar");
+			buttonLimpar = new Button("Limpar");
 		}
 		return buttonLimpar;
 	}
