@@ -5,9 +5,9 @@ public class Icons {
 //	Caminho dos icons
 //	/assets/icons/*.png
 	
-	public static final String CADASTRAR = "";
-	public static final String AGENDAR = "";
-	public static final String RELATORIO = "";
+	public static final String CADASTRAR = "/assets/icons/adicionar.png";
+	public static final String AGENDAR = "/assets/icons/editar.png";
+	public static final String RELATORIO = "/assets/icons/documento.png";
 
 	public static final String CADASTRAR_PACIENTE = "/assets/icons/paciente.png";
 	public static final String CADASTRAR_MEDICO = "/assets/icons/medico.png";
