@@ -10,7 +10,5 @@ public class Frame extends JFrame {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
 		setVisible(true);
-
-//		setMaximumSize(); VER O FUNCIONAMENTO DESSE METODO
 	}
 }

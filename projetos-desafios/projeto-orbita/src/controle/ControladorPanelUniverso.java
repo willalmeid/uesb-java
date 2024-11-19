@@ -60,8 +60,6 @@ public class ControladorPanelUniverso implements ActionListener {
                int x = (i % framesPerRow) * frameWidth;
                int y = (i / framesPerRow) * frameHeight;
 
-               
-
                frames[i] = spriteSheet.getSubimage(x, y, frameWidth, frameHeight);
            }
        } catch (Exception e) {
@@ -70,7 +68,6 @@ public class ControladorPanelUniverso implements ActionListener {
 	}
 
 	public void updateFrame() {
-        // Atualiza o JLabel com o próximo quadro
         panelUniverso.getImageTerra().setIcon(new ImageIcon(frames[currentFrame]));
         currentFrame = (currentFrame + 1) % 30;
     }

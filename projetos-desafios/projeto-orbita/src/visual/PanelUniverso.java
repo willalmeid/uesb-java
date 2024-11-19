@@ -23,9 +23,8 @@ public class PanelUniverso extends JPanel{
 
 	private final int WIDTH = 1280;
     private final int HEIGHT = 768;
-    private final int STAR_RADIUS = 50;
     private final int ORBIT_RADIUS_X = 300;
-    private final int ORBIT_RADIUS_Y = 200;
+    private final int ORBIT_RADIUS_Y = 45;
     
     private double angle = 0;
     
@@ -45,18 +44,17 @@ public class PanelUniverso extends JPanel{
         int centerX = WIDTH / 2;
         int centerY = HEIGHT / 2;
         
-        // Desenha a estrela
-        imageSol.setBounds(centerX - 32, centerY - 32, 64, 64);
+        imageSol.setLocation(centerX-32, centerY-32);
 
         // Desenha a órbita
         g2d.setColor(Color.LIGHT_GRAY);
         g2d.drawOval(centerX - ORBIT_RADIUS_X, centerY - ORBIT_RADIUS_Y, ORBIT_RADIUS_X * 2, ORBIT_RADIUS_Y * 2);
         
-        // Calcula e desenha a posição do corpo celeste
+        // Calcula a posição do corpo celeste
         int bodyX = (int) (centerX + ORBIT_RADIUS_X * Math.cos(angle));
         int bodyY = (int) (centerY + ORBIT_RADIUS_Y * Math.sin(angle));
        
-        imageTerra.setBounds(bodyX - 16, bodyY - 16, 32, 32);
+        imageTerra.setLocation(bodyX - 16, bodyY - 16);
     }
 	
 	public JButton getButtonComecar() {
@@ -80,7 +78,7 @@ public class PanelUniverso extends JPanel{
 		if(imageSol == null) {
 			imageSol = new JLabel("");
 			imageSol.setIcon(new ImageIcon(PanelUniverso.class.getResource("/imagem/sol.png")));
-			imageSol.setBounds(STAR_RADIUS, STAR_RADIUS, 64, 64);
+			imageSol.setSize(64, 64);
 		}
 		return imageSol;
 	}
