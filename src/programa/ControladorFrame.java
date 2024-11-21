@@ -3,10 +3,12 @@ package programa;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import controle.ControladorPanelAgendar;
 import controle.ControladorPanelCadastrar;
 import styles.ButtonCard;
 
 import visual.Frame;
+import visual.PanelAgendar;
 import visual.PanelHome;
 import visual.PanelHomeMain;
 import visual.PanelCadastrar;
@@ -46,7 +48,10 @@ public class ControladorFrame implements ActionListener{
 			frame.setContentPane(panelCadastrar);
 			
         } else if (e.getSource() == panelMain.getButtonAgendar()) {
-            System.out.println("Botão 'Agendar' clicado!");
+        	PanelAgendar panelAgendar = new PanelAgendar();
+        	ControladorPanelAgendar controladorAgendar = new ControladorPanelAgendar(panelAgendar, frame, panelHome);
+        	frame.setContentPane(panelAgendar);
+        	
         } else if (e.getSource() == panelMain.getButtonRelatorios()) {
             System.out.println("Botão 'Relatórios' clicado!");
         }
