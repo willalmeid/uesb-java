@@ -39,7 +39,6 @@ public class ControladorPanelCadastrar implements ActionListener {
 	
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == panelCadastrar.getButtonHome() || e.getSource() == panelCadastrar.getButtonVoltar()) {
-//			new ControladorPanelMain(panelHome, frame);
 			frame.setContentPane(panelHome);
 			
 		} else 
