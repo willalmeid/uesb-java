@@ -8,6 +8,7 @@ import visual.Frame;
 import visual.PanelAgendar;
 import visual.PanelAgendarConsulta;
 import visual.PanelAgendarExame;
+import visual.PanelAgendarPesquisarHorarios;
 import visual.PanelAgendarVisualizarAgenda;
 import visual.PanelHome;
 
@@ -53,6 +54,11 @@ public class ControladorPanelAgendar implements ActionListener {
 			PanelAgendarVisualizarAgenda panelAgendarVisualizarAgenda = new PanelAgendarVisualizarAgenda();
 //			new ControladorPanelAgendarConsulta(panelAgendarVisualizarAgenda);
 			Dialog dialog = new Dialog(panelAgendarVisualizarAgenda);
+			
+		} else if(e.getSource() == panelAgendar.getButtonCardPesquisarHorarios()) {
+			PanelAgendarPesquisarHorarios panelAgendarPesquisarHorarios = new PanelAgendarPesquisarHorarios();
+//			new ControladorPanelAgendarPesquisarHorarios(panelAgendarPesquisarHorarios);
+			Dialog dialog = new Dialog(panelAgendarPesquisarHorarios);
 			
 		}
 	}
