@@ -5,12 +5,14 @@ import java.awt.event.ActionListener;
 
 import controle.ControladorPanelAgendar;
 import controle.ControladorPanelCadastrar;
+import controle.ControladorPanelRelatorios;
 import styles.ButtonCard;
 
 import visual.Frame;
 import visual.PanelAgendar;
 import visual.PanelHome;
 import visual.PanelHomeMain;
+import visual.PanelRelatorios;
 import visual.PanelCadastrar;
 
 public class ControladorFrame implements ActionListener{
@@ -53,7 +55,9 @@ public class ControladorFrame implements ActionListener{
         	frame.setContentPane(panelAgendar);
         	
         } else if (e.getSource() == panelMain.getButtonRelatorios()) {
-            System.out.println("Botão 'Relatórios' clicado!");
+        	PanelRelatorios panelRelatorios = new PanelRelatorios();
+        	ControladorPanelRelatorios controladorRelatorios = new ControladorPanelRelatorios(panelRelatorios, frame, panelHome);
+        	frame.setContentPane(panelRelatorios);
         }
 	}
 	
