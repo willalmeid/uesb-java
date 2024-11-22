@@ -8,6 +8,7 @@ import visual.Frame;
 import visual.PanelAgendar;
 import visual.PanelAgendarConsulta;
 import visual.PanelAgendarExame;
+import visual.PanelAgendarVisualizarAgenda;
 import visual.PanelHome;
 
 public class ControladorPanelAgendar implements ActionListener {
@@ -42,10 +43,17 @@ public class ControladorPanelAgendar implements ActionListener {
 			PanelAgendarConsulta panelAgendarConsulta = new PanelAgendarConsulta();
 //			new ControladorPanelAgendarConsulta(panelAgendarConsulta);
 			Dialog dialog = new Dialog(panelAgendarConsulta);
+			
 		} else if(e.getSource() == panelAgendar.getButtonCardAgendarExame()) {
 			PanelAgendarExame panelAgendarExame = new PanelAgendarExame();
-//			new ControladorPanelAgendarConsulta(panelAgendarConsulta);
+//			new ControladorPanelAgendarConsulta(panelAgendarExame);
 			Dialog dialog = new Dialog(panelAgendarExame);
+			
+		} else if(e.getSource() == panelAgendar.getButtonCardVisualizarAgenda()) {
+			PanelAgendarVisualizarAgenda panelAgendarVisualizarAgenda = new PanelAgendarVisualizarAgenda();
+//			new ControladorPanelAgendarConsulta(panelAgendarVisualizarAgenda);
+			Dialog dialog = new Dialog(panelAgendarVisualizarAgenda);
+			
 		}
 	}
 }
