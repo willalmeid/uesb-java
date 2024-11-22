@@ -3,8 +3,10 @@ package controle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import visual.Dialog;
 import visual.Frame;
 import visual.PanelAgendar;
+import visual.PanelAgendarConsulta;
 import visual.PanelHome;
 
 public class ControladorPanelAgendar implements ActionListener {
@@ -35,6 +37,10 @@ public class ControladorPanelAgendar implements ActionListener {
 		if(e.getSource() == panelAgendar.getButtonHome() || e.getSource() == panelAgendar.getButtonVoltar()) {
 			frame.setContentPane(panelHome);
 			
+		} else if(e.getSource() == panelAgendar.getButtonCardAgendarConsulta()) {
+			PanelAgendarConsulta panelAgendarConsulta = new PanelAgendarConsulta();
+//			new ControladorPanelAgendarConsulta(panelAgendarConsulta);
+			Dialog dialog = new Dialog(panelAgendarConsulta);
 		}
 	}
 }
