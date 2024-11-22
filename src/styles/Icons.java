@@ -14,6 +14,12 @@ public class Icons {
 	public static final String CADASTRAR_EXAME = "/assets/icons/exame.png";
 	public static final String CADASTRAR_CONSULTA = "/assets/icons/consulta.png";
 	public static final String CADASTRAR_MATERIAL = "/assets/icons/material.png";
+	
+	public static final String AGENDAR_CONSULTA = "/assets/icons/consulta.png";
+	public static final String AGENDAR_EXAME = "/assets/icons/exame.png";
+	public static final String VISUALIZAR_AGENDA = "/assets/icons/calendario.png";
+	public static final String PESQUISAR_HORARIOS = "/assets/icons/relogio-calendario.png";
+	public static final String CANCELAR_E_REAGENDAR = "/assets/icons/cancelar-e-reagendar.png";
 
 	public static final String BUTTON_HOME = "/assets/icons/home.png";
 	public static final String BUTTON_BACK = "/assets/icons/voltar.png";

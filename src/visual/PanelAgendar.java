@@ -95,7 +95,7 @@ public class PanelAgendar extends JPanel {
 	public ButtonCard getButtonCardAgendarConsulta() {
 	    if (buttonCardAgendarConsulta == null) {
 	        buttonCardAgendarConsulta = new ButtonCard("Agendar Consulta");
-//	        buttonCardAgendarConsulta.setIcon(new ImageIcon(PanelAgendar.class.getResource(Icons.AGENDAR_CONSULTA)));
+	        buttonCardAgendarConsulta.setIcon(new ImageIcon(PanelAgendar.class.getResource(Icons.AGENDAR_CONSULTA)));
 	    }
 	    return buttonCardAgendarConsulta;
 	}
@@ -103,7 +103,7 @@ public class PanelAgendar extends JPanel {
 	public ButtonCard getButtonCardAgendarExames() {
 	    if (buttonCardAgendarExames == null) {
 	        buttonCardAgendarExames = new ButtonCard("Agendar Exames");
-//	        buttonCardAgendarExames.setIcon(new ImageIcon(PanelAgendar.class.getResource(Icons.AGENDAR_EXAMES)));
+	        buttonCardAgendarExames.setIcon(new ImageIcon(PanelAgendar.class.getResource(Icons.AGENDAR_EXAME)));
 	    }
 	    return buttonCardAgendarExames;
 	}
@@ -111,7 +111,7 @@ public class PanelAgendar extends JPanel {
 	public ButtonCard getButtonCardVisualizarAgenda() {
 	    if (buttonCardVisualizarAgenda == null) {
 	        buttonCardVisualizarAgenda = new ButtonCard("Visualizar Agenda");
-//	        buttonCardVisualizarAgenda.setIcon(new ImageIcon(PanelAgendar.class.getResource(Icons.VISUALIZAR_AGENDA)));
+	        buttonCardVisualizarAgenda.setIcon(new ImageIcon(PanelAgendar.class.getResource(Icons.VISUALIZAR_AGENDA)));
 	    }
 	    return buttonCardVisualizarAgenda;
 	}
@@ -119,7 +119,7 @@ public class PanelAgendar extends JPanel {
 	public ButtonCard getButtonCardPesquisarHorarios() {
 	    if (buttonCardPesquisarHorarios == null) {
 	        buttonCardPesquisarHorarios = new ButtonCard("Pesquisar Horários");
-//	        buttonCardPesquisarHorarios.setIcon(new ImageIcon(PanelAgendar.class.getResource(Icons.PESQUISAR_HORARIOS)));
+	        buttonCardPesquisarHorarios.setIcon(new ImageIcon(PanelAgendar.class.getResource(Icons.PESQUISAR_HORARIOS)));
 	    }
 	    return buttonCardPesquisarHorarios;
 	}
@@ -127,7 +127,7 @@ public class PanelAgendar extends JPanel {
 	public ButtonCard getButtonCardCancelarEReagendar() {
 	    if (buttonCardCancelarEReagendar == null) {
 	        buttonCardCancelarEReagendar = new ButtonCard("Cancelar/Reagendar");
-//	        buttonCardCancelarEReagendar.setIcon(new ImageIcon(PanelAgendar.class.getResource(Icons.CANCELAR_REAGENDAR)));
+	        buttonCardCancelarEReagendar.setIcon(new ImageIcon(PanelAgendar.class.getResource(Icons.CANCELAR_E_REAGENDAR)));
 	    }
 	    return buttonCardCancelarEReagendar;
 	}
