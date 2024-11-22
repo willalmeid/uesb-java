@@ -47,7 +47,7 @@ public class PanelAgendar extends JPanel {
 							.addGap(40)
 							.addComponent(getButtonCardAgendarConsulta(), GroupLayout.PREFERRED_SIZE, 370, GroupLayout.PREFERRED_SIZE)
 							.addGap(30)
-							.addComponent(getButtonCardAgendarExames(), GroupLayout.PREFERRED_SIZE, 370, GroupLayout.PREFERRED_SIZE)
+							.addComponent(getButtonCardAgendarExame(), GroupLayout.PREFERRED_SIZE, 370, GroupLayout.PREFERRED_SIZE)
 							.addGap(30)
 							.addComponent(getButtonCardVisualizarAgenda(), GroupLayout.PREFERRED_SIZE, 370, GroupLayout.PREFERRED_SIZE)))
 					.addContainerGap(50, Short.MAX_VALUE))
@@ -73,7 +73,7 @@ public class PanelAgendar extends JPanel {
 							.addPreferredGap(ComponentPlacement.RELATED)))
 					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
 						.addComponent(getButtonCardAgendarConsulta(), GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE)
-						.addComponent(getButtonCardAgendarExames(), GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE)
+						.addComponent(getButtonCardAgendarExame(), GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE)
 						.addComponent(getButtonCardVisualizarAgenda(), GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE))
 					.addGap(28)
 					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
@@ -100,7 +100,7 @@ public class PanelAgendar extends JPanel {
 	    return buttonCardAgendarConsulta;
 	}
 
-	public ButtonCard getButtonCardAgendarExames() {
+	public ButtonCard getButtonCardAgendarExame() {
 	    if (buttonCardAgendarExames == null) {
 	        buttonCardAgendarExames = new ButtonCard("Agendar Exames");
 	        buttonCardAgendarExames.setIcon(new ImageIcon(PanelAgendar.class.getResource(Icons.AGENDAR_EXAME)));
