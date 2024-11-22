@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import visual.Dialog;
 import visual.Frame;
 import visual.PanelAgendar;
+import visual.PanelAgendarCancelarEReagendar;
 import visual.PanelAgendarConsulta;
 import visual.PanelAgendarExame;
 import visual.PanelAgendarPesquisarHorarios;
@@ -59,6 +60,11 @@ public class ControladorPanelAgendar implements ActionListener {
 			PanelAgendarPesquisarHorarios panelAgendarPesquisarHorarios = new PanelAgendarPesquisarHorarios();
 //			new ControladorPanelAgendarPesquisarHorarios(panelAgendarPesquisarHorarios);
 			Dialog dialog = new Dialog(panelAgendarPesquisarHorarios);
+			
+		} else if(e.getSource() == panelAgendar.getButtonCardCancelarEReagendar()) {
+			PanelAgendarCancelarEReagendar panelAgendarCancelarEReagendar = new PanelAgendarCancelarEReagendar();
+//			new ControladorPanelAgendarCancelarEReagendar(panelAgendarCancelarEReagendar);
+			Dialog dialog = new Dialog(panelAgendarCancelarEReagendar);
 			
 		}
 	}
