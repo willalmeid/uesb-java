@@ -46,7 +46,8 @@ public class ControladorPanelCadastrarConsulta implements ActionListener {
 		String convenio = (String) panelCadastrarConsulta.getComboBoxConvenio().getSelectedItem();
 		String observacoes = panelCadastrarConsulta.getTextAreaObservacoes().getText();
 		
-		Medico medico = (Medico) panelCadastrarConsulta.getComboBoxMedico().getSelectedItem();
+		Medico medico = new Medico();
+		medico.setNome(""+panelCadastrarConsulta.getComboBoxMedico().getSelectedItem());
 		
 		Paciente paciente = new Paciente();
 		paciente.setNome(panelCadastrarConsulta.getTextFieldPaciente().getText());	
