@@ -56,7 +56,9 @@ public class ControladorPanelCadastrarPaciente implements ActionListener {
 			String complemento = panelCadastrarPaciente.getTextFieldComplemento().getText();
 			
 			if(Verificacao.verificaCamposVazios(nome, dataNasc, telefone, historicoMedico, tipoSanguineo, cep, estado, cidade, bairro, numero, logradouro, complemento)) {
-				JOptionPane.showMessageDialog(panelCadastrarPaciente, "Preencha todas as informações!", "Erro", JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(panelCadastrarPaciente, "Preencha todas as informações!", "Erro - Informações em falta", JOptionPane.WARNING_MESSAGE);
+			} else if(Verificacao.verificaDatas(dataNasc)) {
+				JOptionPane.showMessageDialog(panelCadastrarPaciente, "Digite uma data válida no formato dd/mm/aaaa", "Erro - Data inválida", JOptionPane.WARNING_MESSAGE);
 			} else {
 				Endereco e = new Endereco(logradouro, numero, complemento, bairro, cep, cidade, estado);
 				Paciente p = new Paciente(nome, dataNasc, telefone, tipoSanguineo, historicoMedico, covenio, peso, altura, e);

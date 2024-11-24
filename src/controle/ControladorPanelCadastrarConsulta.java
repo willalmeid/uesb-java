@@ -58,6 +58,8 @@ public class ControladorPanelCadastrarConsulta implements ActionListener {
 		
 		if(Verificacao.verificaCamposVazios(data, hora, queixaPaciente, observacoes)) {
 			JOptionPane.showMessageDialog(panelCadastrarConsulta, "Preencha todas as informações!", "Erro", JOptionPane.WARNING_MESSAGE);
+		} else if(Verificacao.verificaDatas(data)) {
+			JOptionPane.showMessageDialog(panelCadastrarConsulta, "Digite uma data válida no formato dd/mm/aaaa", "Erro - Data inválida", JOptionPane.WARNING_MESSAGE);
 		} else {
 			Consulta c = new Consulta(data, hora, queixaPaciente, tipoDeConsulta, convenio, observacoes, medico, paciente, material);
 			
