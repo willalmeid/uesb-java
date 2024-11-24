@@ -43,11 +43,14 @@ public class ControladorPanelCadastrarMaterial implements ActionListener{
 			String nome = panelCadastrarMaterial.getTextFieldNome().getText();
 			String fornecedor = panelCadastrarMaterial.getTextFieldFornecedor().getText();
 			
-			Material m = new Material(nome, qtdEmEstoque, qtdMinimaEmEstoque, fornecedor, preco);
-			
-			materiaisCadastrados.add(m);
-			JOptionPane.showMessageDialog(panelCadastrarMaterial, "Material "+nome+" cadastrado com sucesso", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
-			
+			if(Verificacao.verificaCamposVazios(nome, fornecedor)) {
+				JOptionPane.showMessageDialog(panelCadastrarMaterial, "Preencha todas as informações!", "Erro", JOptionPane.WARNING_MESSAGE);
+			} else {
+				Material m = new Material(nome, qtdEmEstoque, qtdMinimaEmEstoque, fornecedor, preco);
+				
+				materiaisCadastrados.add(m);
+				JOptionPane.showMessageDialog(panelCadastrarMaterial, "Material "+nome+" cadastrado com sucesso", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
+			}			
 		} catch(Exception e){
 			JOptionPane.showMessageDialog(panelCadastrarMaterial, "Erro! Digite números válidos", "Erro!", JOptionPane.WARNING_MESSAGE);
 		}

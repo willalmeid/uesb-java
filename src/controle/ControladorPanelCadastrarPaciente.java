@@ -55,11 +55,15 @@ public class ControladorPanelCadastrarPaciente implements ActionListener {
 			String logradouro = panelCadastrarPaciente.getTextFieldLogradouro().getText();
 			String complemento = panelCadastrarPaciente.getTextFieldComplemento().getText();
 			
-			Endereco e = new Endereco(logradouro, numero, complemento, bairro, cep, cidade, estado);
-			Paciente p = new Paciente(nome, dataNasc, telefone, tipoSanguineo, historicoMedico, covenio, peso, altura, e);
+			if(Verificacao.verificaCamposVazios(nome, dataNasc, telefone, historicoMedico, tipoSanguineo, cep, estado, cidade, bairro, numero, logradouro, complemento)) {
+				JOptionPane.showMessageDialog(panelCadastrarPaciente, "Preencha todas as informações!", "Erro", JOptionPane.WARNING_MESSAGE);
+			} else {
+				Endereco e = new Endereco(logradouro, numero, complemento, bairro, cep, cidade, estado);
+				Paciente p = new Paciente(nome, dataNasc, telefone, tipoSanguineo, historicoMedico, covenio, peso, altura, e);
 
-			pacientesCadastrados.add(p);
-			JOptionPane.showMessageDialog(panelCadastrarPaciente, "Paciente "+nome+" cadastrado com sucesso", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
+				pacientesCadastrados.add(p);
+				JOptionPane.showMessageDialog(panelCadastrarPaciente, "Paciente "+nome+" cadastrado com sucesso", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
+			}
 		} catch(Exception e) {
 			JOptionPane.showMessageDialog(panelCadastrarPaciente, "Erro! Digite números válidos", "Erro!", JOptionPane.WARNING_MESSAGE);
 		}

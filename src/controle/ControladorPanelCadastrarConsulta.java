@@ -42,9 +42,10 @@ public class ControladorPanelCadastrarConsulta implements ActionListener {
 		String data = panelCadastrarConsulta.getTextFieldData().getText();
 		String hora = panelCadastrarConsulta.getTextFieldHora().getText();
 		String queixaPaciente = panelCadastrarConsulta.getTextAreaQueixaPaciente().getText();
-		String tipoDeConsulta  = (String) panelCadastrarConsulta.getComboBoxTipoDeConsulta().getSelectedItem();
-		String convenio = (String) panelCadastrarConsulta.getComboBoxConvenio().getSelectedItem();
 		String observacoes = panelCadastrarConsulta.getTextAreaObservacoes().getText();
+		
+		String tipoDeConsulta = (String) panelCadastrarConsulta.getComboBoxTipoDeConsulta().getSelectedItem();
+		String convenio = (String) panelCadastrarConsulta.getComboBoxConvenio().getSelectedItem();		
 		
 		Medico medico = new Medico();
 		medico.setNome(""+panelCadastrarConsulta.getComboBoxMedico().getSelectedItem());
@@ -55,10 +56,14 @@ public class ControladorPanelCadastrarConsulta implements ActionListener {
 		Material material = new Material(); 
 		material.setNomeDoMaterial(panelCadastrarConsulta.getTextAreaMaterial().getText());
 		
-		Consulta c = new Consulta(data, hora, queixaPaciente, tipoDeConsulta, convenio, observacoes, medico, paciente, material);
-	
-		consultasAgendadas.add(c);
-		JOptionPane.showMessageDialog(panelCadastrarConsulta, "Consulta cadastrada com sucesso", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
+		if(Verificacao.verificaCamposVazios(data, hora, queixaPaciente, observacoes)) {
+			JOptionPane.showMessageDialog(panelCadastrarConsulta, "Preencha todas as informações!", "Erro", JOptionPane.WARNING_MESSAGE);
+		} else {
+			Consulta c = new Consulta(data, hora, queixaPaciente, tipoDeConsulta, convenio, observacoes, medico, paciente, material);
+			
+			consultasAgendadas.add(c);
+			JOptionPane.showMessageDialog(panelCadastrarConsulta, "Consulta cadastrada com sucesso", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
+		}
 	}
 	
 	public void limparPanel() {
