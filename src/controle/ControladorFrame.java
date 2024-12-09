@@ -7,14 +7,21 @@ import visual.Frame;
 
 public class ControladorFrame implements ActionListener {
 
-	Frame frame;
+	private Frame frame;
 	
 	public ControladorFrame(Frame frame) {
 		this.frame = frame;
+		addEventos();
+	}
+	
+	public void addEventos() {
+		frame.getButtonStart().addActionListener(this);
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+		if(e.getSource() == frame.getButtonStart()) {
+			System.out.println("TESTE");
+		}
 		
 	}
 	
