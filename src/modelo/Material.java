@@ -39,7 +39,7 @@ public String salvarDados() {
 			pw.println("qtd. Mínima: " + this.qtdMinEstoque);
 			pw.println("Fornecedor: " + this.fornecedor);
 			pw.println("Preço: " + this.preco);
-			pw.println("\n");
+			pw.println("\n----------------------------------------------------\n");
 			pw.flush();
 			pw.close();
 			fw.close();

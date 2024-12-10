@@ -47,6 +47,7 @@ public class ControladorPanelCadastrarMaterial implements ActionListener{
 				JOptionPane.showMessageDialog(panelCadastrarMaterial, "Preencha todas as informações!", "Erro", JOptionPane.WARNING_MESSAGE);
 			} else {
 				Material m = new Material(nome, qtdEmEstoque, qtdMinimaEmEstoque, fornecedor, preco);
+				m.salvarDados();
 				
 				materiaisCadastrados.add(m);
 				JOptionPane.showMessageDialog(panelCadastrarMaterial, "Material "+nome+" cadastrado com sucesso", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
