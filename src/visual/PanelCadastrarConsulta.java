@@ -29,9 +29,9 @@ public class PanelCadastrarConsulta extends JPanel {
 	private InputLabel labelTipoDeConsulta;
 	private InputLabel labelConvenio;
 	
-	private InputTextField textFieldData;
-	private InputTextField textFieldHora;
 	private InputTextField textFieldPaciente;
+	private InputTextField textFieldHora;
+	private InputTextField textFieldData;
 	
 	private InputTextArea textAreaObservacoes;
 	private InputTextArea textAreaMaterial;
@@ -97,9 +97,9 @@ public class PanelCadastrarConsulta extends JPanel {
 			panelPrincipal.add(getLabelTipoDeConsulta());
 			panelPrincipal.add(getLabelConvenio());
 			
-			panelPrincipal.add(getTextFieldPaciente());
-			panelPrincipal.add(getTextFieldHora());
 			panelPrincipal.add(getTextFieldData());
+			panelPrincipal.add(getTextFieldHora());
+			panelPrincipal.add(getTextFieldPaciente());
 			
 			panelPrincipal.add(getTextAreaQueixaPaciente());
 			panelPrincipal.add(getTextAreaObservacoes());
@@ -193,12 +193,12 @@ public class PanelCadastrarConsulta extends JPanel {
 	}
 	
 	/* ----------------------------------------------------------------- Imputs -------------------------------------------------------------- */
-	public InputTextField getTextFieldData() {
-		if (textFieldData == null) {
-			textFieldData = new InputTextField();
-			textFieldData.setBounds(10, 36, 500, 25);
+	public InputTextField getTextFieldPaciente() {
+		if (textFieldPaciente == null) {
+			textFieldPaciente = new InputTextField();
+			textFieldPaciente.setBounds(10, 36, 500, 25);
 		}
-		return textFieldData;
+		return textFieldPaciente;
 	}
 	
 	public InputTextField getTextFieldHora() {
@@ -209,12 +209,12 @@ public class PanelCadastrarConsulta extends JPanel {
 		return textFieldHora;
 	}
 	
-	public InputTextField getTextFieldPaciente() {
-		if (textFieldPaciente == null) {
-			textFieldPaciente = new InputTextField();
-			textFieldPaciente.setBounds(525, 36, 120, 25);
+	public InputTextField getTextFieldData() {
+		if (textFieldData == null) {
+			textFieldData = new InputTextField("##/##/####");
+			textFieldData.setBounds(525, 36, 120, 25);
 		}
-		return textFieldPaciente;
+		return textFieldData;
 	}
 	
 	public InputTextArea getTextAreaQueixaPaciente() {
