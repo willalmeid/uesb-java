@@ -1,5 +1,8 @@
 package modelo;
 
+import java.io.FileWriter;
+import java.io.PrintWriter;
+
 public class Endereco {
 
 	private String logradouro;
@@ -24,6 +27,17 @@ public class Endereco {
 		this.cep = cep;
 		this.cidade = cidade;
 		this.estado = estado;
+	}
+	
+	public void salvarDados(PrintWriter pw) {
+		pw.println("Logradouro: " + this.logradouro);
+		pw.println("Número: " + this.numero);
+		pw.println("Complemento: " + this.complemento);
+		pw.println("Bairro: " + this.bairro);
+		pw.println("CEP: " + this.cep);
+		pw.println("Cidade: " + this.cidade);
+		pw.println("Estado: " + this.estado);
+		pw.close();
 	}
 	
 	public String getLogradouro() {

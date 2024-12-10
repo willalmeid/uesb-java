@@ -1,5 +1,9 @@
 package modelo;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 public class Consulta {
 	
 	private String data;
@@ -31,6 +35,31 @@ public class Consulta {
 		this.medico = medico;
 		this.paciente = paciente;
 		this.material = material;
+	}
+	
+	public String salvarDados() {
+		
+		try {
+			FileWriter fw = new FileWriter("consultas.txt");
+			PrintWriter pw = new PrintWriter(fw);
+			pw.println("Data: " + this.data);
+			pw.println("Hora: " + this.hora);
+			pw.println("Queixa do Paciente: " + this.queixaPaciente);
+			pw.println("Tipo de Consulta: " + this.tipoDeConsulta);
+			pw.println("Convênio: " + this.convenio);
+			pw.println("Observações: " + this.observacoes);
+			pw.println("Médico: " + this.medico);
+			pw.println("Paciente: " + this.paciente);
+			pw.println("\n");
+			pw.flush();
+			pw.close();
+			fw.close();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return "Cadastrado com sucesso!";
 	}
 
 	public String getData() {

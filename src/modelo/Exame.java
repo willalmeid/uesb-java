@@ -1,5 +1,9 @@
 package modelo;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 public class Exame {
 	
 	private String nomeExame;
@@ -28,6 +32,29 @@ public class Exame {
 		this.materiasUtilizado = materiasUtilizado;
 		this.medico = medico;
 		this.tipoExame = tipoExame;
+	}
+	
+	public String salvarDados() {
+		
+		try {
+			FileWriter fw = new FileWriter("Exame.txt");
+			PrintWriter pw = new PrintWriter(fw);
+			pw.println("Nome do Exame: " + this.nomeExame);
+			pw.println("Descrição: " + this.descricao);
+			pw.println("Valor Particular: " + this.valorParticular);
+			pw.println("Materiais Usados: " + this.materiasUtilizado);
+			pw.println("Médico: " + this.medico);
+			pw.println("Tipo Exame: " + this.tipoExame);
+			pw.println("\n");
+			pw.flush();
+			pw.close();
+			fw.close();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return "Cadastrado com sucesso!";
 	}
 
 	public String getNomeExame() {

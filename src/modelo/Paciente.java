@@ -1,5 +1,9 @@
 package modelo;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 public class Paciente {
 	
 	private String nome;
@@ -36,6 +40,32 @@ public class Paciente {
 		this.peso = peso;
 		this.altura = altura;
 		this.endereco = endereco;
+	}
+	
+	public String salvarDados() {
+		
+		try {
+			FileWriter fw = new FileWriter("pacientes.txt");
+			PrintWriter pw = new PrintWriter(fw);
+			pw.println("Nome: " + this.nome);
+			pw.println("Data de Nascimento: " + this.dataNascimento);
+			pw.println("Telefone: " + this.telefone);
+			pw.println("Tipo Sanguineo: " + this.tipoSanguineo);
+			pw.println("Histórico Médico: " + this.historicoMedico);
+			pw.println("Convênio: " + this.covenio);
+			pw.println("Peso: " + this.peso);
+			pw.println("Altura: " + this.altura);
+			endereco.salvarDados(pw);
+			pw.println("\n");
+			pw.flush();
+			pw.close();
+			fw.close();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return "Cadastrado com sucesso!";
 	}
 
 	/* --------------------------------------------------- Metodos de Acesso ---------------------------------------------------------------- */

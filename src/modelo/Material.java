@@ -1,5 +1,9 @@
 package modelo;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 public class Material {
 
 	private String nomeDoMaterial;
@@ -23,6 +27,28 @@ public class Material {
 		this.qtdMinEstoque = qtdMinEstoque;
 		this.fornecedor = fornecedor;
 		this.preco = preco;
+	}
+	
+public String salvarDados() {
+		
+		try {
+			FileWriter fw = new FileWriter("material.txt");
+			PrintWriter pw = new PrintWriter(fw);
+			pw.println("Nome do Material: " + this.nomeDoMaterial);
+			pw.println("Qtd. Estoque: " + this.qtdEstoque);
+			pw.println("qtd. Mínima: " + this.qtdMinEstoque);
+			pw.println("Fornecedor: " + this.fornecedor);
+			pw.println("Preço: " + this.preco);
+			pw.println("\n");
+			pw.flush();
+			pw.close();
+			fw.close();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return "Cadastrado com sucesso!";
 	}
 
 	public String getNomeDoMaterial() {
