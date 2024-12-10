@@ -62,9 +62,12 @@ public class ControladorPanelCadastrarPaciente implements ActionListener {
 			} else {
 				Endereco e = new Endereco(logradouro, numero, complemento, bairro, cep, cidade, estado);
 				Paciente p = new Paciente(nome, dataNasc, telefone, tipoSanguineo, historicoMedico, covenio, peso, altura, e);
-
+				p.salvarDados();
+				
 				pacientesCadastrados.add(p);
+				
 				JOptionPane.showMessageDialog(panelCadastrarPaciente, "Paciente "+nome+" cadastrado com sucesso", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
+				limparPanel();
 			}
 		} catch(Exception e) {
 			JOptionPane.showMessageDialog(panelCadastrarPaciente, "Erro! Digite números válidos", "Erro!", JOptionPane.WARNING_MESSAGE);
