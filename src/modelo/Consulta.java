@@ -50,7 +50,7 @@ public class Consulta {
 			pw.println("Observações: " + this.observacoes);
 			pw.println("Médico: " + this.medico);
 			pw.println("Paciente: " + this.paciente);
-			pw.println("\n");
+			pw.println("\n----------------------------------------------------\n");
 			pw.flush();
 			pw.close();
 			fw.close();

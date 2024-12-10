@@ -62,6 +62,7 @@ public class ControladorPanelCadastrarConsulta implements ActionListener {
 			JOptionPane.showMessageDialog(panelCadastrarConsulta, "Digite uma data válida no formato dd/mm/aaaa", "Erro - Data inválida", JOptionPane.WARNING_MESSAGE);
 		} else {
 			Consulta c = new Consulta(data, hora, queixaPaciente, tipoDeConsulta, convenio, observacoes, medico, paciente, material);
+			c.salvarDados();
 			
 			consultasAgendadas.add(c);
 			JOptionPane.showMessageDialog(panelCadastrarConsulta, "Consulta cadastrada com sucesso", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
