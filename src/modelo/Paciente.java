@@ -45,7 +45,7 @@ public class Paciente {
 	public String salvarDados() {
 		
 		try {
-			FileWriter fw = new FileWriter("pacientes.txt");
+			FileWriter fw = new FileWriter("pacientes.txt", true);
 			PrintWriter pw = new PrintWriter(fw);
 			pw.println("Nome: " + this.nome);
 			pw.println("Data de Nascimento: " + this.dataNascimento);
@@ -56,7 +56,7 @@ public class Paciente {
 			pw.println("Peso: " + this.peso);
 			pw.println("Altura: " + this.altura);
 			endereco.salvarDados(pw);
-			pw.println("\n");
+			pw.println("\n----------------------------------------------------\n");
 			pw.flush();
 			pw.close();
 			fw.close();

@@ -34,7 +34,7 @@ public class Medico {
 	public String salvarDados() {
 		
 		try {
-			FileWriter fw = new FileWriter("pacientes.txt");
+			FileWriter fw = new FileWriter("pacientes.txt", true);
 			PrintWriter pw = new PrintWriter(fw);
 			pw.println("Nome: " + this.nome);
 			pw.println("Especialidade: " + this.especialidade);

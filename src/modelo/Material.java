@@ -32,7 +32,7 @@ public class Material {
 public String salvarDados() {
 		
 		try {
-			FileWriter fw = new FileWriter("material.txt");
+			FileWriter fw = new FileWriter("material.txt", true);
 			PrintWriter pw = new PrintWriter(fw);
 			pw.println("Nome do Material: " + this.nomeDoMaterial);
 			pw.println("Qtd. Estoque: " + this.qtdEstoque);

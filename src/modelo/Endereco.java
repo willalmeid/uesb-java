@@ -1,6 +1,5 @@
 package modelo;
 
-import java.io.FileWriter;
 import java.io.PrintWriter;
 
 public class Endereco {
@@ -37,7 +36,6 @@ public class Endereco {
 		pw.println("CEP: " + this.cep);
 		pw.println("Cidade: " + this.cidade);
 		pw.println("Estado: " + this.estado);
-		pw.close();
 	}
 	
 	public String getLogradouro() {
