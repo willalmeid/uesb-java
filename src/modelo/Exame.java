@@ -37,7 +37,7 @@ public class Exame {
 	public String salvarDados() {
 		
 		try {
-			FileWriter fw = new FileWriter("Exame.txt", true);
+			FileWriter fw = new FileWriter("./dados/exames.txt", true);
 			PrintWriter pw = new PrintWriter(fw);
 			pw.println("Nome do Exame: " + this.nomeExame);
 			pw.println("Descrição: " + this.descricao);

@@ -40,7 +40,7 @@ public class Consulta {
 	public String salvarDados() {
 		
 		try {
-			FileWriter fw = new FileWriter("consultas.txt", true);
+			FileWriter fw = new FileWriter("./dados/consultas.txt", true);
 			PrintWriter pw = new PrintWriter(fw);
 			pw.println("Data: " + this.data);
 			pw.println("Hora: " + this.hora);
