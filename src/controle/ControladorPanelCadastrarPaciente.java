@@ -28,7 +28,7 @@ public class ControladorPanelCadastrarPaciente implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == panelCadastrarPaciente.getButtonCadastrar()) {
-			cadastrarConsulta();
+			cadastrarPaciente();
 
 		} else if(e.getSource() == panelCadastrarPaciente.getButtonLimpar()) {
 			limparPanel();
@@ -36,7 +36,7 @@ public class ControladorPanelCadastrarPaciente implements ActionListener {
 		}
 	}
 
-	public void cadastrarConsulta() {
+	public void cadastrarPaciente() {
 		try {
 			String nome = panelCadastrarPaciente.getTextFieldNome().getText();
 			String dataNasc = panelCadastrarPaciente.getTextFieldDataNascimento().getText();
