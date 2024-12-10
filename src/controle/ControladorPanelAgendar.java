@@ -44,27 +44,27 @@ public class ControladorPanelAgendar implements ActionListener {
 		} else if(e.getSource() == panelAgendar.getButtonCardAgendarConsulta()) {
 			PanelAgendarConsulta panelAgendarConsulta = new PanelAgendarConsulta();
 //			new ControladorPanelAgendarConsulta(panelAgendarConsulta);
-			Dialog dialog = new Dialog(panelAgendarConsulta);
+			Dialog dialog = new Dialog(frame, panelAgendarConsulta);
 			
 		} else if(e.getSource() == panelAgendar.getButtonCardAgendarExame()) {
 			PanelAgendarExame panelAgendarExame = new PanelAgendarExame();
 //			new ControladorPanelAgendarConsulta(panelAgendarExame);
-			Dialog dialog = new Dialog(panelAgendarExame);
+			Dialog dialog = new Dialog(frame, panelAgendarExame);
 			
 		} else if(e.getSource() == panelAgendar.getButtonCardVisualizarAgenda()) {
 			PanelAgendarVisualizarAgenda panelAgendarVisualizarAgenda = new PanelAgendarVisualizarAgenda();
 //			new ControladorPanelAgendarConsulta(panelAgendarVisualizarAgenda);
-			Dialog dialog = new Dialog(panelAgendarVisualizarAgenda);
+			Dialog dialog = new Dialog(frame, panelAgendarVisualizarAgenda);
 			
 		} else if(e.getSource() == panelAgendar.getButtonCardPesquisarHorarios()) {
 			PanelAgendarPesquisarHorarios panelAgendarPesquisarHorarios = new PanelAgendarPesquisarHorarios();
 //			new ControladorPanelAgendarPesquisarHorarios(panelAgendarPesquisarHorarios);
-			Dialog dialog = new Dialog(panelAgendarPesquisarHorarios);
+			Dialog dialog = new Dialog(frame, panelAgendarPesquisarHorarios);
 			
 		} else if(e.getSource() == panelAgendar.getButtonCardCancelarEReagendar()) {
 			PanelAgendarCancelarEReagendar panelAgendarCancelarEReagendar = new PanelAgendarCancelarEReagendar();
 //			new ControladorPanelAgendarCancelarEReagendar(panelAgendarCancelarEReagendar);
-			Dialog dialog = new Dialog(panelAgendarCancelarEReagendar);
+			Dialog dialog = new Dialog(frame, panelAgendarCancelarEReagendar);
 			
 		}
 	}

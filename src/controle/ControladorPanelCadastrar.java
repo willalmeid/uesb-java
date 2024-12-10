@@ -45,27 +45,27 @@ public class ControladorPanelCadastrar implements ActionListener {
 			if(e.getSource() == panelCadastrar.getButtonCadastrarPaciente()) {
 			PanelCadastrarPaciente panelCadastrarPaciente = new PanelCadastrarPaciente();
 			new ControladorPanelCadastrarPaciente(panelCadastrarPaciente);
-			Dialog dialog = new Dialog(panelCadastrarPaciente);
+			Dialog dialog = new Dialog(frame, panelCadastrarPaciente);
 			
 		} else if(e.getSource() == panelCadastrar.getButtonCadastrarMedico()) {
 			PanelCadastrarMedico panelCadastrarMedico = new PanelCadastrarMedico();
 			new ControladorPanelCadastrarMedico(panelCadastrarMedico);
-			Dialog dialog = new Dialog(panelCadastrarMedico);
+			Dialog dialog = new Dialog(frame, panelCadastrarMedico);
 			
 		} else if(e.getSource() == panelCadastrar.getButtonCadastrarExame()) {
 			PanelCadastrarExame panelCadastrarExame = new PanelCadastrarExame();
 			new ControladorPanelCadastrarExame(panelCadastrarExame);
-			Dialog dialog = new Dialog(panelCadastrarExame);
+			Dialog dialog = new Dialog(frame, panelCadastrarExame);
 			
 		} else if(e.getSource() == panelCadastrar.getButtonCadastrarConsulta()) {
 			PanelCadastrarConsulta panelCadastrarConsulta = new PanelCadastrarConsulta();
 			new ControladorPanelCadastrarConsulta(panelCadastrarConsulta);
-			Dialog dialog = new Dialog(panelCadastrarConsulta);
+			Dialog dialog = new Dialog(frame, panelCadastrarConsulta);
 			
 		} else if(e.getSource() == panelCadastrar.getButtonCadastrarMaterial()) {
 			PanelCadastrarMaterial panelCadastrarMaterial = new PanelCadastrarMaterial();
 			new ControladorPanelCadastrarMaterial(panelCadastrarMaterial);
-			Dialog dialog = new Dialog(panelCadastrarMaterial);
+			Dialog dialog = new Dialog(frame, panelCadastrarMaterial);
 			
 		}
 	}
