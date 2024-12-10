@@ -45,7 +45,7 @@ public class Exame {
 			pw.println("Materiais Usados: " + this.materiasUtilizado);
 			pw.println("Médico: " + this.medico);
 			pw.println("Tipo Exame: " + this.tipoExame);
-			pw.println("\n");
+			pw.println("\n----------------------------------------------------\n");
 			pw.flush();
 			pw.close();
 			fw.close();

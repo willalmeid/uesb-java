@@ -57,6 +57,7 @@ public class ControladorPanelCadastrarExame implements ActionListener {
 				JOptionPane.showMessageDialog(panelCadastrarExame, "Preencha todas as informações!", "Erro", JOptionPane.WARNING_MESSAGE);
 			} else {
 				Exame e = new Exame(nomeExame, descricao, valorParticular, materiaisUtilizados, medico, tipoExame);
+				e.salvarDados();
 				
 				examesCadastrados.add(e);
 				
