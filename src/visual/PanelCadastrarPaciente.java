@@ -322,7 +322,7 @@ public class PanelCadastrarPaciente extends JPanel{
 	
 	public InputTextField getTextFieldDataNascimento() {
 	    if (textFieldDataNascimento == null) {
-	        textFieldDataNascimento = new InputTextField();
+	        textFieldDataNascimento = new InputTextField("##/##/####");
 	        textFieldDataNascimento.setBounds(590, 36, 160, 25);
 	    }
 	    return textFieldDataNascimento;
@@ -330,7 +330,7 @@ public class PanelCadastrarPaciente extends JPanel{
 
 	public InputTextField getTextFieldTelefone() {
 	    if (textFieldTelefone == null) {
-	        textFieldTelefone = new InputTextField();
+	        textFieldTelefone = new InputTextField("(##) #####-####");
 	        textFieldTelefone.setBounds(345, 95, 140, 25);
 	    }
 	    return textFieldTelefone;
@@ -393,7 +393,7 @@ public class PanelCadastrarPaciente extends JPanel{
 	
 	public InputTextField getTextFieldCEP() {
 		if (textFieldCEP == null) {
-			textFieldCEP = new InputTextField();
+			textFieldCEP = new InputTextField("#####-###");
 			textFieldCEP.setBounds(10, 37, 150, 25);
 		}
 		return textFieldCEP;
