@@ -1,12 +1,15 @@
 package visual;
 
 import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import java.awt.Color;
 
 public class Frame extends JFrame {
 
@@ -27,7 +30,8 @@ public class Frame extends JFrame {
 	
 	public JPanel getPanel() {
 		if(panel == null) {
-			panel = new JPanel();
+			panel = new CustomPanel();
+			panel.setBackground(new Color(0, 128, 255));
 			panel.setVisible(true);
 			panel.setSize(600, 700);
 			panel.setLayout(null);
@@ -64,4 +68,16 @@ public class Frame extends JFrame {
 		}
 		return labelBoneco;
 	}
+	
+	 // Classe interna para o painel customizado
+    private static class CustomPanel extends JPanel {
+    	
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+
+            // Desenha o chão como um retângulo verde
+            g.setColor(new Color(34, 139, 34)); // Cor verde
+            g.fillRect(0, 550, getWidth(), 150); // Retângulo no final do painel
+        }
+    }
 }
