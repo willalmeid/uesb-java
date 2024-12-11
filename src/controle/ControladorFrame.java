@@ -41,7 +41,7 @@ public class ControladorFrame implements ActionListener {
 		frame.getButtonStart().setEnabled(false);
 		
 		contador = 0;
-        velocidade = 7; // valor que respondeu melhor
+        velocidade = 8; // valor que respondeu melhor
         
         if (timer != null) {
             timer.cancel(); // Cancela qualquer timer anterior para evitar conflitos
@@ -67,7 +67,7 @@ public class ControladorFrame implements ActionListener {
         }
 
         frame.getLabelBoneco().setBounds(259, posicaoY, 66, 95); // Atualiza a posição no frame
-        if(contador%3 == 0) {
+        if(contador%4 == 0) {
         	atualizarSprite();        	
         }
 	}
