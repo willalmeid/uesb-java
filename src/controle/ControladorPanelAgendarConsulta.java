@@ -2,6 +2,9 @@ package controle;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.swing.JOptionPane;
 
@@ -43,11 +46,27 @@ public class ControladorPanelAgendarConsulta implements ActionListener {
 		} else if(Verificacao.verificaDatas(data)) {
 			JOptionPane.showMessageDialog(panelAgendarConsulta, "Digite uma data válida no formato dd/mm/aaaa", "Erro - Data inválida", JOptionPane.WARNING_MESSAGE);
 		} else {
-//			Consulta c = new Consulta(data, hora, paciente, medico);
-//			c.salvarDados();
 			
-//			consultasAgendadas.add(c);
+			try {
+				FileWriter fw = new FileWriter("./dados/consultas-agendadas.txt", true);
+				PrintWriter pw = new PrintWriter(fw);
+				
+				pw.println("ID da Consulta: ");
+				pw.println("Paciente: " + paciente);
+				pw.println("Médico: " + medico);
+				pw.println("Data: " + data);
+				pw.println("Hora: " + hora);
+				pw.println("\n----------------------------------------------------\n");
+				
+				pw.close();
+				fw.close();
+				
+			} catch(IOException e) {
+				e.printStackTrace();
+			}
+			
 			JOptionPane.showMessageDialog(panelAgendarConsulta, "Consulta cadastrada com sucesso", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
+			limparPanel();
 		}
 	}
 	
