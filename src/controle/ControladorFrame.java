@@ -51,7 +51,7 @@ public class ControladorFrame implements ActionListener {
         timer.scheduleAtFixedRate(new TimerTask() {
             public void run() {
                 atualizarPosicao(); // Chama a função de atualização da posição
-                System.out.println(contador);
+//                System.out.println(contador);
                 contador++;
             }
         }, 0, tempoIntervalo); // Intervalo definido para cada 20ms
