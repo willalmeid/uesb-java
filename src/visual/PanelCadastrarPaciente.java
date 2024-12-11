@@ -39,7 +39,7 @@ public class PanelCadastrarPaciente extends JPanel{
 	
 	private InputTextArea textAreaHistoricoMedico;
 
-	private InputComboBox comboBoxCovenio;
+	private InputComboBox comboBoxConvenio;
 	private InputComboBox comboBoxTipoSanguineo;
 	
 	// Endereço
@@ -138,7 +138,7 @@ public class PanelCadastrarPaciente extends JPanel{
 			panelPaciente.add(getTextAreaHistoricoMedico());
 			panelPaciente.add(getTextFieldPeso());
 			panelPaciente.add(getTextFieldAltura());
-			panelPaciente.add(getComboBoxCovenio());
+			panelPaciente.add(getComboBoxConvenio());
 		}
 		return panelPaciente;
 	}
@@ -360,16 +360,19 @@ public class PanelCadastrarPaciente extends JPanel{
 	    return textFieldAltura;
 	}
 
-	public InputComboBox getComboBoxCovenio() {
-	    if (comboBoxCovenio == null) {
-	        comboBoxCovenio = new InputComboBox();
-	        comboBoxCovenio.setBounds(500, 95, 250, 25);
+	public InputComboBox getComboBoxConvenio() {
+	    if (comboBoxConvenio == null) {
+	        comboBoxConvenio = new InputComboBox();
+	        comboBoxConvenio.setBounds(500, 95, 250, 25);
 	        
-	        comboBoxCovenio.addItem("TIPO DO CONVÊNIO");
+	        comboBoxConvenio.addItem("SUS");
+	        comboBoxConvenio.addItem("Particular");
+	        comboBoxConvenio.addItem("Plano Familiar");
+	        comboBoxConvenio.addItem("Empresarial");
 	        
-	        comboBoxCovenio.setSelectedIndex(-1);
+	        comboBoxConvenio.setSelectedIndex(-1);
 	    }
-	    return comboBoxCovenio;
+	    return comboBoxConvenio;
 	}
 
 	public InputComboBox getComboBoxTipoSanguineo() {
