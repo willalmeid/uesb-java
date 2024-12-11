@@ -62,6 +62,7 @@ public class ControladorPanelCadastrarExame implements ActionListener {
 				examesCadastrados.add(e);
 				
 				JOptionPane.showMessageDialog(panelCadastrarExame, "Exame "+nomeExame+" cadastrado com sucesso", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
+				limparPanel();
 			}
 		} catch (NumberFormatException e) {
 			JOptionPane.showMessageDialog(panelCadastrarExame, "Erro! Digite números válidos", "Erro!", JOptionPane.WARNING_MESSAGE);

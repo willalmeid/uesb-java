@@ -66,6 +66,7 @@ public class ControladorPanelCadastrarConsulta implements ActionListener {
 			
 			consultasAgendadas.add(c);
 			JOptionPane.showMessageDialog(panelCadastrarConsulta, "Consulta cadastrada com sucesso", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
+			limparPanel();
 		}
 	}
 	

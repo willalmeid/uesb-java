@@ -51,6 +51,7 @@ public class ControladorPanelCadastrarMaterial implements ActionListener{
 				
 				materiaisCadastrados.add(m);
 				JOptionPane.showMessageDialog(panelCadastrarMaterial, "Material "+nome+" cadastrado com sucesso", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
+				limparPanel();
 			}			
 		} catch(Exception e){
 			JOptionPane.showMessageDialog(panelCadastrarMaterial, "Erro! Digite números válidos", "Erro!", JOptionPane.WARNING_MESSAGE);
