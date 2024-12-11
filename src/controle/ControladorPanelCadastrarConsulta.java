@@ -51,7 +51,7 @@ public class ControladorPanelCadastrarConsulta implements ActionListener {
 		medico.setNome(""+panelCadastrarConsulta.getComboBoxMedico().getSelectedItem());
 		
 		Paciente paciente = new Paciente();
-		paciente.setNome(panelCadastrarConsulta.getTextFieldPaciente().getText());	
+		paciente.setNome(""+panelCadastrarConsulta.getComboBoxPaciente().getSelectedItem());	
 		
 		Material material = new Material(); 
 		material.setNomeDoMaterial(panelCadastrarConsulta.getTextAreaMaterial().getText());

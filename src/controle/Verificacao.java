@@ -1,7 +1,5 @@
 package controle;
 
-import javax.swing.JPanel;
-
 public class Verificacao {
 	//As funções retornam true se houver algo errado e false se estiver tudo ok
 	
