@@ -21,7 +21,7 @@ public class InputTextField extends JFormattedTextField {
 	    try {
 	        if (mask != null) {
 	            MaskFormatter formatter = new MaskFormatter(mask);
-	            formatter.setPlaceholderCharacter(' '); // Caractere de preenchimento
+	            formatter.setPlaceholderCharacter('_'); // Caractere de preenchimento
 	            return formatter;
 	        }
 	    } catch (java.text.ParseException e) {
