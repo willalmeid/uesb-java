@@ -45,7 +45,7 @@ public class ControladorPanelCadastrarPaciente implements ActionListener {
 			float peso = Float.parseFloat(panelCadastrarPaciente.getTextFieldPeso().getText());
 			float altura = Float.parseFloat(panelCadastrarPaciente.getTextFieldAltura().getText());
 			String tipoSanguineo = (String) panelCadastrarPaciente.getComboBoxTipoSanguineo().getSelectedItem();
-			String covenio = (String) panelCadastrarPaciente.getComboBoxCovenio().getSelectedItem();
+			String covenio = (String) panelCadastrarPaciente.getComboBoxConvenio().getSelectedItem();
 
 			String cep = panelCadastrarPaciente.getTextFieldCEP().getText();
 			String estado = panelCadastrarPaciente.getTextFieldEstado().getText();
@@ -91,6 +91,6 @@ public class ControladorPanelCadastrarPaciente implements ActionListener {
 		panelCadastrarPaciente.getTextFieldComplemento().setText("");
 		
     	panelCadastrarPaciente.getComboBoxTipoSanguineo().setSelectedIndex(-1);
-    	panelCadastrarPaciente.getComboBoxCovenio().setSelectedIndex(-1);
+    	panelCadastrarPaciente.getComboBoxConvenio().setSelectedIndex(-1);
 	}
 }

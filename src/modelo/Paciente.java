@@ -50,7 +50,7 @@ public class Paciente {
 			pw.println("Nome: " + this.nome);
 			pw.println("Data de Nascimento: " + this.dataNascimento);
 			pw.println("Telefone: " + this.telefone);
-			pw.println("Tipo Sanguineo: " + this.tipoSanguineo);
+			pw.println("Tipo Sanguíneo: " + this.tipoSanguineo);
 			pw.println("Histórico Médico: " + this.historicoMedico);
 			pw.println("Convênio: " + this.covenio);
 			pw.println("Peso: " + this.peso);

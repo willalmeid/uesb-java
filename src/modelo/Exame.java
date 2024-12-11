@@ -42,8 +42,8 @@ public class Exame {
 			pw.println("Nome do Exame: " + this.nomeExame);
 			pw.println("Descrição: " + this.descricao);
 			pw.println("Valor Particular: " + this.valorParticular);
-			pw.println("Materiais Usados: " + this.materiasUtilizado);
-			pw.println("Médico: " + this.medico);
+			pw.println("Materiais Usados: " + this.materiasUtilizado.getNomeDoMaterial());
+			pw.println("Médico: " + this.medico.getNome());
 			pw.println("Tipo Exame: " + this.tipoExame);
 			pw.println("\n----------------------------------------------------\n");
 			pw.flush();
