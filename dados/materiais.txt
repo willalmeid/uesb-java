@@ -1,0 +1,40 @@
+Nome do Material: Luvas de Procedimento
+Qtd. Estoque: 5000
+Qtd. Mínima: 1000
+Fornecedor: MedSupply
+Preço: 0.35
+
+----------------------------------------------------
+
+Nome do Material: Máscaras Cirúrgicas
+Qtd. Estoque: 20000
+Qtd. Mínima: 5000
+Fornecedor: SafetyMed
+Preço: 0.50
+
+----------------------------------------------------
+
+Nome do Material: Seringas 10ml
+Qtd. Estoque: 3000
+Qtd. Mínima: 800
+Fornecedor: HealthTech
+Preço: 1.20
+
+----------------------------------------------------
+
+Nome do Material: Álcool Gel 70%
+Qtd. Estoque: 1000
+Qtd. Mínima: 200
+Fornecedor: BioClean
+Preço: 15.00
+
+----------------------------------------------------
+
+Nome do Material: Compressas de Gaze
+Qtd. Estoque: 1500
+Qtd. Mínima: 500
+Fornecedor: ClinicaPlus
+Preço: 0.80
+
+----------------------------------------------------
+

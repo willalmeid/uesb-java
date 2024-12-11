@@ -1,0 +1,45 @@
+Nome do Exame: Hemograma Completo
+Descrição: Exame para avaliar células sanguíneas.
+Valor Particular: 80.00
+Materiais Usados: Seringa, tubos de coleta
+Médico: Dr. Rafael Lopes Andrade
+Tipo Exame: Exames Laboratoriais
+
+----------------------------------------------------
+
+Nome do Exame: Radiografia de Tórax
+Descrição: Imagem do tórax para avaliação de órgãos e ossos.
+Valor Particular: 150.00
+Materiais Usados: Máquina de raio-X
+Médico: Dra. Camila Santos Braga
+Tipo Exame: Exames de Imagem
+
+----------------------------------------------------
+
+Nome do Exame: Eletrocardiograma
+Descrição: Registro da atividade elétrica do coração.
+Valor Particular: 120.00
+Materiais Usados: Eletrodos, gel condutor
+Médico: Dr. João Pedro Almeida
+Tipo Exame: Exames Cardíacos
+
+----------------------------------------------------
+
+Nome do Exame: Ultrassonografia Abdominal
+Descrição: Avaliação de órgãos abdominais por imagem.
+Valor Particular: 200.00
+Materiais Usados: Gel para ultrassom, transdutor
+Médico: Dra. Larissa Melo Oliveira
+Tipo Exame: Exames de Imagem
+
+----------------------------------------------------
+
+Nome do Exame: Teste de Esforço
+Descrição: Exame para monitorar o coração sob esforço físico.
+Valor Particular: 250.00
+Materiais Usados: Esteira ergométrica, eletrodos
+Médico: Dr. Fernando Costa Lima
+Tipo Exame: Exames Cardíacos
+
+----------------------------------------------------
+

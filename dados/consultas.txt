@@ -1,0 +1,55 @@
+Data: 15/03/2023
+Hora: 10:00
+Queixa do Paciente: Dor no peito
+Tipo de Consulta: Cardiologia
+Convênio: Particular
+Observações: Paciente relata dores intensas nos últimos 3 dias.
+Médico: Dr. Rafael Lopes Andrade
+Paciente: João Carlos Pereira
+
+----------------------------------------------------
+
+Data: 20/03/2023
+Hora: 14:30
+Queixa do Paciente: Irritação na pele
+Tipo de Consulta: Dermatologia
+Convênio: SUS
+Observações: Vermelhidão persistente no rosto e braços.
+Médico: Dra. Camila Santos Braga
+Paciente: Fernanda Cristina Silva
+
+----------------------------------------------------
+
+Data: 22/03/2023
+Hora: 09:00
+Queixa do Paciente: Tosse contínua e febre
+Tipo de Consulta: Clínica Geral
+Convênio: Empresarial
+Observações: Sintomas persistem há uma semana, sem melhora.
+Médico: Dr. João Pedro Almeida
+Paciente: Larissa Mendes Oliveira
+
+----------------------------------------------------
+
+Data: 25/03/2023
+Hora: 16:00
+Queixa do Paciente: Dores de cabeça frequentes
+Tipo de Consulta: Neurologia
+Convênio: Plano Familiar
+Observações: Cefaleias intensas durante a noite.
+Médico: Dra. Larissa Melo Oliveira
+Paciente: Marcos Antônio Ferreira
+
+----------------------------------------------------
+
+Data: 30/03/2023
+Hora: 11:00
+Queixa do Paciente: Dores no joelho esquerdo
+Tipo de Consulta: Ortopedia
+Convênio: Particular
+Observações: Histórico de lesão esportiva.
+Médico: Dr. Fernando Costa Lima
+Paciente: Gabriela Souza Lima
+
+----------------------------------------------------
+
