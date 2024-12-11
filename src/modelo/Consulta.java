@@ -48,8 +48,8 @@ public class Consulta {
 			pw.println("Tipo de Consulta: " + this.tipoDeConsulta);
 			pw.println("Convênio: " + this.convenio);
 			pw.println("Observações: " + this.observacoes);
-			pw.println("Médico: " + this.medico);
-			pw.println("Paciente: " + this.paciente);
+			pw.println("Médico: " + this.medico.getNome());
+			pw.println("Paciente: " + this.paciente.getNome());
 			pw.println("\n----------------------------------------------------\n");
 			pw.flush();
 			pw.close();
