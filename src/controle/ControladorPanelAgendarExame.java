@@ -64,7 +64,7 @@ public class ControladorPanelAgendarExame implements ActionListener {
 				e.printStackTrace();
 			}
 			
-			JOptionPane.showMessageDialog(panelAgendarExame, "Consulta cadastrada com sucesso", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(panelAgendarExame, "Exame cadastrada com sucesso", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
 			limparPanel();
 		}
 	}
