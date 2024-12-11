@@ -2,7 +2,6 @@ package visual;
 
 import java.awt.Font;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -45,8 +44,9 @@ public class Frame extends JFrame {
 	public JLabel getLabelTitle() {
 		if (labelTitle == null) {
 			labelTitle = new JLabel("Animação Boneco");
+			labelTitle.setForeground(new Color(255, 255, 255));
 			labelTitle.setFont(new Font("Inter", Font.PLAIN, 45));
-			labelTitle.setBounds(101, 5, 381, 55);
+			labelTitle.setBounds(101, 100, 381, 55);
 		}
 		return labelTitle;
 	}
