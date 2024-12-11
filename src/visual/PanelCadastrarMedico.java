@@ -171,7 +171,7 @@ public class PanelCadastrarMedico extends JPanel{
 	
 	public InputTextField getTextFieldCrm() {
 		if (textFieldCrm == null) {
-			textFieldCrm = new InputTextField();
+			textFieldCrm = new InputTextField("######/??");
 			textFieldCrm.setBounds(10, 156, 240, 25);
 		}
 		return textFieldCrm;
