@@ -307,7 +307,11 @@ public class PanelCadastrarConsulta extends JPanel {
 			comboBoxTipoDeConsulta = new InputComboBox();
 			comboBoxTipoDeConsulta.setBounds(375, 96, 145, 25);
 			
-			comboBoxTipoDeConsulta.addItem("TIPO DE CONSULTA");
+			comboBoxTipoDeConsulta.addItem("Clínica Geral");
+			comboBoxTipoDeConsulta.addItem("Cardiologia");
+			comboBoxTipoDeConsulta.addItem("Dermatologia");
+			comboBoxTipoDeConsulta.addItem("Neurologia");
+			comboBoxTipoDeConsulta.addItem("Ortopedia");
 			
 			comboBoxTipoDeConsulta.setSelectedIndex(-1);
 		}
@@ -319,7 +323,10 @@ public class PanelCadastrarConsulta extends JPanel {
 			comboBoxConvenio = new InputComboBox();
 			comboBoxConvenio.setBounds(535, 96, 215, 25);
 			
-			comboBoxConvenio.addItem("TIPO DE CONVÊNIO");
+			comboBoxConvenio.addItem("SUS");
+	        comboBoxConvenio.addItem("Particular");
+	        comboBoxConvenio.addItem("Plano Familiar");
+	        comboBoxConvenio.addItem("Empresarial");
 			
 			comboBoxConvenio.setSelectedIndex(-1);
 		}
