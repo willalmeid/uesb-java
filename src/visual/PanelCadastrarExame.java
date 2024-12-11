@@ -3,6 +3,10 @@ package visual;
 import javax.swing.JPanel;
 
 import java.awt.Color;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+
 import javax.swing.border.LineBorder;
 
 import styles.Button;
@@ -195,7 +199,27 @@ public class PanelCadastrarExame extends JPanel {
 			comboBoxMedico = new InputComboBox();
 			comboBoxMedico.setBounds(10, 96, 410, 25);
 			
-			comboBoxMedico.addItem("NOME MÉDICO");
+			try {
+				File file = new File("./dados/medicos.txt");
+				FileReader fr = new FileReader(file);
+				BufferedReader br = new BufferedReader(fr);
+				
+				String linha = br.readLine();
+				
+				while(linha != null) {
+					 if (linha.startsWith("Nome:")) {
+			            // Extrai apenas o nome após o prefixo "Nome:"
+			            String nome = linha.substring(6).trim(); // Remove "Nome:" e os espaços extras
+			            comboBoxMedico.addItem(nome);
+			        }
+			        linha = br.readLine();
+				}
+				
+				br.close();
+				fr.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 			
 			comboBoxMedico.setSelectedIndex(-1);
 		}

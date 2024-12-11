@@ -10,6 +10,11 @@ import styles.InputLabel;
 import styles.InputTextArea;
 import styles.Thema;
 import styles.TitlePanel;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
@@ -29,7 +34,7 @@ public class PanelCadastrarConsulta extends JPanel {
 	private InputLabel labelTipoDeConsulta;
 	private InputLabel labelConvenio;
 	
-	private InputTextField textFieldPaciente;
+	private InputComboBox comboBoxPaciente;
 	private InputTextField textFieldHora;
 	private InputTextField textFieldData;
 	
@@ -99,7 +104,7 @@ public class PanelCadastrarConsulta extends JPanel {
 			
 			panelPrincipal.add(getTextFieldData());
 			panelPrincipal.add(getTextFieldHora());
-			panelPrincipal.add(getTextFieldPaciente());
+			panelPrincipal.add(getComboBoxPaciente());
 			
 			panelPrincipal.add(getTextAreaQueixaPaciente());
 			panelPrincipal.add(getTextAreaObservacoes());
@@ -193,12 +198,36 @@ public class PanelCadastrarConsulta extends JPanel {
 	}
 	
 	/* ----------------------------------------------------------------- Imputs -------------------------------------------------------------- */
-	public InputTextField getTextFieldPaciente() {
-		if (textFieldPaciente == null) {
-			textFieldPaciente = new InputTextField();
-			textFieldPaciente.setBounds(10, 36, 500, 25);
+	public InputComboBox getComboBoxPaciente() {
+		if (comboBoxPaciente == null) {
+			comboBoxPaciente = new InputComboBox();
+			comboBoxPaciente.setBounds(10, 36, 500, 25);
+			
+			try {
+				File f = new File("./dados/pacientes.txt");
+				FileReader fr = new FileReader(f);
+				BufferedReader br = new BufferedReader(fr);
+				
+				String linha = br.readLine();
+				
+				while(linha != null) {
+					if(linha.startsWith("Nome: ")) {
+						String nome = linha.substring(6).trim();
+						comboBoxPaciente.addItem(nome);
+					}
+					linha = br.readLine();
+				}
+				
+				br.close();
+				fr.close();
+				
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+			
+			comboBoxPaciente.setSelectedIndex(-1);
 		}
-		return textFieldPaciente;
+		return comboBoxPaciente;
 	}
 	
 	public InputTextField getTextFieldHora() {
@@ -246,7 +275,27 @@ public class PanelCadastrarConsulta extends JPanel {
 			comboBoxMedico = new InputComboBox();
 			comboBoxMedico.setBounds(10, 96, 350, 25);
 			
-			comboBoxMedico.addItem("NOME MÉDICO");
+			try {
+				File f = new File("./dados/medicos.txt");
+				FileReader fr = new FileReader(f);
+				BufferedReader br = new BufferedReader(fr);
+				
+				String linha = br.readLine();
+				
+				while(linha != null) {
+					if(linha.startsWith("Nome: ")) {
+						String nome = linha.substring(6).trim();
+						comboBoxMedico.addItem(nome);
+					}
+					linha = br.readLine();
+				}
+				
+				br.close();
+				fr.close();
+				
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
 			
 			comboBoxMedico.setSelectedIndex(-1);
 		}

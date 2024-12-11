@@ -1,5 +1,9 @@
 package visual;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
@@ -22,8 +26,8 @@ public class PanelAgendarConsulta extends JPanel{
 	
 	private InputTextField textFieldData;
 	private InputTextField textFieldHora;
-	private InputTextField textFieldPaciente;
 	
+	private InputComboBox comboBoxPaciente;
 	private InputComboBox comboBoxMedico;
 
 	private Button buttonAgendar;
@@ -56,7 +60,7 @@ public class PanelAgendarConsulta extends JPanel{
 			
 			panelPrincipal.add(getTextFieldData());
 			panelPrincipal.add(getTextFieldHora());
-			panelPrincipal.add(getTextFieldPaciente());
+			panelPrincipal.add(getComboBoxPaciente());
 			panelPrincipal.add(getComboBoxMedico());
 		}
 		return panelPrincipal;
@@ -119,20 +123,65 @@ public class PanelAgendarConsulta extends JPanel{
 		}
 		return textFieldHora;
 	}
-	public InputTextField getTextFieldPaciente() {
-		if (textFieldPaciente == null) {
-			textFieldPaciente = new InputTextField();
-			textFieldPaciente.setBounds(10, 36, 756, 25);
+	
+	public InputComboBox getComboBoxPaciente() {
+		if (comboBoxPaciente == null) {
+			comboBoxPaciente = new InputComboBox();
+			comboBoxPaciente.setBounds(10, 36, 756, 25);
+
+			try {
+				File file = new File("./dados/pacientes.txt");
+				FileReader fr = new FileReader(file);
+				BufferedReader br = new BufferedReader(fr);
+				
+				String linha = br.readLine();
+				
+				while(linha != null) {
+					if(linha.startsWith("Nome: ")) {
+						String nome = linha.substring(6).trim();
+						comboBoxPaciente.addItem(nome);
+					}
+					linha = br.readLine();
+				}
+				
+				br.close();
+				fr.close();
+			} catch (Exception e){
+				e.printStackTrace();
+			}
+			// Definir seu padrão como nenhum dos itens acima
+	    	comboBoxPaciente.setSelectedIndex(-1);
 		}
-		return textFieldPaciente;
+		return comboBoxPaciente;
 	}
+	
 	public InputComboBox getComboBoxMedico() {
 		if (comboBoxMedico == null) {
 			comboBoxMedico = new InputComboBox();
 			comboBoxMedico.setBounds(10, 96, 521, 25);
-			comboBoxMedico.addItem("NOME MÉDICO");
 			
-			// Definir seu padrão como nenhum dos itens acima
+			try {
+				File file = new File("./dados/medicos.txt");
+				FileReader fr = new FileReader(file);
+				BufferedReader br = new BufferedReader(fr);
+				
+				String linha = br.readLine();
+				
+				while(linha != null) {
+					 if (linha.startsWith("Nome:")) {
+			            // Extrai apenas o nome após o prefixo "Nome:"
+			            String nome = linha.substring(6).trim(); // Remove "Nome:" e os espaços extras
+			            comboBoxMedico.addItem(nome);
+			        }
+			        linha = br.readLine();
+				}
+				
+				br.close();
+				fr.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
 	    	comboBoxMedico.setSelectedIndex(-1);
 		}
 		return comboBoxMedico;

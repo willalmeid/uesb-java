@@ -2,6 +2,9 @@ package visual;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
@@ -25,8 +28,8 @@ public class PanelAgendarExame extends JPanel{
 	
 	private InputTextField textFieldData;
 	private InputTextField textFieldHora;
-	private InputTextField textFieldPaciente;
 	
+	private InputComboBox comboBoxPaciente;
 	private InputComboBox comboBoxTipoExame;
 	
 	private Button buttonAgendar;
@@ -58,7 +61,7 @@ public class PanelAgendarExame extends JPanel{
 			
 			panelPrincipal.add(getTextFieldData());
 			panelPrincipal.add(getTextFieldHora());
-			panelPrincipal.add(getTextFieldPaciente());
+			panelPrincipal.add(getComboBoxPaciente());
 			panelPrincipal.add(getComboBoxTipoExame());
 		}
 		return panelPrincipal;
@@ -124,12 +127,37 @@ public class PanelAgendarExame extends JPanel{
 		return textFieldHora;
 	}
 	
-	public InputTextField getTextFieldPaciente() {
-		if (textFieldPaciente == null) {
-			textFieldPaciente = new InputTextField();
-			textFieldPaciente.setBounds(10, 36, 749, 25);
+	public InputComboBox getComboBoxPaciente() {
+		if (comboBoxPaciente == null) {
+			comboBoxPaciente = new InputComboBox();
+			comboBoxPaciente.setBounds(10, 36, 749, 25);
+
+			try {
+				File f = new File("./dados/pacientes.txt");
+				FileReader fr = new FileReader(f);
+				BufferedReader br = new BufferedReader(fr);
+				
+				String linha = br.readLine();
+				
+				while(linha != null) {
+					if(linha.startsWith("Nome: ")) {
+						String nome = linha.substring(6).trim();
+						comboBoxPaciente.addItem(nome);
+					}
+					linha = br.readLine();
+				}
+				
+				br.close();
+				fr.close();
+				
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+			
+			// Definir seu padrão como nenhum dos itens acima
+	    	comboBoxPaciente.setSelectedIndex(-1);
 		}
-		return textFieldPaciente;
+		return comboBoxPaciente;
 	}
 	
 	public InputComboBox getComboBoxTipoExame() {
