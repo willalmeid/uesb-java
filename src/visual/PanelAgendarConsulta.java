@@ -110,7 +110,7 @@ public class PanelAgendarConsulta extends JPanel{
 	/* --------------------------------------------------------------- Inputs ------------------------------------------------------------ */
 	public InputTextField getTextFieldData() {
 		if(textFieldData == null) {
-			textFieldData = new InputTextField();
+			textFieldData = new InputTextField("##/##/####");
 			textFieldData.setBounds(541, 96, 100, 25);
 		}
 		return textFieldData;
@@ -118,7 +118,7 @@ public class PanelAgendarConsulta extends JPanel{
 
 	public InputTextField getTextFieldHora() {
 		if(textFieldHora == null) {
-			textFieldHora = new InputTextField();
+			textFieldHora = new InputTextField("##:##");
 			textFieldHora.setBounds(666, 96, 100, 25);
 		}
 		return textFieldHora;

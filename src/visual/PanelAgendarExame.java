@@ -111,7 +111,7 @@ public class PanelAgendarExame extends JPanel{
 	/* ------------------------------------------------------------- Inputs --------------------------------------------------------------- */
 	public InputTextField getTextFieldData() {
 		if(textFieldData == null) {
-			textFieldData = new InputTextField();
+			textFieldData = new InputTextField("##/##/####");
 			textFieldData.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			textFieldData.setBounds(10, 96, 241, 25);
 			textFieldData.setColumns(10);
@@ -121,7 +121,7 @@ public class PanelAgendarExame extends JPanel{
 
 	public InputTextField getTextFieldHora() {
 		if(textFieldHora == null) {
-			textFieldHora = new InputTextField();
+			textFieldHora = new InputTextField("##:##");
 			textFieldHora.setBounds(261, 96, 250, 25);
 		}
 		return textFieldHora;
