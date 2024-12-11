@@ -43,17 +43,17 @@ public class ControladorPanelAgendar implements ActionListener {
 			
 		} else if(e.getSource() == panelAgendar.getButtonCardAgendarConsulta()) {
 			PanelAgendarConsulta panelAgendarConsulta = new PanelAgendarConsulta();
-//			new ControladorPanelAgendarConsulta(panelAgendarConsulta);
+			new ControladorPanelAgendarConsulta(panelAgendarConsulta);
 			Dialog dialog = new Dialog(frame, panelAgendarConsulta);
 			
 		} else if(e.getSource() == panelAgendar.getButtonCardAgendarExame()) {
 			PanelAgendarExame panelAgendarExame = new PanelAgendarExame();
-//			new ControladorPanelAgendarConsulta(panelAgendarExame);
+			new ControladorPanelAgendarExame(panelAgendarExame);
 			Dialog dialog = new Dialog(frame, panelAgendarExame);
 			
 		} else if(e.getSource() == panelAgendar.getButtonCardVisualizarAgenda()) {
 			PanelAgendarVisualizarAgenda panelAgendarVisualizarAgenda = new PanelAgendarVisualizarAgenda();
-//			new ControladorPanelAgendarConsulta(panelAgendarVisualizarAgenda);
+			new ControladorPanelVisualizarAgenda(panelAgendarVisualizarAgenda);
 			Dialog dialog = new Dialog(frame, panelAgendarVisualizarAgenda);
 			
 		} else if(e.getSource() == panelAgendar.getButtonCardPesquisarHorarios()) {
