@@ -11,9 +11,16 @@ public class ControladorPanelVisualizarAgenda implements ActionListener {
 	
 	public ControladorPanelVisualizarAgenda(PanelAgendarVisualizarAgenda panelAgendarVisualizarAgenda) {
 		this.panelAgendarVisualizarAgenda = panelAgendarVisualizarAgenda;
+		addEventos();
+	}
+	
+	public void addEventos() {
+		panelAgendarVisualizarAgenda.getButtonAtualizar().addActionListener(this);
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		
+		if(e.getSource() == panelAgendarVisualizarAgenda.getButtonAtualizar()) {
+			System.out.println("TESTE");
+		}
 	}
 }

@@ -38,7 +38,7 @@ public class ControladorPanelAgendar implements ActionListener {
 			frame.setContentPane(panelHome);
 			
 		} else if(e.getSource() == panelAgendar.getButtonCardVisualizarAgenda()) {
-			PanelAgendarVisualizarAgenda panelAgendarVisualizarAgenda = new PanelAgendarVisualizarAgenda();
+			PanelAgendarVisualizarAgenda panelAgendarVisualizarAgenda = new PanelAgendarVisualizarAgenda();		
 			new ControladorPanelVisualizarAgenda(panelAgendarVisualizarAgenda);
 			Dialog dialog = new Dialog(frame, panelAgendarVisualizarAgenda);
 			
