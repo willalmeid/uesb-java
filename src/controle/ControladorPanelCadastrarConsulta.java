@@ -76,9 +76,11 @@ public class ControladorPanelCadastrarConsulta implements ActionListener {
 //		material.setNomeDoMaterial(panelCadastrarConsulta.getTextAreaMaterial().getText());
 		
 		if(Verificacao.verificaCamposVazios(paciente, data, hora, medico, tipoDeConsulta, convenio, queixaPaciente)) {
-			JOptionPane.showMessageDialog(panelCadastrarConsulta, "Preencha todas as informações!", "Erro", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(panelCadastrarConsulta, "Preencha todas as informações!", "Erro! - Informações em falta", JOptionPane.WARNING_MESSAGE);
 		} else if(Verificacao.verificaDatas(data)) {
 			JOptionPane.showMessageDialog(panelCadastrarConsulta, "Digite uma data válida no formato dd/mm/aaaa", "Erro - Data inválida", JOptionPane.WARNING_MESSAGE);
+		} else if(Verificacao.verificaHorarios(hora)) {
+			JOptionPane.showMessageDialog(panelCadastrarConsulta, "Erro! Digite um horário válido", "Erro! - Horário inválido", JOptionPane.WARNING_MESSAGE);
 		} else {
 			Consulta c = new Consulta(paciente, data, hora, medico, tipoDeConsulta, convenio, queixaPaciente, observacoes, materiaisUtilizados);
 			c.salvarDados();

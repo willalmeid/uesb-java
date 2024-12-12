@@ -71,7 +71,9 @@ public class ControladorPanelCadastrarExame implements ActionListener {
 			String tipoExame = (String) panelCadastrarExame.getComboBoxTipoExame().getSelectedItem();
 			
 			if(Verificacao.verificaCamposVazios(nomeExame, descricao, paciente, medico, tipoExame)) {
-				JOptionPane.showMessageDialog(panelCadastrarExame, "Preencha todas as informações!", "Erro", JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(panelCadastrarExame, "Preencha todas as informações!", "Erro! - Informações em falta", JOptionPane.WARNING_MESSAGE);
+			} else if(Verificacao.verificaHorarios(hora)) {
+				JOptionPane.showMessageDialog(panelCadastrarExame, "Erro! Digite um horário válido", "Erro! - Horário inválido", JOptionPane.WARNING_MESSAGE);
 			} else {
 				Exame e = new Exame(nomeExame,  valorParticular, paciente, data, hora, medico, tipoExame, descricao, materiaisUtilizados);
 				e.salvarDados();
@@ -82,7 +84,7 @@ public class ControladorPanelCadastrarExame implements ActionListener {
 				limparPanel();
 			}
 		} catch (NumberFormatException e) {
-			JOptionPane.showMessageDialog(panelCadastrarExame, "Erro! Digite números válidos", "Erro!", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(panelCadastrarExame, "Erro! Digite números válidos", "Erro! - Valores inválidos", JOptionPane.WARNING_MESSAGE);
 		}
 	}
 	
