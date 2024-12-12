@@ -5,6 +5,8 @@ public class Icons {
 //	Caminho dos icons
 //	/assets/icons/*.png
 	
+	public static final String ICON_FRAME = "/assets/icons/icon-frame.png";
+
 	public static final String CADASTRAR = "/assets/icons/icon-adicionar.png";
 	public static final String AGENDAR = "/assets/icons/icon-editar.png";
 	public static final String RELATORIO = "/assets/icons/icon-documentos.png";
