@@ -1,9 +1,12 @@
 package controle;
 
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
 
 import modelo.Exame;
@@ -25,6 +28,9 @@ public class ControladorPanelCadastrarExame implements ActionListener {
 	public void addEventos() {
 		panelCadastrarExame.getButtonCadastrar().addActionListener(this);
 		panelCadastrarExame.getButtonLimpar().addActionListener(this);
+		panelCadastrarExame.getButtonAdicionar().addActionListener(this);
+		panelCadastrarExame.getButtonRemover().addActionListener(this);
+	
 	}
 
 	public void actionPerformed(ActionEvent e) {
@@ -34,6 +40,21 @@ public class ControladorPanelCadastrarExame implements ActionListener {
 		} else if(e.getSource() == panelCadastrarExame.getButtonLimpar()) {
 			limparPanel();
 
+		} else if(e.getSource() == panelCadastrarExame.getButtonAdicionar()) {
+			if(panelCadastrarExame.getComboBoxAdicionarMaterial().getSelectedItem() != null) {
+				String materialName = (String) panelCadastrarExame.getComboBoxAdicionarMaterial().getSelectedItem();
+                DefaultListModel<String> model = (DefaultListModel<String>) panelCadastrarExame.getListMateriaisUtilizados().getModel();
+                model.addElement(materialName);
+                panelCadastrarExame.getComboBoxAdicionarMaterial().setSelectedIndex(-1);;
+			}
+			
+		} else if(e.getSource() == panelCadastrarExame.getButtonRemover()) {
+		    if(panelCadastrarExame.getListMateriaisUtilizados().getSelectedIndex() >= 0) {
+		        int selectedIndex = panelCadastrarExame.getListMateriaisUtilizados().getSelectedIndex();
+		        DefaultListModel<String> model = (DefaultListModel<String>) panelCadastrarExame.getListMateriaisUtilizados().getModel();
+		        model.remove(selectedIndex);
+		    }
+		    
 		}
 	}
 
@@ -44,19 +65,19 @@ public class ControladorPanelCadastrarExame implements ActionListener {
 
 			float valorParticular = Float.parseFloat(panelCadastrarExame.getTextFieldValorParticular().getText());
 			
-			Material materiaisUtilizados = new Material();
-			materiaisUtilizados.setNomeDoMaterial(panelCadastrarExame.getTextAreaMateriaisUtilizados().getText());
+			JList<String> materiaisUtilizados = panelCadastrarExame.getListMateriaisUtilizados();
+//			Material materiaisUtilizados = new Material();
+//			materiaisUtilizados.setNomeDoMaterial(panelCadastrarExame.getTextAreaMateriaisUtilizados().getText());
 			
 
-			Medico medico = new Medico();
-			medico.setNome((String) panelCadastrarExame.getComboBoxMedico().getSelectedItem());
-			
+			String paciente = (String) panelCadastrarExame.getComboBoxPaciente().getSelectedItem();			
+			String medico = (String) panelCadastrarExame.getComboBoxMedico().getSelectedItem();
 			String tipoExame = (String) panelCadastrarExame.getComboBoxTipoExame().getSelectedItem();
 			
-			if(Verificacao.verificaCamposVazios(nomeExame, descricao, materiaisUtilizados.getNomeDoMaterial())) {
+			if(Verificacao.verificaCamposVazios(nomeExame, descricao, paciente, medico, tipoExame)) {
 				JOptionPane.showMessageDialog(panelCadastrarExame, "Preencha todas as informações!", "Erro", JOptionPane.WARNING_MESSAGE);
 			} else {
-				Exame e = new Exame(nomeExame, descricao, valorParticular, materiaisUtilizados, medico, tipoExame);
+				Exame e = new Exame(nomeExame, descricao, valorParticular, materiaisUtilizados, paciente, medico, tipoExame);
 				e.salvarDados();
 				
 				examesCadastrados.add(e);
@@ -72,7 +93,7 @@ public class ControladorPanelCadastrarExame implements ActionListener {
 	public void limparPanel() {
 		panelCadastrarExame.getTextFieldNomeExame().setText("");
 		panelCadastrarExame.getTextFieldValorParticular().setText("");
-		panelCadastrarExame.getTextAreaMateriaisUtilizados().setText("");
+//		panelCadastrarExame.getListMateriaisUtilizados().de("");
 		panelCadastrarExame.getTextAreaDescricao().setText("");
 		
 		panelCadastrarExame.getComboBoxMedico().setSelectedIndex(-1);

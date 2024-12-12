@@ -4,6 +4,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
+
 public class Exame {
 	
 	private String nomeExame;
@@ -12,9 +15,10 @@ public class Exame {
 	private float valorParticular;
 	
 	/* No documento está no plural, mas eu não sei ainda como fazer isso */
-	private Material materiasUtilizado;
+	private JList<String> materiasUtilizado;
 
-	private Medico medico;
+	private String medico;
+	private String paciente;
 	
 	/* Poderia der do tipo enum, pois os tipos já são definidos */
 	private String tipoExame;
@@ -23,13 +27,14 @@ public class Exame {
 		
 	}
 
-	public Exame(String nomeExame, String descricao, float valorParticular, Material materiasUtilizado, Medico medico,
+	public Exame(String nomeExame, String descricao, float valorParticular, JList<String> materiasUtilizado, String paciente, String medico,
 			String tipoExame) {
 		super();
 		this.nomeExame = nomeExame;
 		this.descricao = descricao;
 		this.valorParticular = valorParticular;
 		this.materiasUtilizado = materiasUtilizado;
+		this.paciente = paciente;
 		this.medico = medico;
 		this.tipoExame = tipoExame;
 	}
@@ -42,8 +47,22 @@ public class Exame {
 			pw.println("Nome do Exame: " + this.nomeExame);
 			pw.println("Descrição: " + this.descricao);
 			pw.println("Valor Particular: " + this.valorParticular);
-			pw.println("Materiais Usados: " + this.materiasUtilizado.getNomeDoMaterial());
-			pw.println("Médico: " + this.medico.getNome());
+			
+			DefaultListModel<String> model = (DefaultListModel<String>) this.materiasUtilizado.getModel();
+			
+			pw.print("Materiais Usados: ");
+			for (int i = 0; i < model.getSize(); i++) {
+			    String material = model.getElementAt(i);
+
+			    // Imprime o material com uma vírgula e um espaço, exceto para o último
+			    pw.print("[" + material);
+			    if (i < model.getSize() - 1) {
+			        pw.print("], ");
+			    } else {
+			    	pw.println("]");
+			    }
+			}
+			pw.println("Médico: " + this.medico);
 			pw.println("Tipo Exame: " + this.tipoExame);
 			pw.println("\n----------------------------------------------------\n");
 			pw.flush();
@@ -81,20 +100,28 @@ public class Exame {
 		this.valorParticular = valorParticular;
 	}
 
-	public Material getMateriasUtilizado() {
+	public JList<String> getMateriasUtilizado() {
 		return materiasUtilizado;
 	}
 
-	public void setMateriasUtilizado(Material materiasUtilizado) {
+	public void setMateriasUtilizado(JList<String> materiasUtilizado) {
 		this.materiasUtilizado = materiasUtilizado;
 	}
 
-	public Medico getMedico() {
+	public String getMedico() {
 		return medico;
 	}
 
-	public void setMedico(Medico medico) {
+	public void setMedico(String medico) {
 		this.medico = medico;
+	}
+	
+	public String getPaciente() {
+		return paciente;
+	}
+	
+	public void setPaciente(String paciente) {
+		this.paciente = paciente;
 	}
 
 	public String getTipo() {
