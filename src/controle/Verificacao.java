@@ -40,4 +40,19 @@ public class Verificacao {
 		
 		return false;
 	}
+	
+	public static boolean verificaHorarios(String horario) {
+		String[] horarioDividido = horario.split(":");
+		int horas = Integer.parseInt(horarioDividido[0]);
+		int minutos = Integer.parseInt(horarioDividido[1]);
+		
+		if(horas < 0 || horas > 23) {
+			return true;
+		}
+		if(minutos < 0 || minutos > 59) {
+			return true;
+		}
+		
+		return false;
+	}
 }
