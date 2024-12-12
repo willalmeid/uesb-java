@@ -9,6 +9,7 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 
 import modelo.Medico;
+import visual.Dialog;
 import visual.PanelCadastrarMedico;
 
 public class ControladorPanelCadastrarMedico implements ActionListener{
@@ -71,7 +72,11 @@ public class ControladorPanelCadastrarMedico implements ActionListener{
 				
 				medicosCadastrados.add(m);		
 				JOptionPane.showMessageDialog(panelCadastrarMedico, "Medico "+nome+" cadastrado com sucesso", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
-				limparPanel();
+
+				if (panelCadastrarMedico.getTopLevelAncestor() instanceof Dialog) {
+	                Dialog dialog = (Dialog) panelCadastrarMedico.getTopLevelAncestor();
+	                dialog.dispose();  // Fecha o JDialog
+	            }
 			}
 		} catch(Exception e) {
 			JOptionPane.showMessageDialog(panelCadastrarMedico, "Erro! Digite números válidos", "Erro!", JOptionPane.WARNING_MESSAGE);

@@ -9,6 +9,7 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 
 import modelo.Consulta;
+import visual.Dialog;
 import visual.PanelCadastrarConsulta;
 
 public class ControladorPanelCadastrarConsulta implements ActionListener {
@@ -87,7 +88,11 @@ public class ControladorPanelCadastrarConsulta implements ActionListener {
 			
 			consultasAgendadas.add(c);
 			JOptionPane.showMessageDialog(panelCadastrarConsulta, "Consulta cadastrada com sucesso", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
-			limparPanel();
+
+			if (panelCadastrarConsulta.getTopLevelAncestor() instanceof Dialog) {
+                Dialog dialog = (Dialog) panelCadastrarConsulta.getTopLevelAncestor();
+                dialog.dispose();  // Fecha o JDialog
+            }
 		}
 	}
 	

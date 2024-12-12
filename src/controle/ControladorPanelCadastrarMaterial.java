@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 import modelo.Material;
+import visual.Dialog;
 import visual.PanelCadastrarMaterial;
 
 public class ControladorPanelCadastrarMaterial implements ActionListener{
@@ -51,7 +52,11 @@ public class ControladorPanelCadastrarMaterial implements ActionListener{
 				
 				materiaisCadastrados.add(m);
 				JOptionPane.showMessageDialog(panelCadastrarMaterial, "Material "+nome+" cadastrado com sucesso", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
-				limparPanel();
+
+				if (panelCadastrarMaterial.getTopLevelAncestor() instanceof Dialog) {
+	                Dialog dialog = (Dialog) panelCadastrarMaterial.getTopLevelAncestor();
+	                dialog.dispose();  // Fecha o JDialog
+	            }
 			}			
 		} catch(Exception e){
 			JOptionPane.showMessageDialog(panelCadastrarMaterial, "Erro! Digite números válidos", "Erro!", JOptionPane.WARNING_MESSAGE);

@@ -14,6 +14,7 @@ import javax.swing.JOptionPane;
 
 import modelo.Exame;
 import modelo.Material;
+import visual.Dialog;
 import visual.PanelCadastrarExame;
 
 public class ControladorPanelCadastrarExame implements ActionListener {
@@ -125,7 +126,11 @@ public class ControladorPanelCadastrarExame implements ActionListener {
 				examesCadastrados.add(e);
 				
 				JOptionPane.showMessageDialog(panelCadastrarExame, "Exame "+nomeExame+" cadastrado com sucesso", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
-				limparPanel();
+
+				if (panelCadastrarExame.getTopLevelAncestor() instanceof Dialog) {
+	                Dialog dialog = (Dialog) panelCadastrarExame.getTopLevelAncestor();
+	                dialog.dispose();  // Fecha o JDialog
+	            }
 			}
 		} catch (NumberFormatException e) {
 			JOptionPane.showMessageDialog(panelCadastrarExame, "Erro! Digite números válidos", "Erro! - Valores inválidos", JOptionPane.WARNING_MESSAGE);

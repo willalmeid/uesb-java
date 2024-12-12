@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 
 import modelo.Endereco;
 import modelo.Paciente;
+import visual.Dialog;
 import visual.PanelCadastrarPaciente;
 
 public class ControladorPanelCadastrarPaciente implements ActionListener {
@@ -67,7 +68,11 @@ public class ControladorPanelCadastrarPaciente implements ActionListener {
 				pacientesCadastrados.add(p);
 				
 				JOptionPane.showMessageDialog(panelCadastrarPaciente, "Paciente "+nome+" cadastrado com sucesso", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
-				limparPanel();
+//				limparPanel();
+				if (panelCadastrarPaciente.getTopLevelAncestor() instanceof Dialog) {
+	                Dialog dialog = (Dialog) panelCadastrarPaciente.getTopLevelAncestor();
+	                dialog.dispose();  // Fecha o JDialog
+	            }
 			}
 		} catch(Exception e) {
 			JOptionPane.showMessageDialog(panelCadastrarPaciente, "Erro! Digite números válidos", "Erro!", JOptionPane.WARNING_MESSAGE);
