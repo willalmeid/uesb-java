@@ -7,8 +7,6 @@ import visual.Dialog;
 import visual.Frame;
 import visual.PanelAgendar;
 import visual.PanelAgendarCancelarEReagendar;
-import visual.PanelAgendarConsulta;
-import visual.PanelAgendarExame;
 import visual.PanelAgendarPesquisarHorarios;
 import visual.PanelAgendarVisualizarAgenda;
 import visual.PanelHome;
@@ -30,8 +28,6 @@ public class ControladorPanelAgendar implements ActionListener {
 		panelAgendar.getButtonHome().addActionListener(this);
 		panelAgendar.getButtonVoltar().addActionListener(this);
 		
-		panelAgendar.getButtonCardAgendarConsulta().addActionListener(this);
-		panelAgendar.getButtonCardAgendarExame().addActionListener(this);
 		panelAgendar.getButtonCardVisualizarAgenda().addActionListener(this);
 		panelAgendar.getButtonCardPesquisarHorarios().addActionListener(this);
 		panelAgendar.getButtonCardCancelarEReagendar().addActionListener(this);
@@ -40,16 +36,6 @@ public class ControladorPanelAgendar implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == panelAgendar.getButtonHome() || e.getSource() == panelAgendar.getButtonVoltar()) {
 			frame.setContentPane(panelHome);
-			
-		} else if(e.getSource() == panelAgendar.getButtonCardAgendarConsulta()) {
-			PanelAgendarConsulta panelAgendarConsulta = new PanelAgendarConsulta();
-			new ControladorPanelAgendarConsulta(panelAgendarConsulta);
-			Dialog dialog = new Dialog(frame, panelAgendarConsulta);
-			
-		} else if(e.getSource() == panelAgendar.getButtonCardAgendarExame()) {
-			PanelAgendarExame panelAgendarExame = new PanelAgendarExame();
-			new ControladorPanelAgendarExame(panelAgendarExame);
-			Dialog dialog = new Dialog(frame, panelAgendarExame);
 			
 		} else if(e.getSource() == panelAgendar.getButtonCardVisualizarAgenda()) {
 			PanelAgendarVisualizarAgenda panelAgendarVisualizarAgenda = new PanelAgendarVisualizarAgenda();

@@ -35,28 +35,23 @@ public class PanelAgendar extends JPanel {
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
 				.addGroup(groupLayout.createSequentialGroup()
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addGroup(groupLayout.createSequentialGroup()
-							.addGap(50)
-							.addComponent(getButtonVoltar(), GroupLayout.PREFERRED_SIZE, 62, GroupLayout.PREFERRED_SIZE)
-							.addGap(341)
-							.addComponent(getTitlePanel(), GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE)
-							.addGap(341)
-							.addComponent(getButtonHome(), GroupLayout.PREFERRED_SIZE, 62, GroupLayout.PREFERRED_SIZE))
-						.addGroup(groupLayout.createSequentialGroup()
-							.addGap(40)
-							.addComponent(getButtonCardAgendarConsulta(), GroupLayout.PREFERRED_SIZE, 370, GroupLayout.PREFERRED_SIZE)
-							.addGap(30)
-							.addComponent(getButtonCardAgendarExame(), GroupLayout.PREFERRED_SIZE, 370, GroupLayout.PREFERRED_SIZE)
-							.addGap(30)
-							.addComponent(getButtonCardVisualizarAgenda(), GroupLayout.PREFERRED_SIZE, 370, GroupLayout.PREFERRED_SIZE)))
+					.addGap(50)
+					.addComponent(getButtonVoltar(), GroupLayout.PREFERRED_SIZE, 62, GroupLayout.PREFERRED_SIZE)
+					.addGap(341)
+					.addComponent(getTitlePanel(), GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE)
+					.addGap(341)
+					.addComponent(getButtonHome(), GroupLayout.PREFERRED_SIZE, 62, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap(50, Short.MAX_VALUE))
-				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(248)
+				.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+					.addContainerGap(253, Short.MAX_VALUE)
+					.addComponent(getButtonCardVisualizarAgenda(), GroupLayout.PREFERRED_SIZE, 370, GroupLayout.PREFERRED_SIZE)
+					.addGap(36)
 					.addComponent(getButtonCardPesquisarHorarios(), GroupLayout.PREFERRED_SIZE, 370, GroupLayout.PREFERRED_SIZE)
-					.addGap(30)
+					.addGap(251))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(455)
 					.addComponent(getButtonCardCancelarEReagendar(), GroupLayout.PREFERRED_SIZE, 370, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(262, Short.MAX_VALUE))
+					.addContainerGap(455, Short.MAX_VALUE))
 		);
 		groupLayout.setVerticalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
@@ -72,14 +67,11 @@ public class PanelAgendar extends JPanel {
 								.addComponent(getTitlePanel(), GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE))
 							.addPreferredGap(ComponentPlacement.RELATED)))
 					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(getButtonCardAgendarConsulta(), GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE)
-						.addComponent(getButtonCardAgendarExame(), GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE)
-						.addComponent(getButtonCardVisualizarAgenda(), GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE))
-					.addGap(28)
-					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
 						.addComponent(getButtonCardPesquisarHorarios(), GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE)
-						.addComponent(getButtonCardCancelarEReagendar(), GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE))
-					.addGap(79))
+						.addComponent(getButtonCardVisualizarAgenda(), GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE))
+					.addGap(32)
+					.addComponent(getButtonCardCancelarEReagendar(), GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE)
+					.addGap(75))
 		);
 		setLayout(groupLayout);
 
@@ -90,22 +82,6 @@ public class PanelAgendar extends JPanel {
 			titlePanel = new TitlePanel("Tela de Agendamento");
 		}
 		return titlePanel;
-	}
-
-	public ButtonCard getButtonCardAgendarConsulta() {
-	    if (buttonCardAgendarConsulta == null) {
-	        buttonCardAgendarConsulta = new ButtonCard("Agendar Consulta");
-	        buttonCardAgendarConsulta.setIcon(new ImageIcon(PanelAgendar.class.getResource(Icons.AGENDAR_CONSULTA)));
-	    }
-	    return buttonCardAgendarConsulta;
-	}
-
-	public ButtonCard getButtonCardAgendarExame() {
-	    if (buttonCardAgendarExames == null) {
-	        buttonCardAgendarExames = new ButtonCard("Agendar Exames");
-	        buttonCardAgendarExames.setIcon(new ImageIcon(PanelAgendar.class.getResource(Icons.AGENDAR_EXAME)));
-	    }
-	    return buttonCardAgendarExames;
 	}
 
 	public ButtonCard getButtonCardVisualizarAgenda() {
