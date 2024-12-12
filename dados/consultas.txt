@@ -1,55 +1,59 @@
+Paciente: João Carlos Pereira
 Data: 15/03/2023
 Hora: 10:00
-Queixa do Paciente: Dor no peito
+Médico: Dr. Rafael Lopes Andrade
 Tipo de Consulta: Cardiologia
 Convênio: Particular
+Queixa do Paciente: Dor no peito
 Observações: Paciente relata dores intensas nos últimos 3 dias.
-Médico: Dr. Rafael Lopes Andrade
-Paciente: João Carlos Pereira
+Materiais Usados: [Eletrodos], [Monitor Cardíaco]
 
 ----------------------------------------------------
 
+Paciente: Fernanda Cristina Silva
 Data: 20/03/2023
 Hora: 14:30
-Queixa do Paciente: Irritação na pele
+Médico: Dra. Camila Santos Braga
 Tipo de Consulta: Dermatologia
 Convênio: SUS
+Queixa do Paciente: Irritação na pele
 Observações: Vermelhidão persistente no rosto e braços.
-Médico: Dra. Camila Santos Braga
-Paciente: Fernanda Cristina Silva
+Materiais Usados: [Lâmina para Biópsia], [Luvas Cirúrgicas]
 
 ----------------------------------------------------
 
+Paciente: Larissa Mendes Oliveira
 Data: 22/03/2023
 Hora: 09:00
-Queixa do Paciente: Tosse contínua e febre
+Médico: Dr. João Pedro Almeida
 Tipo de Consulta: Clínica Geral
 Convênio: Empresarial
+Queixa do Paciente: Tosse contínua e febre
 Observações: Sintomas persistem há uma semana, sem melhora.
-Médico: Dr. João Pedro Almeida
-Paciente: Larissa Mendes Oliveira
+Materiais Usados: [Estetoscópio], [Termômetro Digital]
 
 ----------------------------------------------------
 
+Paciente: Marcos Antônio Ferreira
 Data: 25/03/2023
 Hora: 16:00
-Queixa do Paciente: Dores de cabeça frequentes
+Médico: Dra. Larissa Melo Oliveira
 Tipo de Consulta: Neurologia
 Convênio: Plano Familiar
+Queixa do Paciente: Dores de cabeça frequentes
 Observações: Cefaleias intensas durante a noite.
-Médico: Dra. Larissa Melo Oliveira
-Paciente: Marcos Antônio Ferreira
+Materiais Usados: [Eletrodos para EEG], [Notebook para Monitoramento]
 
 ----------------------------------------------------
 
+Paciente: Gabriela Souza Lima
 Data: 30/03/2023
 Hora: 11:00
-Queixa do Paciente: Dores no joelho esquerdo
+Médico: Dr. Fernando Costa Lima
 Tipo de Consulta: Ortopedia
 Convênio: Particular
+Queixa do Paciente: Dores no joelho esquerdo
 Observações: Histórico de lesão esportiva.
-Médico: Dr. Fernando Costa Lima
-Paciente: Gabriela Souza Lima
+Materiais Usados: [Bandagens Compressivas], [Artroscópio]
 
 ----------------------------------------------------
-
