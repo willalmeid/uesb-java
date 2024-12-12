@@ -4,6 +4,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
+
 public class Medico {
 	
 	private String nome;
@@ -12,23 +15,21 @@ public class Medico {
 	private String contato;
 	
 	private float valorConsultaParticular;
-	
-	// Pensei em criar uma class para isso
-	private String historicoDeAtendimento;
+	private JList<String> horariosDeAtendimento;
 
 	public Medico() {
 		
 	}
-
+ 
 	public Medico(String nome, String especialidade, String crm, String contato, float valorConsultaParticular,
-			String históricoDeAtendimento) {
+			JList<String> horariosDeAtendimento) {
 		super();
 		this.nome = nome;
 		this.especialidade = especialidade;
 		this.crm = crm;
 		this.contato = contato;
 		this.valorConsultaParticular = valorConsultaParticular;
-		this.historicoDeAtendimento = históricoDeAtendimento;
+		this.horariosDeAtendimento = horariosDeAtendimento;
 	}
 	
 	public String salvarDados() {
@@ -41,7 +42,21 @@ public class Medico {
 			pw.println("CRM: " + this.crm);
 			pw.println("Contato: " + this.contato);
 			pw.println("Valor Consulta Particular: " + this.valorConsultaParticular);
-			pw.println("Histórico de Atendimento: " + this.historicoDeAtendimento);
+
+			DefaultListModel<String> model = (DefaultListModel<String>) this.horariosDeAtendimento.getModel();
+			
+			pw.print("Horários de Atendimento: ");
+			for (int i = 0; i < model.getSize(); i++) {
+			    String material = model.getElementAt(i);
+
+			    // Imprime o material com uma vírgula e um espaço, exceto para o último
+			    pw.print("[" + material);
+			    if (i < model.getSize() - 1) {
+			        pw.print("], ");
+			    } else {
+			    	pw.println("]");
+			    }
+			}
 			pw.println("\n----------------------------------------------------\n");
 			pw.flush();
 			pw.close();
@@ -94,12 +109,12 @@ public class Medico {
 		this.valorConsultaParticular = valorConsultaParticular;
 	}
 
-	public String getHistóricoDeAtendimento() {
-		return historicoDeAtendimento;
+	public JList<String> getHistóricoDeAtendimento() {
+		return horariosDeAtendimento;
 	}
 
-	public void setHistóricoDeAtendimento(String históricoDeAtendimento) {
-		this.historicoDeAtendimento = históricoDeAtendimento;
+	public void setHistóricoDeAtendimento(JList<String> horariosDeAtendimento) {
+		this.horariosDeAtendimento = horariosDeAtendimento;
 	}
 
 }

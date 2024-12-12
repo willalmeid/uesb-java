@@ -4,6 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
 
 import modelo.Medico;
@@ -23,6 +25,8 @@ public class ControladorPanelCadastrarMedico implements ActionListener{
 	public void addEventos() {
 		panelCadastrarMedico.getButtonCadastrar().addActionListener(this);
 		panelCadastrarMedico.getButtonLimpar().addActionListener(this);
+		panelCadastrarMedico.getButtonAdicionar().addActionListener(this);
+		panelCadastrarMedico.getButtonRemover().addActionListener(this);
 	}
 
 	public void actionPerformed(ActionEvent e) {
@@ -32,6 +36,21 @@ public class ControladorPanelCadastrarMedico implements ActionListener{
 		} else if(e.getSource() == panelCadastrarMedico.getButtonLimpar()) {
 			limparPanel();
 
+		} else if(e.getSource() == panelCadastrarMedico.getButtonAdicionar()) {
+			if(panelCadastrarMedico.getComboBoxAdicionarHorarios().getSelectedItem() != null) {
+				String materialName = (String) panelCadastrarMedico.getComboBoxAdicionarHorarios().getSelectedItem();
+                DefaultListModel<String> model = (DefaultListModel<String>) panelCadastrarMedico.getListHorariosDeAtendimento().getModel();
+                model.addElement(materialName);
+                panelCadastrarMedico.getComboBoxAdicionarHorarios().setSelectedIndex(-1);;
+			}
+			
+		} else if(e.getSource() == panelCadastrarMedico.getButtonRemover()) {
+		    if(panelCadastrarMedico.getListHorariosDeAtendimento().getSelectedIndex() >= 0) {
+		        int selectedIndex = panelCadastrarMedico.getListHorariosDeAtendimento().getSelectedIndex();
+		        DefaultListModel<String> model = (DefaultListModel<String>) panelCadastrarMedico.getListHorariosDeAtendimento().getModel();
+		        model.remove(selectedIndex);
+		    }
+		    
 		}
 	}
 
@@ -42,12 +61,12 @@ public class ControladorPanelCadastrarMedico implements ActionListener{
 			String crm = panelCadastrarMedico.getTextFieldCrm().getText();
 			String contato = panelCadastrarMedico.getTextFieldContato().getText(); 
 			float valorConsultaParticular = Float.parseFloat(panelCadastrarMedico.getTextFieldValorConsultaParticular().getText());
-			String historicoDeAtendimento = panelCadastrarMedico.getTextAreaHistoricoDeAtendimento().getText();
+			JList<String> horariosDeAtendimento = panelCadastrarMedico.getListHorariosDeAtendimento();
 			
-			if(Verificacao.verificaCamposVazios(nome, especialidade, crm, contato, historicoDeAtendimento)) {
+			if(Verificacao.verificaCamposVazios(nome, especialidade, crm, contato)) {
 				JOptionPane.showMessageDialog(panelCadastrarMedico, "Preencha todas as informações!", "Erro", JOptionPane.WARNING_MESSAGE);
 			} else {
-				Medico m = new Medico(nome, especialidade, crm, contato, valorConsultaParticular, historicoDeAtendimento);
+				Medico m = new Medico(nome, especialidade, crm, contato, valorConsultaParticular, horariosDeAtendimento);
 				m.salvarDados();
 				
 				medicosCadastrados.add(m);		
@@ -65,6 +84,7 @@ public class ControladorPanelCadastrarMedico implements ActionListener{
 		panelCadastrarMedico.getTextFieldCrm().setText("");
 		panelCadastrarMedico.getTextFieldContato().setText("");
 		panelCadastrarMedico.getTextFieldValorConsultaParticular().setText("");
-		panelCadastrarMedico.getTextAreaHistoricoDeAtendimento().setText("");
-	}
+
+		DefaultListModel<String> model = (DefaultListModel<String>) panelCadastrarMedico.getListHorariosDeAtendimento().getModel();
+		model.clear();}
 }
