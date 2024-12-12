@@ -23,8 +23,6 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class PanelCadastrarConsulta extends JPanel {
 
@@ -389,10 +387,6 @@ public class PanelCadastrarConsulta extends JPanel {
 	public Button getButtonRemover() {
 		if (buttonRemover == null) {
 			buttonRemover = new Button("Limpar");
-			buttonRemover.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-				}
-			});
 			buttonRemover.setText("Remover");
 			buttonRemover.setFont(new Font("Dialog", Font.BOLD, 12));
 			buttonRemover.setBounds(650, 385, 100, 25);
