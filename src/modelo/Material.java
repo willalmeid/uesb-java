@@ -4,6 +4,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.swing.JOptionPane;
+
 public class Material {
 
 	private String nomeDoMaterial;
@@ -29,7 +31,20 @@ public class Material {
 		this.preco = preco;
 	}
 	
-public String salvarDados() {
+	public void verificaEstoque() { //sistema de alerta
+		if (this.qtdEstoque < this.qtdMinEstoque) {
+			JOptionPane.showMessageDialog(null,
+                    "O material selecionado está com estoque abaixo do mínimo!\n" +
+                    "Nome: " + nomeDoMaterial + "\n" +
+                    "Estoque: " + qtdEstoque + "\n" +
+                    "Mínimo: " + qtdMinEstoque,
+                    "Alerta de Estoque",
+                    JOptionPane.WARNING_MESSAGE
+			);
+		}
+	}
+	
+	public String salvarDados() {
 		
 		try {
 			FileWriter fw = new FileWriter("./dados/materiais.txt", true);

@@ -1,5 +1,5 @@
 Nome do Material: Luvas de Procedimento
-Qtd. Estoque: 5000
+Qtd. Estoque: 500
 Qtd. Mínima: 1000
 Fornecedor: MedSupply
 Preço: 0.35
