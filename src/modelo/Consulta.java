@@ -4,6 +4,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
+
 public class Consulta {
 	
 	private String data;
@@ -13,28 +16,28 @@ public class Consulta {
 	private String convenio;
 	private String observacoes;
 	
-	private Medico medico;
+	private String medico;
 	
-	private Paciente paciente;	
+	private String paciente;	
 	
-	private Material material;
+	private JList<String> materiaisUtilizados;
 
 	public Consulta() {
 		
 	}
 
-	public Consulta(String data, String hora, String queixaPaciente, String tipoDeConsulta, String convenio,
-			String observacoes, Medico medico, Paciente paciente, Material material) {
+	public Consulta(String paciente, String data, String hora, String medico, String tipoDeConsulta, String convenio, String queixaPaciente, 
+			String observacoes, JList<String> materiaisUtilizados) {
 		super();
+		this.paciente = paciente;
 		this.data = data;
 		this.hora = hora;
-		this.queixaPaciente = queixaPaciente;
+		this.medico = medico;
 		this.tipoDeConsulta = tipoDeConsulta;
 		this.convenio = convenio;
+		this.queixaPaciente = queixaPaciente;
 		this.observacoes = observacoes;
-		this.medico = medico;
-		this.paciente = paciente;
-		this.material = material;
+		this.materiaisUtilizados = materiaisUtilizados;
 	}
 	
 	public String salvarDados() {
@@ -42,14 +45,29 @@ public class Consulta {
 		try {
 			FileWriter fw = new FileWriter("./dados/consultas.txt", true);
 			PrintWriter pw = new PrintWriter(fw);
+			pw.println("Paciente: " + this.paciente);
 			pw.println("Data: " + this.data);
 			pw.println("Hora: " + this.hora);
-			pw.println("Queixa do Paciente: " + this.queixaPaciente);
+			pw.println("Médico: " + this.medico);
 			pw.println("Tipo de Consulta: " + this.tipoDeConsulta);
 			pw.println("Convênio: " + this.convenio);
+			pw.println("Queixa do Paciente: " + this.queixaPaciente);
 			pw.println("Observações: " + this.observacoes);
-			pw.println("Médico: " + this.medico.getNome());
-			pw.println("Paciente: " + this.paciente.getNome());
+			
+			DefaultListModel<String> model = (DefaultListModel<String>) this.materiaisUtilizados.getModel();
+			
+			pw.print("Materiais Usados: ");
+			for (int i = 0; i < model.getSize(); i++) {
+			    String material = model.getElementAt(i);
+
+			    // Imprime o material com uma vírgula e um espaço, exceto para o último
+			    pw.print("[" + material);
+			    if (i < model.getSize() - 1) {
+			        pw.print("], ");
+			    } else {
+			    	pw.println("]");
+			    }
+			}
 			pw.println("\n----------------------------------------------------\n");
 			pw.flush();
 			pw.close();
@@ -110,28 +128,28 @@ public class Consulta {
 		this.observacoes = observacoes;
 	}
 
-	public Medico getMedico() {
+	public String getMedico() {
 		return medico;
 	}
 
-	public void setMedico(Medico medico) {
+	public void setMedico(String medico) {
 		this.medico = medico;
 	}
 
-	public Paciente getPaciente() {
+	public String getPaciente() {
 		return paciente;
 	}
 
-	public void setPaciente(Paciente paciente) {
+	public void setPaciente(String paciente) {
 		this.paciente = paciente;
 	}
 
-	public Material getMaterial() {
-		return material;
+	public JList<String> getMaterial() {
+		return materiaisUtilizados;
 	}
 
-	public void setMaterial(Material material) {
-		this.material = material;
+	public void setMaterial(JList<String> materiaisUtilizados) {
+		this.materiaisUtilizados = materiaisUtilizados;
 	}
 
 }
