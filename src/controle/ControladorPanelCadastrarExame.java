@@ -89,10 +89,15 @@ public class ControladorPanelCadastrarExame implements ActionListener {
 	public void limparPanel() {
 		panelCadastrarExame.getTextFieldNomeExame().setText("");
 		panelCadastrarExame.getTextFieldValorParticular().setText("");
-//		panelCadastrarExame.getListMateriaisUtilizados().de("");
+		panelCadastrarExame.getTextFieldData().setText("");
+		panelCadastrarExame.getTextFieldHora().setText("");
 		panelCadastrarExame.getTextAreaDescricao().setText("");
 		
 		panelCadastrarExame.getComboBoxMedico().setSelectedIndex(-1);
 		panelCadastrarExame.getComboBoxTipoExame().setSelectedIndex(-1);
+		panelCadastrarExame.getComboBoxAdicionarMaterial().setSelectedIndex(-1);
+		
+		DefaultListModel<String> model = (DefaultListModel<String>) panelCadastrarExame.getListMateriaisUtilizados().getModel();
+		model.clear();
 	}
 }
