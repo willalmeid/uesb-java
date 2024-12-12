@@ -3,14 +3,12 @@ package visual;
 import javax.swing.JPanel;
 
 import java.awt.Color;
-import java.awt.Component;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 
 import javax.swing.border.LineBorder;
 
-import modelo.Material;
 import styles.Button;
 import styles.InputComboBox;
 import styles.InputTextField;
@@ -39,22 +37,27 @@ public class PanelCadastrarExame extends JPanel {
 	private InputLabel labelValorParticular;
 	private InputLabel labelMedico;
 	private InputLabel labelTipoExame;
+	private InputLabel labelPaciente;
 	
 	private InputTextField textFieldNomeExame;
 	private InputTextField textFieldValorParticular;
-	private JList<String> listMateriaisUtilizados;
 	private InputTextArea textAreaDescricao;
 	
 	private InputComboBox comboBoxMedico;
 	private InputComboBox comboBoxTipoExame;
+	private InputComboBox comboBoxPaciente;
+	private InputComboBox comboBoxAdicionarMaterial;
+	
+	private JList<String> listMateriaisUtilizados;
 	
 	private Button buttonCadastrar;
 	private Button buttonLimpar;
-	private InputLabel labelPaciente;
-	private InputComboBox comboBoxPaciente;
-	private InputComboBox comboBoxAdicionarMaterial;
 	private Button buttonRemover;
 	private Button buttonAdicionar;
+	private InputTextField textFieldHora;
+	private InputLabel labelHora;
+	private InputLabel labelData;
+	private InputTextField textFieldData;
 
 	public PanelCadastrarExame() {
 		setBackground(Thema.PRINCIPAL);
@@ -101,22 +104,26 @@ public class PanelCadastrarExame extends JPanel {
 			panelMain.setLayout(null);
 			
 			panelMain.add(getLabelNomeExame());
-			panelMain.add(getLabelDescricao()); 
 			panelMain.add(getLabelValorParticular()); 
-			panelMain.add(getLabelMateriaisUtilizados());
+			panelMain.add(getLabelPaciente());
+			panelMain.add(getLabelData());
+			panelMain.add(getLabelHora());
 			panelMain.add(getLabelMedico());
 			panelMain.add(getLabelTipoExame());
+			panelMain.add(getLabelDescricao()); 
+			panelMain.add(getLabelMateriaisUtilizados());
 			
 			panelMain.add(getTextFieldNomeExame());
 			panelMain.add(getTextFieldValorParticular());
-			panelMain.add(getListMateriaisUtilizados());
-			panelMain.add(getTextAreaDescricao());
-			
-			panelMain.add(getComboBoxMedico());
-			panelMain.add(getLabelPaciente());
-			panelMain.add(getComboBoxTipoExame());
 			panelMain.add(getComboBoxPaciente());
+			panelMain.add(getTextFieldData());
+			panelMain.add(getTextFieldHora());
+			panelMain.add(getComboBoxMedico());
+			panelMain.add(getComboBoxTipoExame());
+			panelMain.add(getTextAreaDescricao());
 			panelMain.add(getComboBoxAdicionarMaterial());
+			panelMain.add(getListMateriaisUtilizados());
+			
 			panelMain.add(getButtonRemover());
 			panelMain.add(getButtonAdicionar());
 		}
@@ -138,6 +145,41 @@ public class PanelCadastrarExame extends JPanel {
 		}
 		return labelNomeExame;
 	}
+	
+	public InputLabel getLabelValorParticular() {
+		if(labelValorParticular == null) {
+			labelValorParticular = new InputLabel("Valor Particular");
+			labelValorParticular.setBounds(610, 10, 140, 20);
+		}
+		return labelValorParticular;
+	}
+	
+	public InputLabel getLabelPaciente() {
+		if (labelPaciente == null) {
+			labelPaciente = new InputLabel("Médico");
+			labelPaciente.setText("Paciente");
+			labelPaciente.setBounds(10, 70, 484, 20);
+		}
+		return labelPaciente;
+	}
+	
+	public InputLabel getLabelData() {
+		if (labelData == null) {
+			labelData = new InputLabel("Valor Particular");
+			labelData.setText("Data");
+			labelData.setBounds(540, 71, 100, 20);
+		}
+		return labelData;
+	}
+	
+	public InputLabel getLabelHora() {
+		if (labelHora == null) {
+			labelHora = new InputLabel("Valor Particular");
+			labelHora.setText("Hora");
+			labelHora.setBounds(650, 71, 100, 20);
+		}
+		return labelHora;
+	}
 
 	public InputLabel getLabelDescricao() {
 		if(labelDescricao == null) {
@@ -145,22 +187,6 @@ public class PanelCadastrarExame extends JPanel {
 			labelDescricao.setBounds(10, 190, 740, 20);
 		}
 		return labelDescricao;
-	}
-
-	public InputLabel getLabelMateriaisUtilizados() {
-		if(labelMateriaisUtilizados == null) {
-			labelMateriaisUtilizados = new InputLabel("Materiais Utilizados");
-			labelMateriaisUtilizados.setBounds(10, 290, 740, 20);
-		}
-		return labelMateriaisUtilizados;
-	}
-
-	public InputLabel getLabelValorParticular() {
-		if(labelValorParticular == null) {
-			labelValorParticular = new InputLabel("Valor Particular");
-			labelValorParticular.setBounds(610, 10, 140, 20);
-		}
-		return labelValorParticular;
 	}
 	
 	public InputLabel getLabelMedico() {
@@ -170,22 +196,21 @@ public class PanelCadastrarExame extends JPanel {
 		}
 		return labelMedico;
 	}
-	
-	public InputLabel getLabelPaciente() {
-		if (labelPaciente == null) {
-			labelPaciente = new InputLabel("Médico");
-			labelPaciente.setText("Paciente");
-			labelPaciente.setBounds(10, 70, 740, 20);
-		}
-		return labelPaciente;
-	}
-	
+
 	public InputLabel getLabelTipoExame() {
 		if(labelTipoExame == null) {
 			labelTipoExame = new InputLabel("Tipo do Exame");
 			labelTipoExame.setBounds(435, 130, 315, 20);
 		}
 		return labelTipoExame;
+	}
+	
+	public InputLabel getLabelMateriaisUtilizados() {
+		if(labelMateriaisUtilizados == null) {
+			labelMateriaisUtilizados = new InputLabel("Materiais Utilizados");
+			labelMateriaisUtilizados.setBounds(10, 290, 740, 20);
+		}
+		return labelMateriaisUtilizados;
 	}
 
 	/* --------------------------------------------------------------- Imputs ----------------------------------------------------------- */
@@ -195,23 +220,6 @@ public class PanelCadastrarExame extends JPanel {
 			textFieldNomeExame.setBounds(10, 35, 585, 25);
 		}
 		return textFieldNomeExame;
-	}
-	
-	public InputTextArea getTextAreaDescricao() {
-		if (textAreaDescricao == null) {
-			textAreaDescricao = new InputTextArea();
-			textAreaDescricao.setBounds(10, 215, 740, 65);
-		}
-		return textAreaDescricao;
-	}
-	
-	public JList<String> getListMateriaisUtilizados() {
-		if (listMateriaisUtilizados == null) {
-			DefaultListModel<String> model = new DefaultListModel<>();
-	        listMateriaisUtilizados = new JList<>(model);
-			listMateriaisUtilizados.setBounds(10, 350, 740, 100);
-		}
-		return listMateriaisUtilizados;
 	}
 	
 	public InputTextField getTextFieldValorParticular() {
@@ -226,7 +234,7 @@ public class PanelCadastrarExame extends JPanel {
 		if (comboBoxPaciente == null) {
 			comboBoxPaciente = new InputComboBox();
 			comboBoxPaciente.setSelectedIndex(-1);
-			comboBoxPaciente.setBounds(10, 95, 740, 25);
+			comboBoxPaciente.setBounds(10, 95, 520, 25);
 			
 			try {
 				File file = new File("./dados/pacientes.txt");
@@ -253,6 +261,22 @@ public class PanelCadastrarExame extends JPanel {
 			comboBoxPaciente.setSelectedIndex(-1);
 		}
 		return comboBoxPaciente;
+	}
+	
+	public InputTextField getTextFieldData() {
+		if (textFieldData == null) {
+			textFieldData = new InputTextField("##/##/####");
+			textFieldData.setBounds(540, 96, 100, 25);
+		}
+		return textFieldData;
+	}
+	
+	public InputTextField getTextFieldHora() {
+		if (textFieldHora == null) {
+			textFieldHora = new InputTextField("##:##");
+			textFieldHora.setBounds(650, 96, 100, 25);
+		}
+		return textFieldHora;
 	}
 	
 	public InputComboBox getComboBoxMedico() {
@@ -286,7 +310,7 @@ public class PanelCadastrarExame extends JPanel {
 		}
 		return comboBoxMedico;
 	}
-
+	
 	public InputComboBox getComboBoxTipoExame() {
 		if(comboBoxTipoExame == null) {
 			comboBoxTipoExame = new InputComboBox();
@@ -301,6 +325,14 @@ public class PanelCadastrarExame extends JPanel {
 			comboBoxTipoExame.setSelectedIndex(-1);
 		}
 		return comboBoxTipoExame;
+	}
+	
+	public InputTextArea getTextAreaDescricao() {
+		if (textAreaDescricao == null) {
+			textAreaDescricao = new InputTextArea();
+			textAreaDescricao.setBounds(10, 215, 740, 65);
+		}
+		return textAreaDescricao;
 	}
 	
 	public InputComboBox getComboBoxAdicionarMaterial() {
@@ -337,21 +369,16 @@ public class PanelCadastrarExame extends JPanel {
 		return comboBoxAdicionarMaterial;
 	}
 	
+	public JList<String> getListMateriaisUtilizados() {
+		if (listMateriaisUtilizados == null) {
+			DefaultListModel<String> model = new DefaultListModel<>();
+	        listMateriaisUtilizados = new JList<>(model);
+			listMateriaisUtilizados.setBounds(10, 350, 740, 100);
+		}
+		return listMateriaisUtilizados;
+	}
+	
 	/* ------------------------------------------------------------- Buttons ------------------------------------------------------------ */
-	public Button getButtonCadastrar() {
-		if (buttonCadastrar == null) {
-			buttonCadastrar = new Button("Cadastrar");
-		}
-		return buttonCadastrar;
-	}
-	
-	public Button getButtonLimpar() {
-		if (buttonLimpar == null) {
-			buttonLimpar = new Button("Limpar");
-		}
-		return buttonLimpar;
-	}
-	
 	public Button getButtonRemover() {
 		if (buttonRemover == null) {
 			buttonRemover = new Button("Limpar");
@@ -374,5 +401,19 @@ public class PanelCadastrarExame extends JPanel {
 			buttonAdicionar.setBounds(540, 315, 100, 25);
 		}
 		return buttonAdicionar;
+	}
+	
+	public Button getButtonCadastrar() {
+		if (buttonCadastrar == null) {
+			buttonCadastrar = new Button("Cadastrar");
+		}
+		return buttonCadastrar;
+	}
+	
+	public Button getButtonLimpar() {
+		if (buttonLimpar == null) {
+			buttonLimpar = new Button("Limpar");
+		}
+		return buttonLimpar;
 	}
 }

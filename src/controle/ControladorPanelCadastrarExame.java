@@ -1,6 +1,5 @@
 package controle;
 
-import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -10,8 +9,6 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 
 import modelo.Exame;
-import modelo.Material;
-import modelo.Medico;
 import visual.PanelCadastrarExame;
 
 public class ControladorPanelCadastrarExame implements ActionListener {
@@ -62,13 +59,12 @@ public class ControladorPanelCadastrarExame implements ActionListener {
 		try {
 			String nomeExame = panelCadastrarExame.getTextFieldNomeExame().getText();
 			String descricao = panelCadastrarExame.getTextAreaDescricao().getText();
+			String data = panelCadastrarExame.getTextFieldData().getText();
+			String hora = panelCadastrarExame.getTextFieldHora().getText();
 
 			float valorParticular = Float.parseFloat(panelCadastrarExame.getTextFieldValorParticular().getText());
 			
 			JList<String> materiaisUtilizados = panelCadastrarExame.getListMateriaisUtilizados();
-//			Material materiaisUtilizados = new Material();
-//			materiaisUtilizados.setNomeDoMaterial(panelCadastrarExame.getTextAreaMateriaisUtilizados().getText());
-			
 
 			String paciente = (String) panelCadastrarExame.getComboBoxPaciente().getSelectedItem();			
 			String medico = (String) panelCadastrarExame.getComboBoxMedico().getSelectedItem();
@@ -77,7 +73,7 @@ public class ControladorPanelCadastrarExame implements ActionListener {
 			if(Verificacao.verificaCamposVazios(nomeExame, descricao, paciente, medico, tipoExame)) {
 				JOptionPane.showMessageDialog(panelCadastrarExame, "Preencha todas as informações!", "Erro", JOptionPane.WARNING_MESSAGE);
 			} else {
-				Exame e = new Exame(nomeExame, descricao, valorParticular, materiaisUtilizados, paciente, medico, tipoExame);
+				Exame e = new Exame(nomeExame,  valorParticular, paciente, data, hora, medico, tipoExame, descricao, materiaisUtilizados);
 				e.salvarDados();
 				
 				examesCadastrados.add(e);

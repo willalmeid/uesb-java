@@ -10,33 +10,32 @@ import javax.swing.JList;
 public class Exame {
 	
 	private String nomeExame;
+	private String paciente;
+	private String data;
+	private String hora;
+	private String medico;
+	private String tipoExame;
 	private String descricao;
 
 	private float valorParticular;
-	
-	/* No documento está no plural, mas eu não sei ainda como fazer isso */
 	private JList<String> materiasUtilizado;
-
-	private String medico;
-	private String paciente;
-	
-	/* Poderia der do tipo enum, pois os tipos já são definidos */
-	private String tipoExame;
 
 	public Exame() {
 		
 	}
 
-	public Exame(String nomeExame, String descricao, float valorParticular, JList<String> materiasUtilizado, String paciente, String medico,
-			String tipoExame) {
+	public Exame(String nomeExame, float valorParticular, String paciente, String data, String hora, String medico,
+			String tipoExame, String descricao,  JList<String> materiasUtilizado) {
 		super();
 		this.nomeExame = nomeExame;
-		this.descricao = descricao;
 		this.valorParticular = valorParticular;
-		this.materiasUtilizado = materiasUtilizado;
 		this.paciente = paciente;
+		this.data = data;
+		this.hora = hora;
 		this.medico = medico;
 		this.tipoExame = tipoExame;
+		this.descricao = descricao;
+		this.materiasUtilizado = materiasUtilizado;
 	}
 	
 	public String salvarDados() {
@@ -45,8 +44,13 @@ public class Exame {
 			FileWriter fw = new FileWriter("./dados/exames.txt", true);
 			PrintWriter pw = new PrintWriter(fw);
 			pw.println("Nome do Exame: " + this.nomeExame);
-			pw.println("Descrição: " + this.descricao);
 			pw.println("Valor Particular: " + this.valorParticular);
+			pw.println("Paciente: " + this.paciente);
+			pw.println("Data: " + this.data);
+			pw.println("Hora: " + this.hora);
+			pw.println("Médico: " + this.medico);
+			pw.println("Tipo Exame: " + this.tipoExame);
+			pw.println("Descrição: " + this.descricao);
 			
 			DefaultListModel<String> model = (DefaultListModel<String>) this.materiasUtilizado.getModel();
 			
@@ -62,8 +66,6 @@ public class Exame {
 			    	pw.println("]");
 			    }
 			}
-			pw.println("Médico: " + this.medico);
-			pw.println("Tipo Exame: " + this.tipoExame);
 			pw.println("\n----------------------------------------------------\n");
 			pw.flush();
 			pw.close();
