@@ -57,3 +57,4 @@ Descrição: Exame para monitorar o coração sob esforço físico.
 Materiais Usados: [Esteira ergométrica], [eletrodos]
 
 ----------------------------------------------------
+
