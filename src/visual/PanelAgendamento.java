@@ -13,7 +13,7 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.ImageIcon;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
-public class PanelAgendar extends JPanel {
+public class PanelAgendamento extends JPanel {
 
 	private TitlePanel titlePanel;
 	
@@ -26,7 +26,7 @@ public class PanelAgendar extends JPanel {
 	private ButtonNavegacao buttonVoltar;
 	private ButtonNavegacao buttonHome;
 	
-	public PanelAgendar() {
+	public PanelAgendamento() {
 		setVisible(true);
 		setSize(1280, 720);
 		setBackground(Thema.PRINCIPAL);
@@ -87,7 +87,7 @@ public class PanelAgendar extends JPanel {
 	public ButtonCard getButtonCardVisualizarAgenda() {
 	    if (buttonCardVisualizarAgenda == null) {
 	        buttonCardVisualizarAgenda = new ButtonCard("Visualizar Agenda");
-	        buttonCardVisualizarAgenda.setIcon(new ImageIcon(PanelAgendar.class.getResource(Icons.VISUALIZAR_AGENDA)));
+	        buttonCardVisualizarAgenda.setIcon(new ImageIcon(PanelAgendamento.class.getResource(Icons.VISUALIZAR_AGENDA)));
 	    }
 	    return buttonCardVisualizarAgenda;
 	}
@@ -95,7 +95,7 @@ public class PanelAgendar extends JPanel {
 	public ButtonCard getButtonCardPesquisarHorarios() {
 	    if (buttonCardPesquisarHorarios == null) {
 	        buttonCardPesquisarHorarios = new ButtonCard("Pesquisar Horários");
-	        buttonCardPesquisarHorarios.setIcon(new ImageIcon(PanelAgendar.class.getResource(Icons.PESQUISAR_HORARIOS)));
+	        buttonCardPesquisarHorarios.setIcon(new ImageIcon(PanelAgendamento.class.getResource(Icons.PESQUISAR_HORARIOS)));
 	    }
 	    return buttonCardPesquisarHorarios;
 	}
@@ -103,7 +103,7 @@ public class PanelAgendar extends JPanel {
 	public ButtonCard getButtonCardCancelarEReagendar() {
 	    if (buttonCardCancelarEReagendar == null) {
 	        buttonCardCancelarEReagendar = new ButtonCard("Cancelar/Reagendar");
-	        buttonCardCancelarEReagendar.setIcon(new ImageIcon(PanelAgendar.class.getResource(Icons.CANCELAR_E_REAGENDAR)));
+	        buttonCardCancelarEReagendar.setIcon(new ImageIcon(PanelAgendamento.class.getResource(Icons.CANCELAR_E_REAGENDAR)));
 	    }
 	    return buttonCardCancelarEReagendar;
 	}

@@ -3,13 +3,13 @@ package controle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import visual.PanelAgendarVisualizarAgenda;
+import visual.PanelAgendamentoVisualizarAgenda;
 
-public class ControladorPanelVisualizarAgenda implements ActionListener {
+public class ControladorPanelAgendamentoVisualizarAgenda implements ActionListener {
 
-	PanelAgendarVisualizarAgenda panelAgendarVisualizarAgenda;
+	PanelAgendamentoVisualizarAgenda panelAgendarVisualizarAgenda;
 	
-	public ControladorPanelVisualizarAgenda(PanelAgendarVisualizarAgenda panelAgendarVisualizarAgenda) {
+	public ControladorPanelAgendamentoVisualizarAgenda(PanelAgendamentoVisualizarAgenda panelAgendarVisualizarAgenda) {
 		this.panelAgendarVisualizarAgenda = panelAgendarVisualizarAgenda;
 		addEventos();
 	}

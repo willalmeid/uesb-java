@@ -18,7 +18,7 @@ import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
-public class PanelAgendarCancelarEReagendar extends JPanel {
+public class PanelAgendamentoCancelarEReagendar extends JPanel {
 
     private TitlePanel labelTitlePanel;
     private TitlePanel labelTitleConsulta;
@@ -30,7 +30,7 @@ public class PanelAgendarCancelarEReagendar extends JPanel {
     private Button buttonEditarConsulta;
     private Button buttonEditarExames;
 
-    public PanelAgendarCancelarEReagendar() {
+    public PanelAgendamentoCancelarEReagendar() {
         setBackground(Thema.PRINCIPAL);
         
         GroupLayout groupLayout = new GroupLayout(this);

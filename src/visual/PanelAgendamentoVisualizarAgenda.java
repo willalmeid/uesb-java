@@ -9,7 +9,7 @@ import styles.Thema;
 import styles.TitlePanel;
 import javax.swing.GroupLayout.Alignment;
 
-public class PanelAgendarVisualizarAgenda extends JPanel {
+public class PanelAgendamentoVisualizarAgenda extends JPanel {
 
     private TitlePanel labelTitlePanel;
     private TitlePanel labelTitleConsulta;
@@ -20,7 +20,7 @@ public class PanelAgendarVisualizarAgenda extends JPanel {
     private JTable tableExame;
     private Button buttonAtualizar;
 
-    public PanelAgendarVisualizarAgenda() {
+    public PanelAgendamentoVisualizarAgenda() {
         setBackground(Thema.PRINCIPAL);
         setSize(830, 849);
         GroupLayout groupLayout = new GroupLayout(this);
@@ -96,7 +96,11 @@ public class PanelAgendarVisualizarAgenda extends JPanel {
 
     public JScrollPane getTableScrollPaneConsulta() {
         JScrollPane scrollPane = new JScrollPane(getTableConsulta());
-        scrollPane.setBounds(10, 10, 750, 251); // Ajuste de tamanho e posição
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
+        scrollPane.setBorder(new LineBorder(Thema.TRANSPARENT));
+        scrollPane.setBackground(Thema.TRANSPARENT);
+        scrollPane.setBounds(10, 10, 750, 246); // Ajuste de tamanho e posição
         return scrollPane;
     }
 
@@ -157,7 +161,11 @@ public class PanelAgendarVisualizarAgenda extends JPanel {
 
     public JScrollPane getTableScrollPaneExame() {
         JScrollPane scrollPane = new JScrollPane(getTableExame());
-        scrollPane.setBounds(10, 10, 750, 251); // Ajuste de tamanho e posição
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
+        scrollPane.setBorder(new LineBorder(Thema.TRANSPARENT));
+        scrollPane.setBackground(Thema.TRANSPARENT);
+        scrollPane.setBounds(10, 10, 750, 246); // Ajuste de tamanho e posição
         return scrollPane;
     }
 

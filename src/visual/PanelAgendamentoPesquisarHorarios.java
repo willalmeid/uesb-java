@@ -6,12 +6,12 @@ import javax.swing.border.LineBorder;
 import styles.Thema;
 import styles.TitlePanel;
 
-public class PanelAgendarPesquisarHorarios extends JPanel {
+public class PanelAgendamentoPesquisarHorarios extends JPanel {
 
 	private TitlePanel labelTitlePanel;
 	private JPanel panelPrincipal;
 	
-	public PanelAgendarPesquisarHorarios() {
+	public PanelAgendamentoPesquisarHorarios() {
 		setBackground(Thema.PRINCIPAL);
 		setSize(830, 600);
 		setLayout(null);
