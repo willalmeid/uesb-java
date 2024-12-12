@@ -1,46 +1,47 @@
-Nome: Dr. Rafael Lopes Andrade
+Nome: Dr. João Silva
 Especialidade: Cardiologia
-CRM: 123456789
-Contato: (11) 98765-4321
-Valor Consulta Particular: 350.00
-Histórico de Atendimento: 234 pacientes
+CRM: 123456/Ba
+Contato: (11) 12345-6789
+Valor Consulta Particular: 350.0
+Horários de Atendimento: [TESTE2]
 
 ----------------------------------------------------
 
-Nome: Dra. Camila Santos Braga
+Nome: Dra. Ana Souza
 Especialidade: Dermatologia
-CRM: 987654321
-Contato: (21) 99876-5432
-Valor Consulta Particular: 400.00
-Histórico de Atendimento: 180 pacientes
+CRM: 987654/Ba
+Contato: (21) 98765-4321
+Valor Consulta Particular: 400.0
+Horários de Atendimento: [TESTE2]
 
 ----------------------------------------------------
 
-Nome: Dr. João Pedro Almeida
+Nome: Dr. Pedro Costa
 Especialidade: Pediatria
-CRM: 112233445
+CRM: 112233/Ba
 Contato: (85) 91234-5678
-Valor Consulta Particular: 300.00
-Histórico de Atendimento: 290 pacientes
+Valor Consulta Particular: 300.0
+Horários de Atendimento: [TESTE2]
 
 ----------------------------------------------------
 
-Nome: Dra. Larissa Melo Oliveira
+Nome: Dra. Beatriz Oliveira
 Especialidade: Neurologia
-CRM: 556677889
+CRM: 556677/Ba
 Contato: (71) 92345-6789
-Valor Consulta Particular: 500.00
-Histórico de Atendimento: 120 pacientes
+Valor Consulta Particular: 500.0
+Horários de Atendimento: [TESTE2]
 
 ----------------------------------------------------
 
-Nome: Dr. Fernando Costa Lima
+Nome: Dr. Carlos Almeida
 Especialidade: Ortopedia
-CRM: 445566778
+CRM: 445566/Ba
 Contato: (41) 93456-7890
-Valor Consulta Particular: 450.00
-Histórico de Atendimento: 210 pacientes
+Valor Consulta Particular: 450.0
+Horários de Atendimento: [TESTE2]
 
 ----------------------------------------------------
+
 
 
