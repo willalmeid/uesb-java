@@ -17,6 +17,7 @@ import styles.InputTextArea;
 import styles.Thema;
 import styles.TitlePanel;
 
+import javax.swing.BorderFactory;
 import javax.swing.DefaultListModel;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
@@ -373,6 +374,7 @@ public class PanelCadastrarExame extends JPanel {
 		if (listMateriaisUtilizados == null) {
 			DefaultListModel<String> model = new DefaultListModel<>();
 	        listMateriaisUtilizados = new JList<>(model);
+	        listMateriaisUtilizados.setBorder(BorderFactory.createLineBorder(Thema.AUXILIAR, 2));
 			listMateriaisUtilizados.setBounds(10, 350, 740, 100);
 		}
 		return listMateriaisUtilizados;
