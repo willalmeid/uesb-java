@@ -43,3 +43,11 @@ Horários de Atendimento: [TESTE2]
 
 ----------------------------------------------------
 
+Nome: Dr. Rafael Lopes Andrade
+Especialidade: Ortopedia
+CRM: 445566/Ba
+Contato: (41) 93456-7890
+Valor Consulta Particular: 450.0
+Horários de Atendimento: [TESTE2]
+
+----------------------------------------------------
