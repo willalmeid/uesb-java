@@ -49,7 +49,7 @@ public class ControladorPanelAgendamento implements ActionListener {
 			
 		} else if(e.getSource() == panelAgendar.getButtonCardCancelarEReagendar()) {
 			PanelAgendamentoCancelarEReagendar panelAgendamentoCancelarEReagendar = new PanelAgendamentoCancelarEReagendar();
-			new ControladorPanelAgendamentoCancelarEReagendar(panelAgendamentoCancelarEReagendar);
+			new ControladorPanelAgendamentoCancelarEReagendar(frame, panelAgendamentoCancelarEReagendar);
 			Dialog dialog = new Dialog(frame, panelAgendamentoCancelarEReagendar);
 			
 		}
