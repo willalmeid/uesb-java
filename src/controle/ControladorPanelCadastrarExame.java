@@ -78,9 +78,13 @@ public class ControladorPanelCadastrarExame implements ActionListener {
                                 material.verificaEstoque();
                                 br.close();
                                 fr.close();
-                                break;
+                                return;
                             }
-                            nome = null; // Resetar para o próximo bloco
+                            nome = null;
+                            fornecedor = null;
+                            qtdEstoque = 0;
+                            qtdMinima = 0;
+                            preco = 0;
                         }
                     }
                     br.close();

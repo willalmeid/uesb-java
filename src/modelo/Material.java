@@ -51,7 +51,7 @@ public class Material {
 			PrintWriter pw = new PrintWriter(fw);
 			pw.println("Nome do Material: " + this.nomeDoMaterial);
 			pw.println("Qtd. Estoque: " + this.qtdEstoque);
-			pw.println("qtd. Mínima: " + this.qtdMinEstoque);
+			pw.println("Qtd. Mínima: " + this.qtdMinEstoque);
 			pw.println("Fornecedor: " + this.fornecedor);
 			pw.println("Preço: " + this.preco);
 			pw.println("\n----------------------------------------------------\n");
