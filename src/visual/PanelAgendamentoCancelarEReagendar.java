@@ -5,18 +5,16 @@ import java.awt.Font;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
-
-import styles.Button;
-import styles.Thema;
-import styles.TitlePanel;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
+import styles.Button;
+import styles.Thema;
+import styles.TitlePanel;
 
 public class PanelAgendamentoCancelarEReagendar extends JPanel {
 
@@ -26,59 +24,64 @@ public class PanelAgendamentoCancelarEReagendar extends JPanel {
 
     private JList<String> listConsultasCadastradas;
     private JList<String> listExamesCadastrados;
-    
+
     private Button buttonEditarConsulta;
     private Button buttonEditarExames;
+    private Button buttonExcluirConsulta;
+    private Button buttonExcluirExames;
 
     public PanelAgendamentoCancelarEReagendar() {
         setBackground(Thema.PRINCIPAL);
-        
+
+        // Criar o layout
         GroupLayout groupLayout = new GroupLayout(this);
         groupLayout.setHorizontalGroup(
-        	groupLayout.createParallelGroup(Alignment.LEADING)
-        		.addGroup(groupLayout.createSequentialGroup()
-        			.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-        				.addGroup(groupLayout.createSequentialGroup()
-        					.addGap(210)
-        					.addComponent(getLabelTitlePanel(), GroupLayout.PREFERRED_SIZE, 406, GroupLayout.PREFERRED_SIZE))
-        				.addGroup(groupLayout.createSequentialGroup()
-        					.addGap(48)
-        					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
-        						.addComponent(getListConsultasCadastradas(), GroupLayout.PREFERRED_SIZE, 680, GroupLayout.PREFERRED_SIZE)
-        						.addGroup(groupLayout.createSequentialGroup()
-        							.addComponent(getLabelTitleConsulta(), GroupLayout.PREFERRED_SIZE, 406, GroupLayout.PREFERRED_SIZE)
-        							.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        							.addComponent(getButtonEditarConsulta()))))
-        				.addGroup(groupLayout.createSequentialGroup()
-        					.addGap(48)
-        					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
-        						.addComponent(getListExamesCadastrados(), GroupLayout.PREFERRED_SIZE, 680, GroupLayout.PREFERRED_SIZE)
-        						.addGroup(groupLayout.createSequentialGroup()
-        							.addComponent(getLabelTitleExame(), GroupLayout.PREFERRED_SIZE, 406, GroupLayout.PREFERRED_SIZE)
-        							.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        							.addComponent(getButtonEditarExames())))))
-        			.addGap(102))
+            groupLayout.createParallelGroup(Alignment.LEADING)
+                .addGroup(groupLayout.createSequentialGroup()
+                    .addGap(210)
+                    .addComponent(getLabelTitlePanel(), GroupLayout.PREFERRED_SIZE, 406, GroupLayout.PREFERRED_SIZE))
+                .addGroup(groupLayout.createSequentialGroup()
+                    .addGap(48)
+                    .addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
+                        .addComponent(getListConsultasCadastradas(), GroupLayout.PREFERRED_SIZE, 680, GroupLayout.PREFERRED_SIZE)
+                        .addGroup(groupLayout.createSequentialGroup()
+                            .addComponent(getLabelTitleConsulta(), GroupLayout.PREFERRED_SIZE, 406, GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(getButtonExcluirConsulta())
+                            .addPreferredGap(ComponentPlacement.RELATED)
+                            .addComponent(getButtonEditarConsulta()))))
+                .addGroup(groupLayout.createSequentialGroup()
+                    .addGap(48)
+                    .addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
+                        .addComponent(getListExamesCadastrados(), GroupLayout.PREFERRED_SIZE, 680, GroupLayout.PREFERRED_SIZE)
+                        .addGroup(groupLayout.createSequentialGroup()
+                            .addComponent(getLabelTitleExame(), GroupLayout.PREFERRED_SIZE, 406, GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(getButtonExcluirExames())
+                            .addPreferredGap(ComponentPlacement.RELATED)
+                            .addComponent(getButtonEditarExames()))))
         );
+
         groupLayout.setVerticalGroup(
-        	groupLayout.createParallelGroup(Alignment.LEADING)
-        		.addGroup(groupLayout.createSequentialGroup()
-        			.addGap(22)
-        			.addComponent(getLabelTitlePanel(), GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
-        			.addGap(3)
-        			.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-        				.addGroup(groupLayout.createSequentialGroup()
-        					.addGap(8)
-        					.addComponent(getButtonEditarConsulta())
-        					.addPreferredGap(ComponentPlacement.UNRELATED)
-        					.addComponent(getListConsultasCadastradas(), GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE))
-        				.addComponent(getLabelTitleConsulta(), GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE))
-        			.addGap(16)
-        			.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-        				.addComponent(getLabelTitleExame(), GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
-        				.addComponent(getButtonEditarExames()))
-        			.addPreferredGap(ComponentPlacement.RELATED)
-        			.addComponent(getListExamesCadastrados(), GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
-        			.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            groupLayout.createParallelGroup(Alignment.LEADING)
+                .addGroup(groupLayout.createSequentialGroup()
+                    .addGap(22)
+                    .addComponent(getLabelTitlePanel(), GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
+                    .addGap(16)
+                    .addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+                        .addComponent(getLabelTitleConsulta(), GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(getButtonExcluirConsulta())
+                        .addComponent(getButtonEditarConsulta()))
+                    .addPreferredGap(ComponentPlacement.RELATED)
+                    .addComponent(getListConsultasCadastradas(), GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
+                    .addGap(16)
+                    .addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+                        .addComponent(getLabelTitleExame(), GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(getButtonExcluirExames())
+                        .addComponent(getButtonEditarExames()))
+                    .addPreferredGap(ComponentPlacement.RELATED)
+                    .addComponent(getListExamesCadastrados(), GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         setLayout(groupLayout);
     }
@@ -89,7 +92,7 @@ public class PanelAgendamentoCancelarEReagendar extends JPanel {
         }
         return labelTitlePanel;
     }
-    
+
     public TitlePanel getLabelTitleConsulta() {
         if (labelTitleConsulta == null) {
             labelTitleConsulta = new TitlePanel("Agenda de Consultas");
@@ -97,103 +100,81 @@ public class PanelAgendamentoCancelarEReagendar extends JPanel {
         }
         return labelTitleConsulta;
     }
-    
+
+    public Button getButtonExcluirConsulta() {
+        if (buttonExcluirConsulta == null) {
+            buttonExcluirConsulta = new Button("Excluir");
+            buttonExcluirConsulta.setEnabled(false);
+            buttonExcluirConsulta.setVisible(false);
+        }
+        return buttonExcluirConsulta;
+    }
+
     public Button getButtonEditarConsulta() {
-		if (buttonEditarConsulta == null) {
-			buttonEditarConsulta = new Button("Editar");
-		}
-		return buttonEditarConsulta;
-	}
+        if (buttonEditarConsulta == null) {
+            buttonEditarConsulta = new Button("Editar");
+        }
+        return buttonEditarConsulta;
+    }
 
     public JList<String> getListConsultasCadastradas() {
         if (listConsultasCadastradas == null) {
-            DefaultListModel<String> model = new DefaultListModel<>();
-            listConsultasCadastradas = new JList<>(model);
-            listConsultasCadastradas.setBorder(new LineBorder(new Color(0, 0, 0)));
-            listConsultasCadastradas.setFont(new Font("Courier New", Font.PLAIN, 17)); // Fonte monoespaçada
-            
-            try {
-                File file = new File("./dados/consultas.txt");
-                FileReader fr = new FileReader(file);
-                BufferedReader br = new BufferedReader(fr);
-
-                String linha;
-                String paciente = null, data = null, hora = null;
-
-                while ((linha = br.readLine()) != null) {
-                    if (linha.startsWith("Paciente: ")) {
-                        paciente = linha.substring(10).trim();
-                        linha = br.readLine();
-                        data = linha.substring(6).trim();
-                        linha = br.readLine();
-                        hora = linha.substring(6).trim();
-
-                        model.addElement(String.format(" %-43s %-15s %-1s ", paciente, data, hora));
-                    }
-                }
-
-                br.close();
-                fr.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            listConsultasCadastradas = criarListaComDados("./dados/consultas.txt");
         }
-        
         return listConsultasCadastradas;
     }
-    
-	public TitlePanel getLabelTitleExame() {
-		if (labelTitleExame == null) {
-			labelTitleExame = new TitlePanel("Agenda de Consultas");
-			labelTitleExame.setText("Agenda de Exames");
-			labelTitleExame.setFont(new Font("Dialog", Font.BOLD, 25));
-		}
-		return labelTitleExame;
-	}
-	
-	public Button getButtonEditarExames() {
-		if (buttonEditarExames == null) {
-			buttonEditarExames = new Button("Editar");
-		}
-		return buttonEditarExames;
-	}
-	
-	public JList<String> getListExamesCadastrados() {
-        if (listExamesCadastrados == null) {
-            DefaultListModel<String> model = new DefaultListModel<>();
-            listExamesCadastrados = new JList<>(model);
-            listExamesCadastrados.setBorder(new LineBorder(new Color(0, 0, 0)));
-            listExamesCadastrados.setFont(new Font("Courier New", Font.PLAIN, 17)); // Fonte monoespaçada
 
-            model.clear();
-            
-            try {
-                File file = new File("./dados/exames.txt");
-                FileReader fr = new FileReader(file);
-                BufferedReader br = new BufferedReader(fr);
-
-                String linha;
-                String paciente = null, data = null, hora = null;
-
-                while ((linha = br.readLine()) != null) {
-                    if (linha.startsWith("Paciente: ")) {
-                        paciente = linha.substring(10).trim();
-                        linha = br.readLine();
-                        data = linha.substring(6).trim();
-                        linha = br.readLine();
-                        hora = linha.substring(6).trim();
-
-                        model.addElement(String.format(" %-43s %-15s %-1s ", paciente, data, hora));
-                    }
-                }
-
-                br.close();
-                fr.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+    public TitlePanel getLabelTitleExame() {
+        if (labelTitleExame == null) {
+            labelTitleExame = new TitlePanel("Agenda de Exames");
+            labelTitleExame.setFont(new Font("Dialog", Font.BOLD, 25));
         }
-        
+        return labelTitleExame;
+    }
+
+    public Button getButtonExcluirExames() {
+        if (buttonExcluirExames == null) {
+            buttonExcluirExames = new Button("Excluir");
+            buttonExcluirExames.setEnabled(false);
+            buttonExcluirExames.setVisible(false);
+        }
+        return buttonExcluirExames;
+    }
+
+    public Button getButtonEditarExames() {
+        if (buttonEditarExames == null) {
+            buttonEditarExames = new Button("Editar");
+        }
+        return buttonEditarExames;
+    }
+
+    public JList<String> getListExamesCadastrados() {
+        if (listExamesCadastrados == null) {
+            listExamesCadastrados = criarListaComDados("./dados/exames.txt");
+        }
         return listExamesCadastrados;
+    }
+
+    private JList<String> criarListaComDados(String caminhoArquivo) {
+        DefaultListModel<String> model = new DefaultListModel<>();
+        JList<String> list = new JList<>(model);
+        list.setBorder(new LineBorder(new Color(0, 0, 0)));
+        list.setFont(new Font("Courier New", Font.PLAIN, 17));
+
+        try (BufferedReader br = new BufferedReader(new FileReader(new File(caminhoArquivo)))) {
+            String linha;
+            while ((linha = br.readLine()) != null) {
+                if (linha.startsWith("Paciente: ")) {
+                    String paciente = linha.substring(10).trim();
+                    String data = br.readLine().substring(6).trim();
+                    String hora = br.readLine().substring(6).trim();
+                    model.addElement(String.format(" %-43s %-15s %-1s ", paciente, data, hora));
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return list;
     }
 }
