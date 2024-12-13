@@ -1,5 +1,7 @@
 package controle;
 
+import javax.swing.JComboBox;
+
 public class Verificacao {
 	//As funções retornam true se houver algo errado e false se estiver tudo ok
 	
@@ -54,5 +56,14 @@ public class Verificacao {
 		}
 		
 		return false;
+	}
+	
+	public static boolean verificaSeExisteNoComboBox(JComboBox<String> comboBox, String item) {
+	    for (int i = 0; i < comboBox.getItemCount(); i++) {
+	        if (comboBox.getItemAt(i).equals(item)) {
+	            return true;
+	        }
+	    }
+	    return false;
 	}
 }

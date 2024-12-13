@@ -17,6 +17,7 @@ import java.io.FileReader;
 import javax.swing.DefaultListModel;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
+import javax.swing.JTextArea;
 
 public class PanelAgendamentoPesquisarHorarios extends JPanel {
 
@@ -25,6 +26,7 @@ public class PanelAgendamentoPesquisarHorarios extends JPanel {
 	private JComboBox<String> comboBoxTipoPesquisa;
 	private JComboBox<String> comboBoxPesquisa;
 	private JList listHorarios;
+	private JTextArea textAreaHorarios;
 	
 	public PanelAgendamentoPesquisarHorarios() {
 		setBackground(Thema.PRINCIPAL);
@@ -58,6 +60,10 @@ public class PanelAgendamentoPesquisarHorarios extends JPanel {
 						.addGap(18)
 						.addComponent(getComboBoxTipoPesquisa(), GroupLayout.PREFERRED_SIZE, 155, GroupLayout.PREFERRED_SIZE)
 						.addContainerGap())
+					.addGroup(Alignment.LEADING, gl_panelPrincipal.createSequentialGroup()
+						.addGap(20)
+						.addComponent(getTextAreaHorarios(), GroupLayout.PREFERRED_SIZE, 737, GroupLayout.PREFERRED_SIZE)
+						.addContainerGap(20, Short.MAX_VALUE))
 			);
 			gl_panelPrincipal.setVerticalGroup(
 				gl_panelPrincipal.createParallelGroup(Alignment.LEADING)
@@ -66,7 +72,9 @@ public class PanelAgendamentoPesquisarHorarios extends JPanel {
 						.addGroup(gl_panelPrincipal.createParallelGroup(Alignment.BASELINE)
 							.addComponent(getComboBoxTipoPesquisa(), GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 							.addComponent(getComboBoxPesquisa(), GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-						.addContainerGap(394, Short.MAX_VALUE))
+						.addGap(18)
+						.addComponent(getTextAreaHorarios(), GroupLayout.PREFERRED_SIZE, 354, GroupLayout.PREFERRED_SIZE)
+						.addContainerGap(22, Short.MAX_VALUE))
 			);
 			panelPrincipal.setLayout(gl_panelPrincipal);
 		}
@@ -87,7 +95,6 @@ public class PanelAgendamentoPesquisarHorarios extends JPanel {
 			comboBoxPesquisa = new JComboBox<String>();
 			comboBoxPesquisa.setVisible(false);
 			comboBoxPesquisa.setEnabled(false);
-			comboBoxPesquisa.setSelectedIndex(-1);
 		}
 		return comboBoxPesquisa;
 	}
@@ -100,4 +107,10 @@ public class PanelAgendamentoPesquisarHorarios extends JPanel {
         }
         return listHorarios;
     }
+	public JTextArea getTextAreaHorarios() {
+		if (textAreaHorarios == null) {
+			textAreaHorarios = new JTextArea();
+		}
+		return textAreaHorarios;
+	}
 }
