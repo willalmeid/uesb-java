@@ -2,6 +2,10 @@ package controle;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.swing.DefaultListModel;
@@ -9,6 +13,7 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 
 import modelo.Consulta;
+import modelo.Material;
 import visual.Dialog;
 import visual.PanelCadastrarConsulta;
 
@@ -42,7 +47,49 @@ public class ControladorPanelCadastrarConsulta implements ActionListener {
 				String materialName = (String) panelCadastrarConsulta.getComboBoxAdicionarMaterial().getSelectedItem();
                 DefaultListModel<String> model = (DefaultListModel<String>) panelCadastrarConsulta.getListMateriaisUtilizados().getModel();
                 model.addElement(materialName);
-                panelCadastrarConsulta.getComboBoxAdicionarMaterial().setSelectedIndex(-1);;
+                panelCadastrarConsulta.getComboBoxAdicionarMaterial().setSelectedIndex(-1);
+                try {
+                    File file = new File("./dados/materiais.txt");
+                    FileReader fr = new FileReader(file);
+                    BufferedReader br = new BufferedReader(fr);
+
+                    String linha;
+                    String nome = null, fornecedor = null;
+                    int qtdEstoque = 0, qtdMinima = 0;
+                    float preco = 0;
+
+                    while ((linha = br.readLine()) != null) {
+                        if (linha.startsWith("Nome do Material: ")) {
+                            nome = linha.substring(18).trim();
+                        } else if (linha.startsWith("Qtd. Estoque: ")) {
+                            qtdEstoque = Integer.parseInt(linha.substring(14).trim());
+                        } else if (linha.startsWith("Qtd. Mínima: ")) {
+                            qtdMinima = Integer.parseInt(linha.substring(13).trim());
+                        } else if (linha.startsWith("Fornecedor: ")) {
+                            fornecedor = linha.substring(12).trim();
+                        } else if (linha.startsWith("Preço: ")) {
+                            preco = Float.parseFloat(linha.substring(7).trim());
+                        } else if (linha.trim().isEmpty() || linha.startsWith("----")) {
+                            if (nome != null && nome.equalsIgnoreCase(materialName)) {
+                                // Material encontrado, criar e retornar o objeto
+                                Material material = new Material(nome, qtdEstoque, qtdMinima, fornecedor, preco);
+                                material.verificaEstoque();
+                                br.close();
+                                fr.close();
+                                return;
+                            }
+                            nome = null;
+                            fornecedor = null;
+                            qtdEstoque = 0;
+                            qtdMinima = 0;
+                            preco = 0;
+                        }
+                    }
+                    br.close();
+                    fr.close();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
 			}
 			
 		} else if(e.getSource() == panelCadastrarConsulta.getButtonRemover()) {
