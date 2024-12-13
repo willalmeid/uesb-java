@@ -45,7 +45,7 @@ public class ControladorPanelRelatorios implements ActionListener {
 			
 		} else if(e.getSource() == panelRelatorios.getButtonCardRelatorioExame()) {
 			PanelRelatoriosExames panelRelatoriosExames = new PanelRelatoriosExames();
-//			new ControladorPanelRelatoriosExames(panelRelatoriosExames);
+			new ControladorPanelRelatoriosExames(panelRelatoriosExames);
 			Dialog dialog = new Dialog(frame, panelRelatoriosExames);
 			
 		} else if(e.getSource() == panelRelatorios.getButtonCardRelatorioFinanceiro()) {
@@ -55,7 +55,7 @@ public class ControladorPanelRelatorios implements ActionListener {
 			
 		} else if(e.getSource() == panelRelatorios.getButtonCardRelatorioMaterial()) {
 			PanelRelatoriosMateriais panelRelatoriosMateriais = new PanelRelatoriosMateriais();
-//			new ControladorPanelRelatoriosMateriais(panelRelatoriosMateriais);
+			new ControladorPanelRelatoriosMateriais(panelRelatoriosMateriais);
 			Dialog dialog = new Dialog(frame, panelRelatoriosMateriais);
 			
 		}

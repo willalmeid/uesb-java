@@ -1,17 +1,18 @@
 package visual;
 
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import javax.swing.border.LineBorder;
 
 import styles.Thema;
 import styles.TitlePanel;
-import javax.swing.JLabel;
 
 public class PanelRelatoriosMateriais extends JPanel {
 
 	private TitlePanel labelTitlePanel;
 	private JPanel panelPrincipal;
-	private JLabel lblNewLabel;
+	private JTextArea textAreaRelatorioMateriais;
 	
 	public PanelRelatoriosMateriais() {
 		setSize(830, 600);
@@ -29,6 +30,7 @@ public class PanelRelatoriosMateriais extends JPanel {
 			panelPrincipal.setBorder(new LineBorder(null));
 			panelPrincipal.setBackground(Thema.BACKGROUND);
 			panelPrincipal.setLayout(null);
+			panelPrincipal.add(getScrollPaneRelatorioMaterias());
 		}
 		return panelPrincipal;
 	}
@@ -39,5 +41,19 @@ public class PanelRelatoriosMateriais extends JPanel {
 			labelTitlePanel.setBounds(209, 22, 412, 39);
 		}
 		return labelTitlePanel;
+	}
+	
+	private JScrollPane getScrollPaneRelatorioMaterias() {
+        JScrollPane scrollPane = new JScrollPane(getTextAreaRelatorioMateriais());
+        scrollPane.setBounds(50, 20, 660, 409);
+        return scrollPane;
+    }
+	
+	public JTextArea getTextAreaRelatorioMateriais() {
+		if (textAreaRelatorioMateriais == null) {
+			textAreaRelatorioMateriais = new JTextArea();
+			textAreaRelatorioMateriais.setBounds(25, 25, 711, 391);
+		}
+		return textAreaRelatorioMateriais;
 	}
 }
