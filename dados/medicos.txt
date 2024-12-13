@@ -1,53 +1,45 @@
 Nome: Dr. João Silva
 Especialidade: Cardiologia
-CRM: 123456/Ba
+CRM: 123456/BA
 Contato: (11) 12345-6789
 Valor Consulta Particular: 350.0
-Horários de Atendimento: [TESTE2]
-
-----------------------------------------------------
-
-Nome: Dra. Ana Souza
-Especialidade: Dermatologia
-CRM: 987654/Ba
-Contato: (21) 98765-4321
-Valor Consulta Particular: 400.0
-Horários de Atendimento: [TESTE2]
-
-----------------------------------------------------
-
-Nome: Dr. Pedro Costa
-Especialidade: Pediatria
-CRM: 112233/Ba
-Contato: (85) 91234-5678
-Valor Consulta Particular: 300.0
-Horários de Atendimento: [TESTE2]
-
-----------------------------------------------------
-
-Nome: Dra. Beatriz Oliveira
-Especialidade: Neurologia
-CRM: 556677/Ba
-Contato: (71) 92345-6789
-Valor Consulta Particular: 500.0
-Horários de Atendimento: [TESTE2]
-
-----------------------------------------------------
-
-Nome: Dr. Carlos Almeida
-Especialidade: Ortopedia
-CRM: 445566/Ba
-Contato: (41) 93456-7890
-Valor Consulta Particular: 450.0
-Horários de Atendimento: [TESTE2]
+Horários de Atendimento: 09:00-09:30, 09:30-10:00, 10:00-10:30
 
 ----------------------------------------------------
 
 Nome: Dr. Rafael Lopes Andrade
-Especialidade: Ortopedia
-CRM: 445566/Ba
-Contato: (41) 93456-7890
-Valor Consulta Particular: 450.0
-Horários de Atendimento: [TESTE2]
+Especialidade: Cardiologia
+CRM: 654321/SP
+Contato: (11) 98765-4321
+Valor Consulta Particular: 400.0
+Horários de Atendimento: 10:30-11:00, 11:00-11:30, 14:30-15:00
 
 ----------------------------------------------------
+
+Nome: Dra. Mariana Costa
+Especialidade: Pediatria
+CRM: 789123/RJ
+Contato: (21) 92345-6789
+Valor Consulta Particular: 300.0
+Horários de Atendimento: 08:00-08:30, 08:30-09:00, 09:00-09:30
+
+----------------------------------------------------
+
+Nome: Dr. Paulo Ricardo
+Especialidade: Ortopedia
+CRM: 321987/MG
+Contato: (31) 93210-6543
+Valor Consulta Particular: 380.0
+Horários de Atendimento: 13:00-13:30, 13:30-14:00, 14:00-14:30
+
+----------------------------------------------------
+
+Nome: Dra. Fernanda Torres
+Especialidade: Dermatologia
+CRM: 456789/SP
+Contato: (11) 95678-1234
+Valor Consulta Particular: 450.0
+Horários de Atendimento: 15:00-15:30, 15:30-16:00, 16:00-16:30
+
+----------------------------------------------------
+

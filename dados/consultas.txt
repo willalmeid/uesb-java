@@ -6,55 +6,55 @@ Tipo de Consulta: Cardiologia
 Convênio: Particular
 Queixa do Paciente: Dor no peito
 Observações: Paciente relata dores intensas nos últimos 3 dias.
-Materiais Usados: [Eletrodos], [Monitor Cardíaco]
+Materiais Usados: Eletrodos, Monitor Cardíaco
 
 ----------------------------------------------------
 
-Paciente: Fernanda Cristina Silva
-Data: 20/03/2023
-Hora: 14:30
-Médico: Dra. Camila Santos Braga
+Paciente: Ana Paula Souza
+Data: 20/04/2023
+Hora: 09:30
+Médico: Dr. João Silva
+Tipo de Consulta: Cardiologia
+Convênio: Particular
+Queixa do Paciente: Palpitações
+Observações: Relata episódios frequentes à noite.
+Materiais Usados: Estetoscópio, Monitor Cardíaco
+
+----------------------------------------------------
+
+Paciente: Pedro Henrique Almeida
+Data: 10/05/2023
+Hora: 14:00
+Médico: Dr. Paulo Ricardo
+Tipo de Consulta: Ortopedia
+Convênio: Plano Silver
+Queixa do Paciente: Dor no joelho
+Observações: Paciente sofreu acidente ao praticar esportes.
+Materiais Usados: Gelo, Bandagem
+
+----------------------------------------------------
+
+Paciente: Carla Fernanda Braga
+Data: 18/06/2023
+Hora: 15:30
+Médico: Dra. Fernanda Torres
 Tipo de Consulta: Dermatologia
-Convênio: SUS
-Queixa do Paciente: Irritação na pele
-Observações: Vermelhidão persistente no rosto e braços.
-Materiais Usados: [Lâmina para Biópsia], [Luvas Cirúrgicas]
+Convênio: Plano Bronze
+Queixa do Paciente: Mancha na pele
+Observações: Mancha crescente no rosto, há 2 meses.
+Materiais Usados: Lâmpada de Wood, Creme Dermatológico
 
 ----------------------------------------------------
 
 Paciente: Larissa Mendes Oliveira
-Data: 22/03/2023
-Hora: 09:00
-Médico: Dr. João Pedro Almeida
-Tipo de Consulta: Clínica Geral
-Convênio: Empresarial
-Queixa do Paciente: Tosse contínua e febre
-Observações: Sintomas persistem há uma semana, sem melhora.
-Materiais Usados: [Estetoscópio], [Termômetro Digital]
-
-----------------------------------------------------
-
-Paciente: Marcos Antônio Ferreira
-Data: 25/03/2023
-Hora: 16:00
-Médico: Dra. Larissa Melo Oliveira
-Tipo de Consulta: Neurologia
-Convênio: Plano Familiar
-Queixa do Paciente: Dores de cabeça frequentes
-Observações: Cefaleias intensas durante a noite.
-Materiais Usados: [Eletrodos para EEG], [Notebook para Monitoramento]
-
-----------------------------------------------------
-
-Paciente: Gabriela Souza Lima
-Data: 30/03/2023
-Hora: 11:00
-Médico: Dr. Fernando Costa Lima
-Tipo de Consulta: Ortopedia
+Data: 22/07/2023
+Hora: 08:00
+Médico: Dra. Mariana Costa
+Tipo de Consulta: Pediatria
 Convênio: Particular
-Queixa do Paciente: Dores no joelho esquerdo
-Observações: Histórico de lesão esportiva.
-Materiais Usados: [Bandagens Compressivas], [Artroscópio]
+Queixa do Paciente: Tosse persistente
+Observações: Relata sintomas há mais de 1 semana.
+Materiais Usados: Termômetro, Estetoscópio
 
 ----------------------------------------------------
 

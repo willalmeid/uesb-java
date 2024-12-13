@@ -1,60 +1,60 @@
 Nome do Exame: Hemograma Completo
 Valor Particular: 80.00
 Paciente: Larissa Mendes Oliveira
-Data: 11/11/1111
+Data: 11/11/2023
 Hora: 11:11
 Médico: Dr. Rafael Lopes Andrade
 Tipo Exame: Exames Laboratoriais
 Descrição: Exame para avaliar células sanguíneas.
-Materiais Usados: [Seringa], [tubos de coleta]
+Materiais Usados: Seringa, Tubos de Coleta
 
 ----------------------------------------------------
 
-Nome do Exame: Radiografia de Tórax
+Nome do Exame: Raio-X Torácico
 Valor Particular: 150.00
-Paciente: Larissa Mendes Oliveira
-Data: 11/11/1111
-Hora: 11:11
-Médico: Dra. Camila Santos Braga
-Tipo Exame: Exames de Imagem
-Descrição: Imagem do tórax para avaliação de órgãos e ossos.
-Materiais Usados: [Máquina de raio-X]
-
-----------------------------------------------------
-
-Nome do Exame: Eletrocardiograma
-Valor Particular: 120.00
-Paciente: Larissa Mendes Oliveira
-Data: 11/11/1111
-Hora: 11:11
-Médico: Dr. João Pedro Almeida
-Tipo Exame: Exames Cardíacos
-Descrição: Registro da atividade elétrica do coração.
-Materiais Usados: [Eletrodos], [gel condutor]
-
-----------------------------------------------------
-
-Nome do Exame: Ultrassonografia Abdominal
-Valor Particular: 200.00
-Paciente: Larissa Mendes Oliveira
-Data: 11/11/1111
-Hora: 11:11
-Médico: Dra. Larissa Melo Oliveira
-Tipo Exame: Exames de Imagem
-Descrição: Avaliação de órgãos abdominais por imagem.
-Materiais Usados: [Gel para ultrassom], [transdutor]
+Paciente: João Carlos Pereira
+Data: 15/03/2023
+Hora: 11:30
+Médico: Dr. João Silva
+Tipo Exame: Imagens
+Descrição: Radiografia para avaliar o tórax.
+Materiais Usados: Placa de Raio-X, Equipamento Radiológico
 
 ----------------------------------------------------
 
 Nome do Exame: Teste de Esforço
+Valor Particular: 200.00
+Paciente: Ana Paula Souza
+Data: 20/04/2023
+Hora: 10:30
+Médico: Dr. João Silva
+Tipo Exame: Exames Físicos
+Descrição: Avaliar o comportamento cardíaco durante esforço físico.
+Materiais Usados: Esteira Ergométrica, Monitor Cardíaco
+
+----------------------------------------------------
+
+Nome do Exame: Ressonância Magnética
+Valor Particular: 400.00
+Paciente: Pedro Henrique Almeida
+Data: 10/05/2023
+Hora: 14:30
+Médico: Dr. Paulo Ricardo
+Tipo Exame: Imagens
+Descrição: Exame para análise detalhada do joelho.
+Materiais Usados: Máquina de Ressonância, Contraste
+
+----------------------------------------------------
+
+Nome do Exame: Biópsia de Pele
 Valor Particular: 250.00
-Paciente: Larissa Mendes Oliveira
-Data: 11/11/1111
-Hora: 11:11
-Médico: Dr. Fernando Costa Lima
-Tipo Exame: Exames Cardíacos
-Descrição: Exame para monitorar o coração sob esforço físico.
-Materiais Usados: [Esteira ergométrica], [eletrodos]
+Paciente: Carla Fernanda Braga
+Data: 18/06/2023
+Hora: 16:00
+Médico: Dra. Fernanda Torres
+Tipo Exame: Biópsia
+Descrição: Análise de amostra de pele para diagnóstico.
+Materiais Usados: Bisturi, Lâminas de Microscopia
 
 ----------------------------------------------------
 
