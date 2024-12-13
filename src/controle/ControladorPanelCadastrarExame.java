@@ -46,52 +46,7 @@ public class ControladorPanelCadastrarExame implements ActionListener {
 
 		} else if(e.getSource() == panelCadastrarExame.getButtonAdicionar()) {
 			if(panelCadastrarExame.getComboBoxAdicionarMaterial().getSelectedItem() != null) {
-				String materialName = (String) panelCadastrarExame.getComboBoxAdicionarMaterial().getSelectedItem();
-                DefaultListModel<String> model = (DefaultListModel<String>) panelCadastrarExame.getListMateriaisUtilizados().getModel();
-                model.addElement(materialName);
-                panelCadastrarExame.getComboBoxAdicionarMaterial().setSelectedIndex(-1);
-                try {
-                    File file = new File("./dados/materiais.txt");
-                    FileReader fr = new FileReader(file);
-                    BufferedReader br = new BufferedReader(fr);
-
-                    String linha;
-                    String nome = null, fornecedor = null;
-                    int qtdEstoque = 0, qtdMinima = 0;
-                    float preco = 0;
-
-                    while ((linha = br.readLine()) != null) {
-                        if (linha.startsWith("Nome do Material: ")) {
-                            nome = linha.substring(18).trim();
-                        } else if (linha.startsWith("Qtd. Estoque: ")) {
-                            qtdEstoque = Integer.parseInt(linha.substring(14).trim());
-                        } else if (linha.startsWith("Qtd. Mínima: ")) {
-                            qtdMinima = Integer.parseInt(linha.substring(13).trim());
-                        } else if (linha.startsWith("Fornecedor: ")) {
-                            fornecedor = linha.substring(12).trim();
-                        } else if (linha.startsWith("Preço: ")) {
-                            preco = Float.parseFloat(linha.substring(7).trim());
-                        } else if (linha.trim().isEmpty() || linha.startsWith("----")) {
-                            if (nome != null && nome.equalsIgnoreCase(materialName)) {
-                                // Material encontrado, criar e retornar o objeto
-                                Material material = new Material(nome, qtdEstoque, qtdMinima, fornecedor, preco);
-                                material.verificaEstoque();
-                                br.close();
-                                fr.close();
-                                return;
-                            }
-                            nome = null;
-                            fornecedor = null;
-                            qtdEstoque = 0;
-                            qtdMinima = 0;
-                            preco = 0;
-                        }
-                    }
-                    br.close();
-                    fr.close();
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
+				adicionarMaterial();
 			}
 			
 		} else if(e.getSource() == panelCadastrarExame.getButtonRemover()) {
@@ -139,6 +94,55 @@ public class ControladorPanelCadastrarExame implements ActionListener {
 		} catch (NumberFormatException e) {
 			JOptionPane.showMessageDialog(panelCadastrarExame, "Erro! Digite números válidos", "Erro! - Valores inválidos", JOptionPane.WARNING_MESSAGE);
 		}
+	}
+	
+	public void adicionarMaterial() {
+		String materialName = (String) panelCadastrarExame.getComboBoxAdicionarMaterial().getSelectedItem();
+        DefaultListModel<String> model = (DefaultListModel<String>) panelCadastrarExame.getListMateriaisUtilizados().getModel();
+        model.addElement(materialName);
+        panelCadastrarExame.getComboBoxAdicionarMaterial().setSelectedIndex(-1);
+        try {
+            File file = new File("./dados/materiais.txt");
+            FileReader fr = new FileReader(file);
+            BufferedReader br = new BufferedReader(fr);
+
+            String linha;
+            String nome = null, fornecedor = null;
+            int qtdEstoque = 0, qtdMinima = 0;
+            float preco = 0;
+
+            while ((linha = br.readLine()) != null) {
+                if (linha.startsWith("Nome do Material: ")) {
+                    nome = linha.substring(18).trim();
+                } else if (linha.startsWith("Qtd. Estoque: ")) {
+                    qtdEstoque = Integer.parseInt(linha.substring(14).trim());
+                } else if (linha.startsWith("Qtd. Mínima: ")) {
+                    qtdMinima = Integer.parseInt(linha.substring(13).trim());
+                } else if (linha.startsWith("Fornecedor: ")) {
+                    fornecedor = linha.substring(12).trim();
+                } else if (linha.startsWith("Preço: ")) {
+                    preco = Float.parseFloat(linha.substring(7).trim());
+                } else if (linha.trim().isEmpty() || linha.startsWith("----")) {
+                    if (nome != null && nome.equalsIgnoreCase(materialName)) {
+                        // Material encontrado, criar e retornar o objeto
+                        Material material = new Material(nome, qtdEstoque, qtdMinima, fornecedor, preco);
+                        material.verificaEstoque();
+                        br.close();
+                        fr.close();
+                        return;
+                    }
+                    nome = null;
+                    fornecedor = null;
+                    qtdEstoque = 0;
+                    qtdMinima = 0;
+                    preco = 0;
+                }
+            }
+            br.close();
+            fr.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
 	}
 	
 	public void limparPanel() {
