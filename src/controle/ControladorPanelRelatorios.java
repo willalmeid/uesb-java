@@ -50,7 +50,7 @@ public class ControladorPanelRelatorios implements ActionListener {
 			
 		} else if(e.getSource() == panelRelatorios.getButtonCardRelatorioFinanceiro()) {
 			PanelRelatoriosFinanceiros panelRelatoriosFinanceiros = new PanelRelatoriosFinanceiros();
-//			new ControladorPanelRelatoriosFinanceiro(panelRelatoriosFinanceiros);
+			new ControladorPanelRelatoriosFinanceiros(panelRelatoriosFinanceiros);
 			Dialog dialog = new Dialog(frame, panelRelatoriosFinanceiros);
 			
 		} else if(e.getSource() == panelRelatorios.getButtonCardRelatorioMaterial()) {
