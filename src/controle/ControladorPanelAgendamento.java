@@ -44,7 +44,7 @@ public class ControladorPanelAgendamento implements ActionListener {
 			
 		} else if(e.getSource() == panelAgendar.getButtonCardPesquisarHorarios()) {
 			PanelAgendamentoPesquisarHorarios panelAgendamentoPesquisarHorarios = new PanelAgendamentoPesquisarHorarios();
-//			new ControladorPanelAgendamentoPesquisarHorarios(panelAgendamentoPesquisarHorarios);
+			new ControladorPanelAgendamentoPesquisarHorarios(panelAgendamentoPesquisarHorarios);
 			Dialog dialog = new Dialog(frame, panelAgendamentoPesquisarHorarios);
 			
 		} else if(e.getSource() == panelAgendar.getButtonCardCancelarEReagendar()) {
