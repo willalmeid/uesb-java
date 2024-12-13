@@ -10,9 +10,6 @@ import javax.swing.JList;
 
 import java.awt.Color;
 import java.awt.Font;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 
 import javax.swing.DefaultListModel;
 import javax.swing.GroupLayout;
@@ -25,7 +22,7 @@ public class PanelAgendamentoPesquisarHorarios extends JPanel {
 	private JPanel panelPrincipal;
 	private JComboBox<String> comboBoxTipoPesquisa;
 	private JComboBox<String> comboBoxPesquisa;
-	private JList listHorarios;
+	private JList<String> listHorarios;
 	private JTextArea textAreaHorarios;
 	
 	public PanelAgendamentoPesquisarHorarios() {
@@ -80,7 +77,7 @@ public class PanelAgendamentoPesquisarHorarios extends JPanel {
 		}
 		return panelPrincipal;
 	}
-	public JComboBox getComboBoxTipoPesquisa() {
+	public JComboBox<String> getComboBoxTipoPesquisa() {
 		if (comboBoxTipoPesquisa == null) {
 			comboBoxTipoPesquisa = new JComboBox<String>();
 			comboBoxTipoPesquisa.addItem("Por data");
@@ -90,7 +87,7 @@ public class PanelAgendamentoPesquisarHorarios extends JPanel {
 		}
 		return comboBoxTipoPesquisa;
 	}
-	public JComboBox getComboBoxPesquisa() {
+	public JComboBox<String> getComboBoxPesquisa() {
 		if (comboBoxPesquisa == null) {
 			comboBoxPesquisa = new JComboBox<String>();
 			comboBoxPesquisa.setVisible(false);
