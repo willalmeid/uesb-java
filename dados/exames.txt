@@ -6,7 +6,7 @@ Hora: 11:11
 Médico: Dr. Rafael Lopes Andrade
 Tipo Exame: Exames Laboratoriais
 Descrição: Exame para avaliar células sanguíneas.
-Materiais Usados: Seringa, Tubos de Coleta
+Materiais Usados: [Seringa], [Tubos de Coleta]
 
 ----------------------------------------------------
 
@@ -18,7 +18,7 @@ Hora: 11:30
 Médico: Dr. João Silva
 Tipo Exame: Imagens
 Descrição: Radiografia para avaliar o tórax.
-Materiais Usados: Placa de Raio-X, Equipamento Radiológico
+Materiais Usados: [Placa de Raio-X], [Equipamento Radiológico]
 
 ----------------------------------------------------
 
@@ -30,7 +30,7 @@ Hora: 10:30
 Médico: Dr. João Silva
 Tipo Exame: Exames Físicos
 Descrição: Avaliar o comportamento cardíaco durante esforço físico.
-Materiais Usados: Esteira Ergométrica, Monitor Cardíaco
+Materiais Usados: [Esteira Ergométrica], [Monitor Cardíaco]
 
 ----------------------------------------------------
 
@@ -42,7 +42,7 @@ Hora: 14:30
 Médico: Dr. Paulo Ricardo
 Tipo Exame: Imagens
 Descrição: Exame para análise detalhada do joelho.
-Materiais Usados: Máquina de Ressonância, Contraste
+Materiais Usados: [Máquina de Ressonância], [Contraste]
 
 ----------------------------------------------------
 
@@ -54,7 +54,7 @@ Hora: 16:00
 Médico: Dra. Fernanda Torres
 Tipo Exame: Biópsia
 Descrição: Análise de amostra de pele para diagnóstico.
-Materiais Usados: Bisturi, Lâminas de Microscopia
+Materiais Usados: [Bisturi], [Lâminas de Microscopia]
 
 ----------------------------------------------------
 

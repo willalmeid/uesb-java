@@ -6,7 +6,7 @@ Tipo de Consulta: Cardiologia
 Convênio: Particular
 Queixa do Paciente: Dor no peito
 Observações: Paciente relata dores intensas nos últimos 3 dias.
-Materiais Usados: Eletrodos, Monitor Cardíaco
+Materiais Usados: [Eletrodos], [Monitor Cardíaco]
 
 ----------------------------------------------------
 
@@ -18,7 +18,7 @@ Tipo de Consulta: Cardiologia
 Convênio: Particular
 Queixa do Paciente: Palpitações
 Observações: Relata episódios frequentes à noite.
-Materiais Usados: Estetoscópio, Monitor Cardíaco
+Materiais Usados: [Estetoscópio], [Monitor Cardíaco]
 
 ----------------------------------------------------
 
@@ -30,7 +30,7 @@ Tipo de Consulta: Ortopedia
 Convênio: Plano Silver
 Queixa do Paciente: Dor no joelho
 Observações: Paciente sofreu acidente ao praticar esportes.
-Materiais Usados: Gelo, Bandagem
+Materiais Usados: [Gelo], [Bandagem]
 
 ----------------------------------------------------
 
@@ -42,7 +42,7 @@ Tipo de Consulta: Dermatologia
 Convênio: Plano Bronze
 Queixa do Paciente: Mancha na pele
 Observações: Mancha crescente no rosto, há 2 meses.
-Materiais Usados: Lâmpada de Wood, Creme Dermatológico
+Materiais Usados: [Lâmpada de Wood], [Creme Dermatológico]
 
 ----------------------------------------------------
 
@@ -54,7 +54,43 @@ Tipo de Consulta: Pediatria
 Convênio: Particular
 Queixa do Paciente: Tosse persistente
 Observações: Relata sintomas há mais de 1 semana.
-Materiais Usados: Termômetro, Estetoscópio
+Materiais Usados: [Termômetro], [Estetoscópio]
+
+----------------------------------------------------
+
+Paciente: Ana Paula Souza
+Data: 10/02/2022
+Hora: 12:00
+Médico: Dr. João Silva
+Tipo de Consulta: Cardiologia
+Convênio: SUS
+Queixa do Paciente: Dores
+Observações: rqwerqwerqwe
+Materiais Usados: [Seringa], [Tubos de coleta]
+
+----------------------------------------------------
+
+Paciente: Ana Paula Souza
+Data: 11/11/1111
+Hora: 11:11
+Médico: Dra. Mariana Costa
+Tipo de Consulta: Cardiologia
+Convênio: Plano Familiar
+Queixa do Paciente: 111111
+Observações: 11111
+Materiais Usados: [TEste]
+
+----------------------------------------------------
+
+Paciente: Ana Paula Souza
+Data: 11/11/1111
+Hora: 11:11
+Médico: Dr. Rafael Lopes Andrade
+Tipo de Consulta: Cardiologia
+Convênio: Particular
+Queixa do Paciente: 11111111111111
+Observações: 111111111
+Materiais Usados: [TEste]
 
 ----------------------------------------------------
 
