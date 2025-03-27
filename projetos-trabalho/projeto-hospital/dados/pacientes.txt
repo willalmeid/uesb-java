@@ -1,0 +1,90 @@
+Nome: Larissa Mendes Oliveira
+Data de Nascimento: 15/04/1999
+Telefone: (11) 97432-5821
+Tipo Sanguíneo: O-
+Histórico Médico: Nenhum
+Convênio: Particular
+Peso: 60.5
+Altura: 1.65
+Logradouro: Avenida Paulista
+Número: 1234
+Complemento: Apt. 502
+Bairro: Bela Vista
+CEP: 01310-200
+Cidade: São Paulo
+Estado: São Paulo
+
+----------------------------------------------------
+
+Nome: João Carlos Pereira
+Data de Nascimento: 22/03/1987
+Telefone: (11) 98877-6655
+Tipo Sanguíneo: A+
+Histórico Médico: Hipertensão
+Convênio: Plano Gold
+Peso: 78.2
+Altura: 1.75
+Logradouro: Rua das Flores
+Número: 456
+Complemento: Casa
+Bairro: Jardim das Rosas
+CEP: 02340-100
+Cidade: São Paulo
+Estado: São Paulo
+
+----------------------------------------------------
+
+Nome: Ana Paula Souza
+Data de Nascimento: 10/06/1990
+Telefone: (11) 96789-2345
+Tipo Sanguíneo: B-
+Histórico Médico: Diabetes Tipo 2
+Convênio: Particular
+Peso: 65.0
+Altura: 1.70
+Logradouro: Alameda Santos
+Número: 890
+Complemento: Apt. 304
+Bairro: Cerqueira César
+CEP: 01419-001
+Cidade: São Paulo
+Estado: São Paulo
+
+----------------------------------------------------
+
+Nome: Pedro Henrique Almeida
+Data de Nascimento: 05/11/1992
+Telefone: (21) 93456-7890
+Tipo Sanguíneo: AB+
+Histórico Médico: Asma
+Convênio: Plano Silver
+Peso: 85.3
+Altura: 1.80
+Logradouro: Rua Marquês de São Vicente
+Número: 120
+Complemento: Loja 10
+Bairro: Gávea
+CEP: 22451-041
+Cidade: Rio de Janeiro
+Estado: Rio de Janeiro
+
+----------------------------------------------------
+
+Nome: Carla Fernanda Braga
+Data de Nascimento: 08/09/1985
+Telefone: (31) 95678-1234
+Tipo Sanguíneo: O+
+Histórico Médico: Nenhum
+Convênio: Plano Bronze
+Peso: 70.0
+Altura: 1.68
+Logradouro: Avenida Afonso Pena
+Número: 1500
+Complemento: Sala 25
+Bairro: Centro
+CEP: 30130-007
+Cidade: Belo Horizonte
+Estado: Minas Gerais
+
+----------------------------------------------------
+

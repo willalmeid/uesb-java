@@ -1,0 +1,40 @@
+Nome do Material: Eletrodos
+Qtd. Estoque: 50
+Qtd. Mínima: 10
+Fornecedor: MedSupply
+Preço: 1.50
+
+----------------------------------------------------
+
+Nome do Material: Monitor Cardíaco
+Qtd. Estoque: 5
+Qtd. Mínima: 2
+Fornecedor: HealthTech
+Preço: 5000.00
+
+----------------------------------------------------
+
+Nome do Material: Seringa
+Qtd. Estoque: 100
+Qtd. Mínima: 50
+Fornecedor: MedSupply
+Preço: 0.75
+
+----------------------------------------------------
+
+Nome do Material: Tubos de coleta
+Qtd. Estoque: 200
+Qtd. Mínima: 100
+Fornecedor: LabEssentials
+Preço: 0.50
+
+----------------------------------------------------
+
+Nome do Material: Luvas de Procedimento
+Qtd. Estoque: 500
+Qtd. Mínima: 1000
+Fornecedor: MedSupply
+Preço: 0.35
+
+----------------------------------------------------
+
