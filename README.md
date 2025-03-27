@@ -1,7 +1,7 @@
-<h1 align="center"> Repositório da Disciplina de Linguagem de Programação II </h1>
+<h1 align="center"> Repositório da Disciplina de Linguagem de Programação</h1>
 
 <p>
-	Material desenvolvido durante a disciplina de Linguagem de Programação II do curso de Sistemas de Informação - UESB
+	Material desenvolvido durante a disciplina de Linguagem de Programação II e III do curso de Sistemas de Informação - UESB
 </p>
 
 <h2> 🗒️ Descrição </h2>
